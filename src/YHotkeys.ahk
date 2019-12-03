@@ -98,9 +98,10 @@ RunUrl(url) {
     }
 }
 
-ActivateWindowWithID(ahkID) {
+ActivateWindowWithID(ahkID, wait=True) {
     WinActivate, ahk_id %ahkID%
-    WinWaitActive, ahk_id %ahkID%
+    if wait
+        WinWaitActive, ahk_id %ahkID%
 }
 
 ShowHidedWindowWithID(ahkId)
@@ -164,7 +165,7 @@ AddTrayMenuIcon(title, iconPath, default=True) {
 
 UpdateMenu(){
     #Persistent
-    Menu, Tray, NoStandard
+    ; Menu, Tray, NoStandard
     Menu, Tray, Add, YEmreAk, IconClicked
     
     global DIR_NAME
@@ -220,11 +221,15 @@ FocusPreviusWindow() {
 ToggleWindowWithID(ahkID, hide=False) {
     DetectHiddenWindows, Off
     if !WinExist("ahk_id" . ahkID) {
-        ShowHidedWindowWithID(ahkID)
-        ActivateWindowWithID(ahkID)
-        if DropActiveWindowFromMem()
-            DropActiveWindowFromTrayMenu()
-        UpdateMenu()
+        if hide {
+            ShowHidedWindowWithID(ahkID)
+            ActivateWindowWithID(ahkID)
+            if DropActiveWindowFromMem()
+                DropActiveWindowFromTrayMenu()
+            UpdateMenu()
+        } else {
+            ActivateWindowWithID(ahkID, False)
+        }
     } else {
         if WinActive("ahk_id" . ahkID) {
             if hide {
@@ -236,7 +241,8 @@ ToggleWindowWithID(ahkID, hide=False) {
                 WinMinimize, A
             }
         } else {
-            ActivateWindowWithID(ahkID)
+            MsgBox, "Nonactive"
+            ActivateWindowWithID(ahkID, False)
         }
     }
 }
@@ -275,12 +281,12 @@ OpenWindowByClassInTray(className, url) {
         RunUrl(url)
 }
 
-OpenWindowByTitle(className, url, mode=3) {
+OpenWindowByTitle(title, url, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
     
-    if WinExist(className) {
-        WinGet, ahkID, ID, %className%
+    if WinExist(title) {
+        WinGet, ahkID, ID, %title%
         ToggleWindowWithID(ahkID, False)
     } else {
         RunUrl(url)
@@ -311,7 +317,7 @@ return
     name := "Tureng Dictionary"
     path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
     mode := 2
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowByTitle(name, path, mode)
 return
 
 ; --------------------------------- Tray Kısayolları ---------------------------------
