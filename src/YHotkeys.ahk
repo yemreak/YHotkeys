@@ -12,6 +12,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
+; TIP: Veri dizini yolu
 DIR_NAME = %A_AppData%\YHotkeys
 
 InstallIcons()
@@ -206,14 +207,14 @@ UpdateMenu(){
     AddTrayMenuIcon("Kapat", iconPath)
 }
 
-SendActiveWindowToTray() {
-    WinHide, A
-    WinWaitNotActive, A
+SendWindowToTrayByID(ahkID) {
+    WinHide ahk_id %ahkID%
 }
 
-RestoreFocus() {
-    SendEvent, !{Esc} ; Bir önceki pencereye odaklanma
-    ; Eğer uyarı mesajı verilirse, odaklanma bozuluyor
+; WARN: Bug sebebi olabilir
+; WARN: Eğer uyarı mesajı verilirse, odaklanma bozuluyor
+FocusPreviusWindow() {
+    SendEvent, !{Esc}
 }
 
 ToggleWindowWithID(ahkID, hide=False) {
@@ -228,9 +229,9 @@ ToggleWindowWithID(ahkID, hide=False) {
         if WinActive("ahk_id" . ahkID) {
             if hide {
                 KeepActiveWindowInMem()
-                SendActiveWindowToTray()
+                FocusPreviusWindow()
+                SendWindowToTrayByID(ahkID)
                 UpdateMenu()
-                RestoreFocus()
             } else {
                 WinMinimize, A
             }
