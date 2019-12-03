@@ -241,7 +241,6 @@ ToggleWindowWithID(ahkID, hide=False) {
                 WinMinimize, A
             }
         } else {
-            MsgBox, "Nonactive"
             ActivateWindowWithID(ahkID, False)
         }
     }
@@ -313,12 +312,12 @@ return path
     OpenWindowByTitle(name, path, mode)
 return
 
-#t::
-    name := "Tureng Dictionary"
-    path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
-    mode := 2
-    OpenWindowByTitle(name, path, mode)
-return
+; #t::
+;     name := "Tureng Dictionary"
+;     path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
+;     mode := 2
+;     OpenWindowByTitle(name, path, mode)
+; return
 
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
