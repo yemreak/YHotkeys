@@ -1,5 +1,8 @@
 # 💞 YHotkeys
 
+## 🔰 Ne İşe Yarar
+
+- 👮‍♂️ Windows'un kısıltı kısayollarına alternatif olarak yaplmıştır
 - ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
 - 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
 
@@ -12,6 +15,20 @@
 ![](res/default.png)
 
 ![](res/tray_menu.png)
+
+## 👣 Kullanım Adımları
+
+- 💫 **Exe** dosyanızın kısayolunu oluşturun (kopyasını değil)
+- 🚙 Oluşturulan kısayolu istediğiniz yere taşıyabilirsiniz
+
+> 📢 `res` dosyasına bağlı olduğundan, dizini kaybetmesi durumunda varsayılan ikonlar gözükmez
+
+## 🚩 Scriptleri System ile Başlatma
+
+- 🖤 Scriptinizin **kısayolunu** oluşturun (kopyasını değil)
+- 🎌 <kbd>❖ Win</kbd> <kbd>R</kbd> tuşlarına basıp `shell:startup` yazıp <kbd>↩ Enter</kbd> 'a
+ basın
+- 🚙 Oluşturduğunzu kısayolu açılan dizine kopyalayın
 
 ## 💞 Kısayollar
 
@@ -50,13 +67,6 @@
 | --------------------------------- | ----------- |
 | <kbd>✲ Ctrl</kbd> <kbd>PgDn</kbd> | Page Down   |
 | <kbd>✲ Ctrl</kbd> <kbd>PgUp</kbd> | Page Up     |
-
-## 🚩 Scriptleri System ile Başlatma
-
-- 🖤 Scriptinizin **kısayolunu** oluşturun (kopyasını değil)
-- 🎌 <kbd>❖ Win</kbd> <kbd>R</kbd> tuşlarına basıp `shell:startup` yazıp <kbd>↩ Enter</kbd> 'a
- basın
-- 🚙 Oluşturduğunzu kısayolu açılan dizine kopyalayın
 
 ## 👨‍💻 Geliştirici Notları
 
