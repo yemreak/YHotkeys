@@ -165,7 +165,7 @@ AddTrayMenuIcon(title, iconPath, default=True) {
 
 UpdateMenu(){
     #Persistent
-    ; Menu, Tray, NoStandard
+    Menu, Tray, NoStandard
     Menu, Tray, Add, YEmreAk, IconClicked
     
     global DIR_NAME
