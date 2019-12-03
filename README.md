@@ -1,5 +1,8 @@
 # 💞 YHotkeys
 
+- ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
+- 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
+
 ## 👁‍🗨 Uygulamaya Bakış
 
 ![](res/usage.gif)
