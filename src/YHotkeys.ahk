@@ -41,7 +41,7 @@ class MenuObject {
 InstallIcons() {
     global DIR_NAME
     FileCreateDir,  %DIR_NAME%
-    FileInstall, .\res\ylogo.ico, %DIR_NAME%\ylogo.ico, 1
+    FileInstall, .\res\seedling.ico, %DIR_NAME%\seedling.ico, 1
     FileInstall, .\res\default.ico, %DIR_NAME%\default.ico, 1
     FileInstall, .\res\clear.ico, %DIR_NAME%\clear.ico, 1
     FileInstall, .\res\close.ico, %DIR_NAME%\close.ico, 1
@@ -89,7 +89,7 @@ ToggleMemWindowWithTitle(menuName) {
     if ahkID
         ToggleWindowWithID(ahkID, True)
     else
-        Run https://www.yemreak.com
+        Run https://github.com/yedhrab/YHotkeys
 }
 
 RunUrl(url) {
@@ -166,13 +166,14 @@ AddTrayMenuIcon(title, iconPath, default=True) {
 UpdateMenu(){
     #Persistent
     Menu, Tray, NoStandard
-    Menu, Tray, Add, YEmreAk, IconClicked
+    Menu, Tray, Add, YHotkeys, IconClicked
     
     global DIR_NAME
-    iconPath := DIR_NAME . "\ylogo.ico"
+    iconPath := DIR_NAME . "\seedling.ico"
     if FileExist(iconPath) {
         Menu, Tray, Icon, %iconPath%,, 0
-        Menu, Tray, Icon, YEmreAk, %iconPath%,, 20
+        iconPath := DIR_NAME . "\seedling.ico"
+        AddTrayMenuIcon("YHotkeys", iconPath)
     }
     
     global HidedWindows
@@ -198,7 +199,7 @@ UpdateMenu(){
         AddTrayMenuIcon("Temizle", iconPath)
         
     } else {
-        mainTitle := "YEmreAk"
+        mainTitle := "YHotkeys"
     }
     
     Menu, Tray, Default, %mainTitle%
