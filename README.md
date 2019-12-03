@@ -18,17 +18,14 @@
 
 ## 👣 Kullanım Adımları
 
-- 💫 **Exe** dosyanızın kısayolunu oluşturun (kopyasını değil)
-- 🚙 Oluşturulan kısayolu istediğiniz yere taşıyabilirsiniz
-
-> 📢 `res` dosyasına bağlı olduğundan, dizini kaybetmesi durumunda varsayılan ikonlar gözükmez
+- 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
 
 ## 🚩 Scriptleri System ile Başlatma
 
-- 🖤 Scriptinizin **kısayolunu** oluşturun (kopyasını değil)
+- ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
 - 🎌 <kbd>❖ Win</kbd> <kbd>R</kbd> tuşlarına basıp `shell:startup` yazıp <kbd>↩ Enter</kbd> 'a
  basın
-- 🚙 Oluşturduğunzu kısayolu açılan dizine kopyalayın
+- 🚙 Oluşturduğunzu kısayolu veya kopyayı açılan dizine kopyalayın
 
 ## 💞 Kısayollar
 

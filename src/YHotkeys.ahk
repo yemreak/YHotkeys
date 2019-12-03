@@ -12,6 +12,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
+DIR_NAME = %A_AppData%\YHotkeys
+
+InstallIcons()
 UpdateMenu()
 return
 
@@ -32,6 +35,15 @@ class MenuObject {
     ahkID := 0
     title := ""
     iconPath := ""
+}
+
+InstallIcons() {
+    global DIR_NAME
+    FileCreateDir,  %DIR_NAME%
+    FileInstall, .\res\ylogo.ico, %DIR_NAME%\ylogo.ico, 1
+    FileInstall, .\res\default.ico, %DIR_NAME%\default.ico, 1
+    FileInstall, .\res\clear.ico, %DIR_NAME%\clear.ico, 1
+    FileInstall, .\res\close.ico, %DIR_NAME%\close.ico, 1
 }
 
 ClearAllHidedWindows() {
@@ -143,7 +155,9 @@ AddTrayMenuIcon(title, iconPath, default=True) {
     if FileExist(iconPath) {
         Menu, Tray, Icon, %title%, %iconPath%,, 20
     } else if default {
-        AddTrayMenuIcon(title, ".\res\default.ico", False)
+        global DIR_NAME
+        iconPath := DIR_NAME . "\default.ico"
+        AddTrayMenuIcon(title, iconPath, False)
     }
 }
 
@@ -152,7 +166,8 @@ UpdateMenu(){
     Menu, Tray, NoStandard
     Menu, Tray, Add, YEmreAk, IconClicked
     
-    iconPath := ".\res\ylogo.ico"
+    global DIR_NAME
+    iconPath := DIR_NAME . "\ylogo.ico"
     if FileExist(iconPath) {
         Menu, Tray, Icon, %iconPath%,, 0
         Menu, Tray, Icon, YEmreAk, %iconPath%,, 20
@@ -176,7 +191,9 @@ UpdateMenu(){
         }
         
         Menu, Tray, Add, Temizle, ClearAll
-        AddTrayMenuIcon("Temizle", ".\res\clear.ico")
+        
+        iconPath := DIR_NAME . "\clear.ico"
+        AddTrayMenuIcon("Temizle", iconPath)
         
     } else {
         mainTitle := "YEmreAk"
@@ -184,7 +201,9 @@ UpdateMenu(){
     
     Menu, Tray, Default, %mainTitle%
     Menu, Tray, Add, Kapat, CloseApp
-    AddTrayMenuIcon("Kapat", ".\res\close.ico")
+    
+    iconPath := DIR_NAME . "\close.ico"
+    AddTrayMenuIcon("Kapat", iconPath)
 }
 
 SendActiveWindowToTray() {
