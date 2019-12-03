@@ -2,7 +2,7 @@
 
 ## 🔰 Ne İşe Yarar
 
-- 👮‍♂️ Windows'un kısıltı kısayollarına alternatif olarak yaplmıştır
+- 👮‍♂️ Windows'un kısıtlı kısayollarına alternatif olarak yapılmıştır
 - ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
 - 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
 
@@ -17,7 +17,7 @@
 - ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
 - 🎌 <kbd>❖ Win</kbd> <kbd>R</kbd> tuşlarına basıp `shell:startup` yazıp <kbd>↩ Enter</kbd> 'a
  basın
-- 🚙 Oluşturduğunzu kısayolu veya kopyayı açılan dizine kopyalayın
+- 🚙 Oluşturduğunuz kısayolu veya kopyayı açılan dizine kopyalayın
 
 ## 👁‍🗨 Uygulamaya Bakış
 
@@ -93,7 +93,8 @@
 
 ### 🔗 Faydalı Bağlantılar
 
-- [👜 Mağaza Uygulamlarını Komutla Açma](https://windows.yemreak.com/gelistirici-notlarim/magaza-uygulamlarini-komutla-acma)
+- [👜 Mağaza Uygulamalarını Komutla Açma](https://windows.yemreak.com/gelistirici-notlarim/magaza-uygulamlarini-komutla-acma)
+
 
 ## 💖 Destek ve İletişim
 
