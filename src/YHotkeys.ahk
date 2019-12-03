@@ -80,7 +80,9 @@ ToggleMemWindowWithTitle(menuName) {
 }
 
 RunUrl(url) {
-    Run, %url%
+    try {
+        Run, %url%
+    }
 }
 
 ActivateWindowWithID(ahkID) {
