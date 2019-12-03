@@ -8,7 +8,7 @@
 
 ## 👣 Kullanım Adımları
 
-- ⏬ Uygulamayı [buradan](https://github.com/yedhrab/YHotkeys/releases/download/1.0.1/YHotkeys.exe) indirin
+- ⏬ Uygulamayı [buradan](https://github.com/yedhrab/YHotkeys/releases/download/1.0.0/YHotkeys.exe) indirin
 - 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
 
 ## 🚩 Uygulamayı System ile Başlatma
