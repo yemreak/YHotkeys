@@ -23,11 +23,11 @@
 
 ![](res/usage.gif)
 
-![](res/tray_bar.png)
+![](res/tray_icon.png)
 
 ![](res/default.png)
 
-![](res/tray_menu.png)
+![](res/tray_bar.png)
 
 ## 💞 Kısayollar
 
