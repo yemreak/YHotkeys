@@ -8,7 +8,8 @@
 
 ## 👣 Kullanım Adımları
 
-- ⏬ Uygulamayı [buradan](https://github.com/yedhrab/YHotkeys/releases/download/1.0.0/YHotkeys.exe) indirin
+- ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirin
+- 🕐 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
 - 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
 
 ## 🚩 Uygulamayı System ile Başlatma
@@ -30,7 +31,7 @@
 
 ## 💞 Kısayollar
 
-### Tray Icon Kısayolları
+### 🔔 Tray Icon Kısayolları
 
 | 🎹 Buton                      | 📑 Açıklama      |
 | ----------------------------- | ---------------- |
@@ -84,6 +85,11 @@
 | `^`    | Control                          |
 | `+`    | Shift                            |
 | `&`    | Birden faza kısayolu birleştirme |
+
+### ✔️ Yapılacaklar
+
+- [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
+- [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
 
 ### 🔗 Faydalı Bağlantılar
 
