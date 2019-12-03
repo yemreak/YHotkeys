@@ -1,7 +1,5 @@
 # 💞 YHotkeys
 
-📢 Bu çalışma artık [YHotkeys](https://github.com/yedhrab/YHotkeys) adı altında devam etmektedir
-
 ## 👁‍🗨 Uygulamaya Bakış
 
 ![](res/usage.gif)
