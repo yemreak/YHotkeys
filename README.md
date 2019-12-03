@@ -50,14 +50,19 @@
 
 ### 📂 Dizin Kısayolları
 
-| 🎹 Buton                           | 📑 Açıklama |
-| ---------------------------------- | ----------- |
-| <kbd>PgDn</kbd> <kbd>g</kbd>       | GitHub      |
-| <kbd>PgDn</kbd> <kbd>s</kbd>       | Shrarex     |
-| <kbd>PgDn</kbd> <kbd>⇧ Shift</kbd> | Startup     |
-| <kbd>PgDn</kbd> <kbd>i</kbd>       | Icons       |
-| <kbd>PgDn</kbd> <kbd>d</kbd>       | Downloads   |
-| <kbd>PgDn</kbd> <kbd>u</kbd>       | Yedhrab     |
+| 🎹 Buton                           | 📑 Açıklama      |
+| ---------------------------------- | ---------------- |
+| <kbd>PgDn</kbd> <kbd>⇧ Shift</kbd> | Startup          |
+| <kbd>PgDn</kbd> <kbd>d</kbd>       | Downloads        |
+| <kbd>PgDn</kbd> <kbd>u</kbd>       | Kullanıcı Dizini |
+
+### 🌚 Kişisel Dizin Kısayollarım
+
+| 🎹 Buton                     | 📑 Açıklama |
+| ---------------------------- | ----------- |
+| <kbd>PgDn</kbd> <kbd>g</kbd> | GitHub      |
+| <kbd>PgDn</kbd> <kbd>s</kbd> | Sharex      |
+| <kbd>PgDn</kbd> <kbd>i</kbd> | Icons       |
 
 ### 👨‍🔧 Buton Düzeltmeleri
 
