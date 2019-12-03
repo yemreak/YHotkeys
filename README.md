@@ -6,6 +6,18 @@
 - ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
 - 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
 
+## 👣 Kullanım Adımları
+
+- ⏬ Uygulamayı [buradan](https://github.com/yedhrab/YHotkeys/releases/download/1.0.0/YHotkeys.exe) indirin
+- 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
+
+## 🚩 Uygulamayı System ile Başlatma
+
+- ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
+- 🎌 <kbd>❖ Win</kbd> <kbd>R</kbd> tuşlarına basıp `shell:startup` yazıp <kbd>↩ Enter</kbd> 'a
+ basın
+- 🚙 Oluşturduğunzu kısayolu veya kopyayı açılan dizine kopyalayın
+
 ## 👁‍🗨 Uygulamaya Bakış
 
 ![](res/usage.gif)
@@ -15,17 +27,6 @@
 ![](res/default.png)
 
 ![](res/tray_menu.png)
-
-## 👣 Kullanım Adımları
-
-- 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
-
-## 🚩 Scriptleri System ile Başlatma
-
-- ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
-- 🎌 <kbd>❖ Win</kbd> <kbd>R</kbd> tuşlarına basıp `shell:startup` yazıp <kbd>↩ Enter</kbd> 'a
- basın
-- 🚙 Oluşturduğunzu kısayolu veya kopyayı açılan dizine kopyalayın
 
 ## 💞 Kısayollar
 
