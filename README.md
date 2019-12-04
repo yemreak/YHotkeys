@@ -11,6 +11,7 @@
 - ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirin
 - 🕐 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
 - 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
+- [🚀 YEmoji](YEmoji.md) alanı altından emojilerin kısayollarına bakabilirsin
 
 ## 🚩 Uygulamayı System ile Başlatma
 

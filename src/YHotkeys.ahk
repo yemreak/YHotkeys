@@ -1,269 +1,40 @@
 ; v1.1.31.01'de tüm desktoplarda çalışır
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#SingleInstance Force
-    
+#NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
+#SingleInstance Force ; Sadece 1 kez açalıştırabilire
+
+#KeyHistory 0 ; Tuş basımları loglamayı engeller
+
+SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
+ListLines, On ; Derlenen verileri loglamaz
+
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#MaxThreadsPerHotkey, 1 ; no re-entrant hotkey handling
+#MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 
+DIR_NAME = %A_AppData%\YHotkeys
 VERSION = 1.2.0
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
-; TIP: Veri dizini yolu
-DIR_NAME = %A_AppData%\YHotkeys
+InstallIcons(DIR_NAME)
 
-InstallIcons()
-CreateOrUpdateTrayMenu()
+CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
 return
 
-IconClicked:
-    ToggleMemWindowWithTitle(A_ThisMenuItem)
-Return
-
-ClearAll:
-    ClearAllHidedWindows()
-Return
-
-CloseApp:
-    ClearAllHidedWindows()
-    ExitApp
-Return
-
-class MenuObject {
-    ahkID := 0
-    title := ""
-    iconPath := ""
-}
-
-InstallIcons() {
-    global DIR_NAME
-    FileCreateDir,  %DIR_NAME%
-    FileInstall, .\res\seedling.ico, %DIR_NAME%\seedling.ico, 1
-    FileInstall, .\res\default.ico, %DIR_NAME%\default.ico, 1
-    FileInstall, .\res\clear.ico, %DIR_NAME%\clear.ico, 1
-    FileInstall, .\res\close.ico, %DIR_NAME%\close.ico, 1
-}
-
-ClearAllHidedWindows() {
-    ahkIDs := GetHidedWindowsIDs()
-    For index, ahkID in ahkIDs {
-        ToggleWindowWithID(ahkID, True)
-        WinKill, ahk_id %ahkID%
-    }
-}
-
-GetHidedWindowsIDs(){
-    ahkIDs := []
-    global HidedWindows
-    For index, item in HidedWindows {
-        ahkIDs.Push(item.ahkID)
-    }
-return ahkIDs
-}
-
-GetHidedWindowsIDWithTitle(title){
-    global HidedWindows
-    For index, item in HidedWindows {
-        if (item.title == title) {
-            return item.ahkID
-        }
-    }
-return 0
-}
-
-GetHidedWindowsIndexWithID(ahkID){
-    global HidedWindows
-    For index, item in HidedWindows {
-        if (item.ahkID == ahkID) {
-            return index
-        }
-    }
-return 0
-}
-
-ToggleMemWindowWithTitle(menuName) {
-    ahkID := GetHidedWindowsIDWithTitle(menuName)
-    if ahkID
-        ToggleWindowWithID(ahkID, True)
-    else
-        Run https://github.com/yedhrab/YHotkeys
-}
-
-RunUrl(url) {
-    ; WARN: Bazı uygulamarın geç açılması soruna sebep oluyor
-    ; BUG: Uygulamalar bazen 2 kere açılıyor
-    try {
-        SetTitleMatchMode, Slow
-        
-        RunWait, %url%
-    }
-}
-
-ActivateWindowWithID(ahkID, wait=True) {
-    WinActivate, ahk_id %ahkID%
-    if wait
-        WinWaitActive, ahk_id %ahkID%
-}
-
-ShowHidedWindowWithID(ahkId)
-{
-    WinRestore, ahk_id %ahkID%
-    WinShow, ahk_id %ahkID%
-}
-
-DropFromMem(ahkID){
-    index := GetHidedWindowsIndexWithID(ahkID)
-    if index {
-        global HidedWindows
-        HidedWindows.RemoveAt(index)
-    }
-return index
-}
-
-DropActiveWindowFromTrayMenu(){
-    WinGetTitle, title, A
-    Menu, Tray, Delete, %title%
-    global HidedWindows
-    if !HidedWindows.Length()
-        Menu, Tray, Delete, Temizle
-}
-
-DropActiveWindowFromMem(){
-    WinGet, ahkID, ID, A
-    
-return DropFromMem(ahkID)
-}
-
-KeepInMem(ahkID, title, iconPath) {
-    item := new MenuObject
-    
-    item.ahkID := ahkID
-    item.title := title
-    item.iconPath := iconPath
-    
-    global HidedWindows
-    HidedWindows.Push(item)
-}
-
-; Gizlenmeden önce kullanılmazsa id alamaz
-KeepActiveWindowInMem() {
-    WinGetActiveTitle, title
-    WinGet, ahkID, ID, A
-    WinGet, iconPath, ProcessPath, A
-    
-    KeepInMem(ahkID, title, iconPath)
-}
-
-AddTrayMenuIcon(title, iconPath, default=True) {
-    if FileExist(iconPath) {
-        Menu, Tray, Icon, %title%, %iconPath%,, 20
-    } else if default {
-        global DIR_NAME
-        iconPath := DIR_NAME . "\default.ico"
-        AddTrayMenuIcon(title, iconPath, False)
-    }
-}
-
-CreateOrUpdateTrayMenu(){
-    #Persistent
-    Menu, Tray, UseErrorLevel , On
-    Menu, Tray, NoStandard
-    Menu, Tray, Add, YHotkeys, IconClicked
-    
-    global VERSION
-    Menu, Tray, Tip, YHotkeys v%VERSION% ~ YEmreAk
-    Menu, Tray, Click, 1
-    
-    
-    global DIR_NAME
-    iconPath := DIR_NAME . "\seedling.ico"
-    if FileExist(iconPath) {
-        Menu, Tray, Icon, %iconPath%,, 20
-        iconPath := DIR_NAME . "\seedling.ico"
-        AddTrayMenuIcon("YHotkeys", iconPath)
-    }
-    
-    global HidedWindows
-    if (HidedWindows.Length() > 0) {
-        Menu, Tray, Add, Temizle, ClearAll
-        Menu, Tray, Delete, Temizle
-        Menu, Tray, Delete, Kapat
-        
-        iconPath := HidedWindows[HidedWindows.Length()].iconPath
-        mainTitle := HidedWindows[HidedWindows.Length()].title
-        
-        For index, item in HidedWindows {
-            title := item.title
-            iconPath := item.iconPath
-            
-            Menu, Tray, Add, %title%, IconClicked
-            AddTrayMenuIcon(title, iconPath)
-        }
-        
-        Menu, Tray, Add, Temizle, ClearAll
-        
-        iconPath := DIR_NAME . "\clear.ico"
-        AddTrayMenuIcon("Temizle", iconPath)
-        
-    } else {
-        mainTitle := "YHotkeys"
-    }
-    
-    Menu, Tray, Default, YHotkeys
-    Menu, Tray, Add, Kapat, CloseApp
-    
-    iconPath := DIR_NAME . "\close.ico"
-    AddTrayMenuIcon("Kapat", iconPath)
-}
-
-SendWindowToTrayByID(ahkID) {
-    WinHide ahk_id %ahkID%
-}
-
-; WARN: Bug sebebi olabilir (bundan değil bug)
-; WARN: Eğer uyarı mesajı verilirse, odaklanma bozuluyor
-FocusPreviusWindow(ahkID) {
-    SendEvent, !{Esc}
-    WinWaitNotActive, ahk_id %ahkID%
-}
-
-ToggleWindowWithID(ahkID, hide=False) {
-    DetectHiddenWindows, Off
-    if !WinExist("ahk_id" . ahkID) {
-        if hide {
-            ShowHidedWindowWithID(ahkID)
-            ActivateWindowWithID(ahkID)
-            if DropActiveWindowFromMem()
-                DropActiveWindowFromTrayMenu()
-            CreateOrUpdateTrayMenu()
-        } else {
-            ActivateWindowWithID(ahkID)
-        }
-    } else {
-        if WinActive("ahk_id" . ahkID) {
-            if hide {
-                KeepActiveWindowInMem()
-                FocusPreviusWindow(ahkID)
-                SendWindowToTrayByID(ahkID)
-                CreateOrUpdateTrayMenu()
-            } else {
-                WinMinimize, A
-            }
-        } else {
-            ActivateWindowWithID(ahkID)
-        }
-    }
-}
+#Include, %A_ScriptDir%\lib\common.ahk
+#Include, %A_ScriptDir%\lib\memory.ahk
+#Include, %A_ScriptDir%\lib\window.ahk
+#Include, %A_ScriptDir%\lib\menu.ahk
+#Include, %A_ScriptDir%\lib\emoji.ahk
 
 OpenWindowInTray(selector, name, url, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, On
-    
+
     IDlist := []
     if (selector == "title") {
         WinGet, IDlist, list, %name%
@@ -272,7 +43,7 @@ OpenWindowInTray(selector, name, url, mode=3) {
     } else if (selector == "exe") {
         WinGet, IDlist, list, ahk_exe %name%
     }
-    
+
     found := False
     Loop, %IDlist% {
         ahkID := IDlist%A_INDEX%
@@ -280,7 +51,7 @@ OpenWindowInTray(selector, name, url, mode=3) {
             WinGetTitle, title
             if (title == "")
                 continue
-            
+
             ToggleWindowWithID(ahkID, True)
             found := True
         }
@@ -292,7 +63,7 @@ OpenWindowInTray(selector, name, url, mode=3) {
 OpenWindowByTitle(title, url, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
-    
+
     if WinExist(title) {
         WinGet, ahkID, ID, %title%
         ToggleWindowWithID(ahkID, False)
@@ -301,10 +72,43 @@ OpenWindowByTitle(title, url, mode=3) {
     }
 }
 
-GetEnvPath(envvar, path=""){
-    EnvGet, prepath, %envvar%
-    path = %prepath%%path%
-return path
+ToggleMemWindowWithTitle(menuName) {
+    ahkID := GetHidedWindowsIDWithTitle(menuName)
+    if ahkID
+        ToggleWindowWithID(ahkID, True)
+    else
+        Run https://github.com/yedhrab/YHotkeys
+}
+
+ToggleWindowWithID(ahkID, hide=False) {
+    global HidedWindows, DIR_NAME, VERSION
+
+    DetectHiddenWindows, Off
+    if !WinExist("ahk_id" . ahkID) {
+        if hide {
+            ShowHidedWindowWithID(ahkID)
+            ActivateWindowWithID(ahkID)
+            if DropActiveWindowFromMem() {
+                DropActiveWindowFromTrayMenu(HidedWindows)
+            }
+            CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+        } else {
+            ActivateWindowWithID(ahkID)
+        }
+    } else {
+        if WinActive("ahk_id" . ahkID) {
+            if hide {
+                KeepActiveWindowInMem()
+                FocusPreviusWindow(ahkID)
+                SendWindowToTrayByID(ahkID)
+                CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+            } else {
+                WinMinimize, A
+            }
+        } else {
+            ActivateWindowWithID(ahkID)
+        }
+    }
 }
 
 ; ####################################################################################
