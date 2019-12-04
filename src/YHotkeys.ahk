@@ -26,9 +26,9 @@ CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
 return
 
 #Include, %A_ScriptDir%\lib\common.ahk
+#Include, %A_ScriptDir%\lib\menu.ahk
 #Include, %A_ScriptDir%\lib\memory.ahk
 #Include, %A_ScriptDir%\lib\window.ahk
-#Include, %A_ScriptDir%\lib\menu.ahk
 #Include, %A_ScriptDir%\lib\emoji.ahk
 
 OpenWindowInTray(selector, name, url, mode=3) {
@@ -119,6 +119,7 @@ ToggleWindowWithID(ahkID, hide=False) {
 
 ; ---------------------------------- Göster / Gizle ----------------------------------
 #q::
+    Critical
     name := "- OneNote"
     path := "shell:appsFolder\Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim"
     mode := 2
@@ -126,6 +127,7 @@ ToggleWindowWithID(ahkID, hide=False) {
 return
 
 ; #t::
+;     Critical
 ;     name := "Tureng Dictionary"
 ;     path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
 ;     mode := 2
@@ -136,6 +138,7 @@ return
 
 #w::
     ; WARN: 4 tane var exe ile ele alınmalı WhatsApp.exe (bundan değil)
+    Critical
     name := "WhatsApp"
     path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
     mode := 2
@@ -143,6 +146,7 @@ return
 return
 
 #g::
+    Critical
     name := "GitHub Desktop"
     path := GetEnvPath("localappdata", "\GitHubDesktop\GitHubDesktop.exe")
     mode := 3
@@ -150,6 +154,7 @@ return
 return
 
 #x::
+    Critical
     name := "Google Calendar"
     path := GetEnvPath("appdata", "\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Google Calendar.lnk")
     mode := 2
@@ -157,6 +162,7 @@ return
 return
 
 #e::
+    Critical
     name := "CabinetWClass"
     path := "explorer.exe"
     OpenWindowInTray("class", name, path)
@@ -164,12 +170,14 @@ return
 
 ; Dizin kısayolları PgDn ile başlar
 PgDn & g::
+    Critical
     name := "GitHub"
     path := GetEnvPath("userprofile", "\Documents\GitHub")
     OpenWindowInTray("title", name, path)
 return
 
 PgDn & s::
+    Critical
     name := "ShareX"
     path := "shell:appsFolder\19568ShareX.ShareX_egrzcvs15399j!ShareX"
     mode := 3
@@ -177,6 +185,7 @@ PgDn & s::
 return
 
 PgDn & Shift::
+    Critical
     name := "Startup"
     path := "shell:startup"
     mode := 3
@@ -184,6 +193,7 @@ PgDn & Shift::
 return
 
 PgDn & i::
+    Critical
     name := "Icons"
     path := GetEnvPath("userprofile", "\Google Drive\Pictures\Icons")
     mode := 3
@@ -191,6 +201,7 @@ PgDn & i::
 return
 
 PgDn & d::
+    Critical
     name := "Downloads"
     path := "shell:downloads"
     mode := 3
@@ -198,6 +209,7 @@ PgDn & d::
 return
 
 PgDn & u::
+    Critical
     name := "Yunus Emre Ak"
     path := GetEnvPath("userprofile")
     mode := 3
