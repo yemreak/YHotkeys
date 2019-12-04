@@ -225,7 +225,7 @@ SendWindowToTrayByID(ahkID) {
     WinHide ahk_id %ahkID%
 }
 
-; WARN: Bug sebebi olabilir
+; WARN: Bug sebebi olabilir (bundan değil bug)
 ; WARN: Eğer uyarı mesajı verilirse, odaklanma bozuluyor
 FocusPreviusWindow(ahkID) {
     SendEvent, !{Esc}
@@ -331,11 +331,11 @@ return
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
 #w::
-    ; BUG: 4 tane var exe ile ele alınmalı WhatsApp.exe
-    name := "WhatsApp.exe"
+    ; WARN: 4 tane var exe ile ele alınmalı WhatsApp.exe (bundan değil)
+    name := "WhatsApp"
     path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
     mode := 2
-    OpenWindowInTray("exe", name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 #g::

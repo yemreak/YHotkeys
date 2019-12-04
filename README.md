@@ -86,6 +86,10 @@
 | `+`    | Shift                            |
 | `&`    | Birden faza kısayolu birleştirme |
 
+## 🐞 Bilinen Sorunlar
+
+- 💨 Aşırı hızlı kısayol kullanımda tray menüde fazladan menü olmakta
+
 ### ✔️ Yapılacaklar
 
 - [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
