@@ -9,6 +9,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #MaxThreadsPerHotkey, 1 ; no re-entrant hotkey handling
 
+VERSION = 1.2.0
+
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
@@ -16,7 +18,7 @@ HidedWindows := []
 DIR_NAME = %A_AppData%\YHotkeys
 
 InstallIcons()
-UpdateMenu()
+CreateOrUpdateTrayMenu()
 return
 
 IconClicked:
@@ -93,8 +95,12 @@ ToggleMemWindowWithTitle(menuName) {
 }
 
 RunUrl(url) {
+    ; WARN: Bazı uygulamarın geç açılması soruna sebep oluyor
+    ; BUG: Uygulamalar bazen 2 kere açılıyor
     try {
-        Run, %url%
+        SetTitleMatchMode, Slow
+        
+        RunWait, %url%
     }
 }
 
@@ -163,15 +169,21 @@ AddTrayMenuIcon(title, iconPath, default=True) {
     }
 }
 
-UpdateMenu(){
+CreateOrUpdateTrayMenu(){
     #Persistent
+    Menu, Tray, UseErrorLevel , On
     Menu, Tray, NoStandard
     Menu, Tray, Add, YHotkeys, IconClicked
+    
+    global VERSION
+    Menu, Tray, Tip, YHotkeys v%VERSION% ~ YEmreAk
+    Menu, Tray, Click, 1
+    
     
     global DIR_NAME
     iconPath := DIR_NAME . "\seedling.ico"
     if FileExist(iconPath) {
-        Menu, Tray, Icon, %iconPath%,, 0
+        Menu, Tray, Icon, %iconPath%,, 20
         iconPath := DIR_NAME . "\seedling.ico"
         AddTrayMenuIcon("YHotkeys", iconPath)
     }
@@ -202,7 +214,7 @@ UpdateMenu(){
         mainTitle := "YHotkeys"
     }
     
-    Menu, Tray, Default, %mainTitle%
+    Menu, Tray, Default, YHotkeys
     Menu, Tray, Add, Kapat, CloseApp
     
     iconPath := DIR_NAME . "\close.ico"
@@ -215,8 +227,9 @@ SendWindowToTrayByID(ahkID) {
 
 ; WARN: Bug sebebi olabilir
 ; WARN: Eğer uyarı mesajı verilirse, odaklanma bozuluyor
-FocusPreviusWindow() {
+FocusPreviusWindow(ahkID) {
     SendEvent, !{Esc}
+    WinWaitNotActive, ahk_id %ahkID%
 }
 
 ToggleWindowWithID(ahkID, hide=False) {
@@ -227,45 +240,40 @@ ToggleWindowWithID(ahkID, hide=False) {
             ActivateWindowWithID(ahkID)
             if DropActiveWindowFromMem()
                 DropActiveWindowFromTrayMenu()
-            UpdateMenu()
+            CreateOrUpdateTrayMenu()
         } else {
-            ActivateWindowWithID(ahkID, False)
+            ActivateWindowWithID(ahkID)
         }
     } else {
         if WinActive("ahk_id" . ahkID) {
             if hide {
                 KeepActiveWindowInMem()
-                FocusPreviusWindow()
+                FocusPreviusWindow(ahkID)
                 SendWindowToTrayByID(ahkID)
-                UpdateMenu()
+                CreateOrUpdateTrayMenu()
             } else {
                 WinMinimize, A
             }
         } else {
-            ActivateWindowWithID(ahkID, False)
+            ActivateWindowWithID(ahkID)
         }
     }
 }
 
-; Pencereleri gizlenebilir modda açma
-OpenWindowByTitleInTray(windowName, url, mode=3) {
+OpenWindowInTray(selector, name, url, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, On
     
-    if WinExist(windowName) {
-        WinGet, ahkID, ID, %windowName%
-        ToggleWindowWithID(ahkID, True)
-    } else {
-        RunUrl(url)
+    IDlist := []
+    if (selector == "title") {
+        WinGet, IDlist, list, %name%
+    } else if (selector == "class") {
+        WinGet, IDlist, list, ahk_class %name%
+    } else if (selector == "exe") {
+        WinGet, IDlist, list, ahk_exe %name%
     }
     
-}
-
-OpenWindowByClassInTray(className, url) {
-    DetectHiddenWindows, On
-    
     found := False
-    WinGet, IDlist, list, ahk_class %className%
     Loop, %IDlist% {
         ahkID := IDlist%A_INDEX%
         if WinExist("ahk_id" . ahkID) {
@@ -323,79 +331,73 @@ return
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
 #w::
-    name := "WhatsApp"
+    ; BUG: 4 tane var exe ile ele alınmalı WhatsApp.exe
+    name := "WhatsApp.exe"
     path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
     mode := 2
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("exe", name, path, mode)
 return
 
 #g::
     name := "GitHub Desktop"
     path := GetEnvPath("localappdata", "\GitHubDesktop\GitHubDesktop.exe")
     mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
-return
-
-#c::
-    name := "Clockify"
-    path := GetEnvPath("localappdata", "\Programs\Clockify\Clockify.exe")
-    mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 #x::
     name := "Google Calendar"
     path := GetEnvPath("appdata", "\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Google Calendar.lnk")
     mode := 2
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 #e::
     name := "CabinetWClass"
     path := "explorer.exe"
-    OpenWindowByClassInTray(name, path)
+    OpenWindowInTray("class", name, path)
 return
 
 ; Dizin kısayolları PgDn ile başlar
 PgDn & g::
     name := "GitHub"
     path := GetEnvPath("userprofile", "\Documents\GitHub")
-    OpenWindowByTitleInTray(name, path)
+    OpenWindowInTray("title", name, path)
 return
 
 PgDn & s::
     name := "ShareX"
     path := "shell:appsFolder\19568ShareX.ShareX_egrzcvs15399j!ShareX"
     mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 PgDn & Shift::
     name := "Startup"
     path := "shell:startup"
     mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 PgDn & i::
     name := "Icons"
     path := GetEnvPath("userprofile", "\Google Drive\Pictures\Icons")
     mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 PgDn & d::
     name := "Downloads"
     path := "shell:downloads"
     mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 PgDn & u::
     name := "Yunus Emre Ak"
     path := GetEnvPath("userprofile")
     mode := 3
-    OpenWindowByTitleInTray(name, path, mode)
+    OpenWindowInTray("title", name, path, mode)
 return
 
 ; --------------------------------- Buton Kısayolları ---------------------------------
