@@ -1,5 +1,7 @@
 # 🌱 YHotkeys
 
+⭐ Tek bir fide bile, windowsunu tazelemeye yetebilir.
+
 ## 🔰 Ne İşe Yarar
 
 - 👮‍♂️ Windows'un kısıtlı kısayollarına alternatif olarak yapılmıştır
@@ -76,6 +78,7 @@
 ## 👨‍💻 Geliştirici Notları
 
 - 👨‍🔧 Kod içerisinde en altta bulunan kısayolları değiştirebilirsin
+- 🤝 Emojiler hakkında desteğe ihtiyacım var
 
 ### 🍍 Kısayol Tanımlamaları
 
@@ -87,14 +90,18 @@
 | `+`    | Shift                            |
 | `&`    | Birden faza kısayolu birleştirme |
 
-## 🐞 Bilinen Sorunlar
+### 🙄 Bilinen Sorunlar
 
-- 💨 Aşırı hızlı kısayol kullanımda tray menüde fazladan menü olmakta
+- 🤔 Bazı durumlarda **GitHub Desktop** başlatılamıyor
+- 🐞 Markdown dosyalarında, emojiler otomatik yerleştirilemiyor
 
 ### ✔️ Yapılacaklar
 
 - [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
 - [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
+  - [ ] 👷‍♂️ Penceresi aktifken, 🌱 ikonuna tıklayarak, kısayolunu oluşturabilecek
+  - [ ] 💬 Emin misiniz diyerek, pencere başlığı gösterilecek
+  - [ ] 💞 Script tarafından `title`, `iconPath` ve `exePath` otomatik alınacak
 
 ### 🔗 Faydalı Bağlantılar
 

@@ -6,6 +6,8 @@
 - ⭐ Örneğin `:yıldız:` yazarsanız `⭐` karakterine dönüşecektir
 - 🚀 Her yerde çalışır
 
+> ✨ Burada eksik olan emojiler vardır, en güncel halini [emoji.ahk](src/lib/emoji.ahk) dosyası içerisinde bulabilirsin
+
 ## 😋 Duygular
 
 | 💞 Kısayol | 🚀 YEmoji |
@@ -15,6 +17,15 @@
 | ://        | 🤕        |
 | rahatlama  | 😌        |
 | uyuklama   | 😴        |
+
+## İşaretler
+
+| 💞 Kısayol | 🚀 YEmoji |
+| ---------- | --------- |
+| :onay:     | ✔️        |
+| :onayb:    | ✅         |
+| :x:        | ❌         |
+| :xb:       | ❎         |
 
 ## 🥯 Simgeler
 

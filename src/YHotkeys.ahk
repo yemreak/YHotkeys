@@ -14,14 +14,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 
+OnExit("ExitFunc")
+
 DIR_NAME = %A_AppData%\YHotkeys
-VERSION = 1.2.0
+VERSION = 2.0.0
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
 InstallIcons(DIR_NAME)
-
 CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
 return
 
@@ -30,6 +31,31 @@ return
 #Include, %A_ScriptDir%\lib\memory.ahk
 #Include, %A_ScriptDir%\lib\window.ahk
 #Include, %A_ScriptDir%\lib\emoji.ahk
+
+IconClicked:
+    ToggleMemWindowWithTitle(A_ThisMenuItem)
+Return
+
+ClearAll:
+    ClearAllHidedWindows()
+Return
+
+ShowAll:
+    ShowAllHiddenWindows()
+return
+
+
+CloseApp:
+    ExitApp
+Return
+
+ExitFunc(exitReason, exitCode) {
+    if exitReason not in Logoff,Shutdown
+    {
+        ShowAllHiddenWindows()
+        return 0
+    }
+}
 
 OpenWindowInTray(selector, name, url, mode=3) {
     SetTitleMatchMode, %mode%
@@ -72,6 +98,31 @@ OpenWindowByTitle(title, url, mode=3) {
     }
 }
 
+ShowAllHiddenWindows() {
+    ahkIDs := GetHidedWindowsIDs()
+    For index, ahkID in ahkIDs {
+        ToggleWindowWithID(ahkID, True)
+    }
+
+    return ahkIDs
+}
+
+ClearAllHidedWindows() {
+    global HidedWindows, DIR_NAME, VERSION
+
+    DetectHiddenWindows, On
+
+    ahkIDs := GetHidedWindowsIDs()
+    For index, ahkID in ahkIDs {
+        WinKill, ahk_id %ahkID%
+        WinWaitClose, ahk_id %ahkID%
+    }
+
+    HidedWindows := []
+    CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+
+}
+
 ToggleMemWindowWithTitle(menuName) {
     ahkID := GetHidedWindowsIDWithTitle(menuName)
     if ahkID
@@ -86,19 +137,17 @@ ToggleWindowWithID(ahkID, hide=False) {
     DetectHiddenWindows, Off
     if !WinExist("ahk_id" . ahkID) {
         if hide {
-            ShowHidedWindowWithID(ahkID)
-            ActivateWindowWithID(ahkID)
-            if DropActiveWindowFromMem() {
-                DropActiveWindowFromTrayMenu(HidedWindows)
+            if DropFromMem(ahkID, HidedWindows){
+                DropWindowFromTrayMenu(ahkID, HidedWindows)
+                CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
             }
-            CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
-        } else {
-            ActivateWindowWithID(ahkID)
+            ShowHidedWindowWithID(ahkID)
         }
+        ActivateWindowWithID(ahkID)
     } else {
         if WinActive("ahk_id" . ahkID) {
             if hide {
-                KeepActiveWindowInMem()
+                KeepWindowInMem(ahkID)
                 FocusPreviusWindow(ahkID)
                 SendWindowToTrayByID(ahkID)
                 CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
@@ -119,7 +168,6 @@ ToggleWindowWithID(ahkID, hide=False) {
 
 ; ---------------------------------- Göster / Gizle ----------------------------------
 #q::
-    Critical
     name := "- OneNote"
     path := "shell:appsFolder\Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim"
     mode := 2
@@ -127,8 +175,7 @@ ToggleWindowWithID(ahkID, hide=False) {
 return
 
 ; #t::
-;     Critical
-;     name := "Tureng Dictionary"
+;     ;     name := "Tureng Dictionary"
 ;     path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
 ;     mode := 2
 ;     OpenWindowByTitle(name, path, mode)
@@ -138,7 +185,6 @@ return
 
 #w::
     ; WARN: 4 tane var exe ile ele alınmalı WhatsApp.exe (bundan değil)
-    Critical
     name := "WhatsApp"
     path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
     mode := 2
@@ -146,7 +192,6 @@ return
 return
 
 #g::
-    Critical
     name := "GitHub Desktop"
     path := GetEnvPath("localappdata", "\GitHubDesktop\GitHubDesktop.exe")
     mode := 3
@@ -154,7 +199,6 @@ return
 return
 
 #x::
-    Critical
     name := "Google Calendar"
     path := GetEnvPath("appdata", "\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Google Calendar.lnk")
     mode := 2
@@ -162,7 +206,6 @@ return
 return
 
 #e::
-    Critical
     name := "CabinetWClass"
     path := "explorer.exe"
     OpenWindowInTray("class", name, path)
@@ -170,14 +213,12 @@ return
 
 ; Dizin kısayolları PgDn ile başlar
 PgDn & g::
-    Critical
     name := "GitHub"
     path := GetEnvPath("userprofile", "\Documents\GitHub")
     OpenWindowInTray("title", name, path)
 return
 
 PgDn & s::
-    Critical
     name := "ShareX"
     path := "shell:appsFolder\19568ShareX.ShareX_egrzcvs15399j!ShareX"
     mode := 3
@@ -185,7 +226,6 @@ PgDn & s::
 return
 
 PgDn & Shift::
-    Critical
     name := "Startup"
     path := "shell:startup"
     mode := 3
@@ -193,7 +233,6 @@ PgDn & Shift::
 return
 
 PgDn & i::
-    Critical
     name := "Icons"
     path := GetEnvPath("userprofile", "\Google Drive\Pictures\Icons")
     mode := 3
@@ -201,7 +240,6 @@ PgDn & i::
 return
 
 PgDn & d::
-    Critical
     name := "Downloads"
     path := "shell:downloads"
     mode := 3
@@ -209,7 +247,6 @@ PgDn & d::
 return
 
 PgDn & u::
-    Critical
     name := "Yunus Emre Ak"
     path := GetEnvPath("userprofile")
     mode := 3

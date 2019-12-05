@@ -1,25 +1,15 @@
 ; Hafıza işlemleri
-DropActiveWindowFromMem(){
-    WinGet, ahkID, ID, A
-
-return DropFromMem(ahkID)
-}
-
-DropFromMem(ahkID){
+DropFromMem(ahkID, HidedWindows){
     index := GetHidedWindowsIndexWithID(ahkID)
     if index {
-        global HidedWindows
         HidedWindows.RemoveAt(index)
     }
 return index
 }
 
-; Gizlenmeden önce kullanılmazsa id alamaz
-KeepActiveWindowInMem() {
-    WinGetActiveTitle, title
-    WinGet, ahkID, ID, A
-    WinGet, iconPath, ProcessPath, A
-
+KeepWindowInMem(ahkID) {
+    WinGetTitle, title, ahk_id %ahkID%
+    WinGet, iconPath, ProcessPath, ahk_id %ahkID%
     KeepInMem(ahkID, title, iconPath)
 }
 
@@ -32,14 +22,6 @@ KeepInMem(ahkID, title, iconPath) {
 
     global HidedWindows
     HidedWindows.Push(item)
-}
-
-ClearAllHidedWindows() {
-    ahkIDs := GetHidedWindowsIDs()
-    For index, ahkID in ahkIDs {
-        ToggleWindowWithID(ahkID, True)
-        WinKill, ahk_id %ahkID%
-    }
 }
 
 GetHidedWindowsIDs(){
