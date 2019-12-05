@@ -17,7 +17,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 OnExit("ExitFunc")
 
 DIR_NAME = %A_AppData%\YHotkeys
-VERSION = 2.0.0
+VERSION = 2.1.0
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []

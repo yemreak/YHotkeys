@@ -45,10 +45,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::bug::🐞
 :::böcek::🐞
 
+; Yakın zamanda kullandıklarım
 :::inşaat::🚧
 :::yapı::🏗️
-
 :::hız::💨
+:::merak::👀
+:::gözm::👀
+:::mouse::🖱️
 
 ; YEmoji
 :::döngü::💫

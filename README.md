@@ -10,6 +10,7 @@
 
 ## 👣 Kullanım Adımları
 
+- 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
 - ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirin
 - 🕐 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
 - 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
