@@ -45,6 +45,7 @@
 | ------------------------------------------------ | ------------------------------------------- |
 | <kbd>❖ Win</kbd> <kbd>Space</kbd>                | 📌 Pencere sabitleme / sabitlemeyi kaldırma |
 | <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>G</kbd> | 🔍 Google'da arama                          |
+| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>T</kbd> | 💱 Çeviri                                   |
 
 ### 🔔 Tray Icon Kısayolları
 
