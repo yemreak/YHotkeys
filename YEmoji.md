@@ -2,9 +2,10 @@
 
 ## 🔰 Nasıl Kullanılır
 
+- 🚀 Her yerde çalışır (evet her yerde 🤯)
 - 👣 Herhangi bir yere yazı yazarken alttaki kısayolları `:` karakterleri arasına yazın
 - ⭐ Örneğin `:yıldız:` yazarsanız `⭐` karakterine dönüşecektir
-- 🚀 Her yerde çalışır
+- 😏 Yazım hatalarından kaçınmak için, yeniden yazabilme şansınız vardır
 
 > ✨ Burada eksik olan emojiler vardır, en güncel halini [emoji.ahk](src/lib/emoji.ahk) dosyası içerisinde bulabilirsin
 
@@ -18,7 +19,7 @@
 | rahatlama  | 😌        |
 | uyuklama   | 😴        |
 
-## İşaretler
+## 🏹 İşaretler
 
 | 💞 Kısayol | 🚀 YEmoji |
 | ---------- | --------- |

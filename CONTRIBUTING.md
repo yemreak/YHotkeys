@@ -7,6 +7,14 @@
 - <kbd>✲ Ctrl</kbd> <kbd>P</kbd> açılan ekranda `Tasks: Run Task` komutu ile istediğin koşulla çalıştırabilirsin
 - <kbd>✲ Ctrl</kbd> <kbd>⇧ Shift</kbd> <kbd>B</kbd> ile direkt olarak `Run` edebilirsin
 
+## 🗂️ Dizinlerin Anlamları
+
+| Sembol    | Açıklama           |
+| --------- | ------------------ |
+| `util`    | 🧰 Faydalı araçlar |
+| `core`    | ⚙️ Çekirdek kodlar |
+| `example` | ⭐ Örnek çalışmalar |
+
 ## 🍍 Kısayol Tanımlamaları
 
 | Sembol | Açıklama                         |
@@ -20,11 +28,12 @@
 ## 🙄 Bilinen Sorunlar
 
 - 🤔 Bazı durumlarda **GitHub Desktop** başlatılamıyor
-- 🐞 Markdown dosyalarında, emojiler otomatik yerleştirilemiyor
+- 🐛 Emojiler **Markdown All in One** eklentisi ile düzgün çalışmamakta
 
 ## ✔️ Yapılacaklar
 
 - [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
+- [ ] 📃 Kısayollar kod içinde değil, `data/hotkeys.json` dosyasından çekilecek
 - [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
   - [ ] 👷‍♂️ Penceresi aktifken, 🌱 ikonuna tıklayarak, kısayolunu oluşturabilecek
   - [ ] 💬 Emin misiniz diyerek, pencere başlığı gösterilecek

@@ -14,14 +14,29 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Hotstring EndChars : ; Bitirme karakteri
 #Hotstring r Z C0 O ; Algılama ayarları
 
+; Yakın zamanda kullandıklarım
+:::inşaat::🚧
+:::yapı::🏗️
+:::hız::💨
+:::merak::👀
+:::gözm::👀
+:::geridönüşüm::♻️
+:::denge::⚖️
+:::parti::🎉
+:::kurukafa::☠️
+:::takvim::📅
+:::takvimn::📆
+:::takvims::🗓️
+:::polis::👮‍♂️
+
 ; Duygular
 ::::)::😊
 ::::/::😕
 :::://::🤕
 ::::'D::😅
-:::D::😄
+::::D::😁
 ::::O::😯
-::::(::☹️ ; Sorunsuz
+::::(::☹️
 :::zzz::😴
 :::sarılma::🤗
 :::gözy::🙄
@@ -29,6 +44,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::uyuklama::😴
 ::::p::😋
 :::kutlama::🥳
+:::imalı::😏
+:::keyifsiz::😒
 
 :::güneş::☀️
 :::güneşg::🌞
@@ -46,6 +63,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::red::❌
 :::redb::❎
 :::başlat::▶️
+:::raptiye::📌
 
 ; Geliştirici
 :::bug::🐞
@@ -53,19 +71,19 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::dosya::📂
 :::dizin::🗂️
 
-:::kılıç::⚔️
+:::telefon::📞
+:::ahtapot::🐙
+:::not::📝
 
-; Yakın zamanda kullandıklarım
-:::inşaat::🚧
-:::yapı::🏗️
-:::hız::💨
-:::merak::👀
-:::gözm::👀
+:::kılıç::⚔️
+:::koş::🏃‍♂️
+:::patlama::💥
+:::yay::🏹
+
+; Bilgisayar bileşenleri
+
+:::klavye::⌨️
 :::mouse::🖱️
-:::geridönüşüm::♻️
-:::denge::⚖️
-:::parti::🎉
-:::kurukafa::☠️
 
 ; YEmoji
 :::döngü::💫
@@ -78,7 +96,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::karo::💠
 :::elmas::💎
 
-:::patlama::🤯
+:::beyinp::🤯
 :::bağlantı::🔗
 :::gece::🌃
 :::manzara::🌆
@@ -107,8 +125,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::dağ::🌄
 :::mızrak::🔱
 :::grafiky::📈
+:::grafik+::📈
 :::grafika::📉
+:::grafik-::📉
 :::grafiks::📊
+:::grafik=::📊
 :::sayfa::📃
 :::kıvrık::➰
 :::çubuk::🍢
@@ -118,6 +139,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::girilmez::🚫
 :::resim::🖼️
 :::arama::🔍
+:::arama2::🔎
 :::abc::🔤
 :::süpürge::🧹
 :::kurdele::🎀

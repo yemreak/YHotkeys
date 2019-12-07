@@ -7,13 +7,15 @@
 - 👮‍♂️ Windows'un kısıtlı kısayollarına alternatif olarak yapılmıştır
 - ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
 - 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
+- 📌 Çok sık baktığınız pencereleri sabitleyebilirsiniz (<kbd>❖ Win</kbd> <kbd>Space</kbd>)
+- [🚀 YEmoji](YEmoji.md) emojilerini kısayollarla kullanamana olanak sağlar
 
 ## 👣 Kullanım Adımları
 
-- 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
 - ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirin
-- 🕐 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
-- 🚩 Direkt olarak **Exe** dosyasını çalıştırabilirsiniz
+- 😁 Sadece **Exe** uzantılı dosyayı çalıştırman yeterli
+- 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
+- 👀 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
 - [🚀 YEmoji](YEmoji.md) alanı altından emojilerin kısayollarına bakabilirsin
 
 ## 🚩 Uygulamayı System ile Başlatma
@@ -35,27 +37,35 @@
 
 ## 💞 Kısayollar
 
+> 🙄 Bu alan yakın zamanda kişisel kısayollarımdan ayrıştırılacaktır.
+
+### 📈 Verimlilik
+
+| ⌨️ Buton                                         | 📑 Açıklama                                 |
+| ------------------------------------------------ | ------------------------------------------- |
+| <kbd>❖ Win</kbd> <kbd>Space</kbd>                | 📌 Pencere sabitleme / sabitlemeyi kaldırma |
+| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>G</kbd> | 🔍 Google'da arama                          |
+
 ### 🔔 Tray Icon Kısayolları
 
-| 🎹 Buton                      | 📑 Açıklama      |
-| ----------------------------- | ---------------- |
-| <kbd>❖ Win</kbd> <kbd>E</kbd> | File Explorer    |
-| <kbd>❖ Win</kbd> <kbd>W</kbd> | Whatsapp Desktop |
-| <kbd>❖ Win</kbd> <kbd>G</kbd> | GitHub Desktop   |
-| <kbd>❖ Win</kbd> <kbd>C</kbd> | Google Calendar  |
+| ⌨️ Buton                      | 📑 Açıklama         |
+| ----------------------------- | ------------------- |
+| <kbd>❖ Win</kbd> <kbd>E</kbd> | 📁 File Explorer    |
+| <kbd>❖ Win</kbd> <kbd>W</kbd> | 📞 Whatsapp Desktop |
+| <kbd>❖ Win</kbd> <kbd>G</kbd> | 🐙 GitHub Desktop   |
+| <kbd>❖ Win</kbd> <kbd>C</kbd> | 📅 Google Calendar  |
 
 ### 👀 Küçült / Göster Kısayolları
 
-| 🎹 Buton                      | 📑 Açıklama    |
-| ----------------------------- | -------------- |
-| <kbd>❖ Win</kbd> <kbd>Q</kbd> | One Note       |
-| <kbd>❖ Win</kbd> <kbd>T</kbd> | Tureng         |
-| <kbd>❖ Win</kbd> <kbd>G</kbd> | GitHub Desktop |
+| ⌨️ Buton                      | 📑 Açıklama |
+| ----------------------------- | ----------- |
+| <kbd>❖ Win</kbd> <kbd>Q</kbd> | 📝 One Note |
+| <kbd>❖ Win</kbd> <kbd>T</kbd> | Tureng      |
 
 
 ### 📂 Dizin Kısayolları
 
-| 🎹 Buton                           | 📑 Açıklama      |
+| ⌨️ Buton                           | 📑 Açıklama      |
 | ---------------------------------- | ---------------- |
 | <kbd>PgDn</kbd> <kbd>⇧ Shift</kbd> | Startup          |
 | <kbd>PgDn</kbd> <kbd>d</kbd>       | Downloads        |
@@ -63,7 +73,7 @@
 
 ### 🌚 Kişisel Dizin Kısayollarım
 
-| 🎹 Buton                     | 📑 Açıklama |
+| ⌨️ Buton                     | 📑 Açıklama |
 | ---------------------------- | ----------- |
 | <kbd>PgDn</kbd> <kbd>g</kbd> | GitHub      |
 | <kbd>PgDn</kbd> <kbd>s</kbd> | Sharex      |
@@ -71,7 +81,7 @@
 
 ### 👨‍🔧 Buton Düzeltmeleri
 
-| 🎹 Buton                          | 📑 Açıklama |
+| ⌨️ Buton                          | 📑 Açıklama |
 | --------------------------------- | ----------- |
 | <kbd>✲ Ctrl</kbd> <kbd>PgDn</kbd> | Page Down   |
 | <kbd>✲ Ctrl</kbd> <kbd>PgUp</kbd> | Page Up     |

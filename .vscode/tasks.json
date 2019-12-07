@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "▶️ Run AHK",
+            "label": "▶️ Run AHK Project",
             "type": "shell",
             "windows": {
                 "command": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
@@ -16,6 +16,28 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "isBackground": true,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "📃 Run AHK file",
+            "type": "shell",
+            "windows": {
+                "command": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
+            },
+            "args": [
+                "${file}"
+            ],
+            "group": "build",
+            "isBackground": true,
             "presentation": {
                 "echo": false,
                 "reveal": "silent",
@@ -39,6 +61,7 @@
                 "${workspaceFolder}/src/res/seedling.ico"
             ],
             "group": "build",
+            "isBackground": true,
             "presentation": {
                 "echo": false,
                 "reveal": "silent",
@@ -50,7 +73,7 @@
             "problemMatcher": []
         },
         {
-            "label": "🧹 Clear All AHKs",
+            "label": "💥 Clear All AHKs",
             "type": "shell",
             "command": "taskkill",
             "args": [
@@ -58,6 +81,7 @@
                 "autohotkey.exe"
             ],
             "group": "build",
+            "isBackground": true,
             "presentation": {
                 "echo": false,
                 "reveal": "silent",
@@ -69,7 +93,7 @@
             "problemMatcher": []
         },
         {
-            "label": "☠️ Kill AHK",
+            "label": "🧹 Clear AHK Project",
             "type": "shell",
             "command": "wmic",
             "args": [
@@ -79,6 +103,29 @@
                 "delete"
             ],
             "group": "build",
+            "isBackground": true,
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "🧼 Clear AHK File",
+            "type": "shell",
+            "command": "wmic",
+            "args": [
+                "process",
+                "where",
+                "\"commandline like '%%${fileBasename}'\"",
+                "delete"
+            ],
+            "group": "build",
+            "isBackground": true,
             "presentation": {
                 "echo": false,
                 "reveal": "silent",

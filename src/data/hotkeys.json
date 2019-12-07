@@ -1,0 +1,21 @@
+{
+    "pinWindows": "#Space",
+    "searchGoogle": "#+G",
+    "trasnlate": "#+T",
+    "custom": [
+        {
+            "hotkey": "#q",
+            "name": "",
+            "path": "",
+            "mode": 3,
+            "func": ""
+        },
+        {
+            "hotkey": "#q",
+            "name": "",
+            "path": "",
+            "mode": 3,
+            "func": ""
+        }
+    ]
+}

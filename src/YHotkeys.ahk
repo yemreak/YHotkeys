@@ -16,22 +16,22 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 OnExit("ExitFunc")
 
-NAME := "YHotkeys"
-DIR_NAME := A_AppData . "\" . NAME
-VERSION = 2.1.1
+APP_NAME := "YHotkeys"
+DIR_NAME := A_AppData . "\" . APP_NAME
+VERSION = 2.2.0
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
 InstallIcons(DIR_NAME)
-CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
+CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
 return
 
-#Include, %A_ScriptDir%\lib\common.ahk
-#Include, %A_ScriptDir%\lib\menu.ahk
-#Include, %A_ScriptDir%\lib\memory.ahk
-#Include, %A_ScriptDir%\lib\window.ahk
-#Include, %A_ScriptDir%\lib\emoji.ahk
+#Include, %A_ScriptDir%\lib\core\common.ahk
+#Include, %A_ScriptDir%\lib\core\menu.ahk
+#Include, %A_ScriptDir%\lib\core\memory.ahk
+#Include, %A_ScriptDir%\lib\core\window.ahk
+#Include, %A_ScriptDir%\lib\util\emoji.ahk
 
 IconClicked:
     ToggleMemWindowWithTitle(A_ThisMenuItem)
@@ -109,7 +109,7 @@ ShowAllHiddenWindows() {
 }
 
 ClearAllHidedWindows() {
-    global HidedWindows, NAME, DIR_NAME, VERSION
+    global HidedWindows, APP_NAME, DIR_NAME, VERSION
 
     DetectHiddenWindows, On
 
@@ -120,7 +120,7 @@ ClearAllHidedWindows() {
     }
 
     HidedWindows := []
-    CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
+    CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
 
 }
 
@@ -133,14 +133,14 @@ ToggleMemWindowWithTitle(menuName) {
 }
 
 ToggleWindowWithID(ahkID, hide=False) {
-    global HidedWindows, NAME, DIR_NAME, VERSION
+    global HidedWindows, APP_NAME, DIR_NAME, VERSION
 
     DetectHiddenWindows, Off
     if !WinExist("ahk_id" . ahkID) {
         if hide {
             if DropFromMem(ahkID, HidedWindows){
                 DropWindowFromTrayMenu(ahkID, HidedWindows)
-                CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
+                CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
             }
             ShowHidedWindowWithID(ahkID)
         }
@@ -151,7 +151,7 @@ ToggleWindowWithID(ahkID, hide=False) {
                 KeepWindowInMem(ahkID)
                 FocusPreviusWindow(ahkID)
                 SendWindowToTrayByID(ahkID)
-                CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
+                CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
             } else {
                 WinMinimize, A
             }
@@ -167,6 +167,19 @@ ToggleWindowWithID(ahkID, hide=False) {
 ; ##                                                                                ##
 ; ####################################################################################
 
+; ---------------------------------- Özellik Kısayolları ----------------------------------
+#Space::Winset, AlwaysOnTop, , A
+#+G::
+    Send ^c
+    Sleep, 50
+    Run "http://www.google.com/search?q=%clipboard%"
+return
+#+T::
+    Send ^c
+    Sleep, 50
+    Run "https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=%clipboard%"
+return
+
 ; ---------------------------------- Göster / Gizle ----------------------------------
 #q::
     name := "- OneNote"
@@ -174,6 +187,7 @@ ToggleWindowWithID(ahkID, hide=False) {
     mode := 2
     OpenWindowByTitle(name, path, mode)
 return
+
 
 ; #t::
 ;     ;     name := "Tureng Dictionary"
@@ -185,7 +199,6 @@ return
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
 #w::
-    ; WARN: 4 tane var exe ile ele alınmalı WhatsApp.exe (bundan değil)
     name := "WhatsApp"
     path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
     mode := 2
