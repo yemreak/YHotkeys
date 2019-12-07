@@ -6,24 +6,27 @@ class MenuObject {
     iconPath := ""
 }
 
-CreateOrUpdateTrayMenu(dirname, windows, version){
-    Menu, Tray, DeleteAll
-
+CreateMenuHeader(name, iconPath, defaultIconPath, version) {
     Menu, Tray, UseErrorLevel , On
     Menu, Tray, NoStandard
     Menu, Tray, Click, 1
 
-    Menu, Tray, Add, YHotkeys, IconClicked
-    Menu, Tray, Tip, YHotkeys v%version% ~ YEmreAk
+    Menu, Tray, Add, %name%, IconClicked
+    Menu, Tray, Tip, %name% v%version% ~ YEmreAk
+
+    if FileExist(iconPath) {
+        Menu, Tray, Icon, %iconPath%,, 20
+        AddTrayMenuIcon(name, iconPath, defaultIconPath)
+    }
+}
+
+CreateOrUpdateTrayMenu(name, dirname, windows, version){
+    Menu, Tray, DeleteAll
 
     iconPath := dirname . "\seedling.ico"
     defaultIconPath := dirname . "\default.ico"
 
-    if FileExist(iconPath) {
-        Menu, Tray, Icon, %iconPath%,, 20
-        iconPath := dirname . "\seedling.ico"
-        AddTrayMenuIcon("YHotkeys", iconPath, defaultIconPath)
-    }
+    CreateMenuHeader(name, iconPath, defaultIconPath, version)
 
     if (windows.Length() > 0) {
         iconPath := windows[windows.Length()].iconPath

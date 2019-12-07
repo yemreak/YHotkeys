@@ -16,14 +16,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 OnExit("ExitFunc")
 
-DIR_NAME = %A_AppData%\YHotkeys
+NAME := "YHotkeys"
+DIR_NAME := A_AppData . "\" . NAME
 VERSION = 2.1.1
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
 
 InstallIcons(DIR_NAME)
-CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
 return
 
 #Include, %A_ScriptDir%\lib\common.ahk
@@ -108,7 +109,7 @@ ShowAllHiddenWindows() {
 }
 
 ClearAllHidedWindows() {
-    global HidedWindows, DIR_NAME, VERSION
+    global HidedWindows, NAME, DIR_NAME, VERSION
 
     DetectHiddenWindows, On
 
@@ -119,7 +120,7 @@ ClearAllHidedWindows() {
     }
 
     HidedWindows := []
-    CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+    CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
 
 }
 
@@ -132,14 +133,14 @@ ToggleMemWindowWithTitle(menuName) {
 }
 
 ToggleWindowWithID(ahkID, hide=False) {
-    global HidedWindows, DIR_NAME, VERSION
+    global HidedWindows, NAME, DIR_NAME, VERSION
 
     DetectHiddenWindows, Off
     if !WinExist("ahk_id" . ahkID) {
         if hide {
             if DropFromMem(ahkID, HidedWindows){
                 DropWindowFromTrayMenu(ahkID, HidedWindows)
-                CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+                CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
             }
             ShowHidedWindowWithID(ahkID)
         }
@@ -150,7 +151,7 @@ ToggleWindowWithID(ahkID, hide=False) {
                 KeepWindowInMem(ahkID)
                 FocusPreviusWindow(ahkID)
                 SendWindowToTrayByID(ahkID)
-                CreateOrUpdateTrayMenu(DIR_NAME, HidedWindows, VERSION)
+                CreateOrUpdateTrayMenu(NAME, DIR_NAME, HidedWindows, VERSION)
             } else {
                 WinMinimize, A
             }

@@ -20,7 +20,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::://::🤕
 ::::'D::😅
 :::D::😄
-::::O::😲
+::::O::😯
 ::::(::☹️ ; Sorunsuz
 :::zzz::😴
 :::sarılma::🤗
@@ -28,6 +28,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::rahatlama::😌
 :::uyuklama::😴
 ::::p::😋
+:::kutlama::🥳
 
 :::güneş::☀️
 :::güneşg::🌞
@@ -41,13 +42,18 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; İşaretler
 :::onay::✔️
 :::onayb::✅
-:::onayb2::☑️ ;Sorunsuz
+:::onayb2::☑️
 :::red::❌
 :::redb::❎
+:::başlat::▶️
 
 ; Geliştirici
 :::bug::🐞
 :::böcek::🐞
+:::dosya::📂
+:::dizin::🗂️
+
+:::kılıç::⚔️
 
 ; Yakın zamanda kullandıklarım
 :::inşaat::🚧
@@ -57,6 +63,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::gözm::👀
 :::mouse::🖱️
 :::geridönüşüm::♻️
+:::denge::⚖️
+:::parti::🎉
+:::kurukafa::☠️
 
 ; YEmoji
 :::döngü::💫
@@ -68,8 +77,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::harf::🔡
 :::karo::💠
 :::elmas::💎
-:::dosya::📂
-:::dizin::🗂️
+
 :::patlama::🤯
 :::bağlantı::🔗
 :::gece::🌃
