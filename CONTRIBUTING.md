@@ -32,7 +32,7 @@
 
 ## ✔️ Yapılacaklar
 
-- [ ] 📃 Kısayollar kod içinde değil, `data/hotkeys.json` dosyasından çekilecek
+- [ ] 📃 Kısayollar kod içinde değil, `res/settings.json` dosyasından çekilecek
 - [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
   - [ ] 👷‍♂️ Penceresi aktifken, 🌱 ikonuna tıklayarak, kısayolunu oluşturabilecek
   - [ ] 💬 Emin misiniz diyerek, pencere başlığı gösterilecek
