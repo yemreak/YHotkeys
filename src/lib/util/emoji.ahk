@@ -24,11 +24,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::denge::⚖️
 :::parti::🎉
 :::kurukafa::☠️
-:::takvim::📅
+:::takvim::📅w
 :::takvimn::📆
 :::takvims::🗓️
 :::polis::👮‍♂️
 :::hortum::🌪️
+:::alev::🔥
+:::çeviri::💱
+:::dönüştürme::🔄
+:::yılan::🐍
 
 ; Duygular
 ::::)::😊
@@ -37,6 +41,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ::::'D::😅
 ::::D::😁
 ::::O::😯
+::::OO::😱
 ::::(::☹️
 :::zzz::😴
 :::sarılma::🤗
@@ -47,6 +52,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::kutlama::🥳
 :::imalı::😏
 :::keyifsiz::😒
+:::lezzetli::😋
 
 :::güneş::☀️
 :::güneşg::🌞

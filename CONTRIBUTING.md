@@ -41,6 +41,7 @@
   - [ ] 📋 Emojiler için panel eklenecek, windows emoji gibi seçme ve arama imkanı olacak
   - [ ] 🤔 Windows panel olduğundan çok gerekli olmayabilir
   - [ ] 💭 Seçili metni emofiy edebilir belki (?)
+  - [ ] 🤖 Kod tamamlaması (<kbd>⭾ Tab</kbd>) olabilir belki
 
 ## 🔗 Faydalı Bağlantılar
 
