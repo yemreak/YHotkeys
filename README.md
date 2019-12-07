@@ -41,11 +41,11 @@
 
 ### 📈 Verimlilik
 
-| ⌨️ Buton                                         | 📑 Açıklama                                 |
-| ------------------------------------------------ | ------------------------------------------- |
-| <kbd>❖ Win</kbd> <kbd>Space</kbd>                | 📌 Pencere sabitleme / sabitlemeyi kaldırma |
-| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>G</kbd> | 🔍 Google'da arama                          |
-| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>T</kbd> | 💱 Çeviri                                   |
+| ⌨️ Buton                                         | 📑 Açıklama                                              |
+| ------------------------------------------------ | -------------------------------------------------------- |
+| <kbd>❖ Win</kbd> <kbd>Space</kbd>                | 📌 Aktif olan pencereyi sabitleme / sabitlemeyi kaldırma |
+| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>G</kbd> | 🔍 Seçili metni Google'da arama                          |
+| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>T</kbd> | 💱 Seçili metni Google Çeviri'de açma                    |
 
 ### 🔔 Tray Icon Kısayolları
 
