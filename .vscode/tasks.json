@@ -1,0 +1,92 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "▶️ Run AHK",
+            "type": "shell",
+            "windows": {
+                "command": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
+            },
+            "args": [
+                "${workspaceFolder}/src/YHotkeys.ahk"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "🏗️ Build AHK",
+            "type": "shell",
+            "command": "\"C:\\Program Files\\AutoHotkey\\Compiler\\Ahk2Exe.exe\"",
+            "args": [
+                "/in",
+                "${workspaceFolder}/src/YHotkeys.ahk",
+                "/out",
+                "${workspaceFolder}/src/YHotkeys.exe",
+                "/icon",
+                "${workspaceFolder}/src/res/seedling.ico"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            // taskkill /im "autohotkey.exe"
+            "label": "🧹 Clear All AHKs",
+            "type": "shell",
+            "command": "taskkill",
+            "args": [
+                "/im",
+                "autohotkey.exe",
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            // wmic process where "commandline like '%%MyScript.ahk'" delete
+            "label": "☠️ Kill AHK",
+            "type": "shell",
+            "command": "wmic",
+            "args": [
+                "process",
+                "where",
+                "\"commandline like '%%YHotkeys.ahk'\"",
+                "delete"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+    ]
+}
