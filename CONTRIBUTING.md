@@ -32,13 +32,15 @@
 
 ## ✔️ Yapılacaklar
 
-- [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
-  - [ ] 📋 Emojiler için panel eklenecek, windows emoji gibi seçme ve arama imkanı olacak
 - [ ] 📃 Kısayollar kod içinde değil, `data/hotkeys.json` dosyasından çekilecek
 - [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
   - [ ] 👷‍♂️ Penceresi aktifken, 🌱 ikonuna tıklayarak, kısayolunu oluşturabilecek
   - [ ] 💬 Emin misiniz diyerek, pencere başlığı gösterilecek
   - [ ] 💞 Script tarafından `title`, `iconPath` ve `exePath` otomatik alınacak
+- [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
+  - [ ] 📋 Emojiler için panel eklenecek, windows emoji gibi seçme ve arama imkanı olacak
+  - [ ] 🤔 Windows panel olduğundan çok gerekli olmayabilir
+  - [ ] 💭 Seçili metni emofiy edebilir belki (?)
 
 ## 🔗 Faydalı Bağlantılar
 
