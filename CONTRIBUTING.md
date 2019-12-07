@@ -33,6 +33,7 @@
 ## ✔️ Yapılacaklar
 
 - [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
+  - [ ] 📋 Emojiler için panel eklenecek, windows emoji gibi seçme ve arama imkanı olacak
 - [ ] 📃 Kısayollar kod içinde değil, `data/hotkeys.json` dosyasından çekilecek
 - [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
   - [ ] 👷‍♂️ Penceresi aktifken, 🌱 ikonuna tıklayarak, kısayolunu oluşturabilecek
