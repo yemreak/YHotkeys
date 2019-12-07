@@ -1,6 +1,6 @@
 # 🌱 YHotkeys
 
-⭐ Tek bir fide bile, windowsunu tazelemeye yetebilir.
+⭐ Tek bir fide bile, windowsunu tazelemeye yeter.
 
 ## 🔰 Ne İşe Yarar
 
@@ -75,39 +75,6 @@
 | --------------------------------- | ----------- |
 | <kbd>✲ Ctrl</kbd> <kbd>PgDn</kbd> | Page Down   |
 | <kbd>✲ Ctrl</kbd> <kbd>PgUp</kbd> | Page Up     |
-
-## 👨‍💻 Geliştirici Notları
-
-- 👨‍🔧 Kod içerisinde en altta bulunan kısayolları değiştirebilirsin
-- 🤝 Emojiler hakkında desteğe ihtiyacım var
-
-### 🍍 Kısayol Tanımlamaları
-
-| Sembol | Açıklama                         |
-| ------ | -------------------------------- |
-| `#`    | Win (Windows logo key)           |
-| `!`    | Alt                              |
-| `^`    | Control                          |
-| `+`    | Shift                            |
-| `&`    | Birden faza kısayolu birleştirme |
-
-### 🙄 Bilinen Sorunlar
-
-- 🤔 Bazı durumlarda **GitHub Desktop** başlatılamıyor
-- 🐞 Markdown dosyalarında, emojiler otomatik yerleştirilemiyor
-
-### ✔️ Yapılacaklar
-
-- [ ] 💖 Emoji penceresi [EmojiPedia](https://emojipedia.org/)'daki emojilere göre yapılacak
-- [ ] 🏗️ Kullanıcılara arayüzle hotkey yapma imkanı tanınacak
-  - [ ] 👷‍♂️ Penceresi aktifken, 🌱 ikonuna tıklayarak, kısayolunu oluşturabilecek
-  - [ ] 💬 Emin misiniz diyerek, pencere başlığı gösterilecek
-  - [ ] 💞 Script tarafından `title`, `iconPath` ve `exePath` otomatik alınacak
-
-### 🔗 Faydalı Bağlantılar
-
-- [👜 Mağaza Uygulamalarını Komutla Açma](https://windows.yemreak.com/gelistirici-notlarim/magaza-uygulamlarini-komutla-acma)
-
 
 ## 💖 Destek ve İletişim
 
