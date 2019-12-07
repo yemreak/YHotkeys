@@ -12,7 +12,10 @@
             "args": [
                 "${workspaceFolder}/src/YHotkeys.ahk"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "presentation": {
                 "echo": false,
                 "reveal": "silent",
@@ -47,13 +50,12 @@
             "problemMatcher": []
         },
         {
-            // taskkill /im "autohotkey.exe"
             "label": "🧹 Clear All AHKs",
             "type": "shell",
             "command": "taskkill",
             "args": [
                 "/im",
-                "autohotkey.exe",
+                "autohotkey.exe"
             ],
             "group": "build",
             "presentation": {
@@ -67,7 +69,6 @@
             "problemMatcher": []
         },
         {
-            // wmic process where "commandline like '%%MyScript.ahk'" delete
             "label": "☠️ Kill AHK",
             "type": "shell",
             "command": "wmic",
@@ -87,6 +88,6 @@
                 "clear": false
             },
             "problemMatcher": []
-        },
+        }
     ]
 }
