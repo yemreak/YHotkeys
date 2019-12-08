@@ -33,6 +33,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::çeviri::💱
 :::dönüştürme::🔄
 :::yılan::🐍
+:::pc::💻
+:::bilgisayar::💻
+:::para::💰
 
 ; Duygular
 ::::)::😊
@@ -75,6 +78,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Geliştirici
 :::bug::🐞
 :::böcek::🐞
+:::debug::🐛
 :::dosya::📂
 :::dizin::🗂️
 
