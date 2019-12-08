@@ -42,6 +42,7 @@
   - [ ] 🤔 Windows panel olduğundan çok gerekli olmayabilir
   - [ ] 💭 Seçili metni emofiy edebilir belki (?)
   - [ ] 🤖 Kod tamamlaması (<kbd>⭾ Tab</kbd>) olabilir belki
+- [ ] 👜 Windows Store APP yapılacak
 
 ## 🔗 Faydalı Bağlantılar
 
