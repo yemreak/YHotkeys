@@ -7,6 +7,8 @@
 - <kbd>✲ Ctrl</kbd> <kbd>P</kbd> açılan ekranda `Tasks: Run Task` komutu ile istediğin koşulla çalıştırabilirsin
 - <kbd>✲ Ctrl</kbd> <kbd>⇧ Shift</kbd> <kbd>B</kbd> ile direkt olarak `Run` edebilirsin
 
+> AutoHotkey Manager tavsiye edilir
+
 ## 🗂️ Dizinlerin Anlamları
 
 | Sembol    | Açıklama           |
