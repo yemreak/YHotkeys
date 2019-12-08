@@ -6,7 +6,11 @@ ShowHidedWindowWithID(ahkId)
     WinShow, ahk_id %ahkID%
 }
 
-ActivateWindowWithID(ahkID, wait=True) {
+MinimizeWindowWithID(ahkId) {
+    Winminimize, ahk_id %ahkID%
+}
+
+ActivateWindowWithID(ahkID, wait=False) {
     WinActivate, ahk_id %ahkID%
     if wait
         WinWaitActive, ahk_id %ahkID%

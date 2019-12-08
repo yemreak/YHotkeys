@@ -18,7 +18,7 @@ OnExit("ExitFunc")
 
 APP_NAME := "YHotkeys"
 DIR_NAME := A_AppData . "\" . APP_NAME
-VERSION = 2.2.0
+VERSION = 2.2.1
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
@@ -153,7 +153,7 @@ ToggleWindowWithID(ahkID, hide=False) {
                 SendWindowToTrayByID(ahkID)
                 CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
             } else {
-                WinMinimize, A
+                MinimizeWindowWithID(ahkID)
             }
         } else {
             ActivateWindowWithID(ahkID)
