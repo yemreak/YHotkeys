@@ -1,4 +1,4 @@
-; Genel işlemler
+﻿; Genel işlemler
 
 RunUrl(url) {
     ; WARN: Bazı uygulamarın geç açılması soruna sebep oluyor
@@ -16,10 +16,12 @@ GetEnvPath(envvar, path=""){
 return path
 }
 
-InstallIcons(dir_name) {
-    FileCreateDir,  %dir_name%
-    FileInstall, .\res\seedling.ico, %dir_name%\seedling.ico, 1
-    FileInstall, .\res\default.ico, %dir_name%\default.ico, 1
-    FileInstall, .\res\clear.ico, %dir_name%\clear.ico, 1
-    FileInstall, .\res\close.ico, %dir_name%\close.ico, 1
+InstallIcons() {
+    global DIR_NAME
+    FileCreateDir,  %DIR_NAME%
+    FileInstall, .\res\update.ico, %DIR_NAME%\update.ico, 1
+    FileInstall, .\res\seedling.ico, %DIR_NAME%\seedling.ico, 1
+    FileInstall, .\res\default.ico, %DIR_NAME%\default.ico, 1
+    FileInstall, .\res\clear.ico, %DIR_NAME%\clear.ico, 1
+    FileInstall, .\res\close.ico, %DIR_NAME%\close.ico, 1
 }

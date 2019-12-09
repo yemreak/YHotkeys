@@ -1,4 +1,4 @@
-; v1.1.31.01'de tüm desktoplarda çalışır
+﻿; v1.1.31.01'de tüm desktoplarda çalışır
 
 #NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
@@ -18,11 +18,14 @@ OnExit("ExitFunc")
 
 #Include, %A_ScriptDir%\lib\core\config.ahk
 
-; Gizlenmiş pencelerin ID'si
+; Gizlenmiş pencelerin ID'si (Ini file olabilir)
 HidedWindows := []
 
-InstallIcons(DIR_NAME)
-CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
+NewVersion := ""
+
+CheckForUpdates()
+InstallIcons()
+CreateOrUpdateTrayMenu()
 return
 
 #Include, %A_ScriptDir%\lib\core\common.ahk
@@ -45,7 +48,7 @@ ShowAll:
 return
 
 UpdateClick:
-    UpdateApp(false)
+    UpdateApp()
 return
 
 CloseApp:
@@ -111,8 +114,6 @@ ShowAllHiddenWindows() {
 }
 
 ClearAllHidedWindows() {
-    global HidedWindows, APP_NAME, DIR_NAME, VERSION
-
     DetectHiddenWindows, On
 
     ahkIDs := GetHidedWindowsIDs()
@@ -121,9 +122,10 @@ ClearAllHidedWindows() {
         WinWaitClose, ahk_id %ahkID%
     }
 
+    global HidedWindows
     HidedWindows := []
-    CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
 
+    CreateOrUpdateTrayMenu()
 }
 
 ToggleMemWindowWithTitle(menuName) {
@@ -135,14 +137,12 @@ ToggleMemWindowWithTitle(menuName) {
 }
 
 ToggleWindowWithID(ahkID, hide=False) {
-    global HidedWindows, APP_NAME, DIR_NAME, VERSION
-
     DetectHiddenWindows, Off
     if !WinExist("ahk_id" . ahkID) {
         if hide {
-            if DropFromMem(ahkID, HidedWindows){
-                DropWindowFromTrayMenu(ahkID, HidedWindows)
-                CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
+            if DropFromMem(ahkID){
+                DropWindowFromTrayMenu(ahkID)
+                CreateOrUpdateTrayMenu()
             }
             ShowHidedWindowWithID(ahkID)
         }
@@ -153,7 +153,7 @@ ToggleWindowWithID(ahkID, hide=False) {
                 KeepWindowInMem(ahkID)
                 FocusPreviusWindow(ahkID)
                 SendWindowToTrayByID(ahkID)
-                CreateOrUpdateTrayMenu(APP_NAME, DIR_NAME, HidedWindows, VERSION)
+                CreateOrUpdateTrayMenu()
             } else {
                 MinimizeWindowWithID(ahkID)
             }

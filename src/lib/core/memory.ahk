@@ -1,10 +1,11 @@
 ; Hafıza işlemleri
-DropFromMem(ahkID, HidedWindows){
+DropFromMem(ahkID){
     index := GetHidedWindowsIndexWithID(ahkID)
     if index {
+        global HidedWindows
         HidedWindows.RemoveAt(index)
     }
-return index
+    return index
 }
 
 KeepWindowInMem(ahkID) {
