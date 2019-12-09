@@ -6,6 +6,10 @@ class MenuObject {
     iconPath := ""
 }
 
+GetIconPath(dirname, iconName) {
+    return dirname . "\" . iconName
+}
+
 CreateMenuHeader(appname, iconPath, defaultIconPath, version) {
     Menu, Tray, UseErrorLevel , On
     Menu, Tray, NoStandard
@@ -20,11 +24,25 @@ CreateMenuHeader(appname, iconPath, defaultIconPath, version) {
     }
 }
 
+CreateMenuFooter(mainTitle, iconPath, defaultIconPath) {
+    Menu, Tray, Default, %mainTitle%
+    Menu, Tray, Add, Kapat, CloseApp
+
+    global TITLE_CLOSE
+    AddTrayMenuIcon(TITLE_CLOSE, iconPath, defaultIconPath)
+}
+
+AddUpdateMenu(iconPath, defaultIconPath) {
+    Menu, Tray, Add, Update, UpdateClick
+    AddTrayMenuIcon("Update", iconPath, defaultIconPath)
+}
+
 CreateOrUpdateTrayMenu(appname, dirname, windows, version){
     Menu, Tray, DeleteAll
 
-    iconPath := dirname . "\seedling.ico"
-    defaultIconPath := dirname . "\default.ico"
+    global ICON_APP, ICON_DEFAULT
+    iconPath := GetIconPath(dirname, ICON_APP)
+    defaultIconPath := GetIconPath(dirname, ICON_DEFAULT)
 
     CreateMenuHeader(appname, iconPath, defaultIconPath, version)
 
@@ -42,18 +60,20 @@ CreateOrUpdateTrayMenu(appname, dirname, windows, version){
 
         Menu, Tray, Add, Temizle, ClearAll
 
-        iconPath := dirname . "\clear.ico"
-        AddTrayMenuIcon("Temizle", iconPath, defaultIconPath)
+        global ICON_CLEAR, TITLE_CLEAR
+        iconPath := GetIconPath(dirname, ICON_CLEAR)
+        AddTrayMenuIcon(TITLE_CLEAR, iconPath, defaultIconPath)
 
     } else {
-        mainTitle := "YHotkeys"
+        mainTitle := appname
     }
 
-    Menu, Tray, Default, YHotkeys
-    Menu, Tray, Add, Kapat, CloseApp
+    iconPath := GetIconPath(dirname, ICON_CLEAR)
+    AddUpdateMenu(iconPath, defaultIconPath)
 
-    iconPath := dirname . "\close.ico"
-    AddTrayMenuIcon("Kapat", iconPath, defaultIconPath)
+    global ICON_CLOSE
+    iconPath := GetIconPath(dirname, ICON_CLOSE)
+    CreateMenuFooter(mainTitle, iconPath, defaultIconPath)
 }
 
 DropWindowFromTrayMenu(ahkID, windows){

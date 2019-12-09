@@ -16,9 +16,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 OnExit("ExitFunc")
 
-APP_NAME := "YHotkeys"
-DIR_NAME := A_AppData . "\" . APP_NAME
-VERSION = 2.2.1
+#Include, %A_ScriptDir%\lib\core\config.ahk
 
 ; Gizlenmiş pencelerin ID'si
 HidedWindows := []
@@ -32,6 +30,7 @@ return
 #Include, %A_ScriptDir%\lib\core\memory.ahk
 #Include, %A_ScriptDir%\lib\core\window.ahk
 #Include, %A_ScriptDir%\lib\util\emoji.ahk
+#Include, %A_ScriptDir%\lib\util\update.ahk
 
 IconClicked:
     ToggleMemWindowWithTitle(A_ThisMenuItem)
@@ -45,6 +44,9 @@ ShowAll:
     ShowAllHiddenWindows()
 return
 
+UpdateClick:
+    UpdateApp(false)
+return
 
 CloseApp:
     ExitApp

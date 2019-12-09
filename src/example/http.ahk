@@ -1,4 +1,6 @@
-URL := "https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . Clipboard
+#Include, %A_ScriptDir%\..\lib\util\json.ahk
+
+URL = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
 
 oHTTP:=ComObjCreate("WinHttp.WinHttpRequest.5.1")
 If !IsObject(oHTTP)
@@ -12,4 +14,6 @@ oHTTP.SetAutoLogonPolicy(0) ; AutoLogonPolicy_Always=0, AutoLogonPolicy_OnlyIfBy
 oHTTP.Send()
 
 Response := oHTTP.ResponseText
-MsgBox, %Response%
+parsed := JSON.Load(Response)
+tagname := parsed.tag_name
+MsgBox, %tagname%
