@@ -113,9 +113,8 @@ CheckForUpdates() {
             NewVersion := tagname
 
             if (ShowDialog(tagname)) {
-                assetURL := response.assets_url
-                response := HTTPRequest("GET", assetURL)
-                downloadURL := response[1].browser_download_url
+                assets := response.assets
+                downloadURL := assets[1].browser_download_url
 
                 global FILENAME
                 FileSelectFile, downlaodLocation, S, %FILENAME%

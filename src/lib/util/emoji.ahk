@@ -36,6 +36,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::pc::💻
 :::bilgisayar::💻
 :::para::💰
+:::saat::🕐
+:::alarm::⏰
+:::saatk::⌚
+:::öğretmen::👨‍🏫
+
+; Hızlı emojiler
+:::eli::🤭
 
 ; Kod için hızlı emojiler
 

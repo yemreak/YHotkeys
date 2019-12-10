@@ -16,7 +16,6 @@ TITLE_CLOSE := "Çıkış"
 TITLE_CLEAR := "Temizle"
 TITLE_UPDATE := "Güncelle"
 
-
 TEXT_CONNECTION_ERROR := "🐞 Bağlantı hatası"
 TEXT_DOWNLOAD_START := "⏱ Yükleme hazırlanıyor"
 TEXT_DOWNLOADING := "✨ Yükleniyor..."
