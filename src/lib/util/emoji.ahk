@@ -40,6 +40,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::alarm::⏰
 :::saatk::⌚
 :::öğretmen::👨‍🏫
+:::kitap::📖
+:::kitaplar::📚
+:::kitapk::📕
+:::kitapm::📘
+:::kitapy::📗
+:::kitapt::📙
+:::gemi::🛳️
+:::gazete::📰
+:::lisans::©️
 
 ; Hızlı emojiler
 :::eli::🤭
@@ -114,6 +123,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; YEmoji
 :::döngü::💫
 :::tuğla::🧱
+:::duvar::🧱
 :::yıldız::⭐
 :::fav::🌟
 :::kod::👨‍💻
