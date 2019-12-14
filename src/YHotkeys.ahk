@@ -1,4 +1,5 @@
 ﻿; v1.1.31.01'de tüm desktoplarda çalışır
+; https://www.autohotkey.com/download/1.1/AutoHotkey_1.1.31.01_setup.exe
 
 #NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
