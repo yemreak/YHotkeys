@@ -103,23 +103,26 @@ ShowDialog(tagname) {
 
 CheckForUpdates() {
     global API_RELEASE
-    response := HTTPRequest("GET", API_RELEASE)
 
-    tagname := response.tag_name
-    if (tagname) {
-        global VERSION
-        if (UpdateExist(tagname)) {
-            global NewVersion
-            NewVersion := tagname
+    try {
+        response := HTTPRequest("GET", API_RELEASE)
 
-            if (ShowDialog(tagname)) {
-                assets := response.assets
-                downloadURL := assets[1].browser_download_url
+        tagname := response.tag_name
+        if (tagname) {
+            global VERSION
+            if (UpdateExist(tagname)) {
+                global NewVersion
+                NewVersion := tagname
 
-                global FILENAME
-                FileSelectFile, downlaodLocation, S, %FILENAME%
-                if (downlaodLocation) {
-                    DownloadFile(downloadUrl, downlaodLocation)
+                if (ShowDialog(tagname)) {
+                    assets := response.assets
+                    downloadURL := assets[1].browser_download_url
+
+                    global FILENAME
+                    FileSelectFile, downlaodLocation, S, %FILENAME%
+                    if (downlaodLocation) {
+                        DownloadFile(downloadUrl, downlaodLocation)
+                    }
                 }
             }
         }
