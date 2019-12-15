@@ -1,4 +1,4 @@
-{
+﻿{
     "hotstrings": {
         "name": "value",
         "merak": "👀"
@@ -23,5 +23,6 @@
                 "func": ""
             }
         ]
-    }
+    },
+    "heyyo": "temp"
 }
