@@ -152,8 +152,8 @@ ToggleWindowWithID(ahkID, hide=False) {
         if WinActive("ahk_id" . ahkID) {
             if hide {
                 KeepWindowInMem(ahkID)
-                FocusPreviusWindow(ahkID)
                 SendWindowToTrayByID(ahkID)
+                FocusPreviusWindow(ahkID)
                 CreateOrUpdateTrayMenu()
             } else {
                 MinimizeWindowWithID(ahkID)

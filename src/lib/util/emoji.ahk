@@ -63,6 +63,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::boş::🚫
 :::ikili::💕
 :::duyuru::📢
+:::kan::🩸
+:::çocuk::🧒
+:::yağmur::☔
 
 ; Hızlı emojiler
 :::eli::🤭

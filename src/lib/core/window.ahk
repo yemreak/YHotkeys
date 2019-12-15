@@ -19,7 +19,8 @@ ActivateWindowWithID(ahkID, wait=False) {
 ; WARN: Bug sebebi olabilir (bundan değil bug)
 ; WARN: Eğer uyarı mesajı verilirse, odaklanma bozuluyor
 FocusPreviusWindow(ahkID) {
-    SendEvent, !{Esc}
+    ; SendMessage, 0x7, 0, 0, Edit3, A  ; WM_SETFOCUS = 0x07
+    SendInput, !{Esc}
     WinWaitNotActive, ahk_id %ahkID%
 }
 
