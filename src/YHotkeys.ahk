@@ -22,8 +22,6 @@ OnExit("ExitFunc")
 ; Gizlenmiş pencelerin ID'si (Ini file olabilir)
 HidedWindows := []
 
-NewVersion := ""
-
 CheckForUpdates()
 InstallIcons()
 CreateOrUpdateTrayMenu()

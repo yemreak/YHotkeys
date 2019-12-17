@@ -6,6 +6,7 @@
 
 ### ✨ Yenilikler
 
+- 💫 Güncelleme alanı detaylandırıldı
 - 📑 Sabitlenen pencerelerin başlıklarına 📌 konulmakta
 - 🔳 <kbd>F1</kbd> butonu ile pencereleri tam ekran yapma, yapılı ise normale alma özelliği eklendi
 - 👨‍🔧 Sanal masaüstü değiştirme sorunu düzeltildi, artık gizlenen pencereler aktif masaüstüne getirilecek

@@ -30,5 +30,9 @@ TITLE_TEXT_DOWNLOADING := "Yükleniyor"
 ; Update utility
 NEWEST_URL = https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe
 RELEASE_URL = http://github.com/yedhrab/yhotkeys/releases/latest/download/yhotkeys.exe
+
+RELEASE_TAGNAME := ""
+RELEASE_BODY := ""
+
 API_RELEASE = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
 FILENAME = YHotkeys.exe

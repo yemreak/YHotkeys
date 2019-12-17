@@ -99,12 +99,23 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
     Return
 }
 
-ShowDialog(tagname) {
-    MsgBox, 4,, 🌟 %tagname% sürümü mevcut, güncellemek ister misin?
-    IfMsgBox Yes
-        return True
-    else
+StoreReleaseInfos(tagname, body) {
+    global RELEASE_TAGNAME, RELEASE_BODY
+    RELEASE_TAGNAME := tagname
+    RELEASE_BODY := body
+}
+
+ShowUpdateDialog() {
+    global RELEASE_TAGNAME, RELEASE_BODY
+    if RELEASE_TAGNAME and RELEASE_BODY {
+        MsgBox, 4,🌟 %RELEASE_TAGNAME% sürümü mevcut, %RELEASE_BODY% `n`nGüncellemek ister misin?
+        IfMsgBox Yes
+            return True
+        else
+            return False
+    } else {
         return False
+    }
 }
 
 CheckForUpdates() {
@@ -114,13 +125,12 @@ CheckForUpdates() {
         response := HTTPRequest("GET", API_RELEASE)
 
         tagname := response.tag_name
+        body := response.body
         if (tagname) {
             global VERSION
             if (UpdateExist(tagname)) {
-                global NewVersion
-                NewVersion := tagname
-
-                if (ShowDialog(tagname)) {
+                StoreReleaseInfos(tagname, body)
+                if (ShowUpdateDialog()) {
                     assets := response.assets
                     downloadURL := assets[1].browser_download_url
 
@@ -136,10 +146,12 @@ CheckForUpdates() {
 }
 
 UpdateApp() {
-    global FILENAME, RELEASE_URL
-    FileSelectFile, downlaodLocation, S, %FILENAME%
-    if (downlaodLocation) {
-        DownloadFile(RELEASE_URL, downlaodLocation)
+    if (ShowUpdateDialog()) {
+        global FILENAME, RELEASE_URL
+        FileSelectFile, downlaodLocation, S, %FILENAME%
+        if (downlaodLocation) {
+            DownloadFile(RELEASE_URL, downlaodLocation)
+        }
     }
 }
 
