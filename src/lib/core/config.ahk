@@ -1,9 +1,15 @@
-﻿; UTF-8 with BOM
+﻿; ####################################################################################
+; ##                                                                                ##
+; ##                              YAPILANDIRMA VERİLERİ                             ##
+; ##                                                                                ##
+; ####################################################################################
+
+; UTF-8 with BOM
 
 ; Core Settings
 APP_NAME := "YHotkeys"
 DIR_NAME := A_AppData . "\" . APP_NAME
-VERSION = 2.3.1
+VERSION = 2.3.2
 
 ; Menu config
 ICON_APP := "seedling.ico"

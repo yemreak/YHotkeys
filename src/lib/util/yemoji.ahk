@@ -1,18 +1,12 @@
-﻿#NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
-#SingleInstance Force ; Sadece 1 kez açalıştırabilire
+﻿; ####################################################################################
+; ##                                                                                ##
+; ##                               YEMOJİ KISAYOLLARI                               ##
+; ##                                                                                ##
+; ####################################################################################
 
-#KeyHistory 0 ; Tuş basımları loglamayı engeller
-
-SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
-ListLines, Off ; Derlenen verileri loglamaz
-
-#Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
-#MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 #Hotstring EndChars : ; Bitirme karakteri
 #Hotstring r Z C0 O ; Algılama ayarları
+return
 
 ; Yakın zamanda kullandıklarım
 :::inşaat::🚧
@@ -58,7 +52,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::web::🕸️
 :::sabun::🧼
 :::paket::📦
-:::modul::🍱
+:::modül::🍱
 :::çöp::🗑️
 :::boş::🚫
 :::ikili::💕
@@ -71,10 +65,23 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::100::💯
 :::melek::😇
 :::duello::🤺
+:::uçak::✈️
+:::adam::🤵
+:::işçi::👷‍♂️
+:::wifi:::📶
+:::bluetooth::📶
+:::havalı::😎
+::bilim::👨‍🔬
+:::analiz::🕵️‍♂️
+:::araştırma::🕵️‍♂️
+:::disk::💾
+:::kaydet::💾
+:::dokunma::👇
 
 ; Hızlı emojiler
 :::eli::🤭
 :::selam::🙋‍♂️
+:::yeni::✨
 
 ; Kod için hızlı emojiler
 
@@ -244,7 +251,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :::megafon::📢
 :::çekiç::🔨
 :::balon::🎈
-:::disk::💿
+:::dvd::💿
 :::uzay::🌌
 :::top1::🏈
 :::top2::🏀

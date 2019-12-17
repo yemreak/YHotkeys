@@ -1,4 +1,10 @@
-﻿#Include, %A_ScriptDir%\lib\util\json.ahk
+﻿; ####################################################################################
+; ##                                                                                ##
+; ##                              GÜNCELLEME ARACI                                  ##
+; ##                                                                                ##
+; ####################################################################################
+
+#Include, %A_ScriptDir%\lib\util\json.ahk
 
 HTTPRequest(requestType, url) {
     oHTTP:=ComObjCreate("WinHttp.WinHttpRequest.5.1")

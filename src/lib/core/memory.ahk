@@ -1,6 +1,11 @@
-; Hafıza işlemleri
+; ####################################################################################
+; ##                                                                                ##
+; ##                                 HAFIZA İŞLEMLERİ                               ##
+; ##                                                                                ##
+; ####################################################################################
+
 DropFromMem(ahkID){
-    index := GetHidedWindowsIndexWithID(ahkID)
+    index := GetHidedWindowsIndex(ahkID)
     if index {
         global HidedWindows
         HidedWindows.RemoveAt(index)
@@ -44,7 +49,7 @@ GetHidedWindowsIDWithTitle(title){
 return 0
 }
 
-GetHidedWindowsIndexWithID(ahkID){
+GetHidedWindowsIndex(ahkID){
     global HidedWindows
     For index, item in HidedWindows {
         if (item.ahkID == ahkID) {
