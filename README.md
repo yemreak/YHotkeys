@@ -8,6 +8,7 @@
 - ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
 - 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
 - 📌 Çok sık baktığınız pencereleri sabitleyebilirsiniz (<kbd>❖ Win</kbd> <kbd>Space</kbd>)
+- 🔳 <kbd>F1</kbd> butonu ile tam ekran olmayı desteklemese de pencereyi tam ekran yapabilirsin
 - [🚀 YEmoji](YEmoji.md) emojilerini kısayollarla kullanamana olanak sağlar
 
 ## 👣 Kullanım Adımları
@@ -15,6 +16,7 @@
 - ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirin
 - 😁 Sadece **Exe** uzantılı dosyayı çalıştırman yeterli
 - 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
+- ✨ Uygulama kendini otomatik olarak güncellemektedir
 - 👀 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
 - [🚀 YEmoji](YEmoji.md) alanı altından emojilerin kısayollarına bakabilirsin
 
