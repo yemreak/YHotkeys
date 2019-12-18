@@ -77,11 +77,25 @@ return
 :::disk::💾
 :::kaydet::💾
 :::dokunma::👇
+:::tebrik::👏
+:::zincir::⛓️
+:::fişek::🎇
+:::tek::🦄
+:::kontrol::🕹️
+:::joystick::🕹️
+:::bilet::🎫
+:::dalga::🌊
+:::ofis::🏢
+:::şirket::🏢
+:::çan::🔔
+:::bildirim::🔔
+:::zil::🛎️
 
 ; Hızlı emojiler
 :::eli::🤭
 :::selam::🙋‍♂️
 :::yeni::✨
+:::akış::🌊
 
 ; Kod için hızlı emojiler
 
@@ -110,6 +124,9 @@ return
 :::keyifsiz::😒
 :::lezzetli::😋
 :::ukala::🤓
+::::|::😐
+:::üzgün::😥
+::::'(::😥
 
 :::güneş::☀️
 :::güneşg::🌞

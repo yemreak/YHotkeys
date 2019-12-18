@@ -19,10 +19,7 @@ OnExit("ExitFunc")
 
 #Include, %A_ScriptDir%\lib\core\config.ahk
 
-; Gizlenmiş pencelerin ID'si (Ini file olabilir)
-HidedWindows := []
-
-CheckForUpdates()
+; CheckForUpdates()
 InstallIcons()
 CreateOrUpdateTrayMenu()
 return
@@ -41,7 +38,7 @@ IconClicked:
 Return
 
 ClearAll:
-    ClearAllHidedWindows()
+    ClearAllHIDDEN_WINDOWS()
 Return
 
 ShowAll:
@@ -60,6 +57,7 @@ ExitFunc(exitReason, exitCode) {
     if exitReason not in Logoff,Shutdown
     {
         ShowAllHiddenWindows()
+        ReleaseAllPinnedWindows()
         return 0
     }
 }
@@ -106,7 +104,7 @@ OpenWindowByTitle(title, url, mode=3) {
 }
 
 ShowAllHiddenWindows() {
-    ahkIDs := GetHidedWindowsIDs()
+    ahkIDs := GetHiddenWindowIDs()
     For index, ahkID in ahkIDs {
         ToggleWindow(ahkID, True)
     }
@@ -114,23 +112,23 @@ ShowAllHiddenWindows() {
     return ahkIDs
 }
 
-ClearAllHidedWindows() {
+ClearAllHIDDEN_WINDOWS() {
     DetectHiddenWindows, On
 
-    ahkIDs := GetHidedWindowsIDs()
+    ahkIDs := GetHiddenWindowIDs()
     For index, ahkID in ahkIDs {
         WinKill, ahk_id %ahkID%
         WinWaitClose, ahk_id %ahkID%
     }
 
-    global HidedWindows
-    HidedWindows := []
+    global HIDDEN_WINDOWS
+    HIDDEN_WINDOWS := []
 
     CreateOrUpdateTrayMenu()
 }
 
 ToggleMemWindowWithTitle(menuName) {
-    ahkID := GetHidedWindowsIDWithTitle(menuName)
+    ahkID := GetHiddenWindowIDByTitle(menuName)
     if ahkID
         ToggleWindow(ahkID, True)
     else
@@ -159,15 +157,13 @@ OnWinNotExist(ahkID, mask) {
 }
 
 OnWinActive(ahkID, mask) {
-    MinimizeWindow(ahkID)
     if mask {
         MinimizeWindowToTray(ahkID)
     }
+    MinimizeWindow(ahkID)
 }
 
-OnWinNotActive(ahkID, mask) {
-    OnWinActive(ahkID, mask)
-    OnWinNotExist(ahkID, mask)
+OnWinNotActive(ahkID) {
     ActivateWindow(ahkID)
 }
 
@@ -179,7 +175,7 @@ ToggleWindow(ahkID, mask=False) {
         if WinActive("ahk_id" . ahkID) {
             OnWinActive(ahkID, mask)
         } else {
-            OnWinNotActive(ahkID, mask)
+            OnWinNotActive(ahkID)
         }
     }
 }

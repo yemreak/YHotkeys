@@ -8,15 +8,7 @@
 return
 
 #Space::
-    WinGetTitle, active_title, A
-    if InStr(active_title, "📌") {
-        new_title := StrReplace(active_title, "📌 ", "")
-    } else {
-        new_title := "📌 " . active_title
-    }
-
-    WinSetTitle, %active_title%, , %new_title%
-    WinSet, AlwaysOnTop, , A
+    ToggleWindowPin()
 return
 #+G::
     Send ^c

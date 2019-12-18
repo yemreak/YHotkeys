@@ -5,10 +5,10 @@
 ; ####################################################################################
 
 DropFromMem(ahkID){
-    index := GetHidedWindowsIndex(ahkID)
+    index := GetHiddenWindowIndex(ahkID)
     if index {
-        global HidedWindows
-        HidedWindows.RemoveAt(index)
+        global HIDDEN_WINDOWS
+        HIDDEN_WINDOWS.RemoveAt(index)
     }
     return index
 }
@@ -26,22 +26,22 @@ KeepInMem(ahkID, title, iconPath) {
     item.title := title
     item.iconPath := iconPath
 
-    global HidedWindows
-    HidedWindows.Push(item)
+    global HIDDEN_WINDOWS
+    HIDDEN_WINDOWS.Push(item)
 }
 
-GetHidedWindowsIDs(){
+GetHiddenWindowIDs(){
     ahkIDs := []
-    global HidedWindows
-    For index, item in HidedWindows {
+    global HIDDEN_WINDOWS
+    For index, item in HIDDEN_WINDOWS {
         ahkIDs.Push(item.ahkID)
     }
 return ahkIDs
 }
 
-GetHidedWindowsIDWithTitle(title){
-    global HidedWindows
-    For index, item in HidedWindows {
+GetHiddenWindowIDByTitle(title){
+    global HIDDEN_WINDOWS
+    For index, item in HIDDEN_WINDOWS {
         if (item.title == title) {
             return item.ahkID
         }
@@ -49,9 +49,9 @@ GetHidedWindowsIDWithTitle(title){
 return 0
 }
 
-GetHidedWindowsIndex(ahkID){
-    global HidedWindows
-    For index, item in HidedWindows {
+GetHiddenWindowIndex(ahkID){
+    global HIDDEN_WINDOWS
+    For index, item in HIDDEN_WINDOWS {
         if (item.ahkID == ahkID) {
             return index
         }

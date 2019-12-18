@@ -70,12 +70,12 @@ AddClearMenu() {
 }
 
 AddWindowsMenu() {
-    global HidedWindows
-    if (HidedWindows.Length() > 0) {
-        iconPath := HidedWindows[HidedWindows.Length()].iconPath
-        mainTitle := HidedWindows[HidedWindows.Length()].title
+    global HIDDEN_WINDOWS
+    if (HIDDEN_WINDOWS.Length() > 0) {
+        iconPath := HIDDEN_WINDOWS[HIDDEN_WINDOWS.Length()].iconPath
+        mainTitle := HIDDEN_WINDOWS[HIDDEN_WINDOWS.Length()].title
 
-        For index, item in HidedWindows {
+        For index, item in HIDDEN_WINDOWS {
             title := item.title
             iconPath := item.iconPath
 
@@ -103,8 +103,8 @@ DropWindowFromTrayMenu(ahkID){
     WinGetTitle, title, ahk_id %ahkID%
     Menu, Tray, Delete, %title%
 
-    global HidedWindows
-    if !HidedWindows.Length()
+    global HIDDEN_WINDOWS
+    if !HIDDEN_WINDOWS.Length()
         Menu, Tray, Delete, Temizle
 }
 
