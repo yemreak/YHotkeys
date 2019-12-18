@@ -9,6 +9,8 @@
 ; Core Settings
 APP_NAME := "YHotkeys"
 DIR_NAME := A_AppData . "\" . APP_NAME
+
+DEBUG := False
 VERSION = 2.3.3
 
 ; Gizlenmiş pencelerin ID'si (Ini file olabilir)

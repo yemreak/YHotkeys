@@ -19,7 +19,9 @@ OnExit("ExitFunc")
 
 #Include, %A_ScriptDir%\lib\core\config.ahk
 
-; CheckForUpdates()
+if not DEBUG
+    CheckForUpdates()
+
 InstallIcons()
 CreateOrUpdateTrayMenu()
 return

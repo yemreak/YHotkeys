@@ -119,9 +119,8 @@ ShowUpdateDialog() {
 }
 
 CheckForUpdates() {
-    global API_RELEASE
-
     try {
+        global API_RELEASE
         response := HTTPRequest("GET", API_RELEASE)
 
         tagname := response.tag_name
