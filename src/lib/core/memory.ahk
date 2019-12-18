@@ -4,6 +4,13 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
+this_version:= "1.2.3.0"
+
+web_version := "1.2.3.1"
+
+if (web_version > this_version)
+  msgbox, get the new update
+
 DropFromMem(ahkID){
     index := GetHiddenWindowIndex(ahkID)
     if index {

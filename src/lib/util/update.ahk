@@ -99,86 +99,68 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
     Return
 }
 
-StoreReleaseInfos(tagname, body) {
-    global RELEASE_TAGNAME, RELEASE_BODY
+StoreReleaseInfos(response) {
+    tagname := response.tag_name
+    body := response.body
+    download_url := response.assets[1].browser_download_url
+
+    global RELEASE_TAGNAME, RELEASE_BODY, RELEASE_URL
     RELEASE_TAGNAME := tagname
     RELEASE_BODY := body
+    RELEASE_URL := download_url
 }
 
 ShowUpdateDialog() {
     global RELEASE_TAGNAME, RELEASE_BODY
-    if RELEASE_TAGNAME and RELEASE_BODY {
-        MsgBox, 4,🌟 %RELEASE_TAGNAME% sürümü mevcut, %RELEASE_BODY% `n`nGüncellemek ister misin?
-        IfMsgBox Yes
-            return True
-        else
-            return False
-    } else {
+    MsgBox, 4,🌟 %RELEASE_TAGNAME% sürümü mevcut, %RELEASE_BODY% `n`nGüncellemek ister misin?
+    IfMsgBox Yes
+        return True
+    else
         return False
-    }
+}
+
+UpdateExist() {
+    global VERSION, RELEASE_TAGNAME
+    return RELEASE_TAGNAME and VERSION < RELEASE_TAGNAME
 }
 
 CheckForUpdates() {
     try {
         global API_RELEASE
         response := HTTPRequest("GET", API_RELEASE)
+        OnResponse(response)
+    }
+}
 
-        tagname := response.tag_name
-        body := response.body
-        if (tagname) {
-            global VERSION
-            if (UpdateExist(tagname)) {
-                StoreReleaseInfos(tagname, body)
-                if (ShowUpdateDialog()) {
-                    assets := response.assets
-                    downloadURL := assets[1].browser_download_url
+OnResponse(response) {
+    StoreReleaseInfos(response)
 
-                    global FILENAME
-                    FileSelectFile, downlaodLocation, S, %FILENAME%
-                    if (downlaodLocation) {
-                        DownloadFile(downloadUrl, downlaodLocation)
-                    }
-                }
-            }
+    if (UpdateExist()) {
+        if (ShowUpdateDialog()) {
+            UpdateApp()
         }
+    }
+}
+
+OnUpdateClick() {
+    if (ShowUpdateDialog()) {
+        UpdateApp()
     }
 }
 
 UpdateApp() {
-    if (ShowUpdateDialog()) {
-        global FILENAME, RELEASE_URL
-        FileSelectFile, downlaodLocation, S, %FILENAME%
-        if (downlaodLocation) {
+    global FILENAME, RELEASE_URL
+    FileSelectFile, downlaodLocation, S, %FILENAME%
+
+    if (downlaodLocation) {
+        if (downlaodLocation == A_ScriptFullPath) {
+            MsgBox, 0, 😥 Yol hatalı, 🚩 Lütfen scriptin yolundan farklı bir yol seçin
+            UpdateApp()
+        } else {
             DownloadFile(RELEASE_URL, downlaodLocation)
+            Run, %downlaodLocation%
+            MsgBox, 0, 👏 Güncelleme başarılı, 🌱 İmleci ikon üstüne getirerek yeni sürümü görebilirsiniz.
+            ExitApp
         }
     }
-}
-
-Check(verArray, tagArray, index) {
-    if (index > verArray.Length()) {
-        return False
-    }
-
-    if (verArray[index] < tagArray[index]) {
-        return True
-    } else if (verArray[index] == tagArray[index]) {
-        return Check(verArray, tagArray, index + 1)
-    }
-    return False
-}
-
-UpdateExist(tagname) {
-    tagArray := StrSplit(tagname, ".")
-
-    global VERSION
-    verArray := StrSplit(VERSION, ".")
-
-    Loop % verArray.MaxIndex() {
-        if (verArray[A_index] < tagArray[A_index]) {
-            return True
-        } else if (verArray[A_index] > tagArray[A_index]) {
-            return False
-        }
-    }
-    return False
 }

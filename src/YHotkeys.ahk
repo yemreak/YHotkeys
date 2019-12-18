@@ -19,11 +19,13 @@ OnExit("ExitFunc")
 
 #Include, %A_ScriptDir%\lib\core\config.ahk
 
-if not DEBUG
-    CheckForUpdates()
-
 InstallIcons()
 CreateOrUpdateTrayMenu()
+
+if not DEBUG {
+    CheckForUpdates()
+    CreateOrUpdateTrayMenu()
+}
 return
 
 #Include, %A_ScriptDir%\lib\core\common.ahk
@@ -48,7 +50,7 @@ ShowAll:
 return
 
 UpdateClick:
-    UpdateApp()
+    OnUpdateClick()
 return
 
 CloseApp:
