@@ -46,9 +46,8 @@ AddFooterMenu() {
 }
 
 AddUpdateMenu() {
-    global RELEASE_TAGNAME
-    if (RELEASE_TAGNAME) {
-        global TITLE_UPDATE
+    if (UpdateExist()) {
+        global TITLE_UPDATE, RELEASE_TAGNAME
         title := TITLE_UPDATE . " (v" . RELEASE_TAGNAME . ")"
         Menu, Tray, Add, %title%, UpdateClick
 

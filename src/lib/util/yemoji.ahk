@@ -90,6 +90,10 @@ return
 :::çan::🔔
 :::bildirim::🔔
 :::zil::🛎️
+:::vs::🆚
+:::pin::📌
+:::ağır::🎳
+:::maliyet::🎳
 
 ; Hızlı emojiler
 :::eli::🤭

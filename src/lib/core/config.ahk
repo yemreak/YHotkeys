@@ -11,7 +11,7 @@ APP_NAME := "YHotkeys"
 DIR_NAME := A_AppData . "\" . APP_NAME
 
 DEBUG := False
-VERSION = 2.3.3
+VERSION = 2.3.3.1
 
 ; Gizlenmiş pencelerin ID'si (Ini file olabilir)
 HIDDEN_WINDOWS := []
