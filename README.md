@@ -48,6 +48,7 @@
 | <kbd>❖ Win</kbd> <kbd>Space</kbd>                | 📌 Aktif olan pencereyi sabitleme / sabitlemeyi kaldırma |
 | <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>G</kbd> | 🔍 Seçili metni Google'da arama                          |
 | <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>T</kbd> | 💱 Seçili metni Google Çeviri'de açma                    |
+| <kbd>✲ Ctrl</kbd> <kbd>⇧ Shift</kbd> <kbd>N</kbd> | 📝 Seçili alanı `notepad` 'a aktarıp, notepad'i sabitler |
 
 ### 🔔 Tray Icon Kısayolları
 

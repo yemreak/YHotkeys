@@ -4,5 +4,6 @@
 
 ## 🚀 Son Yapılan Yenilik
 
+- 📝 Seçili alanı <kbd>✲ Ctrl</kbd> <kbd>⇧ Shift</kbd> <kbd>N</kbd> kısayolu ile `notepad` 'a aktarılıp sabitlenir
 - 👨‍🔧 Güncellemedeki sorunlar giderildi
 - ✨ Emojiler artırıldı

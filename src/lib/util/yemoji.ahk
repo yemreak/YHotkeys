@@ -94,6 +94,15 @@ return
 :::pin::📌
 :::ağır::🎳
 :::maliyet::🎳
+:::çerçeve::🔳
+:::pil::🔋
+:::batarya::🔋
+:::konum::📍
+:::lokasyon::📍
+:::yol::🚩
+:::path::🚩
+:::salyangoz::🐌
+:::yavaş::🐌
 
 ; Hızlı emojiler
 :::eli::🤭
@@ -254,11 +263,16 @@ return
 :::yükleme::⏫
 :::indirme::⏬
 :::kalp::💖
-:::skalp::🖤
-:::ykalp::💚
-:::sarıkalp::💛
-:::mkalp::💜
+:::kalps::🖤
+:::kalpsiyah::🖤
+:::kalpy::💚
+:::kalpyeşil::💚
+:::kalpsa::💛
+:::kalpsarı::💛
+:::kalpm::💜
+:::kalpmavi::💙
 :::kırıkkalp::💔
+:::kalpkırık::💔
 :::kiraz::🍒
 :::pano::📋
 :::sirk::🎪
