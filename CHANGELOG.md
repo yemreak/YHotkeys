@@ -4,6 +4,9 @@
 
 ## 🚀 Son Yapılan Yenilik
 
-- 📝 Seçili alanı <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>N</kbd> kısayolu ile `notepad` 'a aktarılıp sabitlenir
-- 👨‍🔧 Güncellemedeki sorunlar giderildi
-- ✨ Emojiler artırıldı
+- 🚀 Güncelleme işlemi artık, çalışan scripti güncelliyor ve yenisini açıyor
+- ✨ Güncelleme aracı scriptten bağımsız hale getirildi
+- 👮‍♂️ Güncelle menüsü ile artık istendiği zamanda güncelleme kontrol edilebilmekte
+- ➕ Yemojiler artırıldı
+
+> 🚅 Program açıldığında otomatik güncelleme kontrolü devam etmektedir

@@ -103,6 +103,14 @@ return
 :::path::🚩
 :::salyangoz::🐌
 :::yavaş::🐌
+:::rapor::📜
+:::duyuru::📢
+:::tarih::📅
+:::ressam::👨‍🎨
+:::haber::📰
+:::habers::📰
+:::gazate::📰
+:::gazates::🗞️
 
 ; Hızlı emojiler
 :::eli::🤭

@@ -11,8 +11,8 @@ class MenuObject {
 }
 
 GetIconPath(iconName) {
-    global DIR_NAME
-    return DIR_NAME . "\" . iconName
+    global DIR_ICON
+    return DIR_ICON . "\" . iconName
 }
 
 DeleteMenu() {

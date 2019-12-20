@@ -19,8 +19,14 @@ OnExit("ExitFunc")
 
 #Include, %A_ScriptDir%\lib\core\config.ahk
 
+RemoveOldData()
 InstallIcons()
+InstallUpdateTool()
 CreateOrUpdateTrayMenu()
+
+if not DEBUG {
+    CheckForUpdate()
+}
 
 return
 
@@ -41,7 +47,7 @@ ClearAll:
 return
 
 CheckForUpdate:
-    ; TODO: Update aracını çalıştır
+    CheckForUpdate()
 return
 
 ShowAll:

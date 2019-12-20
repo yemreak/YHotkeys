@@ -4,7 +4,42 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-#Include, %A_ScriptDir%\lib\util\json.ahk
+; update.exe name version url
+
+TEXT_DOWNLOAD_START := "⏱ Yükleme hazırlanıyor"
+TEXT_DOWNLOADING := "✨ Yükleniyor..."
+
+TITLE_MSG_BOX := "✨ YHotkeys ~ Güncelleyici"
+TITLE_TEXT_DOWNLOADING := "Yükleniyor"
+
+RELEASE_TAGNAME := ""
+RELEASE_BODY := ""
+RELEASE_URL := ""
+
+APP_NAME = 0
+APP_VERSION = 0
+APP_GITHUB_RELEASE_API = 0
+APP_PATH = 0
+
+ParseArgs()
+CheckForUpdates()
+return
+
+#Include, %A_ScriptDir%\json.ahk
+
+ParseArgs() {
+    global APP_NAME, APP_VERSION, APP_GITHUB_RELEASE_API, APP_PATH
+    APP_NAME := A_Args[1]
+    APP_VERSION := A_Args[2]
+    APP_GITHUB_RELEASE_API := A_Args[3]
+    APP_PATH := A_Args[4]
+
+    if not (APP_NAME and APP_VERSION and APP_GITHUB_RELEASE_API and APP_PATH) {
+        global TITLE_MSG_BOX
+        MsgBox, 0, %TITLE_MSG_BOX%, ❗ Eksik parametreler var: `n`n💎APP_NAME: %APP_NAME%`n💎APP_VERSION: %APP_VERSION%`n💎APP_GITHUB_RELEASE_API:%APP_GITHUB_RELEASE_API%`n💎APP_PATH:%APP_PATH%
+        ExitApp
+    }
+}
 
 HTTPRequest(requestType, url) {
     oHTTP:=ComObjCreate("WinHttp.WinHttpRequest.5.1")
@@ -15,7 +50,7 @@ HTTPRequest(requestType, url) {
 
     oHTTP.Open(requestType, url)
     oHTTP.SetAutoLogonPolicy(0) ; AutoLogonPolicy_Always=0, AutoLogonPolicy_OnlyIfBypassProxy=1, AutoLogonPolicy_Never=2
-    oHTTP.Send()
+    oHTTP.Send()s
 
     return JSON.Load(oHTTP.ResponseText)
 }
@@ -111,8 +146,8 @@ StoreReleaseInfos(response) {
 }
 
 ShowUpdateDialog() {
-    global RELEASE_TAGNAME, RELEASE_BODY
-    MsgBox, 4,🌟 %RELEASE_TAGNAME% sürümü mevcut, %RELEASE_BODY% `n`nGüncellemek ister misin?
+    global RELEASE_TAGNAME, RELEASE_BODY, TITLE_MSG_BOX
+    MsgBox, 4, %TITLE_MSG_BOX%, 🌟 %RELEASE_TAGNAME% sürümü mevcut`n`n%RELEASE_BODY% `n`n❔Güncellemek ister misin?
     IfMsgBox Yes
         return True
     else
@@ -120,14 +155,14 @@ ShowUpdateDialog() {
 }
 
 UpdateExist() {
-    global VERSION, RELEASE_TAGNAME
-    return RELEASE_TAGNAME and VERSION < RELEASE_TAGNAME
+    global RELEASE_TAGNAME, APP_VERSION
+    return RELEASE_TAGNAME and APP_VERSION < RELEASE_TAGNAME
 }
 
 CheckForUpdates() {
     try {
-        global API_RELEASE
-        response := HTTPRequest("GET", API_RELEASE)
+        global APP_GITHUB_RELEASE_API
+        response := HTTPRequest("GET", APP_GITHUB_RELEASE_API)
         OnResponse(response)
     }
 }
@@ -136,9 +171,10 @@ OnResponse(response) {
     StoreReleaseInfos(response)
 
     if (UpdateExist()) {
-        if (ShowUpdateDialog()) {
-            UpdateApp()
-        }
+        OnUpdateClick()
+    } else {
+        global TITLE_MSG_BOX
+        MsgBox, 0, %TITLE_MSG_BOX%, 👏 Zaten son sürümdesiniz`n💖 Günceli takip etmeniz ne hoş
     }
 }
 
@@ -149,18 +185,20 @@ OnUpdateClick() {
 }
 
 UpdateApp() {
-    global FILENAME, RELEASE_URL
-    FileSelectFile, downlaodLocation, S, %FILENAME%
+    KillScript()
 
-    if (downlaodLocation) {
-        if (downlaodLocation == A_ScriptFullPath) {
-            MsgBox, 0, 😥 Yol hatalı, 🚩 Lütfen scriptin yolundan farklı bir yol seçin
-            UpdateApp()
-        } else {
-            DownloadFile(RELEASE_URL, downlaodLocation)
-            Run, %downlaodLocation%
-            MsgBox, 0, 👏 Güncelleme başarılı, 🌱 İmleci ikon üstüne getirerek yeni sürümü görebilirsiniz.
-            ExitApp
-        }
-    }
+    global RELEASE_URL, APP_PATH
+    DownloadFile(RELEASE_URL, APP_PATH)
+
+    Run, %APP_PATH%
+
+    global TITLE_MSG_BOX
+    MsgBox, 0, %TITLE_MSG_BOX%, 👏 Güncelleme başarılı`n🌱 İmleci ikon üstüne getirerek yeni sürümü görebilirsiniz.
+    ExitApp
+}
+
+KillScript() {
+    global APP_NAME
+    command := "taskkill /im " . APP_NAME . "*"
+    RunWait, %comspec% /c "%command%", , Hide
 }
