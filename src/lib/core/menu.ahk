@@ -46,16 +46,13 @@ AddFooterMenu() {
 }
 
 AddUpdateMenu() {
-    if (UpdateExist()) {
-        global TITLE_UPDATE, RELEASE_TAGNAME
-        title := TITLE_UPDATE . " (v" . RELEASE_TAGNAME . ")"
-        Menu, Tray, Add, %title%, UpdateClick
+    global TITLE_UPDATE
+    Menu, Tray, Add, %TITLE_UPDATE%, CheckForUpdate
 
-        global ICON_UPDATE
-        iconPath := GetIconPath(ICON_UPDATE)
+    global ICON_UPDATE
+    iconPath := GetIconPath(ICON_UPDATE)
 
-        AddTrayMenuIcon(title, iconPath)
-    }
+    AddTrayMenuIcon(TITLE_UPDATE, iconPath)
 }
 
 AddClearMenu() {

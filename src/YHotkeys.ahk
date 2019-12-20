@@ -22,10 +22,6 @@ OnExit("ExitFunc")
 InstallIcons()
 CreateOrUpdateTrayMenu()
 
-if not DEBUG {
-    CheckForUpdates()
-    CreateOrUpdateTrayMenu()
-}
 return
 
 #Include, %A_ScriptDir%\lib\core\common.ahk
@@ -34,23 +30,22 @@ return
 #Include, %A_ScriptDir%\lib\core\window.ahk
 #Include, %A_ScriptDir%\lib\util\hotkeys.ahk
 #Include, %A_ScriptDir%\lib\util\yemoji.ahk
-#Include, %A_ScriptDir%\lib\util\update.ahk
 #Include, %A_ScriptDir%\lib\util\fullscreen.ahk
 
 IconClicked:
     ToggleMemWindowWithTitle(A_ThisMenuItem)
-Return
+return
 
 ClearAll:
     ClearAllHIDDEN_WINDOWS()
-Return
+return
+
+CheckForUpdate:
+    ; TODO: Update aracını çalıştır
+return
 
 ShowAll:
     ShowAllHiddenWindows()
-return
-
-UpdateClick:
-    OnUpdateClick()
 return
 
 CloseApp:
