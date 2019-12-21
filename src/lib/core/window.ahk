@@ -24,10 +24,6 @@ SendWindowToTrayByID(ahkID) {
     WinHide ahk_id %ahkID%
 }
 
-IsWindowTitleExist(window_title) {
-    return window_title != "Program Manager" and window_title != ""
-}
-
 StorePinnedWindow(window_id) {
     global PINNED_WINDOWS
     PINNED_WINDOWS.Push(window_id)
@@ -62,52 +58,54 @@ ReleasePinnedWindow(window_id) {
 ReleaseAllPinnedWindows() {
     window_ids := GetPinnedWindowIDs()
     For index, window_id in window_ids {
-        WinGetTitle, window_title, ahk_id %window_id%
-        OnPinnedWindow(window_id, window_title)
+        OnPinnedWindow(window_id)
     }
 
     global PINNED_WINDOWS
     PINNED_WINDOWS := []
 }
 
-OnPinnedWindow(window_id, window_title) {
-    UnPinWindow(window_id, window_title)
+OnPinnedWindow(window_id) {
+    UnPinWindow(window_id)
     ReleasePinnedWindow(window_id)
 }
 
-OnUnPinnedWindow(window_id, window_title) {
-    PinWindow(window_id, window_title)
+OnUnPinnedWindow(window_id) {
+    PinWindow(window_id)
     StorePinnedWindow(window_id)
 }
 
-UnPinWindow(window_id, window_title) {
+UnPinWindow(window_id) {
     global TRANSPARENT_NORMAL
     WinSet, Transparent, %TRANSPARENT_NORMAL%, ahk_id %window_id%
-
-    new_title := StrReplace(window_title, "📌 ", "")
-    WinSetTitle, ahk_id %window_id%, ,%new_title%
-
     WinSet, AlwaysOnTop, Off, ahk_id %window_id%
 }
 
-PinWindow(window_id, window_title) {
+PinWindow(window_id) {
     global TRANSPARENT_PINNED
     WinSet, Transparent, %TRANSPARENT_PINNED%, ahk_id %window_id%
-
-    new_title := "📌 " . window_title
-    WinSetTitle, ahk_id %window_id%, ,%new_title%
-
     WinSet, AlwaysOnTop, On, ahk_id %window_id%
+}
+
+IsWindowTitleExist(window_title) {
+    return window_title != "Program Manager" and window_title != ""
+}
+
+IsPinned(window_id) {
+    WinGet, window_trans, Transparent, ahk_id %window_id%
+
+    global TRANSPARENT_PINNED
+    return window_trans == TRANSPARENT_PINNED
 }
 
 ToggleWindowPin() {
     WinGet, window_id, ID, A
     WinGetTitle, window_title, ahk_id %window_id%
     if (IsWindowTitleExist(window_title)) {
-        if InStr(window_title, "📌") {
-            OnPinnedWindow(window_id, window_title)
+        if (IsPinned(window_id)) {
+            OnPinnedWindow(window_id)
         } else {
-            OnUnPinnedWindow(window_id, window_title)
+            OnUnPinnedWindow(window_id)
         }
     }
 }
