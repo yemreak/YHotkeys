@@ -14,8 +14,9 @@ return
 :::hız::💨
 :::merak::👀
 
+
 :::test::🧪
-:::geridönüşüm::♻️
+:::geridönüşüm::♻️s
 :::denge::⚖️
 :::parti::🎉
 :::kurukafa::☠️
@@ -72,7 +73,7 @@ return
 :::wifi:::📶
 :::bluetooth::📶
 :::havalı::😎
-::bilim::👨‍🔬
+:::bilim::👨‍🔬
 :::analiz::🕵️‍♂️
 :::araştırma::🕵️‍♂️
 :::disk::💾
