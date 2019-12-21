@@ -45,6 +45,7 @@
 
 | ⌨️ Buton                                         | 📑 Açıklama                                              |
 | ------------------------------------------------ | -------------------------------------------------------- |
+| <kbd>⎇ Alt</kbd> <kbd>"</kbd> | 💫 Aynı tür pencelerer arasında gezinme
 | <kbd>❖ Win</kbd> <kbd>Space</kbd>                | 📌 Aktif olan pencereyi sabitleme / sabitlemeyi kaldırma |
 | <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>G</kbd> | 🔍 Seçili metni Google'da arama                          |
 | <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>T</kbd> | 💱 Seçili metni Google Çeviri'de açma                    |
@@ -64,7 +65,6 @@
 | ⌨️ Buton                      | 📑 Açıklama |
 | ----------------------------- | ----------- |
 | <kbd>❖ Win</kbd> <kbd>Q</kbd> | 📝 One Note |
-| <kbd>❖ Win</kbd> <kbd>T</kbd> | Tureng      |
 
 
 ### 📂 Dizin Kısayolları

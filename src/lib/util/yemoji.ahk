@@ -13,7 +13,8 @@ return
 :::yapı::🏗️
 :::hız::💨
 :::merak::👀
-:::gözm::👀
+
+:::test::🧪
 :::geridönüşüm::♻️
 :::denge::⚖️
 :::parti::🎉
@@ -112,7 +113,46 @@ return
 :::gazate::📰
 :::gazates::🗞️
 :::silah::🔫
+:::tatil::🏖️
+:::plan::🏌️‍♂️
+:::uyarı::⚠️
+:::duyuru::📢
+:::formül::🧬
+:::dna::🧬
 
+
+; Kalemler
+:::kalem::🖊️
+:::kalemu::✒️
+:::kalemd::🖋️
+
+; Kalp
+:::kalp::💖
+:::kalps::🖤
+:::kalpsiyah::🖤
+:::kalpy::💚
+:::kalpyeşil::💚
+:::kalpsa::💛
+:::kalpsarı::💛
+:::kalpm::💜
+:::kalpmavi::💙
+:::kırıkkalp::💔
+:::kalpkırık::💔
+:::kalp2::💞
+::kalpç::🤎
+:::kalp!::❣️
+
+; Çanta
+:::çanta::🛍️
+:::çantae::👜
+:::çantap::👝
+
+; Göz
+:::göz::👁️
+:::gözb::👁‍🗨
+:::gözm::👀
+:::gözy::🙄
+:::gözc::🧐
 
 ; Hızlı emojiler
 :::eli::🤭
@@ -138,7 +178,7 @@ return
 ::::(::☹️
 :::zzz::😴
 :::sarılma::🤗
-:::gözy::🙄
+
 :::rahatlama::😌
 :::uyuklama::😴
 ::::p::😋
@@ -179,6 +219,7 @@ return
 
 :::telefon::📞
 :::ahtapot::🐙
+:::github::🐙
 :::not::📝
 
 :::kılıç::⚔️
@@ -267,31 +308,31 @@ return
 :::anlaşma::🤝
 :::elkaldırma::🙋‍♂️
 :::mikrofon::🎤
-:::gözlüklü::🧐
+
 :::dünya::🌍
 :::okul::🏫
 :::zar::🎲
 :::?::❔
 :::yükleme::⏫
 :::indirme::⏬
-:::kalp::💖
-:::kalps::🖤
-:::kalpsiyah::🖤
-:::kalpy::💚
-:::kalpyeşil::💚
-:::kalpsa::💛
-:::kalpsarı::💛
-:::kalpm::💜
-:::kalpmavi::💙
-:::kırıkkalp::💔
-:::kalpkırık::💔
+
+
+
+
+
+
+
+
+
+
+
 :::kiraz::🍒
 :::pano::📋
 :::sirk::🎪
 :::deney::🧪
 :::civciv::🐥
 :::ycivciv::🐣
-:::göz::👁️
+
 :::çember::⭕
 :::kavhe::☕
 :::2parmak::🤞
