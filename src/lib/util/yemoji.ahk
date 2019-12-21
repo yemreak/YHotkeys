@@ -14,6 +14,9 @@ return
 :::hız::💨
 :::merak::👀
 
+:::civciv::🐥
+:::civcivy::🐣
+:::erişim::🐣
 
 :::test::🧪
 :::geridönüşüm::♻️s
@@ -28,6 +31,8 @@ return
 :::alev::🔥
 :::çeviri::💱
 :::dönüştürme::🔄
+:::sync::🔄
+:::senkronize::🔄
 :::yılan::🐍
 :::pc::💻
 :::bilgisayar::💻
@@ -101,6 +106,7 @@ return
 :::batarya::🔋
 :::konum::📍
 :::lokasyon::📍
+:::bayrakü::🚩
 :::yol::🚩
 :::path::🚩
 :::salyangoz::🐌
@@ -267,6 +273,7 @@ return
 :::parlak::🔆
 :::kutu::🧃
 ::dal::🔀
+:::birleştirme::🔀
 :::anahtar::🔑
 :::kilit::🔏
 :::parşomen::📜
@@ -331,8 +338,7 @@ return
 :::pano::📋
 :::sirk::🎪
 :::deney::🧪
-:::civciv::🐥
-:::ycivciv::🐣
+
 
 :::çember::⭕
 :::kavhe::☕
