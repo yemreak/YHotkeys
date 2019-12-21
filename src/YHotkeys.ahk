@@ -84,7 +84,7 @@ OpenWindowInTray(selector, name, url, mode=3) {
     Loop, %IDlist% {
         ahkID := IDlist%A_INDEX%
         if WinExist("ahk_id" . ahkID) {
-            WinGetTitle, title
+            WinGetTitle, title, ahk_id %ahkID%
             if (title == "")
                 continue
 
