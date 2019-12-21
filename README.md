@@ -33,13 +33,11 @@
 
 ![](res/tray_icon.png)
 
-![](res/default.png)
+![](res/hover_version.png)
 
-![](res/tray_bar.png)
+![](res/tray_menu.png)
 
 ## 💞 Kısayollar
-
-> 🙄 Bu alan yakın zamanda kişisel kısayollarımdan ayrıştırılacaktır.
 
 ### 📈 Verimlilik
 
