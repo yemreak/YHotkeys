@@ -7,7 +7,7 @@
 - ⭐ Örneğin `:yıldız:` yazarsanız `⭐` karakterine dönüşecektir
 - 😏 Yazım hatalarından kaçınmak için, yeniden yazabilme şansınız vardır
 
-> ✨ Burada eksik olan emojiler vardır, en güncel halini [yemoji.ahk](src/lib/yemoji.ahk) dosyası içerisinde bulabilirsin
+> ✨ Burada eksik olan emojiler vardır, en güncel halini [yemoji.ahk](src/lib/util/yemoji.ahk) dosyası içerisinde bulabilirsin
 
 ## 😋 Duygular
 
