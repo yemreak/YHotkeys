@@ -32,8 +32,8 @@ OnMessage( 0x06, "ch_WM_ACTIVATE" )
 
 ;================================Variables================================;
 
-ch_hotkeyHide := "#q"                     ;{Win}q
-ch_hotkeyShow := "#w"                     ;{Win}w
+ch_hotkeyHide := "#+q"                     ;{Win}q
+ch_hotkeyShow := "#+w"                     ;{Win}w
 ch_hotkeyExit := "#F7"                    ;{Win}F7
 ch_maxWindows := 10
 ch_bgColor := "EBEBEB"
