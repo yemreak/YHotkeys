@@ -111,6 +111,8 @@ return
 :::habers::📰
 :::gazate::📰
 :::gazates::🗞️
+:::silah::🔫
+
 
 ; Hızlı emojiler
 :::eli::🤭
@@ -180,6 +182,8 @@ return
 :::not::📝
 
 :::kılıç::⚔️
+:::hançer::🗡️
+:::bıçak::🔪
 :::koş::🏃‍♂️
 :::patlama::💥
 :::yay::🏹
