@@ -4,8 +4,9 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-; ---------------------------------- Özellik Kısayolları ----------------------------------
 return
+
+; ---------------------------------- Özellik Kısayolları ----------------------------------
 
 #Space::
     ToggleWindowPin()
@@ -29,9 +30,8 @@ return
     ToggleWindowPin()
 return
 
-return
-
 ; ---------------------------------- Göster / Gizle ----------------------------------
+
 #q::
     name := "- OneNote"
     path := "shell:appsFolder\Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim"
@@ -75,6 +75,8 @@ return
     path := "explorer.exe"
     OpenWindowInTray("class", name, path)
 return
+
+; --------------------------------- Dizin Kısayolları ---------------------------------
 
 ; Dizin kısayolları PgDn ile başlar
 PgDn & g::
