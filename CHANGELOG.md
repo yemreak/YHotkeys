@@ -2,12 +2,21 @@
 
 [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri (2.4.0)
+## 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri (2.4.0.1)
 
 - 💫 <kbd>⎇ Alt</kbd> <kbd>"</kbd> kısayolı ile aynı tür pencelerer arasında gezinme
 - 👨‍🔧 Sabitlemede pencere başlığından kaynaklanan sorun giderildi
 - 🧹 Sabitlenen pencerelerde pencere başlığı artık değiştirilmemekte
 - ➕ YEmojiler artırıldı
+
+## 🚀 Güncelleme aracı bağımsızlaştırıldı (2.4.0)
+
+- 🚀 Güncelleme işlemi artık, çalışan scripti güncelliyor ve yenisini açıyor
+- ✨ Güncelleme aracı scriptten bağımsız hale getirildi
+- 👮‍♂️ Güncelle menüsü ile artık istendiği zamanda güncelleme kontrol edilebilmekte
+- ➕ Yemojiler artırıldı
+
+> 🚅 Program açıldığında otomatik güncelleme kontrolü devam etmektedir
 
 ## 📝 Not defterine hızlıca not alma kısayolu (2.3.3.2)
 
