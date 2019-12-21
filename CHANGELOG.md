@@ -4,7 +4,7 @@
 
 ## 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri (2.4.0.1)
 
-- 💫 <kbd>⎇ Alt</kbd> <kbd>"</kbd> kısayolı ile aynı tür pencelerer arasında gezinme
+- 💫 <kbd>⎇ Alt</kbd> <kbd>"</kbd> kısayolı ile aynı tür pencereler arasında gezinme
 - 👨‍🔧 Sabitlemede pencere başlığından kaynaklanan sorun giderildi
 - 🧹 Sabitlenen pencerelerde pencere başlığı artık değiştirilmemekte
 - ➕ YEmojiler artırıldı
@@ -52,7 +52,7 @@
 
 - ✨ Fonksiyon isimleri sadeleştirildi, kod yapısı anlamlaştırıldı
 
-## 🚀 Yeni versiyon (2.3.0)
+## 🚀 Güncelleme yapısı eklendi (v2.3.0)
 
 - ✨ Kendi kendisini güncelleme yapısı eklendi
 - 💖 Emojiler artırıldı
