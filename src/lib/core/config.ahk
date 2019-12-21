@@ -6,7 +6,7 @@
 
 ; UTF-8 with BOM
 
-DEBUG := True
+DEBUG := False
 
 ; Core Settings
 APP_NAME := "YHotkeys"
