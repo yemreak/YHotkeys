@@ -147,7 +147,7 @@ StoreReleaseInfos(response) {
 
 ShowUpdateDialog() {
     global RELEASE_TAGNAME, RELEASE_BODY, TITLE_MSG_BOX
-    MsgBox, 4, %TITLE_MSG_BOX%, 🌟 %RELEASE_TAGNAME% sürümü mevcut`n`n%RELEASE_BODY% `n`n❔Güncellemek ister misin?
+    MsgBox, 4, %TITLE_MSG_BOX%, 🌟 %RELEASE_TAGNAME% sürümü mevcut`n`n%RELEASE_BODY% `n`n❔ Güncellemek ister misin?
     IfMsgBox Yes
         return True
     else
