@@ -30,6 +30,10 @@ return
     ToggleWindowPin()
 return
 
+!"::
+    SwitchWindow()
+return
+
 ; ---------------------------------- Göster / Gizle ----------------------------------
 
 #q::

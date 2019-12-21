@@ -109,3 +109,17 @@ ToggleWindowPin() {
         }
     }
 }
+
+SwitchWindow() {
+    WinGet, window_id, ID, A
+    WinGet, window_exe, ProcessName, ahk_id %window_id%
+    WinGet, window_ids, List, ahk_exe %window_exe%
+    Loop, %window_ids% {
+        window_idx := window_ids%A_Index%
+        WinGetTitle, window_titlex, ahk_id %window_idx%
+        if (IsWindowTitleExist(window_titlex) and window_idx != window_id) {
+            WinActivate, ahk_id %window_idx%
+            Break
+        }
+    }
+}
