@@ -19,7 +19,7 @@ return
 :::erişim::🐣
 
 :::test::🧪
-:::geridönüşüm::♻️s
+:::geridönüşüm::♻️
 :::denge::⚖️
 :::parti::🎉
 :::kurukafa::☠️
@@ -324,21 +324,10 @@ return
 :::yükleme::⏫
 :::indirme::⏬
 
-
-
-
-
-
-
-
-
-
-
 :::kiraz::🍒
 :::pano::📋
 :::sirk::🎪
 :::deney::🧪
-
 
 :::çember::⭕
 :::kavhe::☕
