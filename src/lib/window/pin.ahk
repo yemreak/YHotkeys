@@ -1,28 +1,11 @@
 ﻿; ####################################################################################
 ; ##                                                                                ##
-; ##                               PENCERE YÖNETİMLERİ                              ##
+; ##                             SABİTLEME YÖNETİMİ                                 ##
 ; ##                                                                                ##
 ; ####################################################################################
 
-ShowHidedWindow(ahkId)
-{
-    WinRestore, ahk_id %ahkID%
-    WinShow, ahk_id %ahkID%
-}
 
-MinimizeWindow(ahkId) {
-    Winminimize, ahk_id %ahkID%
-}
-
-ActivateWindow(ahkID, wait=False) {
-    WinActivate, ahk_id %ahkID%
-    if wait
-        WinWaitActive, ahk_id %ahkID%
-}
-
-SendWindowToTrayByID(ahkID) {
-    WinHide ahk_id %ahkID%
-}
+; --------------------------------- Hafıza İşlemleri ---------------------------------
 
 StorePinnedWindow(window_id) {
     global PINNED_WINDOWS
@@ -47,6 +30,8 @@ GetPinnedWindowIDs(){
     }
 return window_ids
 }
+
+; --------------------------------- Yönetim İşlemleri ---------------------------------
 
 ReleasePinnedWindow(window_id) {
     ix := GetPinnedWindowIndex(window_id)
@@ -110,16 +95,4 @@ ToggleWindowPin() {
     }
 }
 
-SwitchWindow() {
-    WinGet, window_id, ID, A
-    WinGet, window_exe, ProcessName, ahk_id %window_id%
-    WinGet, window_ids, List, ahk_exe %window_exe%
-    Loop, %window_ids% {
-        window_idx := window_ids%A_Index%
-        WinGetTitle, window_titlex, ahk_id %window_idx%
-        if (IsWindowTitleExist(window_titlex) and window_idx != window_id) {
-            WinActivate, ahk_id %window_idx%
-            Break
-        }
-    }
-}
+

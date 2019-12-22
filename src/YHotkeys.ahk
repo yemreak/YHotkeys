@@ -1,4 +1,24 @@
-﻿; v1.1.31.01'de tüm desktoplarda çalışır
+﻿; Copyright [2019] [Yunus Emre Ak]
+;
+;    Licensed under the Apache License, Version 2.0 (the "License");
+;    you may not use this file except in compliance with the License.
+;    You may obtain a copy of the License at
+;
+;        http://www.apache.org/licenses/LICENSE-2.0
+;
+;    Unless required by applicable law or agreed to in writing, software
+;    distributed under the License is distributed on an "AS IS" BASIS,
+;    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+;    See the License for the specific language governing permissions and
+;    limitations under the License.
+
+; ####################################################################################
+; ##                                                                                ##
+; ##                           YHotkeys Kısayol Yönetici                            ##
+; ##                                                                                ##
+; ####################################################################################
+
+; v1.1.31.01'de tüm desktoplarda çalışır
 ; https://www.autohotkey.com/download/1.1/AutoHotkey_1.1.31.01_setup.exe
 
 #NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
@@ -32,8 +52,8 @@ return
 
 #Include, %A_ScriptDir%\lib\core\common.ahk
 #Include, %A_ScriptDir%\lib\core\menu.ahk
-#Include, %A_ScriptDir%\lib\core\memory.ahk
-#Include, %A_ScriptDir%\lib\core\window.ahk
+#Include, %A_ScriptDir%\lib\window\hide.ahk
+#Include, %A_ScriptDir%\lib\window\pin.ahk
 #Include, %A_ScriptDir%\lib\util\hotkeys.ahk
 #Include, %A_ScriptDir%\lib\util\yemoji.ahk
 #Include, %A_ScriptDir%\lib\util\fullscreen.ahk
@@ -43,7 +63,7 @@ IconClicked:
 return
 
 ClearAll:
-    ClearAllHIDDEN_WINDOWS()
+    ClearAllHiddenWindows()
 return
 
 CheckForUpdate:
@@ -64,124 +84,5 @@ ExitFunc(exitReason, exitCode) {
         ShowAllHiddenWindows()
         ReleaseAllPinnedWindows()
         return 0
-    }
-}
-
-OpenWindowInTray(selector, name, url, mode=3) {
-    SetTitleMatchMode, %mode%
-    DetectHiddenWindows, On
-
-    IDlist := []
-    if (selector == "title") {
-        WinGet, IDlist, list, %name%
-    } else if (selector == "class") {
-        WinGet, IDlist, list, ahk_class %name%
-    } else if (selector == "exe") {
-        WinGet, IDlist, list, ahk_exe %name%
-    }
-
-    found := False
-    Loop, %IDlist% {
-        ahkID := IDlist%A_INDEX%
-        if WinExist("ahk_id" . ahkID) {
-            WinGetTitle, title, ahk_id %ahkID%
-            if (title == "")
-                continue
-
-            ToggleWindow(ahkID, True)
-            found := True
-        }
-    }
-    if !found
-        RunUrl(url)
-}
-
-OpenWindowByTitle(title, url, mode=3) {
-    SetTitleMatchMode, %mode%
-    DetectHiddenWindows, Off
-
-    if WinExist(title) {
-        WinGet, ahkID, ID, %title%
-        ToggleWindow(ahkID, False)
-    } else {
-        RunUrl(url)
-    }
-}
-
-ShowAllHiddenWindows() {
-    ahkIDs := GetHiddenWindowIDs()
-    For index, ahkID in ahkIDs {
-        ToggleWindow(ahkID, True)
-    }
-
-    return ahkIDs
-}
-
-ClearAllHIDDEN_WINDOWS() {
-    DetectHiddenWindows, On
-
-    ahkIDs := GetHiddenWindowIDs()
-    For index, ahkID in ahkIDs {
-        WinKill, ahk_id %ahkID%
-        WinWaitClose, ahk_id %ahkID%
-    }
-
-    global HIDDEN_WINDOWS
-    HIDDEN_WINDOWS := []
-
-    CreateOrUpdateTrayMenu()
-}
-
-ToggleMemWindowWithTitle(menuName) {
-    ahkID := GetHiddenWindowIDByTitle(menuName)
-    if ahkID
-        ToggleWindow(ahkID, True)
-    else
-        global APP_PAGE
-        Run, %APP_PAGE%
-}
-
-ShowWindowInTray(ahkID) {
-    if DropFromMem(ahkID){
-        DropWindowFromTrayMenu(ahkID)
-        CreateOrUpdateTrayMenu()
-    }
-    ShowHidedWindow(ahkID)
-}
-
-MinimizeWindowToTray(ahkID) {
-    KeepWindowInMem(ahkID)
-    SendWindowToTrayByID(ahkID)
-    CreateOrUpdateTrayMenu()
-}
-
-OnWinNotExist(ahkID, mask) {
-    if mask {
-        ShowWindowInTray(ahkID)
-    }
-    ActivateWindow(ahkID)
-}
-
-OnWinActive(ahkID, mask) {
-    if mask {
-        MinimizeWindowToTray(ahkID)
-    }
-    MinimizeWindow(ahkID)
-}
-
-OnWinNotActive(ahkID) {
-    ActivateWindow(ahkID)
-}
-
-ToggleWindow(ahkID, mask=False) {
-    DetectHiddenWindows, Off
-    if !WinExist("ahk_id" . ahkID) {
-        OnWinNotExist(ahkID, mask)
-    } else {
-        if WinActive("ahk_id" . ahkID) {
-            OnWinActive(ahkID, mask)
-        } else {
-            OnWinNotActive(ahkID)
-        }
     }
 }

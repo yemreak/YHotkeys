@@ -53,6 +53,13 @@ return
 
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
+; #"::
+;     name := "WindowsTerminal.exe"
+;     path := "shell:appsfolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App"
+;     mode := 2
+;     OpenWindowInTray("exe", name, path, mode)
+; return
+
 #w::
     name := "WhatsApp"
     path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
