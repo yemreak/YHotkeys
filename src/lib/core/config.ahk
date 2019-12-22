@@ -7,10 +7,10 @@
 ; UTF-8 with BOM
 
 ; ------------------------------- Development Settings -------------------------------
-DEBUG := False
+DEBUG := True
 
 ; ----------------------------------- App Settings -----------------------------------
-APP_NAME := "YHotkeys"
+APP_NAME = YHotkeys
 APP_PAGE = https://yhotkeys.yemreak.com
 
 ; -------------------------------- Data dir settings ---------------------------------
@@ -18,9 +18,9 @@ DIR_NAME := A_AppData . "\" . APP_NAME
 DIR_ICON := DIR_NAME . "\Icons"
 
 ; --------------------------------- Update settings ----------------------------------
-VERSION = 2.4.0.2
+VERSION = 2.4.0.3
 API_RELEASE = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
-PATH_UPDATER = %DIR_NAME%\updater.exe
+PATH_UPDATER = %DIR_NAME%\YUpdater.exe
 
 ; --------------------------------- Windows settings ---------------------------------
 HIDDEN_WINDOWS := []

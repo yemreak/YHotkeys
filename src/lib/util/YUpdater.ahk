@@ -5,6 +5,7 @@
 ; ####################################################################################
 
 ; update.exe name version url
+; YUpdater.exe YHotkeys 1 https://api.github.com/repos/yedhrab/YHotkeys/releases/latest .
 
 TEXT_DOWNLOAD_START := "⏱ Yükleme hazırlanıyor"
 TEXT_DOWNLOADING := "✨ Yükleniyor..."
@@ -13,6 +14,7 @@ TITLE_MSG_BOX := "✨ YHotkeys ~ Güncelleyici"
 TITLE_TEXT_DOWNLOADING := "Yükleniyor"
 
 RELEASE_TAGNAME := ""
+RELEASE_TITLE := ""
 RELEASE_BODY := ""
 RELEASE_URL := ""
 
@@ -24,6 +26,7 @@ APP_PATH = 0
 ParseArgs()
 CheckForUpdates()
 return
+
 
 #Include, %A_ScriptDir%\json.ahk
 
@@ -136,18 +139,20 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
 
 StoreReleaseInfos(response) {
     tagname := response.tag_name
+    name := response.name
     body := response.body
     download_url := response.assets[1].browser_download_url
 
-    global RELEASE_TAGNAME, RELEASE_BODY, RELEASE_URL
+    global RELEASE_TAGNAME, RELEASE_TITLE, RELEASE_BODY, RELEASE_URL
     RELEASE_TAGNAME := tagname
+    RELEASE_TITLE := name . " ( " . tagname . " )"
     RELEASE_BODY := body
     RELEASE_URL := download_url
 }
 
 ShowUpdateDialog() {
-    global RELEASE_TAGNAME, RELEASE_BODY, TITLE_MSG_BOX
-    MsgBox, 4, %TITLE_MSG_BOX%, 🌟 %RELEASE_TAGNAME% sürümü mevcut`n`n%RELEASE_BODY% `n`n❔ Güncellemek ister misin?
+    global RELEASE_TITLE, RELEASE_BODY, TITLE_MSG_BOX, APP_VERSION, RELEASE_TAGNAME
+    MsgBox, 4, %TITLE_MSG_BOX%, %RELEASE_TITLE%`n`n%RELEASE_BODY% `n`n✨ Güncellemek ister misin? ( %APP_VERSION% -> %RELEASE_TAGNAME% )
     IfMsgBox Yes
         return True
     else

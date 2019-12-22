@@ -38,7 +38,7 @@ InstallIcons() {
 InstallUpdateTool() {
     global DIR_NAME, PATH_UPDATER
     FileCreateDir,  %DIR_NAME%
-    FileInstall, .\lib\util\updater.exe, %PATH_UPDATER%, 1
+    FileInstall, .\lib\util\YUpdater.exe, %PATH_UPDATER%, 1
 }
 
 WriteToIni(sec, key, val) {
