@@ -8,6 +8,13 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
+## 🌍 Ikona tıklandığında doküman sayfasına yönlendirme \(2.4.0.2\)
+
+- 🚀 Yeni doküman sayfası oluşturuldu
+- 🔗 Artık ikona tıklandığında yeni web sayfasına yönlendirecek
+- 🧹 İkona tıklandığında son yapılan eylemi tekrarlama kaldırıldı
+- 👨‍💻 Kodlarda iyileştirme yapıldı
+
 ## 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri \(2.4.0.1\)
 
 * 💫 ⎇ Alt " kısayolı ile aynı tür pencereler arasında gezinme
