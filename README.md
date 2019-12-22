@@ -26,7 +26,7 @@ description: >-
 * 👀 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
 * [🚀 YEmoji](yemoji.md) alanı altından emojilerin kısayollarına bakabilirsin
 
-## 🚩 Uygulamayı System ile Başlatma
+## 🚩 System ile Başlatma
 
 * ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
 * 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp ↩ Enter 'a
