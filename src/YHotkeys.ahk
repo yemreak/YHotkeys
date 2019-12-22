@@ -45,7 +45,7 @@ InstallUpdateTool()
 CreateOrUpdateTrayMenu()
 
 if not DEBUG {
-    CheckForUpdate()
+    CheckForUpdate(True)
 }
 
 return

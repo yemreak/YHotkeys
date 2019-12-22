@@ -46,8 +46,8 @@ WriteToIni(sec, key, val) {
     IniWrite, %val%, %DIR_NAME%\yhotkeys.ini, %sec%, %key%
 }
 
-CheckForUpdate() {
+CheckForUpdate(silent := False) {
     global PATH_UPDATER, DIR_NAME, APP_NAME, VERSION, API_RELEASE
-    command = %PATH_UPDATER% "%APP_NAME%" "%VERSION%" "%API_RELEASE%" "%A_ScriptFullPath%"
+    command = %PATH_UPDATER% "%APP_NAME%" "%VERSION%" "%API_RELEASE%" "%A_ScriptFullPath%" %silent%
     RunWait, %command%
 }

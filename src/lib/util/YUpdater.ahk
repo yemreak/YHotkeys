@@ -4,8 +4,9 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-; update.exe name version url
+; update.exe name version url silent_flag
 ; YUpdater.exe YHotkeys 1 https://api.github.com/repos/yedhrab/YHotkeys/releases/latest .
+#Warn
 
 TEXT_DOWNLOAD_START := "⏱ Yükleme hazırlanıyor"
 TEXT_DOWNLOADING := "✨ Yükleniyor..."
@@ -23,6 +24,8 @@ APP_VERSION = 0
 APP_GITHUB_RELEASE_API = 0
 APP_PATH = 0
 
+FLAG_SILENT = 0
+
 ParseArgs()
 CheckForUpdates()
 return
@@ -31,11 +34,12 @@ return
 #Include, %A_ScriptDir%\json.ahk
 
 ParseArgs() {
-    global APP_NAME, APP_VERSION, APP_GITHUB_RELEASE_API, APP_PATH
+    global APP_NAME, APP_VERSION, APP_GITHUB_RELEASE_API, APP_PATH, FLAG_SILENT
     APP_NAME := A_Args[1]
     APP_VERSION := A_Args[2]
     APP_GITHUB_RELEASE_API := A_Args[3]
     APP_PATH := A_Args[4]
+    FLAG_SILENT := A_Args[5]
 
     if not (APP_NAME and APP_VERSION and APP_GITHUB_RELEASE_API and APP_PATH) {
         global TITLE_MSG_BOX
@@ -53,7 +57,7 @@ HTTPRequest(requestType, url) {
 
     oHTTP.Open(requestType, url)
     oHTTP.SetAutoLogonPolicy(0) ; AutoLogonPolicy_Always=0, AutoLogonPolicy_OnlyIfBypassProxy=1, AutoLogonPolicy_Never=2
-    oHTTP.Send()s
+    oHTTP.Send()
 
     return JSON.Load(oHTTP.ResponseText)
 }
@@ -175,9 +179,10 @@ CheckForUpdates() {
 OnResponse(response) {
     StoreReleaseInfos(response)
 
+    global FLAG_SILENT
     if (UpdateExist()) {
         OnUpdateClick()
-    } else {
+    } else if (not FLAG_SILENT) {
         global TITLE_MSG_BOX
         MsgBox, 0, %TITLE_MSG_BOX%, 👏 Zaten son sürümdesiniz`n💖 Günceli takip etmeniz ne hoş
     }
