@@ -34,6 +34,8 @@ AddHeaderMenu() {
         Menu, Tray, Icon, %iconPath%,, 20
         AddTrayMenuIcon(APP_NAME, iconPath)
     }
+
+    Menu, Tray, Default, %APP_NAME%
 }
 
 AddFooterMenu() {
@@ -83,8 +85,6 @@ AddWindowsMenu() {
         global APP_NAME
         mainTitle := APP_NAME
     }
-
-    Menu, Tray, Default, %mainTitle%
 }
 
 CreateOrUpdateTrayMenu(){

@@ -137,7 +137,8 @@ ToggleMemWindowWithTitle(menuName) {
     if ahkID
         ToggleWindow(ahkID, True)
     else
-        Run https://github.com/yedhrab/YHotkeys
+        global APP_PAGE
+        Run, %APP_PAGE%
 }
 
 ShowWindowInTray(ahkID) {
