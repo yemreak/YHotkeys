@@ -20,12 +20,40 @@ return
 
 :::sessiz::🤫
 
+:::sayı::🔢
+:::i::ℹ️
+:::bilgi::ℹ️
+:::info::ℹ️
+
+:::tr::☪️
+:::türkiye::☪️
+
+; Bayrak
+:::yol::🚩
+:::path::🚩
+:::bayrakü::🚩
+:::bayrakb::🏁
+:::bayrakç::🎌
+:::kullanım::🎌
+
 ; Casus
 :::analiz::🕵️‍♂️
 :::araştırma::🕵️‍♂️
 :::casus::🕵️‍♂️
 :::spy::🕵️‍♂️
 :::dedektif::🕵️‍♂️
+
+:::dosyalar::🗃️
+:::çekmece::🗃️
+:::veri::🗃️
+
+; Saat
+:::saat::🕐
+:::alarm::⏰
+:::sayaç::⏱
+:::saatk::⌚
+:::saatk::⏳
+:::saatkd::⌛
 
 :::test::🧪
 :::geridönüşüm::♻️
@@ -46,9 +74,7 @@ return
 :::pc::💻
 :::bilgisayar::💻
 :::para::💰
-:::saat::🕐
-:::alarm::⏰
-:::saatk::⌚
+
 :::öğretmen::👨‍🏫
 :::kitap::📖
 :::kitaplar::📚
@@ -113,9 +139,7 @@ return
 :::batarya::🔋
 :::konum::📍
 :::lokasyon::📍
-:::bayrakü::🚩
-:::yol::🚩
-:::path::🚩
+
 :::salyangoz::🐌
 :::yavaş::🐌
 :::rapor::📜
@@ -308,13 +332,12 @@ return
 :::abc::🔤
 :::süpürge::🧹
 :::kurdele::🎀
-:::übayrak::🚩
 :::tamir::👨‍🔧
 :::alet::🧰
 :::düşünceli::🤔
 :::sanat::🎨
-:::bbayrak::🏁
-:::çbayrak::🎌
+
+
 :::roket::🚀
 :::kumsaati::⌛
 :::yazı::✍
