@@ -51,7 +51,7 @@ description: >-
 
 | ⌨️ Buton | 📑 Açıklama |
 | :--- | :--- |
-| ⎇ Alt " | 💫 Aynı tür pencelerer arasında gezinme |
+| ⎇ Alt " | 💫 Aynı tür pencereler arasında gezinme |
 | ❖ Win Space | 📌 Aktif olan pencereyi sabitleme / sabitlemeyi kaldırma |
 | ❖ Win ⇧ Shift G | 🔍 Seçili metni Google'da arama |
 | ❖ Win ⇧ Shift T | 💱 Seçili metni Google Çeviri'de açma |
