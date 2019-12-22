@@ -19,11 +19,11 @@ description: >-
 
 ## 👣 Kullanım Adımları
 
-* ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirin
-* 😁 Sadece **Exe** uzantılı dosyayı çalıştırman yeterli
-* 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
-* ✨ Uygulama kendini otomatik olarak güncellemektedir
+* ⏬ Uygulamanın son sürümünü [🔗 buradan](http://github.com/yedhrab/YHotkeys/releases/latest/download/YHotkeys.exe) indirin
 * 👀 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
+* 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
+* 🌱 İkonuna tıklayarak bu sayfaya yönelebilirsin
+* ✨ Uygulama kendini otomatik olarak güncellemektedir
 * [🚀 YEmoji](yemoji.md) alanı altından emojilerin kısayollarına bakabilirsin
 
 ## 🚩 System ile Başlatma
