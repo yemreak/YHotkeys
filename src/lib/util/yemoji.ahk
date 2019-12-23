@@ -28,6 +28,16 @@ return
 :::tr::☪️
 :::türkiye::☪️
 
+; Klavye butonları
+:::win::❖ Win
+:::tab::⭾ Tab
+:::shift::⇧ Shift
+:::ctrl::✲ Ctrl
+:::enter::↩ Enter
+:::arrow::↑ ↓ ← → Arrow
+:::esc::⎋ Esc
+:::alt::⎇ Alt
+
 ; Bayrak
 :::yol::🚩
 :::path::🚩
