@@ -20,11 +20,22 @@ description: >-
 ## 👣 Kullanım Adımları
 
 * ⏬ Uygulamanın son sürümünü [🔗 buradan](http://github.com/yedhrab/YHotkeys/releases/latest/download/YHotkeys.exe) indirin
-* 👀 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakabilirsin
-* 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
+* 👀 Uygulamanın sunduğu kısayollar için [💞 Kısayollar](./#kisayollar) alanına bakabilirsin
+* 🚀 YEmoji kısayolları için [🚀 YEmoji](yemoji.md) alanına bakmalısın
 * 🌱 İkonuna tıklayarak bu sayfaya yönelebilirsin
+
+{% hint style="info" %}
+👀 Diğer sürümlere göz atmak için [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanına bakmalısın
+{% endhint %}
+
+## ✨ Güncelleme İşlemleri
+
+* 🖱️ İmlecini 🌱 ikonunun üzerinde bekleterek, kullandığın sürümü görebilirsin
 * ✨ Uygulama kendini otomatik olarak güncellemektedir
-* [🚀 YEmoji](yemoji.md) alanı altından emojilerin kısayollarına bakabilirsin
+
+{% hint style="info" %}
+📢 Güncellemede sorun yaşarsan [👣 Kullanım Adımları](./#kullanim-adimlari) alanından son sürümü indirebilirsin
+{% endhint %}
 
 ## 🚩 System ile Başlatma
 
