@@ -21,15 +21,14 @@
 ; v1.1.31.01'de tüm desktoplarda çalışır
 ; https://www.autohotkey.com/download/1.1/AutoHotkey_1.1.31.01_setup.exe
 
+#Warn  ; Enable warnings to assist with detecting common errors.
 #NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
-
 #KeyHistory 0 ; Tuş basımları loglamayı engeller
 
 SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
 ListLines, On ; Derlenen verileri loglamaz
 
-#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -39,9 +38,6 @@ OnExit("ExitFunc")
 
 #Include, %A_ScriptDir%\lib\core\config.ahk
 
-RemoveOldData()
-InstallIcons()
-InstallUpdateTool()
 CreateOrUpdateTrayMenu()
 
 if not DEBUG {
@@ -51,32 +47,13 @@ if not DEBUG {
 return
 
 #Include, %A_ScriptDir%\lib\core\common.ahk
+#Include, %A_ScriptDir%\lib\core\event.ahk
 #Include, %A_ScriptDir%\lib\core\menu.ahk
 #Include, %A_ScriptDir%\lib\window\hide.ahk
 #Include, %A_ScriptDir%\lib\window\pin.ahk
 #Include, %A_ScriptDir%\lib\util\hotkeys.ahk
 #Include, %A_ScriptDir%\lib\util\yemoji.ahk
 #Include, %A_ScriptDir%\lib\util\fullscreen.ahk
-
-IconClicked:
-    ToggleMemWindowWithTitle(A_ThisMenuItem)
-return
-
-ClearAll:
-    ClearAllHiddenWindows()
-return
-
-CheckForUpdate:
-    CheckForUpdate()
-return
-
-ShowAll:
-    ShowAllHiddenWindows()
-return
-
-CloseApp:
-    ExitApp
-Return
 
 ExitFunc(exitReason, exitCode) {
     if exitReason not in Logoff,Shutdown

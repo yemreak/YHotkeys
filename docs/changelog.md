@@ -8,6 +8,20 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
+## 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik \(2.4.1.0\)
+
+- 📋 Alt menü oluşturuldu
+- 💖 Tüm ikonlar yeniden yapılandırıldı
+- 👷‍♂️ Yükleyici oluşturuldu
+- 📂 Seçili metin ❖ Win ⇧ Shift E kısayolu ile dosya gezgininde açılır
+- ⌨️ Klavye butonları temsil eden yemojiler eklendi
+- ✨ Yemojiler artırıldı
+- 👨‍💻 Kodda verimlilik
+
+![](.gitbook/assets/tray_menu.png)
+
+> 😥 Kısayollar henüz desteklenmemektedir.
+
 ## 🌍 Ikona tıklandığında doküman sayfasına yönlendirme \(2.4.0.2\)
 
 - 🚀 Yeni doküman sayfası oluşturuldu

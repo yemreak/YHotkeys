@@ -8,6 +8,12 @@ return
 
 ; --------------------------------- Hafıza İşlemleri ---------------------------------
 
+class WindowObject {
+    ahkID := 0
+    title := ""
+    iconPath := ""
+}
+
 DropFromMem(ahkID){
     index := GetHiddenWindowIndex(ahkID)
     if index {
@@ -18,20 +24,23 @@ DropFromMem(ahkID){
 }
 
 KeepWindowInMem(ahkID) {
-    WinGetTitle, title, ahk_id %ahkID%
-    WinGet, iconPath, ProcessPath, ahk_id %ahkID%
-    KeepInMem(ahkID, title, iconPath)
+    item := CreateWindowObject(ahkID)
+
+    global HIDDEN_WINDOWS
+    HIDDEN_WINDOWS.Push(item)
 }
 
-KeepInMem(ahkID, title, iconPath) {
-    item := new MenuObject
+CreateWindowObject(ahkID) {
+    WinGetTitle, title, ahk_id %ahkID%
+    WinGet, iconPath, ProcessPath, ahk_id %ahkID%
+
+    item := new WindowObject
 
     item.ahkID := ahkID
     item.title := title
     item.iconPath := iconPath
 
-    global HIDDEN_WINDOWS
-    HIDDEN_WINDOWS.Push(item)
+    return item
 }
 
 GetHiddenWindowIDs(){

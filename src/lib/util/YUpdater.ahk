@@ -6,13 +6,28 @@
 
 ; update.exe name version url silent_flag
 ; YUpdater.exe YHotkeys 1 https://api.github.com/repos/yedhrab/YHotkeys/releases/latest .
-#Warn
+
+#Warn  ; Enable warnings to assist with detecting common errors.
+#NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
+#SingleInstance Force ; Sadece 1 kez açalıştırabilire
+#KeyHistory 0 ; Tuş basımları loglamayı engeller
+
+SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
+ListLines, On ; Derlenen verileri loglamaz
+
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+#MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 
 TEXT_DOWNLOAD_START := "⏱ Yükleme hazırlanıyor"
 TEXT_DOWNLOADING := "✨ Yükleniyor..."
 
-TITLE_MSG_BOX := "✨ YHotkeys ~ Güncelleyici"
+VERSION := "1.0.0"
+TIP_MENU := "✨ YUpdater - Güncelleyici ~ YEmreAk (v" . VERSION . ")"
+
 TITLE_TEXT_DOWNLOADING := "Yükleniyor"
+ICON_TRAY := "..\..\res\update.ico"
 
 RELEASE_TAGNAME := ""
 RELEASE_TITLE := ""
@@ -26,12 +41,20 @@ APP_PATH = 0
 
 FLAG_SILENT = 0
 
+SetTrayMenu()
 ParseArgs()
 CheckForUpdates()
 return
 
-
 #Include, %A_ScriptDir%\json.ahk
+
+SetTrayMenu() {
+    global TIP_MENU, ICON_TRAY
+    Menu, Tray, Tip, %TIP_MENU%
+    If (FileExist(ICON_TRAY)) {
+        Menu, Tray, Icon, %ICON_TRAY%
+    }
+}
 
 ParseArgs() {
     global APP_NAME, APP_VERSION, APP_GITHUB_RELEASE_API, APP_PATH, FLAG_SILENT
@@ -42,8 +65,8 @@ ParseArgs() {
     FLAG_SILENT := A_Args[5]
 
     if not (APP_NAME and APP_VERSION and APP_GITHUB_RELEASE_API and APP_PATH) {
-        global TITLE_MSG_BOX
-        MsgBox, 0, %TITLE_MSG_BOX%, ❗ Eksik parametreler var: `n`n💎APP_NAME: %APP_NAME%`n💎APP_VERSION: %APP_VERSION%`n💎APP_GITHUB_RELEASE_API:%APP_GITHUB_RELEASE_API%`n💎APP_PATH:%APP_PATH%
+        global TIP_MENU
+        MsgBox, 0, %TIP_MENU%, ❗ Eksik parametreler var: `n`n💎APP_NAME: %APP_NAME%`n💎APP_VERSION: %APP_VERSION%`n💎APP_GITHUB_RELEASE_API:%APP_GITHUB_RELEASE_API%`n💎APP_PATH:%APP_PATH%
         ExitApp
     }
 }
@@ -155,8 +178,8 @@ StoreReleaseInfos(response) {
 }
 
 ShowUpdateDialog() {
-    global RELEASE_TITLE, RELEASE_BODY, TITLE_MSG_BOX, APP_VERSION, RELEASE_TAGNAME
-    MsgBox, 4, %TITLE_MSG_BOX%, %RELEASE_TITLE%`n`n%RELEASE_BODY% `n`n✨ Güncellemek ister misin? ( %APP_VERSION% -> %RELEASE_TAGNAME% )
+    global RELEASE_TITLE, RELEASE_BODY, TIP_MENU, APP_VERSION, RELEASE_TAGNAME
+    MsgBox, 4, %TIP_MENU%, %RELEASE_TITLE%`n`n%RELEASE_BODY% `n`n✨ Güncellemek ister misin? ( %APP_VERSION% -> %RELEASE_TAGNAME% )
     IfMsgBox Yes
         return True
     else
@@ -183,8 +206,8 @@ OnResponse(response) {
     if (UpdateExist()) {
         OnUpdateClick()
     } else if (not FLAG_SILENT) {
-        global TITLE_MSG_BOX
-        MsgBox, 0, %TITLE_MSG_BOX%, 👏 Zaten son sürümdesiniz`n💖 Günceli takip etmeniz ne hoş
+        global TIP_MENU
+        MsgBox, 0, %TIP_MENU%, 👏 Zaten son sürümdesiniz`n💖 Günceli takip etmeniz ne hoş
     }
 }
 
@@ -202,8 +225,8 @@ UpdateApp() {
 
     Run, %APP_PATH%
 
-    global TITLE_MSG_BOX
-    MsgBox, 0, %TITLE_MSG_BOX%, 👏 Güncelleme başarılı`n🌱 İmleci ikon üstüne getirerek yeni sürümü görebilirsiniz.
+    global TIP_MENU
+    MsgBox, 0, %TIP_MENU%, 👏 Güncelleme başarılı`n🌱 İmleci ikon üstüne getirerek yeni sürümü görebilirsiniz.
     ExitApp
 }
 

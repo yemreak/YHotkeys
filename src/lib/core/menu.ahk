@@ -4,94 +4,113 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-class MenuObject {
-    ahkID := 0
-    title := ""
-    iconPath := ""
-}
-
 GetIconPath(iconName) {
     global DIR_ICON
     return DIR_ICON . "\" . iconName
 }
 
 DeleteMenu() {
-    Menu, Tray, DeleteAll
+    global MENU_TRAY, MENU_MORE
+    Menu, %MENU_TRAY%, DeleteAll
 }
 
 AddHeaderMenu() {
-    global APP_NAME, ICON_APP, VERSION
+    global APP_NAME, TIP_MENU, ICON_APP
 
     Menu, Tray, UseErrorLevel , On
     Menu, Tray, NoStandard
     Menu, Tray, Click, 1
 
     Menu, Tray, Add, %APP_NAME%, IconClicked
-    Menu, Tray, Tip, %APP_NAME% v%VERSION% ~ YEmreAk
+    Menu, Tray, Tip, %TIP_MENU%
 
     iconPath := GetIconPath(ICON_APP)
     if FileExist(iconPath) {
         Menu, Tray, Icon, %iconPath%,, 20
-        AddTrayMenuIcon(APP_NAME, iconPath)
+
+        global MENU_TRAY
+        AddMenuIcon(MENU_TRAY, APP_NAME, iconPath)
     }
 
     Menu, Tray, Default, %APP_NAME%
 }
 
-AddFooterMenu() {
-    global TITLE_CLOSE
-    Menu, Tray, Add, %TITLE_CLOSE%, CloseApp
+CreateMenuItem(rootmenu, title, onclick, icon_name) {
+    Menu, %rootmenu%, Add, %title%, %onclick%
+    iconPath := GetIconPath(icon_name)
+    AddMenuIcon(rootmenu, title, iconPath)
+}
 
-    global ICON_CLOSE
-    iconPath := GetIconPath(ICON_CLOSE)
-    AddTrayMenuIcon(TITLE_CLOSE, iconPath)
+AddFooterMenu() {
+    global MENU_TRAY, TITLE_CLOSE, ICON_CLOSE
+    CreateMenuItem(MENU_TRAY, TITLE_CLOSE, "CloseApp", ICON_CLOSE)
 }
 
 AddUpdateMenu() {
-    global TITLE_UPDATE
-    Menu, Tray, Add, %TITLE_UPDATE%, CheckForUpdate
-
-    global ICON_UPDATE
-    iconPath := GetIconPath(ICON_UPDATE)
-
-    AddTrayMenuIcon(TITLE_UPDATE, iconPath)
+    global MENU_MORE, TITLE_UPDATE, ICON_UPDATE
+    CreateMenuItem(MENU_MORE, TITLE_UPDATE, "CheckForUpdate", ICON_UPDATE)
 }
 
 AddClearMenu() {
-    global TITLE_CLEAR
-    Menu, Tray, Add, %TITLE_CLEAR%, ClearAll
+    global MENU_TRAY, TITLE_CLEAR, ICON_CLEAR
+    CreateMenuItem(MENU_TRAY, TITLE_CLEAR, "ClearAll", ICON_CLEAR)
+}
 
-    global ICON_CLEAR
-    iconPath := GetIconPath(ICON_CLEAR)
+AddDocumentationMenu() {
+    global MENU_MORE, TITLE_DOC, ICON_DOC
+    CreateMenuItem(MENU_MORE, TITLE_DOC, "OnDocumentationClicked", ICON_DOC)
+}
 
-    AddTrayMenuIcon(TITLE_CLEAR, iconPath)
+AddHotkeysMenu() {
+    global MENU_MORE, TITLE_HOTKEYS, ICON_HOTKEY
+    CreateMenuItem(MENU_MORE, TITLE_HOTKEYS, "OnHotkeysClicked", ICON_HOTKEY)
+}
+
+HasHiddenWindow() {
+    global HIDDEN_WINDOWS
+    return HIDDEN_WINDOWS.Length() > 0
 }
 
 AddWindowsMenu() {
     global HIDDEN_WINDOWS
-    if (HIDDEN_WINDOWS.Length() > 0) {
-        iconPath := HIDDEN_WINDOWS[HIDDEN_WINDOWS.Length()].iconPath
-        mainTitle := HIDDEN_WINDOWS[HIDDEN_WINDOWS.Length()].title
+    iconPath := HIDDEN_WINDOWS[HIDDEN_WINDOWS.Length()].iconPath
+    mainTitle := HIDDEN_WINDOWS[HIDDEN_WINDOWS.Length()].title
 
-        For index, item in HIDDEN_WINDOWS {
-            title := item.title
-            iconPath := item.iconPath
+    For index, item in HIDDEN_WINDOWS {
+        title := item.title
+        iconPath := item.iconPath
 
-            Menu, Tray, Add, %title%, IconClicked
-            AddTrayMenuIcon(title, iconPath)
-        }
-        AddClearMenu()
-    } else {
-        global APP_NAME
-        mainTitle := APP_NAME
+        global MENU_TRAY
+        Menu, %MENU_TRAY%, Add, %title%, IconClicked
+        AddMenuIcon(MENU_TRAY, title, iconPath)
     }
+}
+
+CreateSubMenu(rootmenu, title, submenu, icon_name) {
+    Menu, %rootmenu%, Add, %title%, :%submenu%
+    iconPath := GetIconPath(icon_name)
+    AddMenuIcon(rootmenu, title, iconPath)
+}
+
+AddMoreMenu() {
+    AddDocumentationMenu()
+    AddHotkeysMenu()
+    AddUpdateMenu()
+
+    global MENU_TRAY, TITLE_MORE, MENU_MORE, ICON_MORE
+    CreateSubMenu(MENU_TRAY, TITLE_MORE, MENU_MORE, ICON_MORE)
 }
 
 CreateOrUpdateTrayMenu(){
     DeleteMenu()
     AddHeaderMenu()
-    AddWindowsMenu()
-    AddUpdateMenu()
+
+    if (HasHiddenWindow()) {
+        AddWindowsMenu()
+        AddClearMenu()
+    }
+
+    AddMoreMenu()
     AddFooterMenu()
 }
 
@@ -104,12 +123,12 @@ DropWindowFromTrayMenu(ahkID){
         Menu, Tray, Delete, Temizle
 }
 
-AddTrayMenuIcon(title, iconPath) {
+AddMenuIcon(mname, title, iconPath) {
     if FileExist(iconPath) {
-        Menu, Tray, Icon, %title%, %iconPath%,, 20
+        Menu, %mname%, Icon, %title%, %iconPath%,, 20
     } else {
         global ICON_DEFAULT
         defaultIconPath := GetIconPath(ICON_DEFAULT)
-        Menu, Tray, Icon, %title%, %defaultIconPath%,, 20
+        Menu, %mname%, Icon, %title%, %defaultIconPath%,, 20
     }
 }

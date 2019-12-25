@@ -3,6 +3,12 @@
 ; ##                                   KISAYOLLAR                                   ##
 ; ##                                                                                ##
 ; ####################################################################################
+#SingleInstance, Force
+#KeyHistory, 0
+#MaxThreadsPerHotkey, 1
+
+SetBatchLines, -1
+ListLines, Off
 
 return
 
@@ -12,29 +18,23 @@ return
     ToggleWindowPin()
 return
 #+G::
-    Send ^c
-    Sleep, 100
-    Run "http://www.google.com/search?q=%clipboard%"
+    SearchOnGoogle()
+return
+#+E::
+    OpenInFileExplorer()
 return
 #+T::
-    Send ^c
-    Sleep, 100
-    Run "https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=%clipboard%"
+    TranslateOnGoogle()
 return
 #+N::
-    Send ^c
-    Run, notepad.exe
-    WinActivate, Untitled - Notepad
-    WinWaitActive, Untitled - Notepad
-    Send ^v
-    ToggleWindowPin()
+    KeepOnNotepad()
 return
-
 !"::
     SwitchWindow()
 return
 
 ; ---------------------------------- Göster / Gizle ----------------------------------
+
 
 #q::
     name := "- OneNote"
