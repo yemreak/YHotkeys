@@ -8,6 +8,10 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
+## 🚀
+
+- 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçtiğini kullanır
+
 ## 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik \(2.4.1.0\)
 
 - 📋 Alt menü oluşturuldu
