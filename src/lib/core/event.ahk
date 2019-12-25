@@ -34,30 +34,63 @@ CloseApp:
     ExitApp
 Return
 
-OpenInFileExplorer() {
+RunUrl(url) {
+    try {
+        RunWait, %url%
+    }
+}
+
+CopySelected() {
     Send ^c
     Sleep, 100
-    RunWait, explorer.exe %clipboard%
+}
+
+; Seçili alan varsa onu, yoksa eski kopyalananı alma
+GetExistClipboard() {
+    value := TrimStr(clipboard)
+
+    CopySelected()
+    trimmed_clipboard := TrimStr(clipboard)
+    if (StrLen(trimmed_clipboard) > 0) {
+        return trimmed_clipboard
+    } else if (StrLen(value) > 0) {
+        return value
+    } else {
+        return False
+    }
+}
+
+OpenInFileExplorer() {
+    value := GetExistClipboard()
+    if (value) {
+        command = %ComSpec% /c ""explorer.exe" "%value%""
+        Run, %command%, , hide
+    }
 }
 
 SearchOnGoogle() {
-    Send ^c
-    Sleep, 100
-    Run "http://www.google.com/search?q=%clipboard%"
+    value := GetExistClipboard()
+    if (value) {
+        Run, "http://www.google.com/search?q=%value%"
+    }
 }
 
 TranslateOnGoogle() {
-    Send ^c
-    Sleep, 100
-    Run "https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=%clipboard%"
+    value := GetExistClipboard()
+    if (value) {
+        Run, "https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=%value%"
+    }
 }
 
 KeepOnNotepad() {
-    Send ^c
+    CopySelected()
+
     Run, notepad.exe
     WinActivate, Untitled - Notepad
     WinWaitActive, Untitled - Notepad
+
     Send ^v
+
     ToggleWindowPin()
 }
 

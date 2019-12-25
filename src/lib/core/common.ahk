@@ -4,16 +4,6 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-RunUrl(url) {
-    ; WARN: Bazı uygulamarın geç açılması soruna sebep oluyor
-    ; BUG: Uygulamalar bazen 2 kere açılıyor
-    try {
-        SetTitleMatchMode, Slow
-
-        RunWait, %url%
-    }
-}
-
 GetEnvPath(envvar, path=""){
     EnvGet, prepath, %envvar%
     path = %prepath%%path%
@@ -29,4 +19,8 @@ CheckForUpdate(silent := False) {
     global PATH_UPDATER, DIR_NAME, APP_NAME, VERSION, API_RELEASE
     command = %PATH_UPDATER% "%APP_NAME%" "%VERSION%" "%API_RELEASE%" "%A_Temp%\YInstaller.exe" %silent%
     RunWait, %command%
+}
+
+TrimStr(str) {
+    return Trim(Clipboard, OmitChars := " `r`n`t")
 }
