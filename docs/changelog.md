@@ -10,7 +10,7 @@ description: YHotkeys'de neler değişti
 
 ## 🚀
 
-- 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçtiğini kullanır
+- 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
 
 ## 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik \(2.4.1.0\)
 
