@@ -10,6 +10,8 @@ description: YHotkeys'de neler değişti
 
 ## 👨‍🔬 Beta
 
+🧪 Deneysel version
+
 * 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
 
 ## 🔸 2.4.1.0
@@ -57,18 +59,24 @@ description: YHotkeys'de neler değişti
 
 > 🚅 Program açıldığında otomatik güncelleme kontrolü devam etmektedir
 
-## 📝 Not defterine hızlıca not alma kısayolu \(2.3.3.2\)
+## 🔸 2.3.3.2
+
+📝 Not defterine hızlıca not alma kısayolu
 
 * 📝 Seçili alanı ❖ Win ⇧ Shift N kısayolu ile `notepad` 'a aktarılıp sabitlenir
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
-## 👨‍🔧 Genel Sorun Düzeltme \(2.3.3.1\)
+## 🔸 2.3.3.1
+
+ 👨‍🔧 Genel Sorun Düzeltme
 
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
-## 📌 Sabitlenen pencereler daha belirgin \(2.3.3\)
+## 🔸 2.3.3
+
+ 📌 Sabitlenen pencereler daha belirgin
 
 * ✨ Güncellemeden sonra yeni script çalıştırılmakta
 * 👮‍♂️ Daha güvenli güncelleme sistemi kuruldu
@@ -77,7 +85,9 @@ description: YHotkeys'de neler değişti
 * ✨ Pencerelerin görünme eylemlerinde ufak iyileştirmeler yapıldı
 * 🚀 YEmoji geliştirildi, kısayolları arttı
 
-## 👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler \(2.3.2\)
+## 🔸 2.3.2
+
+ 👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler
 
 * 💫 Güncelleme alanı detaylandırıldı
 * 📑 Sabitlenen pencerelerin başlıklarına 📌 konulmakta
@@ -86,7 +96,9 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 Eski pencereye odaklanmada meydana gelen sorun giderildi
 * 👨‍💻 Fonksiyon isimleri sadeleştirildi, kod yapısı anlamlaştırıldı
 
-## 🚀 Güncelleme yapısı eklendi \(v2.3.0\)
+## 🔸 2.3.0
+
+ 🚀 Güncelleme yapısı eklendi
 
 * ✨ Kendi kendisini güncelleme yapısı eklendi
 * 💖 Emojiler artırıldı
