@@ -1,3 +1,7 @@
+---
+description: YHotkeys ile pencere yönetim kısayolları
+---
+
 # ✴️ Pencere Yönetimi
 
 ## 🌄 Genel İşlemler

@@ -1,5 +1,5 @@
 ---
-description: YHotkeys kısayollarına bakış ve temel kısayolları tanıma
+description: YHotkeys kısayollarına bakış ve tavsiyeler
 ---
 
 # 👀 Kısayollara Bakış
