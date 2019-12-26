@@ -8,6 +8,10 @@
 #Hotstring r Z C0 O ; Algılama ayarları
 return
 
+; Emoji Kaynakları
+; http://xahlee.info/comp/unicode_index.html
+; https://emojipedia.org/
+
 ; Yakın zamanda kullandıklarım
 :::inşaat::🚧
 :::yapı::🏗️
@@ -26,6 +30,22 @@ return
 :::info::🔸
 
 ; Yeni
+:::pencere::✴️
+:::windows::✴️
+
+; Sayfa işaret
+:::sayfa::📃
+:::sayfaö::⎗
+:::sayfas::⎘
+
+; Ses işaretleri
+:::ses0::🔈
+:::ses1::🔉
+:::ses2::🔊
+:::ses-::🔉
+:::ses+::🔊
+
+:::makas::✂️
 :::zombi::🧟‍♂️
 :::zombik::🧟‍♀️
 :::volkan::🌋
@@ -45,10 +65,13 @@ return
 :::tab::⭾ Tab
 :::shift::⇧ Shift
 :::ctrl::✲ Ctrl
+:::cmd::⌘ Command
 :::enter::↩ Enter
 :::arrow::↑ ↓ ← → Arrow
 :::esc::⎋ Esc
 :::alt::⎇ Alt
+:::F5::⟲ F5
+:::space::⌂ Space
 
 ; Bayrak
 :::yol::🚩
@@ -344,7 +367,6 @@ return
 :::grafik-::📉
 :::grafiks::📊
 :::grafik=::📊
-:::sayfa::📃
 :::kıvrık::➰
 :::çubuk::🍢
 :::fiş::🔌
