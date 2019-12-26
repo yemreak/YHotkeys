@@ -8,7 +8,7 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 Beta Sürümü \( ~ \)
+## 👨‍🔬 Beta
 
 * 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
 
