@@ -1,5 +1,5 @@
 ---
-description: YHotkeys üzerinde kullanılan kişiselleştirilmiş emoji kısayolları
+description: YHotkeys üzerinde kullanılan kişiselleştirilmiş emoji (yemoji) kısayolları
 ---
 
 # 🚀 YEmoji
