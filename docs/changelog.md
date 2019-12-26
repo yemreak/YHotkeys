@@ -26,11 +26,11 @@ description: YHotkeys'de neler değişti
 * ✨ Yemojiler artırıldı
 * 👨‍💻 Kodda verimlilik
 
-![](.gitbook/assets/tray_menu.png)
+![](.gitbook/assets/tray_menu%20%281%29.png)
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 
-##  🔸 2.4.0.2
+## 🔸 2.4.0.2
 
 🌍 İkona tıklandığında doküman sayfasına yönlendirme
 
@@ -69,14 +69,14 @@ description: YHotkeys'de neler değişti
 
 ## 🔸 2.3.3.1
 
- 👨‍🔧 Genel Sorun Düzeltme
+👨‍🔧 Genel Sorun Düzeltme
 
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
 ## 🔸 2.3.3
 
- 📌 Sabitlenen pencereler daha belirgin
+📌 Sabitlenen pencereler daha belirgin
 
 * ✨ Güncellemeden sonra yeni script çalıştırılmakta
 * 👮‍♂️ Daha güvenli güncelleme sistemi kuruldu
@@ -87,7 +87,7 @@ description: YHotkeys'de neler değişti
 
 ## 🔸 2.3.2
 
- 👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler
+👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler
 
 * 💫 Güncelleme alanı detaylandırıldı
 * 📑 Sabitlenen pencerelerin başlıklarına 📌 konulmakta
@@ -98,7 +98,7 @@ description: YHotkeys'de neler değişti
 
 ## 🔸 2.3.0
 
- 🚀 Güncelleme yapısı eklendi
+🚀 Güncelleme yapısı eklendi
 
 * ✨ Kendi kendisini güncelleme yapısı eklendi
 * 💖 Emojiler artırıldı

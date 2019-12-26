@@ -38,7 +38,7 @@ description: >-
 ## 🚩 System ile Başlatma
 
 * ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
-* 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp  ↩ Enter 'a
+* 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp ↩ Enter 'a
 
   basın
 
@@ -46,13 +46,13 @@ description: >-
 
 ## 👁‍🗨 Uygulamaya Bakış
 
-![](.gitbook/assets/usage.gif)
+![](.gitbook/assets/usage%20%281%29.gif)
 
-![](.gitbook/assets/tray_icon.png)
+![](.gitbook/assets/tray_icon%20%281%29.png)
 
-![](.gitbook/assets/hover_version.png)
+![](.gitbook/assets/hover_version%20%281%29.png)
 
-![](.gitbook/assets/tray_menu.png)
+![](.gitbook/assets/tray_menu%20%281%29.png)
 
 ## 💖 Destek ve İletişim
 
