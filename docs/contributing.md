@@ -7,11 +7,7 @@
 * ✲ Ctrl P açılan ekranda `Tasks: Run Task` komutu ile istediğin koşulla çalıştırabilirsin
 * ✲ Ctrl ⇧ Shift B ile direkt olarak `Run` edebilirsin
 
-## 💒 Çalışma Ortamı
-
-* 🌃 VSCode üzerinden çalışılmaktadır
-* 🔸 Çalışma ortamı hakkında bilgiler için [🔰 AutoHotkey'e Giriş](https://windows.yemreak.com/autohotkey/giris) alanına bakabilirsin
-* [💫 AutoHotkey](https://windows.yemreak.com/autohotkey) alanından kullanılan programlama dili hakkında bilgi alabilirsin
+> AutoHotkey Manager tavsiye edilir
 
 ## 🗂️ Dizinlerin Anlamları
 
