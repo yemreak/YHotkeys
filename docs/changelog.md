@@ -12,7 +12,9 @@ description: YHotkeys'de neler değişti
 
 * 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
 
-## 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik \(2.4.1.0\)
+## 🔸 2.4.1.0
+
+🚀 Yükleyici yapısı ve tasarımda köklü değişiklik
 
 * 📋 Alt menü oluşturuldu
 * 💖 Tüm ikonlar yeniden yapılandırıldı
@@ -26,21 +28,27 @@ description: YHotkeys'de neler değişti
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 
-## 🌍 Ikona tıklandığında doküman sayfasına yönlendirme \(2.4.0.2\)
+##  🔸 2.4.0.2
+
+🌍 İkona tıklandığında doküman sayfasına yönlendirme
 
 * 🚀 Yeni doküman sayfası oluşturuldu
 * 🔗 Artık ikona tıklandığında yeni web sayfasına yönlendirecek
 * 🧹 İkona tıklandığında son yapılan eylemi tekrarlama kaldırıldı
 * 👨‍💻 Kodlarda iyileştirme yapıldı
 
-## 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri \(2.4.0.1\)
+## 🔸 2.4.0.1
+
+👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri
 
 * 💫 ⎇ Alt " kısayolı ile aynı tür pencereler arasında gezinme
 * 👨‍🔧 Sabitlemede pencere başlığından kaynaklanan sorun giderildi
 * 🧹 Sabitlenen pencerelerde pencere başlığı artık değiştirilmemekte
 * ➕ YEmojiler artırıldı
 
-## 🚀 Güncelleme aracı bağımsızlaştırıldı \(2.4.0\)
+## 🔸 2.4.0
+
+🚀 Güncelleme aracı bağımsızlaştırıldı
 
 * 🚀 Güncelleme işlemi artık, çalışan scripti güncelliyor ve yenisini açıyor
 * ✨ Güncelleme aracı scriptten bağımsız hale getirildi
@@ -71,17 +79,12 @@ description: YHotkeys'de neler değişti
 
 ## 👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler \(2.3.2\)
 
-### ✨ Yenilikler
-
 * 💫 Güncelleme alanı detaylandırıldı
 * 📑 Sabitlenen pencerelerin başlıklarına 📌 konulmakta
 * 🔳 F1 butonu ile pencereleri tam ekran yapma, yapılı ise normale alma özelliği eklendi
 * 👨‍🔧 Sanal masaüstü değiştirme sorunu düzeltildi, artık gizlenen pencereler aktif masaüstüne getirilecek
 * 👨‍🔧 Eski pencereye odaklanmada meydana gelen sorun giderildi
-
-### 👨‍💻 Geliştirici Yenilikleri
-
-* ✨ Fonksiyon isimleri sadeleştirildi, kod yapısı anlamlaştırıldı
+* 👨‍💻 Fonksiyon isimleri sadeleştirildi, kod yapısı anlamlaştırıldı
 
 ## 🚀 Güncelleme yapısı eklendi \(v2.3.0\)
 
