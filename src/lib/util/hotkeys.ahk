@@ -33,8 +33,9 @@ return
     SwitchWindow()
 return
 
-; ---------------------------------- Göster / Gizle ----------------------------------
+#F1::Suspend ; Win + scrollLock
 
+; ---------------------------------- Göster / Gizle ----------------------------------
 
 #q::
     name := "- OneNote"
@@ -140,3 +141,10 @@ return
 Control & PgUp::
     Send , !{PgUp}
 return
+
+; -------------------------------- Koşullu Kısayollar ---------------------------------
+; WARN: En alta yazılmazsa sonrasındakilerin çalışmasını engeller, IfWındows yapılması gerekir
+
+#If MouseIsOver("ahk_class Shell_TrayWnd") ; For MouseIsOver, see #If example 1.
+WheelUp::Send {Volume_Up}     ; Wheel over taskbar: increase/decrease volume.
+WheelDown::Send {Volume_Down} ;

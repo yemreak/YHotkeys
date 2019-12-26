@@ -24,3 +24,8 @@ CheckForUpdate(silent := False) {
 TrimStr(str) {
     return Trim(Clipboard, OmitChars := " `r`n`t")
 }
+
+MouseIsOver(WinTitle) {
+    MouseGetPos,,, Win
+    return WinExist(WinTitle . " ahk_id " . Win)
+}

@@ -36,7 +36,8 @@ Return
 
 RunUrl(url) {
     try {
-        RunWait, %url%
+        command = %ComSpec% /c ""explorer.exe" "%url%""
+        RunWait, %command%, , hide
     }
 }
 
@@ -63,29 +64,28 @@ GetExistClipboard() {
 OpenInFileExplorer() {
     value := GetExistClipboard()
     if (value) {
-        command = %ComSpec% /c ""explorer.exe" "%value%""
-        Run, %command%, , hide
+        RunUrl(value)
     }
 }
 
 SearchOnGoogle() {
     value := GetExistClipboard()
     if (value) {
-        Run, "http://www.google.com/search?q=%value%"
+        RunUrl("http://www.google.com/search?q=" . value)
     }
 }
 
 TranslateOnGoogle() {
     value := GetExistClipboard()
     if (value) {
-        Run, "https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=%value%"
+        RunUrl("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
     }
 }
 
 KeepOnNotepad() {
     CopySelected()
 
-    Run, notepad.exe
+    RunUrl("notepad.exe")
     WinActivate, Untitled - Notepad
     WinWaitActive, Untitled - Notepad
 
@@ -96,5 +96,5 @@ KeepOnNotepad() {
 
 OpenDocumentationPage() {
     global APP_PAGE
-    Run, %APP_PAGE%
+    RunUrl(APP_PAGE)
 }

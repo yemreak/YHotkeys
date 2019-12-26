@@ -13,6 +13,9 @@ description: YHotkeys'de neler değişti
 🧪 Deneysel version
 
 * 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
+* 👨‍🔧 Kısayollar ile pencere açmadaki ufak sorunlar düzeltildi
+* ❖ Win F1 kısayolu ile scripti susturma / çalıştırma
+* 🔉 İmleci sağ alttaki ses simgesinin üzerine getirip, fare tekerleği ile ses açıp kısma
 
 ## 🔸 2.4.1.0
 

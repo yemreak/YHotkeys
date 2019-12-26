@@ -29,7 +29,6 @@
 
 ## 🙄 Bilinen Sorunlar
 
-* 🤔 Bazı durumlarda **GitHub Desktop** başlatılamıyor
 * 🐛 Emojiler **Markdown All in One** eklentisi ile düzgün çalışmamakta
 
 ## ✔️ Yapılacaklar
