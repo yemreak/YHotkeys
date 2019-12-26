@@ -1,3 +1,7 @@
+---
+description: YHotkeys ile dizin yönetim kısayolları
+---
+
 # 📂 Dizin Yönetimi
 
 ## 🤵 Kullanıcı Dizinleri
