@@ -46,13 +46,13 @@ description: >-
 
 ## 👁‍🗨 Uygulamaya Bakış
 
-![](.gitbook/assets/usage%20%281%29.gif)
+![](.gitbook/assets/usage.gif)
 
-![](.gitbook/assets/tray_icon%20%281%29.png)
+![](.gitbook/assets/tray_icon.png)
 
-![](.gitbook/assets/hover_version%20%281%29.png)
+![](.gitbook/assets/tray_hover.png)
 
-![](.gitbook/assets/tray_menu%20%281%29.png)
+![](.gitbook/assets/tray_menu.png)
 
 ## 💖 Destek ve İletişim
 
