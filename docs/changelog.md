@@ -26,7 +26,7 @@ description: YHotkeys'de neler değişti
 * ✨ Yemojiler artırıldı
 * 👨‍💻 Kodda verimlilik
 
-![](.gitbook/assets/tray_menu%20%281%29.png)
+![](.gitbook/assets/tray_menu.png)
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 
