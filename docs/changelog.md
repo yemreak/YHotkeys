@@ -10,28 +10,28 @@ description: YHotkeys'de neler değişti
 
 ## 🚀
 
-* 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
+- 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
 
 ## 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik \(2.4.1.0\)
 
-* 📋 Alt menü oluşturuldu
-* 💖 Tüm ikonlar yeniden yapılandırıldı
-* 👷‍♂️ Yükleyici oluşturuldu
-* 📂 Seçili metin ❖ Win ⇧ Shift E kısayolu ile dosya gezgininde açılır
-* ⌨️ Klavye butonları temsil eden yemojiler eklendi
-* ✨ Yemojiler artırıldı
-* 👨‍💻 Kodda verimlilik
+- 📋 Alt menü oluşturuldu
+- 💖 Tüm ikonlar yeniden yapılandırıldı
+- 👷‍♂️ Yükleyici oluşturuldu
+- 📂 Seçili metin ❖ Win ⇧ Shift E kısayolu ile dosya gezgininde açılır
+- ⌨️ Klavye butonları temsil eden yemojiler eklendi
+- ✨ Yemojiler artırıldı
+- 👨‍💻 Kodda verimlilik
 
-![](.gitbook/assets/tray_menu%20%281%29.png)
+![](.gitbook/assets/tray_menu.png)
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 
 ## 🌍 Ikona tıklandığında doküman sayfasına yönlendirme \(2.4.0.2\)
 
-* 🚀 Yeni doküman sayfası oluşturuldu
-* 🔗 Artık ikona tıklandığında yeni web sayfasına yönlendirecek
-* 🧹 İkona tıklandığında son yapılan eylemi tekrarlama kaldırıldı
-* 👨‍💻 Kodlarda iyileştirme yapıldı
+- 🚀 Yeni doküman sayfası oluşturuldu
+- 🔗 Artık ikona tıklandığında yeni web sayfasına yönlendirecek
+- 🧹 İkona tıklandığında son yapılan eylemi tekrarlama kaldırıldı
+- 👨‍💻 Kodlarda iyileştirme yapıldı
 
 ## 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri \(2.4.0.1\)
 
