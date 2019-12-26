@@ -11,17 +11,14 @@ description: >-
 ⭐ Tek bir fide bile, Windows'unu tazelemeye yeter.
 
 * 👮‍♂️ Windows'un kısıtlı kısayollarına alternatif olarak yapılmıştır
-* ✨ Windows 10 üzerinde kişisel kısayollarınızı oluşturmanıza olanak tanır
-* 👁‍🗨 Pencereleri **görev çubuğunda** veya **tray icon** olarak gösterip / gizlemenizi sağlar
-* 📌 Çok sık baktığınız pencereleri sabitleyebilirsiniz \(❖ Win Space\)
-* 🔳 F1 butonu ile tam ekran olmayı desteklemese de pencereyi tam ekran yapabilirsin
-* [🚀 YEmoji](yemoji.md) emojilerini kısayollarla kullanmana olanak sağlar
+* ✨ Windows üzerinde yeni [💞 Kısayollar](kisayollar/) kullanmanızı sağlar
+* 🥰 Emoji kısayolları olan [🚀 YEmoji](yemoji.md) ile her yerde çalışan emoji kısayolları sunar
 
 ## 👣 Kullanım Adımları
 
-* ⏬ Uygulamanın son sürümünü [🔗 buradan](http://github.com/yedhrab/YHotkeys/releases/latest/download/YHotkeys.exe) indirin
+* ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/releases/latest) indirin
 * 👀 Uygulamanın sunduğu kısayollar için [💞 Kısayollar](./#kisayollar) alanına bakabilirsin
-* 🚀 YEmoji kısayolları için [🚀 YEmoji](yemoji.md) alanına bakmalısın
+* 🥰  YEmoji kısayolları için [🚀 YEmoji](yemoji.md) alanına bakmalısın
 * 🌱 İkonuna tıklayarak bu sayfaya yönelebilirsin
 
 {% hint style="info" %}
@@ -41,7 +38,7 @@ description: >-
 ## 🚩 System ile Başlatma
 
 * ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
-* 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp  ↩  Enter 'a
+* 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp  ↩ Enter 'a
 
   basın
 
@@ -49,64 +46,13 @@ description: >-
 
 ## 👁‍🗨 Uygulamaya Bakış
 
-![](.gitbook/assets/usage.gif)
+![](.gitbook/assets/usage%20%281%29.gif)
 
-![](.gitbook/assets/tray_icon.png)
+![](.gitbook/assets/tray_icon%20%281%29.png)
 
-![](.gitbook/assets/hover_version.png)
+![](.gitbook/assets/hover_version%20%281%29.png)
 
-![](.gitbook/assets/tray_menu.png)
-
-## 💞 Kısayollar
-
-### 📈 Verimlilik
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| ⎇ Alt " | 💫 Aynı tür pencereler arasında gezinme |
-| ❖ Win Space | 📌 Aktif olan pencereyi sabitleme / sabitlemeyi kaldırma |
-| ❖ Win ⇧ Shift E | 📂 Seçili metni Dosya Gezgini üzerinde açar |
-| ❖ Win ⇧ Shift G | 🔍 Seçili metni Google'da arama |
-| ❖ Win ⇧ Shift T | 💱 Seçili metni Google Çeviri'de açma |
-| ❖ Win ⇧ Shift N | 📝 Seçili alanı `notepad` 'a aktarıp, notepad'i sabitler |
-
-### 🔔 Tray Icon Kısayolları
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| ❖ Win E | 📁 File Explorer |
-| ❖ Win W | 📞 WhatsApp Desktop |
-| ❖ Win G | 🐙 GitHub Desktop |
-| ❖ Win C | 📅 Google Calendar |
-
-### 👀 Küçült / Göster Kısayolları
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| ❖ Win Q | 📝 One Note |
-
-### 📂 Dizin Kısayolları
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| PgDn ⇧ Shift | Startup |
-| PgDn d | Downloads |
-| PgDn u | Kullanıcı Dizini |
-
-### 🌚 Kişisel Dizin Kısayollarım
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| PgDn g | GitHub |
-| PgDn s | Sharex |
-| PgDn i | Icons |
-
-### 👨‍🔧 Buton Düzeltmeleri
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| ✲ Ctrl PgDn | Page Down |
-| ✲ Ctrl PgUp | Page Up |
+![](.gitbook/assets/tray_menu%20%281%29.png)
 
 ## 💖 Destek ve İletişim
 

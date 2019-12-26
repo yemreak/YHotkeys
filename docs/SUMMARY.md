@@ -1,9 +1,13 @@
 # Table of contents
 
 * [🌱 YHotkeys](README.md)
-* [✨ Changelog](changelog.md)
-* [🚀 YEmoji](yemoji.md)
 * [💖 Katkıda Bulunma Rehberi](contributing.md)
+* [✨ Changelog](changelog.md)
+* [💞 Kısayollar](kisayollar/README.md)
+  * [👀 Kısayollara Bakış](kisayollar/secili-metin-icin-islemler.md)
+  * [✴️ Pencere Yönetimi](kisayollar/pencere-yoenetimi.md)
+  * [📂 Dizin Yönetimi](kisayollar/dizin-yoenetimi.md)
+* [🚀 YEmoji](yemoji.md)
 
 ## Derlenmiş Çalışmalarım
 
