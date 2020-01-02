@@ -31,6 +31,10 @@
 | `+` | Shift |
 | `&` | Birden faza kısayolu birleştirme |
 
+## ❣️ Önemli Hususlar
+
+- 🐞 `SendInput !{Esc}` komutu kısayol sorunlarına sebep olmaktadır
+
 ## 🙄 Bilinen Sorunlar
 
 * 🐛 Emojiler **Markdown All in One** eklentisi ile düzgün çalışmamakta
