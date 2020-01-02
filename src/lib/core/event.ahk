@@ -34,11 +34,9 @@ CloseApp:
     ExitApp
 Return
 
-RunUrl(url) {
-    try {
-        command = %ComSpec% /c ""explorer.exe" "%url%""
-        RunWait, %command%, , hide
-    }
+RunOnExplorer(url) {
+    command = %ComSpec% /c ""explorer.exe" "%url%""
+    RunWait, %command%, , hide
 }
 
 CopySelected() {
@@ -64,28 +62,28 @@ GetExistClipboard() {
 OpenInFileExplorer() {
     value := GetExistClipboard()
     if (value) {
-        RunUrl(value)
+        RunOnExplorer(value)
     }
 }
 
 SearchOnGoogle() {
     value := GetExistClipboard()
     if (value) {
-        RunUrl("http://www.google.com/search?q=" . value)
+        RunOnExplorer("http://www.google.com/search?q=" . value)
     }
 }
 
 TranslateOnGoogle() {
     value := GetExistClipboard()
     if (value) {
-        RunUrl("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
+        RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
     }
 }
 
 KeepOnNotepad() {
     CopySelected()
 
-    RunUrl("notepad.exe")
+    Run, notepad.exe
     WinActivate, Untitled - Notepad
     WinWaitActive, Untitled - Notepad
 
@@ -96,5 +94,5 @@ KeepOnNotepad() {
 
 OpenDocumentationPage() {
     global APP_PAGE
-    RunUrl(APP_PAGE)
+    RunOnExplorer(APP_PAGE)
 }

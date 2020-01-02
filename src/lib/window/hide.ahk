@@ -134,7 +134,7 @@ OpenWindowInTray(selector, name, url, mode=3) {
         }
     }
     if !found
-        RunUrl(url)
+        RunOnExplorer(url)
 }
 
 OpenWindowByTitle(title, url, mode=3) {
@@ -145,7 +145,7 @@ OpenWindowByTitle(title, url, mode=3) {
         WinGet, ahkID, ID, %title%
         ToggleWindow(ahkID, False)
     } else {
-        RunUrl(url)
+        RunOnExplorer(url)
     }
 }
 
