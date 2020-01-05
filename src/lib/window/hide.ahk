@@ -124,6 +124,8 @@ OpenWindowInTray(selector, name, url, mode=3) {
     found := False
     Loop, %IDlist% {
         ahkID := IDlist%A_INDEX%
+
+        DetectHiddenWindows, On
         if WinExist("ahk_id" . ahkID) {
             WinGetTitle, title, ahk_id %ahkID%
             if (title == "")
@@ -214,6 +216,7 @@ OnWinNotActive(ahkID) {
     ActivateWindow(ahkID)
 }
 
+; DEV: Toggle windows by class
 ToggleWindow(ahkID, mask=False) {
     DetectHiddenWindows, Off
     if !WinExist("ahk_id" . ahkID) {
