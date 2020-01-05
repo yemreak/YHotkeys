@@ -3,6 +3,9 @@
 ; ##                                   KISAYOLLAR                                   ##
 ; ##                                                                                ##
 ; ####################################################################################
+
+; https://windows.yemreak.com/autohotkey/diger-islemler#hotkeys-butonlari
+
 #SingleInstance, Force
 #KeyHistory, 0
 #MaxThreadsPerHotkey, 1
@@ -17,23 +20,27 @@ return
 #Space::
     ToggleWindowPin()
 return
-#+G::
+#^G::
     SearchOnGoogle()
 return
-#+E::
+#^E::
     OpenInFileExplorer()
 return
-#+T::
+#^T::
     TranslateOnGoogle()
 return
-#+N::
+#^N::
     KeepOnNotepad()
 return
 !"::
     SwitchWindow()
 return
 
-#F1::Suspend ; Win + scrollLock
+#F1::Suspend
+
+; ---------------------------------- Çalıştır ----------------------------------
+
+#+e::Run, explorer
 
 ; ---------------------------------- Göster / Gizle ----------------------------------
 
@@ -46,7 +53,7 @@ return
 
 
 ; #t::
-;     ;     name := "Tureng Dictionary"
+;     name := "Tureng Dictionary"
 ;     path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
 ;     mode := 2
 ;     OpenWindowByTitle(name, path, mode)
@@ -146,6 +153,8 @@ return
 ; WARN: En alta yazılmazsa sonrasındakilerin çalışmasını engeller, IfWındows yapılması gerekir
 
 #If MouseIsOver("ahk_class Shell_TrayWnd") ; For MouseIsOver, see #If example 1.
-WheelUp::Send {Volume_Up}     ; Wheel over taskbar: increase/decrease volume.
-WheelDown::Send {Volume_Down} ;
+WheelUp::Send {Volume_Up}
+WheelDown::Send {Volume_Down}
+^WheelUp::Send {B}
+^WheelDown::Send {Volume_Down}
 #IfWinActive
