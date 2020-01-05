@@ -12,6 +12,50 @@ return
 ; http://xahlee.info/comp/unicode_index.html
 ; https://emojipedia.org/
 
+; Yeni
+
+:::pdf::📃
+:::rar::🗃️
+:::metot::💠
+
+:::sunum::📹
+
+:::hesaplama::🧮
+:::hesaplma::🧮
+
+:::hafif::🎈
+:::alternatif::💁‍♂️
+:::yinede::💁‍♂️
+:::ely::💁‍♂️
+:::elo::🤷‍♂️
+:::elk::🤦‍♂️
+:::elb::🤦‍♂️
+:::diğer::💁‍♂️
+:::omuz::🤷‍♂️
+:::bilmiyorum::🤷‍♂️
+:::farketmez::🤷‍♂️
+
+
+:::kaş::🤨
+
+:::sms::📧
+:::eposta::📧
+:::posta::📧
+:::zarf::✉️
+::postak::📮
+:::postak2::📬
+:::mail::📧
+
+; Sihir & Büyü
+:::büyücü::‍🧙‍♂
+:::küre::🔮
+:::büyü::🔮
+:::sihir::🔮
+
+:::ev::🏠
+:::ev2::🏘️
+:::evb::💒
+
 ; Yakın zamanda kullandıklarım
 :::inşaat::🚧
 :::yapı::🏗️
@@ -29,12 +73,66 @@ return
 :::bilgi::🔸
 :::info::🔸
 
-; Yeni
+:::hedef::🎯
+:::odak::🎯
+::amaç::🎯
+
+:::gbb::‍🧙‍♂ Detaylı bilgi için TEMP alanına bakabilirsin.
+
+:::db::🗃️
+:::veritabanı::🗃️
+:::evraklar::🗃️
+:::örnek::⭐
+
+:::yasak::⛔
+:::girilmez::🚫
+:::engel:::🚫
+:::blok::🚫
+
+:::güncel:::🔄
+:::kahve::☕
+:::android::📲
+:::kişisel::🤵
+:::küresel::🌐
+:::dil::👅
+:::dily::🌐
+
+; Durum Emojileri
+:::geliştirme::✨
+:::güncelleme::🎈
+:::yenileme::🎈
+:::düzeltme::👨‍🔧
+:::ekleme::➕
+
+; Para
+:::para::💸
+:::para1::💵
+:::para2::💴
+:::para3::💶
+:::para4::💷
+:::paraç::💰
+:::ticaret::💱
+:::dolar::💲
+:::$::💲
+:::paragöz::🤑
+:::parak::👝
+
+:::pantolon::👖
+:::kıyafet::👘
+:::elbise::👗
+
 :::pencere::✴️
 :::windows::✴️
+:::thread::🧵
+:::iplik::🧵
+:::multiprocessing::🎎
+:::çift::🎎
+:::paralel::🎎
+:::zincir::⛓️
 
 ; Sayfa işaret
 :::sayfa::📃
+:::sayfaa::📑
 :::sayfaö::⎗
 :::sayfas::⎘
 
@@ -60,18 +158,25 @@ return
 :::tr::☪️
 :::türkiye::☪️
 
+; Bilgisayar bileşenleri
+
+:::klavye::⌨️
+:::mouse::🖱️
+
 ; Klavye butonları
+; http://xahlee.info/comp/unicode_computing_symbols.html
 :::win::❖ Win
 :::tab::⭾ Tab
 :::shift::⇧ Shift
 :::ctrl::✲ Ctrl
 :::cmd::⌘ Command
-:::enter::↩ Enter
+:::enter::↵ Enter
 :::arrow::↑ ↓ ← → Arrow
 :::esc::⎋ Esc
 :::alt::⎇ Alt
 :::F5::⟲ F5
 :::space::⌂ Space
+:::insert::⎀ Insert
 
 ; Bayrak
 :::yol::🚩
@@ -118,7 +223,6 @@ return
 :::yılan::🐍
 :::pc::💻
 :::bilgisayar::💻
-:::para::💰
 
 :::öğretmen::👨‍🏫
 :::kitap::📖
@@ -164,7 +268,6 @@ return
 :::kaydet::💾
 :::dokunma::👇
 :::tebrik::👏
-:::zincir::⛓️
 :::fişek::🎇
 :::tek::🦄
 :::kontrol::🕹️
@@ -192,6 +295,7 @@ return
 :::duyuru::📢
 :::tarih::📅
 :::ressam::👨‍🎨
+:::ressamk::👩‍🎨
 :::haber::📰
 :::habers::📰
 :::gazate::📰
@@ -242,12 +346,11 @@ return
 :::eli::🤭
 :::selam::🙋‍♂️
 :::yeni::✨
+:::parıltı::✨
 :::akış::🌊
 
 ; Kod için hızlı emojiler
 
-:::tren::🚅
-:::dizi::🚅
 :::link::🔗
 :::beyin::🧠
 
@@ -255,25 +358,28 @@ return
 ::::)::😊
 ::::/::😕
 :::://::🤕
-::::'D::😅
 ::::D::😁
+::::DD::😂
+::::'D::😅
 ::::O::😯
 ::::OO::😱
+::::|::😐
 ::::(::☹️
-:::zzz::😴
-:::sarılma::🤗
+::::'(::😥
+::::p::😋
 
 :::rahatlama::😌
 :::uyuklama::😴
-::::p::😋
 :::kutlama::🥳
+:::kutla::🥳
+:::partici::🥳
 :::imalı::😏
 :::keyifsiz::😒
 :::lezzetli::😋
 :::ukala::🤓
-::::|::😐
+:::zzz::😴
+:::sarılma::🤗
 :::üzgün::😥
-::::'(::😥
 
 :::güneş::☀️
 :::güneşg::🌞
@@ -292,6 +398,8 @@ return
 :::xb::❎
 :::red::❌
 :::redb::❎
+:::run::▶️
+:::çalıştır::▶️
 :::başlat::▶️
 :::raptiye::📌
 :::!::❗
@@ -301,7 +409,41 @@ return
 :::böcek::🐞
 :::debug::🐛
 :::dosya::📂
-:::dizin::🗂️
+
+::kız::👧
+::erkek::👨
+
+:::destek::🤝
+
+:::istek::💌
+:::arzu::💌
+
+:::ödül::🏆
+:::kupa::🏆
+:::madaya::🏅
+:::madalyaa::🎖️
+:::madalyas::🏅
+:::madalya1::🥇
+:::madalya2::🥈
+:::madalya3::🥉
+
+
+:::uyanık::🙇‍♂️
+:::ayık::🙇‍♂️
+:::wake::🙇‍♂️
+:::izin::👮‍♂️
+
+:::dizi::🗂️
+:::dizid::🗂️
+:::sıralama:::🚄
+:::sıralama2::🚅
+:::tren::🚄
+:::treny::🚅
+:::dizit::🚄
+:::dizi2::📇
+:::dizic::
+:::aktarma::🚛
+:::taşıma::🚛
 
 :::telefon::📞
 :::ahtapot::🐙
@@ -315,10 +457,7 @@ return
 :::patlama::💥
 :::yay::🏹
 
-; Bilgisayar bileşenleri
 
-:::klavye::⌨️
-:::mouse::🖱️
 
 ; YEmoji
 :::döngü::💫
@@ -344,6 +483,7 @@ return
 :::müzik::🎶
 :::hoperlör::🔉
 :::yönetici::👨‍💼
+:::yönet::👨‍💼
 :::yapboz::🧩
 :::çadır::⛺
 :::güneş::🌞
@@ -351,12 +491,11 @@ return
 :::japon::🔰
 :::parlak::🔆
 :::kutu::🧃
-::dal::🔀
+:::dal::🔀
 :::birleştirme::🔀
 :::anahtar::🔑
 :::kilit::🔏
 :::parşomen::📜
-:::parıltı::✨
 :::meraklı::👀
 :::bulut::⛅
 :::dağ::🌄
@@ -371,8 +510,6 @@ return
 :::çubuk::🍢
 :::fiş::🔌
 :::voltaj::⚡
-:::yasak::⛔
-:::girilmez::🚫
 :::resim::🖼️
 :::arama::🔍
 :::arama2::🔎
@@ -426,6 +563,5 @@ return
 :::alışveriş::🛒
 :::atom::⚛️
 :::fide::🌱
-:::büyücü::‍🧙‍♂
 :::adım::👣
 :::etiket::🏷️
