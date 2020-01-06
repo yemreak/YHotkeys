@@ -12,10 +12,19 @@ description: YHotkeys'de neler değişti
 
 🧪 Deneysel version
 
+* 🙄 Henüz bir şey yapılmadı
+
+## 🔸 2.4.1.1
+
+👨‍🔧 Genel hata düzeltmesi, çoklu pencere ve odak yönetimi
+
+* 👨‍💼 ⇧ Shift butonu yerine ✲ Ctrl butonu ile çeviri, googleda arama vs işlemleri yapılmakta
+* 🚀 Birden fazla pencereyi kısayol ile gösterip gizleme eklendi
+* 👨‍🔧 Pencerelere odaklanma sorunu giderildi
 * 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır
 * 👨‍🔧 Kısayollar ile pencere açmadaki ufak sorunlar düzeltildi
 * ❖ Win F1 kısayolu ile scripti susturma / çalıştırma
-* 🔉 İmleci sağ alttaki ses simgesinin üzerine getirip, fare tekerleği ile ses açıp kısma
+* 🔉 İmleci görev çubuğuna getirip, fare tekerleği ile ses açıp kısma
 
 ## 🔸 2.4.1.0
 
