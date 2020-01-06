@@ -39,10 +39,7 @@ description: >-
 ## 🚩 System ile Başlatma
 
 * ✨ Scriptinizin kısayolunu veya kopyasını oluşturun
-* 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp ↩ Enter 'a
-
-  basın
-
+* 🎌 ❖ Win R tuşlarına basıp `shell:startup` yazıp ↩ Enter 'a basın
 * 🚙 Oluşturduğunuz kısayolu veya kopyayı açılan dizine kopyalayın
 
 ## 👁‍🗨 Uygulamaya Bakış
