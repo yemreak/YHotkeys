@@ -18,6 +18,7 @@ description: YHotkeys'de neler değişti
 
 👨‍🔧 Genel hata düzeltmesi, çoklu pencere ve odak yönetimi
 
+* 💨 Pencere geçişleri hızlandırıldı
 * 🚀 Birden fazla pencereyi kısayol ile gösterip gizleme eklendi
 * 🔉 İmleci görev çubuğuna getirip, fare tekerleği ile ses açıp kısma
 * 👁️ Metin işlemleri; seçili metin varsa onu kopyalar, yoksa en son seçileni kullanır

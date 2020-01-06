@@ -213,8 +213,9 @@ OnWinNotExist(ahkID, mask) {
 OnWinActive(ahkID, mask) {
     if mask {
         MinimizeWindowToTray(ahkID)
+    } else {
+        MinimizeWindow(ahkID)
     }
-    MinimizeWindow(ahkID)
 }
 
 OnWinNotActive(ahkID) {
