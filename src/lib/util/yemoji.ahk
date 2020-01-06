@@ -58,6 +58,7 @@ return
 
 ; Yakın zamanda kullandıklarım
 :::inşaat::🚧
+:::işlem::🚧
 :::yapı::🏗️
 :::hız::💨
 :::merak::👀
