@@ -192,8 +192,13 @@ ShowWindowInTray(ahkID) {
     ShowHidedWindow(ahkID)
 }
 
+FocusPreviusWindow() {
+    Send !{ESC}
+}
+
 MinimizeWindowToTray(ahkID) {
     KeepWindowInMem(ahkID)
+    FocusPreviusWindow()
     SendWindowToTrayByID(ahkID)
     CreateOrUpdateTrayMenu()
 }
