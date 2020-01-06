@@ -46,11 +46,11 @@ description: >-
 
 ![](.gitbook/assets/usage.gif)
 
-![](.gitbook/assets/tray_icon.png)
+![](.gitbook/assets/tray_icon%20%281%29.png)
 
-![](.gitbook/assets/tray_hover.png)
+![](.gitbook/assets/tray_hover%20%281%29.png)
 
-![](.gitbook/assets/tray_menu.png)
+![](.gitbook/assets/tray_menu%20%281%29.png)
 
 ## 💖 Destek ve İletişim
 
