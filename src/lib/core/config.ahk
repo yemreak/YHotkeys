@@ -18,7 +18,7 @@ DIR_NAME := A_AppData . "\" . APP_NAME
 DIR_ICON := DIR_NAME . "\Icons"
 
 ; --------------------------------- Update settings ----------------------------------
-VERSION = 2.4.1.0
+VERSION = 2.4.1.1
 API_RELEASE = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
 
 PATH_EXE = %DIR_NAME%\YHotkeys.exe
