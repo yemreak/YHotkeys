@@ -11,8 +11,20 @@ return
 ; Emoji Kaynakları
 ; http://xahlee.info/comp/unicode_index.html
 ; https://emojipedia.org/
+; Giriş, Aktarma
 
 ; Yeni
+
+:::geri::↩️
+:::back::↩️
+:::ileri::↪️
+:::next::↪️
+:::yukarı::⤴️
+:::top::⤴️
+
+:::yürü::🚶‍♂️
+:::move::🚶‍♂️
+
 
 :::pdf::📃
 :::rar::🗃️
@@ -23,7 +35,11 @@ return
 :::hesaplama::🧮
 :::hesaplma::🧮
 
-:::hafif::🎈
+:::hafif::🕊️
+:::kuş::🕊️
+:::inanç::🕊️
+:::din::🕊️
+
 :::alternatif::💁‍♂️
 :::yinede::💁‍♂️
 :::ely::💁‍♂️
@@ -529,7 +545,12 @@ return
 :::yazı::✍
 :::robot::🤖
 :::dalgıç::🤿
+
 :::anlaşma::🤝
+:::katkı::🤝
+:::birlik::🤝
+:::els::🤝
+
 :::elkaldırma::🙋‍♂️
 :::mikrofon::🎤
 
