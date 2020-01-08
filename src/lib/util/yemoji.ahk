@@ -15,6 +15,10 @@ return
 
 ; Yeni
 
+:::linux::🐧
+:::penguen::🐧
+:::bash::🐧
+
 :::geri::↩️
 :::back::↩️
 :::ileri::↪️
