@@ -7,7 +7,7 @@
 ; UTF-8 with BOM
 
 ; ------------------------------- Development Settings -------------------------------
-DEBUG := False
+DEBUG := True
 
 ; ----------------------------------- App Settings -----------------------------------
 APP_NAME = YHotkeys

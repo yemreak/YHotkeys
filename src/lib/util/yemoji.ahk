@@ -15,6 +15,18 @@ return
 
 ; Yeni
 
+:::gece::🌃
+:::manzara::🌆
+
+:::çadır::⛺
+:::arkaplan::⛺
+:::evç::⛺
+:::saklı::⛺
+
+:::eski::🕰️
+:::tarihg::🕰️
+:::old::🕰️
+
 :::duyuru::📢
 :::duyur::📢
 
@@ -523,8 +535,7 @@ return
 
 :::beyinp::🤯
 :::bağlantı::🔗
-:::gece::🌃
-:::manzara::🌆
+
 :::sarhoş::🥴
 :::buton::🎛️
 :::vida::🔩
@@ -534,7 +545,6 @@ return
 :::yönetici::👨‍💼
 :::yönet::👨‍💼
 :::yapboz::🧩
-:::çadır::⛺
 :::güneş::🌞
 :::sinyal::📶
 :::japon::🔰
