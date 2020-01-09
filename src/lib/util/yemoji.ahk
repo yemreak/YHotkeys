@@ -15,6 +15,33 @@ return
 
 ; Yeni
 
+:::duyuru::📢
+:::duyur::📢
+
+:::dişli::⚙️
+:::ayar::⚙️
+:::ayarlar::⚙️
+:::settings::⚙️
+:::setting::⚙️
+
+:::çekiç::🔨
+:::yapılandırma::🔨
+:::yapılandır::🔨
+:::ayary::🔨
+
+:::etiket::🏷️
+:::versiyon::🏷️
+:::tag::🏷️
+:::sürüm::🏷️
+:::v.::🏷️
+
+:::anahtar::🔑
+:::key::🔑
+:::kilit::🔒
+:::kilita::🔓
+:::kilitk::🔏
+:::şifre::🔏
+
 :::linux::🐧
 :::penguen::🐧
 :::bash::🐧
@@ -76,6 +103,8 @@ return
 :::ev2::🏘️
 :::evb::💒
 
+
+
 ; Yakın zamanda kullandıklarım
 :::inşaat::🚧
 :::işlem::🚧
@@ -88,6 +117,7 @@ return
 :::erişim::🐣
 
 :::sessiz::🤫
+:::şşh::🤫
 
 :::sayı::🔢
 :::i::🔸
@@ -268,7 +298,6 @@ return
 :::çöp::🗑️
 :::boş::🚫
 :::ikili::💕
-:::duyuru::📢
 :::kan::🩸
 :::çocuk::🧒
 :::yağmur::☔
@@ -498,7 +527,6 @@ return
 :::manzara::🌆
 :::sarhoş::🥴
 :::buton::🎛️
-:::dişli::⚙️
 :::vida::🔩
 :::ampul::💡
 :::müzik::🎶
@@ -514,8 +542,7 @@ return
 :::kutu::🧃
 :::dal::🔀
 :::birleştirme::🔀
-:::anahtar::🔑
-:::kilit::🔏
+
 :::parşomen::📜
 :::meraklı::👀
 :::bulut::⛅
@@ -574,7 +601,6 @@ return
 :::kavhe::☕
 :::2parmak::🤞
 :::megafon::📢
-:::çekiç::🔨
 :::balon::🎈
 :::dvd::💿
 :::uzay::🌌
@@ -590,4 +616,3 @@ return
 :::atom::⚛️
 :::fide::🌱
 :::adım::👣
-:::etiket::🏷️
