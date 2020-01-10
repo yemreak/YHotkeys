@@ -12,7 +12,8 @@ description: YHotkeys'de neler değişti
 
 🧪 Deneysel version
 
-* 🙄 Henüz bir şey yapılmadı
+- 👨‍🔧 Pencere geçişlerindeki sorunlar giderildi
+- ➕ Yemojiler artırıldı
 
 ## 🔸 2.4.1.1
 
