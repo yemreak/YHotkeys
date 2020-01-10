@@ -10,7 +10,10 @@
 DEBUG := True
 
 ; ----------------------------------- App Settings -----------------------------------
+APP_ICON = 🌱
 APP_NAME = YHotkeys
+APP_DESCRIPTION = Kısayol Yöneticisi
+APP_OWNER = YEmreAk
 APP_PAGE = https://yhotkeys.yemreak.com
 
 ; -------------------------------- Data dir settings ---------------------------------
@@ -18,7 +21,7 @@ DIR_NAME := A_AppData . "\" . APP_NAME
 DIR_ICON := DIR_NAME . "\Icons"
 
 ; --------------------------------- Update settings ----------------------------------
-VERSION = 2.4.1.1
+VERSION = 2.4.1.2b
 API_RELEASE = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
 
 PATH_EXE = %DIR_NAME%\YHotkeys.exe
@@ -35,7 +38,7 @@ TRANSPARENT_PINNED = 220
 TRANSPARENT_NORMAL = 255
 
 ; ---------------------------------- Menu settings -----------------------------------
-TIP_MENU := "🌱 YHotkeys - Kısayol Yöneticisi ~ YEmreAk (v" . VERSION . ")"
+TIP_MENU := APP_ICON . " " . APP_NAME . " - " . APP_DESCRIPTION " ~ " . APP_OWNER . " (v" . VERSION . ")"
 
 ICON_APP := "seedling.ico"
 ICON_DEFAULT := "default.ico"
