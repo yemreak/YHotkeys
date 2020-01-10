@@ -17,7 +17,7 @@ description: >-
 ## 👣 Kullanım Adımları
 
 * ⏬ Uygulamanın son sürümünü [🔗 buradan](https://github.com/yedhrab/YHotkeys/releases/latest) indirin
-* 👨‍🔬 Deneysel sürümünü  [🧪 buradan](https://github.com/yedhrab/YHotkeys/raw/master/src/YHotkeys.exe) indirebilirsin
+* 👨‍🔬 Deneysel sürümünü  [🧪 buradan](https://github.com/yedhrab/YHotkeys/raw/master/build/YHotkeys-Installer.exe) indirebilirsin
 * 👀 Uygulamanın sunduğu kısayollar için [💞 Kısayollar](./#kisayollar) alanına bakabilirsin
 * 🥰  YEmoji kısayolları için [🚀 YEmoji](yemoji.md) alanına bakmalısın
 * 🌱 İkonuna tıklayarak bu sayfaya yönelebilirsin
