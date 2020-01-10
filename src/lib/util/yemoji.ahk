@@ -15,6 +15,10 @@ return
 
 ; Yeni
 
+:::tuğla::🧱
+:::duvar::🧱
+:::temel::🧱
+
 :::gece::🌃
 :::manzara::🌆
 
@@ -115,9 +119,6 @@ return
 :::ev2::🏘️
 :::evb::💒
 
-
-
-; Yakın zamanda kullandıklarım
 :::inşaat::🚧
 :::işlem::🚧
 :::yapı::🏗️
@@ -149,7 +150,7 @@ return
 
 :::yasak::⛔
 :::girilmez::🚫
-:::engel:::🚫
+:::engel::🚫
 :::blok::🚫
 
 :::güncel:::🔄
@@ -523,8 +524,7 @@ return
 
 ; YEmoji
 :::döngü::💫
-:::tuğla::🧱
-:::duvar::🧱
+
 :::yıldız::⭐
 :::fav::🌟
 :::kod::👨‍💻
