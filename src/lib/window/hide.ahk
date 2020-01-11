@@ -193,9 +193,10 @@ ShowWindowInTray(ahkID) {
 }
 
 FocusPreviusWindow(ahkID) {
-    if WinActive("ahk_id " . ahkID) {
-        Send !{ESC}
-    }
+    ; if WinActive("ahk_id " . ahkID) {
+    ;     Send !{ESC}
+    ; }
+    Focus("recent")
 }
 
 MinimizeWindowToTray(ahkID) {
