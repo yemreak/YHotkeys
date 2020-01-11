@@ -10,6 +10,7 @@ F1::FWT()
 
 ; FWT - Fullscreen window toggle
 ; https://autohotkey.com/boards/viewtopic.php?p=123166#p123166
+
 FWT(hwnd:=""){
 	static MONITOR_DEFAULTTONEAREST := 0x00000002
 	static WS_CAPTION               := 0x00C00000
