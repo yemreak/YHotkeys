@@ -11,9 +11,144 @@ return
 ; Emoji Kaynakları
 ; http://xahlee.info/comp/unicode_index.html
 ; https://emojipedia.org/
+; https://gitmoji.carloscuesta.me/
 ; Giriş, Aktarma
 
 ; Yeni
+
+:::güzelleştirme::💄
+:::güzelr::💄
+:::ruj::💄
+
+:::güzelt::💅
+:::tırnak::💅
+:::oje::💅
+:::güzelo::💅
+
+:::yeni::✨
+:::parıltı::✨
+:::geliştirme::✨
+
+:::balon::🎈
+:::şişir::🎈
+:::şişirme::🎈
+:::büyültme::🎈
+:::güncelleme::🎈
+:::yenileme::🎈
+
+:::geridönüşüm::♻️
+:::recyle::♻️
+:::gerid::♻️
+
+:::voltaj::⚡
+:::elektrik::⚡
+:::verim::⚡
+:::şimşek::⚡
+:::enerji::⚡
+:::yıldırım::⚡
+
+:::alev::🔥
+:::yanam::🔥
+:::yakma::🔥
+:::yoketme::🔥
+:::darbe::🔥
+:::isyan::🔥
+:::firebase::🔥
+
+:::pin::📌
+:::sabit::📌
+:::sabitleme::📌
+:::raptiye::📌
+
+:::gerib::↩️
+:::backb::↩️
+:::ileri::↪️
+:::next::↪️
+:::yukarı::⤴️
+:::top::⤴️
+
+:::gerialma::⏪
+:::reverse::⏪
+:::geri::⏪
+
+:::dal::🔀
+:::birleştirme::🔀
+:::merge::🔀
+
+:::aktarma::🚚
+:::taşıma::🚚
+:::taşı::🚚
+:::aktar::🚚
+
+:::bok::💩
+:::kaka::💩
+:::dışkı::💩
+:::krema::💩
+
+:::foto::📸
+:::kamera::📸
+:::cam::📸
+
+:::bilim::👨‍🔬
+:::icat::👨‍🔬
+:::buluş::👨‍🔬
+:::keşif::👨‍🔬
+
+:::deneyt::🧪
+:::tüp::🧪
+
+:::deneysel::⚗️
+:::imbik::⚗️
+:::deneyi::⚗️
+:::deneyy::⚗️
+
+:::döngü::💫
+:::animasyon::💫
+:::anim::💫
+:::geçiş::💫
+:::baygın::💫
+:::başd::💫
+
+:::arama::🔍
+:::arama2::🔎
+:::aramasağ::🔍
+:::aramasol::🔎
+:::seo::🔍
+
+:::katkısağlayan::👥
+:::contributer::👥
+:::katkıi::👥
+:::contr::👥
+
+:::cambaz::🤹
+:::topç::🤹
+:::fonksiyonellik::🤹
+:::işlevsel::🤹
+:::fonksiyonel::🤹
+
+:::süpürge::🧹
+:::temiz::💦
+:::damlalar::💦
+:::temizleme::💦
+:::clear::💦
+:::clean::💦
+
+:::kızma::👿
+:::sinirli::👿
+:::kötüg::😈
+
+:::mezun::👨‍🎓
+:::mezunk::👩‍🎓
+
+:::tek::🦄
+:::aile::👪
+:::aileç::👨‍👩‍👦‍👦
+:::çok::👪
+:::çokk::👨‍👩‍👦‍👦
+
+:::tebrik::👏
+:::alkış::👏
+:::elç::👏
 
 :::bulantı::🤢
 :::kus::🤮
@@ -64,6 +199,10 @@ return
 :::yapılandır::🔨
 :::ayary::🔨
 
+:::anahtari::🔧
+:::ayara::🔧
+:::ayari::🔧
+
 :::etiket::🏷️
 :::versiyon::🏷️
 :::tag::🏷️
@@ -80,13 +219,6 @@ return
 :::linux::🐧
 :::penguen::🐧
 :::bash::🐧
-
-:::geri::↩️
-:::back::↩️
-:::ileri::↪️
-:::next::↪️
-:::yukarı::⤴️
-:::top::⤴️
 
 :::yürü::🚶‍♂️
 :::move::🚶‍♂️
@@ -181,9 +313,6 @@ return
 :::dily::🌐
 
 ; Durum Emojileri
-:::geliştirme::✨
-:::güncelleme::🎈
-:::yenileme::🎈
 :::düzeltme::👨‍🔧
 :::ekleme::➕
 
@@ -290,7 +419,6 @@ return
 :::saatkd::⌛
 
 :::test::🧪
-:::geridönüşüm::♻️
 :::denge::⚖️
 :::parti::🎉
 :::kurukafa::☠️
@@ -299,7 +427,6 @@ return
 :::takvims::🗓️
 :::polis::👮‍♂️
 :::hortum::🌪️
-:::alev::🔥
 :::çeviri::💱
 :::dönüştürme::🔄
 :::sync::🔄
@@ -345,13 +472,10 @@ return
 :::wifi:::📶
 :::bluetooth::📶
 :::havalı::😎
-:::bilim::👨‍🔬
 :::disk::💾
 :::kaydet::💾
 :::dokunma::👇
-:::tebrik::👏
 :::fişek::🎇
-:::tek::🦄
 :::kontrol::🕹️
 :::joystick::🕹️
 :::bilet::🎫
@@ -362,7 +486,6 @@ return
 :::bildirim::🔔
 :::zil::🛎️
 :::vs::🆚
-:::pin::📌
 :::ağır::🎳
 :::maliyet::🎳
 :::çerçeve::🔳
@@ -427,8 +550,7 @@ return
 ; Hızlı emojiler
 :::eli::🤭
 :::selam::🙋‍♂️
-:::yeni::✨
-:::parıltı::✨
+
 :::akış::🌊
 
 ; Kod için hızlı emojiler
@@ -438,6 +560,7 @@ return
 
 ; Duygular
 ::::)::😊
+::::))::😌
 ::::/::😕
 :::://::🤕
 ::::D::😁
@@ -483,7 +606,6 @@ return
 :::run::▶️
 :::çalıştır::▶️
 :::başlat::▶️
-:::raptiye::📌
 :::!::❗
 
 ; Geliştirici
@@ -524,8 +646,6 @@ return
 :::dizit::🚄
 :::dizi2::📇
 :::dizic::
-:::aktarma::🚛
-:::taşıma::🚛
 
 :::telefon::📞
 :::ahtapot::🐙
@@ -542,7 +662,6 @@ return
 
 
 ; YEmoji
-:::döngü::💫
 
 :::yıldız::⭐
 :::fav::🌟
@@ -569,8 +688,7 @@ return
 :::japon::🔰
 :::parlak::🔆
 :::kutu::🧃
-:::dal::🔀
-:::birleştirme::🔀
+
 
 :::parşomen::📜
 :::meraklı::👀
@@ -586,12 +704,9 @@ return
 :::kıvrık::➰
 :::çubuk::🍢
 :::fiş::🔌
-:::voltaj::⚡
 :::resim::🖼️
-:::arama::🔍
-:::arama2::🔎
+
 :::abc::🔤
-:::süpürge::🧹
 :::kurdele::🎀
 :::tamir::👨‍🔧
 :::alet::🧰
@@ -624,13 +739,11 @@ return
 :::kiraz::🍒
 :::pano::📋
 :::sirk::🎪
-:::deney::🧪
 
 :::çember::⭕
 :::kavhe::☕
 :::2parmak::🤞
 :::megafon::📢
-:::balon::🎈
 :::dvd::💿
 :::uzay::🌌
 :::top1::🏈
