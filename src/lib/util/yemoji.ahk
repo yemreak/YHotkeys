@@ -15,6 +15,25 @@ return
 
 ; Yeni
 
+:::bulantı::🤢
+:::kus::🤮
+:::kusb::🤢
+:::kusma::🤮
+:::kusmab::🤢
+
+:::delik::🕳️
+:::port::🕳️
+:::socket::🕳️
+:::boşluk::🕳️
+
+:::uydu::🛰️
+:::yayın::🛰️
+:::broadcast::🛰️
+
+:::anten::📡
+:::alıcı::📡
+:::receiver::📡
+
 :::tuğla::🧱
 :::duvar::🧱
 :::temel::🧱
@@ -175,6 +194,7 @@ return
 :::para3::💶
 :::para4::💷
 :::paraç::💰
+
 :::ticaret::💱
 :::dolar::💲
 :::$::💲
@@ -302,8 +322,7 @@ return
 :::terazi::⚖️
 :::adalet::⚖️
 :::çay::☕
-:::uydu::🛰️
-:::anten::📡
+
 :::web::🕸️
 :::sabun::🧼
 :::paket::📦
