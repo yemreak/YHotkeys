@@ -16,6 +16,77 @@ return
 
 ; Yeni
 
+:::gözlük::👓
+:::gözlükg::🕶️
+:::gözlüks::🕶️
+
+; Kalp
+:::kalp::💖
+:::kalpp::💖
+:::kalp2::💞
+:::kalp!::❣️
+:::kalpk::❤️
+:::kalpb::🤍
+:::kalpç::🤎
+:::kalps::🖤
+:::kalpy::💚
+:::kalpm::💜
+:::kalpkı::💔
+:::kalpsa::💛
+:::kalpma::💙
+:::kalpmo::💜
+:::kalpsi::🖤
+
+:::esneme::🥱
+:::ela::🥱
+:::uykulu::🥱
+:::uykue::🥱
+
+:::azcık::🤏
+:::az::🤏
+:::azıcık::🤏
+:::els::🤏
+
+:::parşomen::📜
+:::json::📜
+:::xml::📜
+:::sayfap::📜
+
+:::ara::🔍
+:::arama::🔍
+:::arama2::🔎
+:::aramasağ::🔍
+:::aramasol::🔎
+:::seo::🔍
+
+:::başd::💫
+:::dön::💫
+:::döny::💫
+:::dönüş::💫
+:::döngü::💫
+:::animasyon::💫
+:::anim::💫
+:::geçiş::💫
+:::baygın::💫
+
+:::gy::📈
+:::ga::📉
+:::gs::📊
+:::g+::📈
+:::g-::📉
+:::g=::📊
+:::grafiky::📈
+:::grafik+::📈
+:::grafika::📉
+:::grafik-::📉
+:::grafiks::📊
+:::grafik=::📊
+
+:::süper::🦸‍♂️
+:::süperk::🦸‍♀️
+:::hero::🦸‍♂️
+:::herok::🦸‍♀️
+
 :::güzelleştirme::💄
 :::güzelr::💄
 :::ruj::💄
@@ -93,6 +164,10 @@ return
 :::icat::👨‍🔬
 :::buluş::👨‍🔬
 :::keşif::👨‍🔬
+:::deney::👨‍🔬
+:::deneysel::👨‍🔬
+:::beta::👨‍🔬
+
 
 :::deneyt::🧪
 :::tüp::🧪
@@ -101,19 +176,6 @@ return
 :::imbik::⚗️
 :::deneyi::⚗️
 :::deneyy::⚗️
-
-:::döngü::💫
-:::animasyon::💫
-:::anim::💫
-:::geçiş::💫
-:::baygın::💫
-:::başd::💫
-
-:::arama::🔍
-:::arama2::🔎
-:::aramasağ::🔍
-:::aramasol::🔎
-:::seo::🔍
 
 :::katkısağlayan::👥
 :::contributer::👥
@@ -174,7 +236,10 @@ return
 :::temel::🧱
 
 :::gece::🌃
-:::manzara::🌆
+:::manzara::🌇
+:::güng::🌃
+:::günb::🌇
+:::güna::🌆
 
 :::çadır::⛺
 :::arkaplan::⛺
@@ -256,15 +321,20 @@ return
 :::eposta::📧
 :::posta::📧
 :::zarf::✉️
-::postak::📮
+:::postak::📮
 :::postak2::📬
 :::mail::📧
 
 ; Sihir & Büyü
 :::büyücü::‍🧙‍♂
 :::küre::🔮
-:::büyü::🔮
-:::sihir::🔮
+:::büyü::✨
+:::büyük::🔮
+:::büyüc::‍🧙‍♂
+:::büyüd::‍🧙‍♂
+:::büyüy::‍🧙‍♂✨
+:::sihir::✨
+:::sihirk::🔮
 
 :::ev::🏠
 :::ev2::🏘️
@@ -290,7 +360,7 @@ return
 
 :::hedef::🎯
 :::odak::🎯
-::amaç::🎯
+:::amaç::🎯
 
 :::gbb::‍🧙‍♂ Detaylı bilgi için TEMP alanına bakabilirsin.
 
@@ -519,22 +589,6 @@ return
 :::kalemu::✒️
 :::kalemd::🖋️
 
-; Kalp
-:::kalp::💖
-:::kalps::🖤
-:::kalpsiyah::🖤
-:::kalpy::💚
-:::kalpyeşil::💚
-:::kalpsa::💛
-:::kalpsarı::💛
-:::kalpm::💜
-:::kalpmavi::💙
-:::kırıkkalp::💔
-:::kalpkırık::💔
-:::kalp2::💞
-::kalpç::🤎
-:::kalp!::❣️
-
 ; Çanta
 :::çanta::🛍️
 :::çantae::👜
@@ -690,17 +744,11 @@ return
 :::kutu::🧃
 
 
-:::parşomen::📜
 :::meraklı::👀
 :::bulut::⛅
 :::dağ::🌄
 :::mızrak::🔱
-:::grafiky::📈
-:::grafik+::📈
-:::grafika::📉
-:::grafik-::📉
-:::grafiks::📊
-:::grafik=::📊
+
 :::kıvrık::➰
 :::çubuk::🍢
 :::fiş::🔌
