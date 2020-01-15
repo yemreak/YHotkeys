@@ -39,6 +39,13 @@ RunOnExplorer(url) {
     RunWait, %command%, , hide
 }
 
+RunCommand(url) {
+    command = %ComSpec% /c "%url%"
+    RunWait, %command%, , hide, ahkPID
+
+    return ahkPID
+}
+
 CopySelected() {
     Send ^c
     Sleep, 100

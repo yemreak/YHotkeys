@@ -108,7 +108,7 @@ SwitchWindow() {
     }
 }
 
-OpenWindowInTray(selector, name, url, mode=3) {
+OpenWindowInTray(selector, name, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, On
 
@@ -136,10 +136,10 @@ OpenWindowInTray(selector, name, url, mode=3) {
         }
     }
     if !found
-        RunOnExplorer(url)
+        RunCommand(command)
 }
 
-OpenWindowByTitle(title, url, mode=3) {
+OpenWindowByTitle(title, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
 
@@ -147,7 +147,7 @@ OpenWindowByTitle(title, url, mode=3) {
         WinGet, ahkID, ID, %title%
         ToggleWindow(ahkID, False)
     } else {
-        RunOnExplorer(url)
+        RunCommand(command)
     }
 }
 

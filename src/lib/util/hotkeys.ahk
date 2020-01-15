@@ -43,56 +43,65 @@ return
 #+e::Run, explorer
 
 ; ---------------------------------- Göster / Gizle ----------------------------------
+; WARN: - olmazsa hata oluşmakta
 
 #q::
     name := "- OneNote"
-    path := "shell:appsFolder\Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim"
+    com := createAppCommand("Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim")
     mode := 2
-    OpenWindowByTitle(name, path, mode)
+    OpenWindowByTitle(name, com, mode)
+return
+
+#x::
+    name := "- Calendar"
+    com := createAppCommand("microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.calendar")
+    mode := 2
+    OpenWindowByTitle(name, com, mode)
+return
+
+#c::
+    ; BUG: Hesap makinesi tekrardan açılmıyor
+    name := "Calculator"
+    com := createAppCommand("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
+    mode := 2
+    OpenWindowByTitle(name, com, mode)
 return
 
 
 ; #t::
 ;     name := "Tureng Dictionary"
-;     path := "shell:appsFolder\24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
+;     com := createAppCommand("24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
 ;     mode := 2
-;     OpenWindowByTitle(name, path, mode)
+;     OpenWindowByTitle(name, com, mode)
 ; return
 
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
 ; #"::
 ;     name := "WindowsTerminal.exe"
-;     path := "shell:appsfolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App"
+;     com := createAppCommand("Microsoft.WindowsTerminal_8wekyb3d8bbwe!App"
 ;     mode := 2
-;     OpenWindowInTray("exe", name, path, mode)
+;     OpenWindowInTray("exe", name, com, mode)
 ; return
 
 #w::
     name := "WhatsApp"
-    path := "shell:appsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop"
+    com := createAppCommand("5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop")
     mode := 2
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 #g::
     name := "GitHub Desktop"
-    path := GetEnvPath("localappdata", "\GitHubDesktop\GitHubDesktop.exe")
+    com := GetEnvPath("localappdata", "\GitHubDesktop\GitHubDesktop.exe")
     mode := 3
-    OpenWindowInTray("title", name, path, mode)
-return
-
-#x::
-    name := "Google Calendar"
-    path := GetEnvPath("appdata", "\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Google Calendar.lnk")
-    mode := 2
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 #e::
     name := "CabinetWClass"
-    path := "explorer.exe"
-    OpenWindowInTray("class", name, path)
+    com := "explorer.exe"
+    OpenWindowInTray("class", name, com)
 return
 
 ; --------------------------------- Dizin Kısayolları ---------------------------------
@@ -100,43 +109,43 @@ return
 ; Dizin kısayolları PgDn ile başlar
 PgDn & g::
     name := "GitHub"
-    path := GetEnvPath("userprofile", "\Documents\GitHub")
-    OpenWindowInTray("title", name, path)
+    com := GetEnvPath("userprofile", "\Documents\GitHub")
+    OpenWindowInTray("title", name, com)
 return
 
 PgDn & s::
     name := "ShareX"
-    path := "shell:appsFolder\19568ShareX.ShareX_egrzcvs15399j!ShareX"
+    com := createAppCommand("19568ShareX.ShareX_egrzcvs15399j!ShareX")
     mode := 3
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 PgDn & Shift::
     name := "Startup"
-    path := "shell:startup"
+    com := "shell:startup"
     mode := 3
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 PgDn & i::
     name := "Icons"
-    path := GetEnvPath("userprofile", "\Google Drive\Pictures\Icons")
+    com := GetEnvPath("userprofile", "\Google Drive\Pictures\Icons")
     mode := 3
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 PgDn & d::
     name := "Downloads"
-    path := "shell:downloads"
+    com := "shell:downloads"
     mode := 3
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 PgDn & u::
     name := "Yunus Emre Ak"
-    path := GetEnvPath("userprofile")
+    com := GetEnvPath("userprofile")
     mode := 3
-    OpenWindowInTray("title", name, path, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 ; --------------------------------- Buton Kısayolları ---------------------------------
