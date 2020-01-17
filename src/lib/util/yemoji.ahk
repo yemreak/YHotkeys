@@ -16,6 +16,13 @@ return
 
 ; Yeni
 
+:::metot::💠
+:::fonksiyon::💠
+:::param::💎
+:::arg::💎
+:::parametre::💎
+:::argüman::💎
+
 :::gözlük::👓
 :::gözlükg::🕶️
 :::gözlüks::🕶️
