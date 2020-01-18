@@ -16,6 +16,11 @@ return
 
 ; Yeni
 
+:::ai::🧠
+:::beyin::🧠
+:::zeka::🧠
+:::yapayzeka::🧠
+
 :::metot::💠
 :::fonksiyon::💠
 :::param::💎
@@ -381,7 +386,7 @@ return
 :::engel::🚫
 :::blok::🚫
 
-:::güncel:::🔄
+:::güncel::🔄
 :::kahve::☕
 :::android::📲
 :::kişisel::🤵
@@ -546,7 +551,7 @@ return
 :::adam::🤵
 :::işçi::👷‍♂️
 :::işçik::👷‍♀️
-:::wifi:::📶
+:::wifi::📶
 :::bluetooth::📶
 :::havalı::😎
 :::disk::💾
@@ -675,8 +680,8 @@ return
 :::debug::🐛
 :::dosya::📂
 
-::kız::👧
-::erkek::👨
+:::kız::👧
+:::erkek::👨
 
 :::destek::🤝
 
