@@ -5,16 +5,41 @@
 ; ####################################################################################
 
 #Hotstring EndChars : ; Bitirme karakteri
-#Hotstring r Z C0 O ; Algılama ayarları
+#Hotstring Z C0 O T ; Algılama ayarları
 return
 
 ; Emoji Kaynakları
 ; http://xahlee.info/comp/unicode_index.html
 ; https://emojipedia.org/
 ; https://gitmoji.carloscuesta.me/
+; https://www.autohotkey.com/docs/Hotstrings.htm
 ; Giriş, Aktarma
 
 ; Yeni
+
+:::dizzy::😵
+:::şaşkın::😵
+:::kafak::😵
+:::başd::😵
+
+:::0::0️⃣
+:::1::1️⃣
+:::2::2️⃣
+:::3::3️⃣
+:::4::4️⃣
+:::5::5️⃣
+:::6::6️⃣
+:::7::7️⃣
+:::8::8️⃣
+:::9::9️⃣
+:::10::🔟
+:::#::#️⃣
+:::*::*️⃣
+
+:::adım::👣
+:::ayaki::👣
+:::takip::👣
+:::ayaka::👣
 
 :::ai::🧠
 :::beyin::🧠
@@ -43,11 +68,12 @@ return
 :::kalps::🖤
 :::kalpy::💚
 :::kalpm::💜
-:::kalpkı::💔
+:::kalpkı::
 :::kalpsa::💛
 :::kalpma::💙
 :::kalpmo::💜
 :::kalpsi::🖤
+:::kalpler::❤️🤍🤎🖤💚💜💛💙💜
 
 :::esneme::🥱
 :::ela::🥱
@@ -405,6 +431,8 @@ return
 :::para3::💶
 :::para4::💷
 :::paraç::💰
+:::parat::💱
+:::paraç::💱
 
 :::ticaret::💱
 :::dolar::💲
@@ -817,4 +845,3 @@ return
 :::alışveriş::🛒
 :::atom::⚛️
 :::fide::🌱
-:::adım::👣

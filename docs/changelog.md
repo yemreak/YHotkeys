@@ -12,6 +12,8 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- ➕ Sayılar hakkında yemojiler eklendi 1️⃣2️⃣3️⃣
+- 👪 YEmojiler gruplandırıldı ❤️🤍🤎🖤💚💜💛💙💜
 - 👨‍🔧 Gecikmeli pencere açılma sorunu giderildi
 - 👨‍🔧 ❖ Win E ile artık `Documents` değil `Quick Access` alanı açılmakta
 - 🚀 YEmojiler kategorizelendi ve yenilendi
