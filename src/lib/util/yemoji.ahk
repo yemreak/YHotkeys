@@ -91,7 +91,7 @@ return
 :::kalps::🖤
 :::kalpy::💚
 :::kalpm::💜
-:::kalpkı::
+:::kalpkı::💔
 :::kalpsa::💛
 :::kalpma::💙
 :::kalpmo::💜
