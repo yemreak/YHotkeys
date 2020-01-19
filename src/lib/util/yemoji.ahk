@@ -16,6 +16,23 @@ return
 ; Giriş, Aktarma
 
 ; Yeni
+:::parmak::👆
+:::parmak2::🤞
+:::parmaky::👆
+:::parmaky2::☝
+:::parmaka::👇
+:::parmaksa::👉
+:::parmakso::👈
+:::parmak5::🖐
+:::parmakb::🤘
+:::parmakay::🖖
+:::parmakt::👌
+:::parmako::👌
+:::ok::👌
+
+:::id::🆔
+:::kimlik::🆔
+:::ID::🆔
 
 :::fikir::💡
 :::lamba::💡
@@ -835,7 +852,6 @@ return
 
 :::çember::⭕
 :::kavhe::☕
-:::2parmak::🤞
 :::megafon::📢
 :::dvd::💿
 :::uzay::🌌
