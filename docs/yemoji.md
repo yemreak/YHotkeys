@@ -563,7 +563,7 @@ description: YHotkeys üzerinde kullanılan kişiselleştirilmiş emoji (yemoji)
 | :'D |😅
 | :O |😯
 | :OO |😱
-| :| |😐
+| :\| |😐
 | :( |☹️
 | :'( |😥
 | :p |😋
