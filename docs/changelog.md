@@ -12,6 +12,7 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- ➕ YEmojiler artırıldı 💡😵
 - ➕ Sayılar hakkında yemojiler eklendi 1️⃣2️⃣3️⃣
 - 👪 YEmojiler gruplandırıldı ❤️🤍🤎🖤💚💜💛💙💜
 - 👨‍🔧 Gecikmeli pencere açılma sorunu giderildi
