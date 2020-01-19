@@ -12,6 +12,8 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+## 🏷️ 2.4.1.3
+
 - ➕ YEmojiler artırıldı 🤘🆔💡😵
 - ➕ Sayılar hakkında yemojiler eklendi 1️⃣2️⃣3️⃣
 - 👪 YEmojiler gruplandırıldı ❤️🤍🤎🖤💚💜💛💙💜
