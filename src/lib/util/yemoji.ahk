@@ -16,6 +16,50 @@ return
 ; Giriş, Aktarma
 
 ; Yeni
+
+:::maymuns::🙊
+:::maymung::🙈
+:::maymund::🙉
+
+:::dur::✋
+:::durt::🛑
+:::durl::🛑
+:::durak::🚏
+:::durb::⏸
+:::durm::⏯
+:::durk::⏹
+
+:::ölü::☠️
+:::ölüb::💀
+:::kurukafa::☠️
+:::kafak::☠️
+:::kafai::💀
+
+:::sakin::🧘‍♀️
+:::sakink::🧘‍♂️
+
+:::yüzme::🏊‍♂️
+:::yüz::🏊‍♂️
+:::yüzmek::🏊‍♀️
+:::yüzk::🏊‍♀️
+
+:::girişh::🏄‍♂️
+:::sörf::🏄‍♂️
+:::girişh::🏄‍♂️
+:::girişhk::🏄‍♀️
+:::sörfk::🏄‍♀️
+:::girişhk::🏄‍♀️
+
+:::giriş3::🏄‍♂️
+:::giriş2::🏂
+:::giriş::🚴‍♂️
+:::girişk::🚴‍♀️
+:::bisiklet::🚴‍♂️
+:::bisikletd::🚵‍♀️
+:::bisikletk::🚴‍♀️
+:::bisikletdk::🚵‍♂️
+
+
 :::parmak::👆
 :::parmak2::🤞
 :::parmaky::👆
@@ -492,6 +536,9 @@ return
 :::sayfaa::📑
 :::sayfaö::⎗
 :::sayfas::⎘
+:::sayfay::📝
+:::sayfad::📝
+:::doc::📝
 
 ; Ses işaretleri
 :::ses0::🔈
@@ -570,7 +617,6 @@ return
 :::test::🧪
 :::denge::⚖️
 :::parti::🎉
-:::kurukafa::☠️
 :::takvim::📅
 :::takvimn::📆
 :::takvims::🗓️

@@ -12,6 +12,9 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- ➕ YEmojiler artırıldı 🙊🙈🙉✋🛑🚏🏊‍♂️🏄‍♂️🚴‍♂️🚵‍♂️
+- 🙋‍♀️ Kadın YEmojiler eklendi
+
 ## 🏷️ 2.4.1.3
 
 💫 Genel düzeltmeler ve iyileştirmeler
