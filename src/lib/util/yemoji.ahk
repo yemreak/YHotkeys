@@ -17,6 +17,23 @@ return
 
 ; Yeni
 
+:::ağızd::😬
+:::ağızf::🤐
+
+:::hayran::🤩
+:::gözyıldız::🤩
+:::gözyı::🤩
+
+:::aydınlat::🕯️
+:::mum::🕯️
+:::ışıktutma::🕯️
+
+:::sepetç::🧺
+:::çamaşır::🧺
+:::sepeta::🛒
+:::al::🛒
+:::topla::🧺
+
 :::maymuns::🙊
 :::maymung::🙈
 :::maymund::🙉
@@ -105,8 +122,14 @@ return
 
 :::adım::👣
 :::ayaki::👣
+:::pati::🐾
+:::patii::🐾
+:::ayakh::🐾
+:::ayakk::🐾
+:::ayakp::🐾
 :::takip::👣
 :::ayaka::👣
+:::ayakizi::👣
 
 :::ai::🧠
 :::beyin::🧠
@@ -275,8 +298,8 @@ return
 :::icatk::👩‍🔬
 :::keşifk::👩‍🔬
 
-
 :::deneyt::🧪
+:::test::🧪
 :::tüp::🧪
 
 :::deneysel::⚗️
@@ -424,6 +447,8 @@ return
 :::elbk::🤦‍♀️
 :::diğer::💁‍♂️
 :::omuz::🤷‍♂️
+:::bilmem::🤷‍♂️
+:::bilmemk::🤷‍♀️
 :::bilmiyorum::🤷‍♂️
 :::bilmiyorumk::🤷‍♀️
 :::farketmez::🤷‍♂️
@@ -608,13 +633,13 @@ return
 
 ; Saat
 :::saat::🕐
+:::süre::🕖
 :::alarm::⏰
 :::sayaç::⏱
 :::saatk::⌚
 :::saatk::⏳
 :::saatkd::⌛
 
-:::test::🧪
 :::denge::⚖️
 :::parti::🎉
 :::takvim::📅

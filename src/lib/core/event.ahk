@@ -68,23 +68,17 @@ GetExistClipboard() {
 
 OpenInFileExplorer() {
     value := GetExistClipboard()
-    if (value) {
-        RunOnExplorer(value)
-    }
+    RunOnExplorer(value)
 }
 
 SearchOnGoogle() {
     value := GetExistClipboard()
-    if (value) {
-        RunOnExplorer("http://www.google.com/search?q=" . value)
-    }
+    RunOnExplorer("http://www.google.com/search?q=" . value)
 }
 
 TranslateOnGoogle() {
     value := GetExistClipboard()
-    if (value) {
-        RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
-    }
+    RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
 }
 
 KeepOnNotepad() {

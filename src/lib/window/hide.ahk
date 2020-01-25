@@ -192,11 +192,14 @@ ShowWindowInTray(ahkID) {
     ShowHidedWindow(ahkID)
 }
 
+StoreActiveWindow() {
+    global LAST_ACTIVE_WINDOW_ID
+    WinGet, LAST_ACTIVE_WINDOW_ID, ID, A
+}
+
 FocusPreviusWindow(ahkID) {
-    ; if WinActive("ahk_id " . ahkID) {
-    ;     Send !{ESC}
-    ; }
-    Focus("recent")
+    global LAST_ACTIVE_WINDOW_ID
+    WinActivate, ahk_id %LAST_ACTIVE_WINDOW_ID%
 }
 
 MinimizeWindowToTray(ahkID) {
@@ -210,7 +213,7 @@ OnWinNotExist(ahkID, mask) {
     if mask {
         ShowWindowInTray(ahkID)
     }
-    ActivateWindow(ahkID)
+    OnWinNotActive(ahkID)
 }
 
 OnWinActive(ahkID, mask) {
@@ -222,6 +225,7 @@ OnWinActive(ahkID, mask) {
 }
 
 OnWinNotActive(ahkID) {
+    StoreActiveWindow()
     ActivateWindow(ahkID)
 }
 

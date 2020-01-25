@@ -12,7 +12,14 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
-- ➕ YEmojiler artırıldı 🙊🙈🙉✋🛑🚏🏊‍♂️🏄‍♂️🚴‍♂️🚵‍♂️
+# 🏷️ 2.4.1.4
+
+👨‍🔧 Hatalar düzeltildi, verimlilik artırıldı
+
+- 🐞 Birden fazla aynı pencerenin olması durumunda hatalar mevcut
+- 👨‍🔧 Bir önceki pencereye odaklan sorunu giderildi
+- 👨‍🔧 Seçili metin kısayollarındaki çalışmama sorunu giderildi
+- ➕ YEmojiler artırıldı 🤐😬🤩🛒🧺🕯️🙊🙈🙉✋🛑🚏🏊‍♂️🏄‍♂️🚴‍♂️🚵‍♂️
 - 🙋‍♀️ Kadın YEmojiler eklendi
 
 ## 🏷️ 2.4.1.3
