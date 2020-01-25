@@ -12,6 +12,8 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 💦 Focus yardımcı paketi kaldırıldı
+
 # 🏷️ 2.4.1.4
 
 👨‍🔧 Hatalar düzeltildi, verimlilik artırıldı
