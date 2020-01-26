@@ -32,6 +32,24 @@ return
 #^N::
     KeepOnNotepad()
 return
+#^+U::
+    ToUpperCase()
+return
+#^+L::
+    ToLowerCase()
+return
+#^+T::
+    ToTitleCase()
+return
+#^+I::
+    ToInverted()
+return
+#^+E::
+    ToEncode()
+return
+#^+D::
+    ToDecode()
+return
 !"::
     SwitchWindow()
 return
