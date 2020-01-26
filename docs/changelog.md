@@ -4,50 +4,52 @@ description: YHotkeys'de neler değişti
 
 # ✨ Changelog
 
-## 📋 Tüm Değişiklikler
+## ✨ Changelog
+
+### 📋 Tüm Değişiklikler
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.1.5b
+### 👨‍🔬 2.4.1.5b
 
 ⚗️ Deneysel versiyon
 
-- 🔨 Seçili Metni Düzeltme kısayolları eklendi
-- 🤩 Upper, Lower, Title case, Encode ve Decode kısayolları eklendi
-- ➕ YEmojiler artırıldı 🦅🦋🐊🦖🕊️🦜🦢
-- 🏹 Yön YEmojileri eklendi ⬆️⬇️➡️⬅️↔️➡️⬅️↘️↗️↙️↖️
-- 💦 Focus yardımcı paketi kaldırıldı
+* 🔨 Seçili Metni Düzeltme kısayolları eklendi
+* 🤩 Upper, Lower, Title case, Encode ve Decode kısayolları eklendi
+* ➕ YEmojiler artırıldı 🦅🦋🐊🦖🕊️🦜🦢
+* 🏹 Yön YEmojileri eklendi ⬆️⬇️➡️⬅️↔️➡️⬅️↘️↗️↙️↖️
+* 💦 Focus yardımcı paketi kaldırıldı
 
-# 🏷️ 2.4.1.4
+## 🏷️ 2.4.1.4
 
 👨‍🔧 Hatalar düzeltildi, verimlilik artırıldı
 
-- 🐞 Birden fazla aynı pencerenin olması durumunda hatalar mevcut
-- 👨‍🔧 Bir önceki pencereye odaklan sorunu giderildi
-- 👨‍🔧 Seçili metin kısayollarındaki çalışmama sorunu giderildi
-- ➕ YEmojiler artırıldı 🤐😬🤩🛒🧺🕯️🙊🙈🙉✋🛑🚏🏊‍♂️🏄‍♂️🚴‍♂️🚵‍♂️
-- 🙋‍♀️ Kadın YEmojiler eklendi
+* 🐞 Birden fazla aynı pencerenin olması durumunda hatalar mevcut
+* 👨‍🔧 Bir önceki pencereye odaklan sorunu giderildi
+* 👨‍🔧 Seçili metin kısayollarındaki çalışmama sorunu giderildi
+* ➕ YEmojiler artırıldı 🤐😬🤩🛒🧺🕯️🙊🙈🙉✋🛑🚏🏊‍♂️🏄‍♂️🚴‍♂️🚵‍♂️
+* 🙋‍♀️ Kadın YEmojiler eklendi
 
-## 🏷️ 2.4.1.3
+### 🏷️ 2.4.1.3
 
 💫 Genel düzeltmeler ve iyileştirmeler
 
-- ➕ YEmojiler artırıldı 🤘🆔💡😵
-- ➕ Sayılar hakkında yemojiler eklendi 1️⃣2️⃣3️⃣
-- 👪 YEmojiler gruplandırıldı ❤️🤍🤎🖤💚💜💛💙💜
-- 👨‍🔧 Gecikmeli pencere açılma sorunu giderildi
-- 👨‍🔧 ❖ Win E ile artık `Documents` değil `Quick Access` alanı açılmakta
-- 🚀 YEmojiler kategorizelendi ve yenilendi
+* ➕ YEmojiler artırıldı 🤘🆔💡😵
+* ➕ Sayılar hakkında yemojiler eklendi 1️⃣2️⃣3️⃣
+* 👪 YEmojiler gruplandırıldı ❤️🤍🤎🖤💚💜💛💙💜
+* 👨‍🔧 Gecikmeli pencere açılma sorunu giderildi
+* 👨‍🔧 ❖ Win E ile artık `Documents` değil `Quick Access` alanı açılmakta
+* 🚀 YEmojiler kategorizelendi ve yenilendi
 
-## 🏷️ 2.4.1.2
+### 🏷️ 2.4.1.2
 
 ✨ Genel geliştirmeler
 
-- 👨‍🔧 Pencere geçişlerindeki sorunlar giderildi
-- ➕ Yemojiler artırıldı
-- 👨‍🔬 Beta yönetimi eklendi
+* 👨‍🔧 Pencere geçişlerindeki sorunlar giderildi
+* ➕ Yemojiler artırıldı
+* 👨‍🔬 Beta yönetimi eklendi
 
-## 🏷️ 2.4.1.1
+### 🏷️ 2.4.1.1
 
 👨‍🔧 Genel hata düzeltmesi, çoklu pencere ve odak yönetimi
 
@@ -60,7 +62,7 @@ description: YHotkeys'de neler değişti
 * 👨‍💼 ⇧ Shift butonu yerine ✲ Ctrl butonu ile çeviri, googleda arama vs işlemleri yapılmakta
 * 🚫 ❖ Win F1 kısayolu ile scripti susturma / çalıştırma
 
-## 🏷️ 2.4.1.0
+### 🏷️ 2.4.1.0
 
 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik
 
@@ -72,11 +74,11 @@ description: YHotkeys'de neler değişti
 * ✨ Yemojiler artırıldı
 * 👨‍💻 Kodda verimlilik
 
-![](.gitbook/assets/tray_menu-1.png)
+![](.gitbook/assets/tray_menu-1%20%282%29.png)
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 
-## 🏷️ 2.4.0.2
+### 🏷️ 2.4.0.2
 
 🌍 İkona tıklandığında doküman sayfasına yönlendirme
 
@@ -85,7 +87,7 @@ description: YHotkeys'de neler değişti
 * 🧹 İkona tıklandığında son yapılan eylemi tekrarlama kaldırıldı
 * 👨‍💻 Kodlarda iyileştirme yapıldı
 
-## 🏷️ 2.4.0.1
+### 🏷️ 2.4.0.1
 
 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri
 
@@ -94,7 +96,7 @@ description: YHotkeys'de neler değişti
 * 🧹 Sabitlenen pencerelerde pencere başlığı artık değiştirilmemekte
 * ➕ YEmojiler artırıldı
 
-## 🏷️ 2.4.0
+### 🏷️ 2.4.0
 
 🚀 Güncelleme aracı bağımsızlaştırıldı
 
@@ -105,7 +107,7 @@ description: YHotkeys'de neler değişti
 
 > 🚅 Program açıldığında otomatik güncelleme kontrolü devam etmektedir
 
-## 🏷️ 2.3.3.2
+### 🏷️ 2.3.3.2
 
 📝 Not defterine hızlıca not alma kısayolu
 
@@ -113,14 +115,14 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
-## 🏷️ 2.3.3.1
+### 🏷️ 2.3.3.1
 
 👨‍🔧 Genel Sorun Düzeltme
 
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
-## 🏷️ 2.3.3
+### 🏷️ 2.3.3
 
 📌 Sabitlenen pencereler daha belirgin
 
@@ -131,7 +133,7 @@ description: YHotkeys'de neler değişti
 * ✨ Pencerelerin görünme eylemlerinde ufak iyileştirmeler yapıldı
 * 🚀 YEmoji geliştirildi, kısayolları arttı
 
-## 🏷️ 2.3.2
+### 🏷️ 2.3.2
 
 👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler
 
@@ -142,7 +144,7 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 Eski pencereye odaklanmada meydana gelen sorun giderildi
 * 👨‍💻 Fonksiyon isimleri sadeleştirildi, kod yapısı anlamlaştırıldı
 
-## 🏷️ 2.3.0
+### 🏷️ 2.3.0
 
 🚀 Güncelleme yapısı eklendi
 
