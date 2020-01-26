@@ -12,6 +12,10 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 🔨 Seçili Metni Düzeltme kısayolları eklendi
+- 🤩 Upper, Lower, Title case, Encode ve Decode kısayolları eklendi
+- ➕ YEmojiler artırıldı 🦅🦋🐊🦖🕊️🦜🦢
+- 🏹 Yön YEmojileri eklendi ⬆️⬇️➡️⬅️↔️➡️⬅️↘️↗️↙️↖️
 - 💦 Focus yardımcı paketi kaldırıldı
 
 # 🏷️ 2.4.1.4
