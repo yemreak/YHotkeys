@@ -8,11 +8,14 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.1.5b
+## 👨‍🔬 2.4.2.1b
 
 ⚗️ Deneysel versiyon
 
-- 🔨 Seçili Metni Düzeltme kısayolları eklendi
+## 🏷️ 2.4.2
+
+🔨 Seçili Metni Düzeltme kısayolları eklendi
+
 - 🤩 Upper, Lower, Title case, Encode ve Decode kısayolları eklendi
 - ➕ YEmojiler artırıldı 🦅🦋🐊🦖🕊️🦜🦢
 - 🏹 Yön YEmojileri eklendi ⬆️⬇️➡️⬅️↔️➡️⬅️↘️↗️↙️↖️
