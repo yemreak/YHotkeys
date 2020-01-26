@@ -44,13 +44,13 @@ description: >-
 
 ## 👁‍🗨 Uygulamaya Bakış
 
-![](.gitbook/assets/usage.gif)
+![](.gitbook/assets/usage%20%282%29.gif)
 
-![](.gitbook/assets/tray_icon%20%281%29.png)
+![](.gitbook/assets/tray_icon-1.png)
 
-![](.gitbook/assets/tray_hover%20%281%29.png)
+![](.gitbook/assets/tray_hover-1.png)
 
-![](.gitbook/assets/tray_menu%20%281%29.png)
+![](.gitbook/assets/tray_menu-1%20%281%29.png)
 
 ## 💖 Destek ve İletişim
 
