@@ -25,6 +25,7 @@
 #NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
 #KeyHistory 0 ; Tuş basımları loglamayı engeller
+; #InstallKeybdHook ; Deneysel
 
 SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
 ListLines, On ; Derlenen verileri loglamaz
