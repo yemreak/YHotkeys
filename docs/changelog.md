@@ -8,7 +8,7 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 Beta
+## 👨‍🔬 2.4.1.5b
 
 ⚗️ Deneysel versiyon
 
