@@ -26,6 +26,9 @@ return
 #^E::
     OpenInFileExplorer()
 return
+#^C::
+    OpenInCommandPrompt()
+return
 #^T::
     TranslateOnGoogle()
 return

@@ -136,6 +136,11 @@ GetExistClipboard() {
     }
 }
 
+OpenInCommandPrompt() {
+    value := GetExistClipboard()
+    RunWait, %ComSpec% /k cd %value%
+}
+
 OpenInFileExplorer() {
     value := GetExistClipboard()
     RunOnExplorer(value)

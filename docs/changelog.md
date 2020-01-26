@@ -14,6 +14,8 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 🖤 Komut istemi üzerinden açma kısayolu eklendi
+
 ## 🏷️ 2.4.2
 
 🔨 Seçili Metni Düzeltme kısayolları eklendi
