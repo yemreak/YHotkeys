@@ -14,6 +14,7 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 👪 Microsoft Teams kısayolu eklendi (❖ Win T)
 - 🖤 Komut istemi üzerinden açma kısayolu eklendi
 
 ## 🏷️ 2.4.2

@@ -88,14 +88,6 @@ return
     OpenWindowByTitle(name, com, mode)
 return
 
-
-; #t::
-;     name := "Tureng Dictionary"
-;     com := createAppCommand("24232AlperOzcetin.Tureng_9n2ce2f97t3e6!App"
-;     mode := 2
-;     OpenWindowByTitle(name, com, mode)
-; return
-
 ; --------------------------------- Tray Kısayolları ---------------------------------
 
 ; #"::
@@ -123,6 +115,13 @@ return
     name := "CabinetWClass"
     com := "explorer.exe"
     OpenWindowInTray("class", name, com)
+return
+
+#t::
+    name := " Microsoft Teams"
+    com := GetEnvPath("localappdata", "\Microsoft\Teams\Update.exe --processStart ""Teams.exe""")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
 return
 
 ; --------------------------------- Dizin Kısayolları ---------------------------------
