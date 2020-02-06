@@ -4,6 +4,7 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
+SendMode, Input
 #Hotstring EndChars : ; Bitirme karakteri
 #Hotstring Z C0 O T ; Algılama ayarları
 return
@@ -16,6 +17,22 @@ return
 ; Giriş, Aktarma
 
 ; Yeni
+
+:::kabak::🎃
+
+:::araba::🚗
+:::arabay::🚙
+:::arabay::🏎
+:::arabai::🚒
+:::itfaiye::🚒
+:::arabaö::🚘
+:::tır::🚛
+:::kamyon::🚚
+
+:::artist::👨‍🎨
+:::artistk::👩‍🎨
+:::sanatçı::👨‍🎨
+:::sanatçık::👩‍🎨
 
 :::oky::⬆️
 :::oka::⬇️
