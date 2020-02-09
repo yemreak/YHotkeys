@@ -4,9 +4,7 @@ description: YHotkeys'de neler değişti
 
 # ✨ Changelog
 
-## ✨ Changelog
-
-### 📋 Tüm Değişiklikler
+## 📋 Tüm Değişiklikler
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
@@ -46,7 +44,7 @@ description: YHotkeys'de neler değişti
 * ➕ YEmojiler artırıldı 🤐😬🤩🛒🧺🕯️🙊🙈🙉✋🛑🚏🏊‍♂️🏄‍♂️🚴‍♂️🚵‍♂️
 * 🙋‍♀️ Kadın YEmojiler eklendi
 
-### 🏷️ 2.4.1.3
+## 🏷️ 2.4.1.3
 
 💫 Genel düzeltmeler ve iyileştirmeler
 
@@ -57,7 +55,7 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 ❖ Win E ile artık `Documents` değil `Quick Access` alanı açılmakta
 * 🚀 YEmojiler kategorizelendi ve yenilendi
 
-### 🏷️ 2.4.1.2
+## 🏷️ 2.4.1.2
 
 ✨ Genel geliştirmeler
 
@@ -65,7 +63,7 @@ description: YHotkeys'de neler değişti
 * ➕ Yemojiler artırıldı
 * 👨‍🔬 Beta yönetimi eklendi
 
-### 🏷️ 2.4.1.1
+## 🏷️ 2.4.1.1
 
 👨‍🔧 Genel hata düzeltmesi, çoklu pencere ve odak yönetimi
 
@@ -78,7 +76,7 @@ description: YHotkeys'de neler değişti
 * 👨‍💼 ⇧ Shift butonu yerine ✲ Ctrl butonu ile çeviri, googleda arama vs işlemleri yapılmakta
 * 🚫 ❖ Win F1 kısayolu ile scripti susturma / çalıştırma
 
-### 🏷️ 2.4.1.0
+## 🏷️ 2.4.1.0
 
 🚀 Yükleyici yapısı ve tasarımda köklü değişiklik
 
@@ -94,7 +92,7 @@ description: YHotkeys'de neler değişti
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 
-### 🏷️ 2.4.0.2
+## 🏷️ 2.4.0.2
 
 🌍 İkona tıklandığında doküman sayfasına yönlendirme
 
@@ -103,7 +101,7 @@ description: YHotkeys'de neler değişti
 * 🧹 İkona tıklandığında son yapılan eylemi tekrarlama kaldırıldı
 * 👨‍💻 Kodlarda iyileştirme yapıldı
 
-### 🏷️ 2.4.0.1
+## 🏷️ 2.4.0.1
 
 👨‍🔧 Yeni Kısayol ve Hata Düzeltmeleri
 
@@ -112,7 +110,7 @@ description: YHotkeys'de neler değişti
 * 🧹 Sabitlenen pencerelerde pencere başlığı artık değiştirilmemekte
 * ➕ YEmojiler artırıldı
 
-### 🏷️ 2.4.0
+## 🏷️ 2.4.0
 
 🚀 Güncelleme aracı bağımsızlaştırıldı
 
@@ -123,7 +121,7 @@ description: YHotkeys'de neler değişti
 
 > 🚅 Program açıldığında otomatik güncelleme kontrolü devam etmektedir
 
-### 🏷️ 2.3.3.2
+## 🏷️ 2.3.3.2
 
 📝 Not defterine hızlıca not alma kısayolu
 
@@ -131,14 +129,14 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
-### 🏷️ 2.3.3.1
+## 🏷️ 2.3.3.1
 
 👨‍🔧 Genel Sorun Düzeltme
 
 * 👨‍🔧 Güncellemedeki sorunlar giderildi
 * ✨ Emojiler artırıldı
 
-### 🏷️ 2.3.3
+## 🏷️ 2.3.3
 
 📌 Sabitlenen pencereler daha belirgin
 
@@ -149,7 +147,7 @@ description: YHotkeys'de neler değişti
 * ✨ Pencerelerin görünme eylemlerinde ufak iyileştirmeler yapıldı
 * 🚀 YEmoji geliştirildi, kısayolları arttı
 
-### 🏷️ 2.3.2
+## 🏷️ 2.3.2
 
 👨‍🔧 Hata düzeltmeleri ve Güzelleştirmeler
 
@@ -160,7 +158,7 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 Eski pencereye odaklanmada meydana gelen sorun giderildi
 * 👨‍💻 Fonksiyon isimleri sadeleştirildi, kod yapısı anlamlaştırıldı
 
-### 🏷️ 2.3.0
+## 🏷️ 2.3.0
 
 🚀 Güncelleme yapısı eklendi
 
