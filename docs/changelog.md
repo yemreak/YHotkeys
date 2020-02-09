@@ -14,9 +14,9 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
-## 👨‍🔬 2.4.2.1
+## 🏷️ 2.4.2.1
 
-⚗️ Deneysel versiyon
+✨ Seçili metnin üzerine uygulanan işlemler geliştirildi
 
 - 🌍 HTTP linklerini (`http://` ön eki olmasa bile) ❖ Win ✲ Ctrl E ile browser ile açma
 - 🧠 Daha verimli HTTP link algılayıcı eklendi (`www.`, `.com` metinleri ile HTTP algılanmakta)
