@@ -13,15 +13,3 @@ description: YHotkeys kısayollarına bakış ve tavsiyeler
 | 📋 Seçili metinleri çalıştırabilir, google üzerinde aratabilir veye çevirebilirsiniz | [👀 Kısayollara Bakış](kisayollara-bakis.md) |
 | 🔳 F1 butonu ile tam ekran olmayı desteklemese de pencereyi tam ekran yapabilirsin | [✴️ Pencere Yönetimi](pencere-yoenetimi.md) |
 | [🚀 YEmoji](../yemoji.md) emojilerini kısayollarla kullanmana olanak sağlar | [🚀 YEmoji](../yemoji.md) |
-
-{% hint style="warning" %}
-📢 Buton değişikliği olduğundan[ 👨‍🔧 Buton Düzeltmeleri](kisayollara-bakis.md#buton-duezeltmeleri) alanına bakmanda fayda var.
-{% endhint %}
-
-## 👨‍🔧 Buton Düzeltmeleri
-
-| ⌨️ Buton | 📑 Açıklama |
-| :--- | :--- |
-| ✲ Ctrl PgDn | Page Down |
-| ✲ Ctrl PgUp | Page Up |
-

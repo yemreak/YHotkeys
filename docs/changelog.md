@@ -14,6 +14,9 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 💦 `Page` butonlarının değişiklikleri kaldırıldı
+- 💦 Gereksiz kısayollar temizlendi
+
 ## 🏷️ 2.4.2.1
 
 ✨ Seçili metnin üzerine uygulanan işlemler geliştirildi

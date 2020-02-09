@@ -42,10 +42,10 @@ RunOnExplorer(url) {
 }
 
 FixIfUrl(url) {
-	If url contains www.,.com
-		url := "http://" . url
+	if url not contains http
+		If url contains www.,.com
+			url := "http://" . url
 
-	MsgBox, %url%
 	return url
 }
 
