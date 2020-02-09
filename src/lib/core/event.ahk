@@ -35,8 +35,18 @@ CloseApp:
 Return
 
 RunOnExplorer(url) {
+	url := FixIfUrl(url)
+	
     command = %ComSpec% /c ""explorer.exe" "%url%""
     RunWait, %command%, , hide
+}
+
+FixIfUrl(url) {
+	If url contains www.,.com
+		url := "http://" . url
+
+	MsgBox, %url%
+	return url
 }
 
 RunCommand(url) {

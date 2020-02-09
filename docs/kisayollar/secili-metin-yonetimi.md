@@ -8,10 +8,13 @@ description: YHotkeys ile pencere seçili metin yönetim kısayolları
 
 | ⌨️ Buton | 📑 Açıklama |
 | :--- | :--- |
-| ❖ Win ✲ Ctrl E | 📂 Seçili metni Dosya Gezgini üzerinde açar |
+| ❖ Win ✲ Ctrl E | 👨‍💼 Seçili metni varsayılan uygulama ile çalıştırır |
+| ❖ Win ✲ Ctrl C | 🖤 Seçili metni Komut İstemi üzerinde açar |
 | ❖ Win ✲ Ctrl G | 🔍 Seçili metni Google'da arama |
 | ❖ Win ✲ Ctrl T | 💱 Seçili metni Google Çeviri'de açma |
 | ❖ Win ✲ Ctrl N | 📝 Seçili alanı `notepad` 'a aktarıp, notepad'i sabitler |
+
+> 💁‍♂️ HTTP urllerinin çalıştırılması tarayıcı ile olur.
 
 ## 🔨 Seçili Metni Düzeltme
 

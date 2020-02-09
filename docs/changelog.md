@@ -10,12 +10,19 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.2.1b
+## 👨‍🔬 2.4.2.2b
 
 ⚗️ Deneysel versiyon
 
+## 👨‍🔬 2.4.2.1
+
+⚗️ Deneysel versiyon
+
+- 🌍 HTTP linklerini (`http://` ön eki olmasa bile) ❖ Win ✲ Ctrl E ile browser ile açma
+- 🧠 Daha verimli HTTP link algılayıcı eklendi (`www.`, `.com` metinleri ile HTTP algılanmakta)
+- ➕ YEmojiler artırıldı
 - 👪 Microsoft Teams kısayolu eklendi (❖ Win T)
-- 🖤 Komut istemi üzerinden açma kısayolu eklendi
+- 🖤 Seçili yolu komut istemi üzerinden açma kısayolu eklendi ❖ Win ✲ Ctrl C
 
 ## 🏷️ 2.4.2
 

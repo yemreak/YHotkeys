@@ -22,6 +22,7 @@ description: YHotkeys ile pencere yönetim kısayolları
 | :--- | :--- |
 | ❖ Win E | 📁 File Explorer |
 | ❖ Win W | 📞 WhatsApp Desktop |
+| ❖ Win T | 👪 Microsoft Teams (telegram ile değişebilir 👨‍🔬) |
 | ❖ Win G | 🐙 GitHub Desktop |
 | ❖ Win C | 📅 Google Calendar |
 
