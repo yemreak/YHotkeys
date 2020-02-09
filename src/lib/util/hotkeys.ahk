@@ -124,58 +124,13 @@ return
     OpenWindowInTray("title", name, com, mode)
 return
 
-; --------------------------------- Dizin Kısayolları ---------------------------------
+; --------------------------------- Python | Özel Kısayollar ---------------------------------
 
-; Dizin kısayolları PgDn ile başlar
-PgDn & g::
-    name := "GitHub"
-    com := GetEnvPath("userprofile", "\Documents\GitHub")
-    OpenWindowInTray("title", name, com)
-return
-
-PgDn & s::
+#^!+s::
     name := "ShareX"
     com := createAppCommand("19568ShareX.ShareX_egrzcvs15399j!ShareX")
     mode := 3
     OpenWindowInTray("title", name, com, mode)
-return
-
-PgDn & Shift::
-    name := "Startup"
-    com := "shell:startup"
-    mode := 3
-    OpenWindowInTray("title", name, com, mode)
-return
-
-PgDn & i::
-    name := "Icons"
-    com := GetEnvPath("userprofile", "\Google Drive\Pictures\Icons")
-    mode := 3
-    OpenWindowInTray("title", name, com, mode)
-return
-
-PgDn & d::
-    name := "Downloads"
-    com := "shell:downloads"
-    mode := 3
-    OpenWindowInTray("title", name, com, mode)
-return
-
-PgDn & u::
-    name := "Yunus Emre Ak"
-    com := GetEnvPath("userprofile")
-    mode := 3
-    OpenWindowInTray("title", name, com, mode)
-return
-
-; --------------------------------- Buton Kısayolları ---------------------------------
-
-; Değiştirilen butonları kurtarma
-Control & PgDn::
-    Send , !{PgDn}
-return
-Control & PgUp::
-    Send , !{PgUp}
 return
 
 ; -------------------------------- Koşullu Kısayollar ---------------------------------
