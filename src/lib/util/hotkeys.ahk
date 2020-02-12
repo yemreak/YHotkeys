@@ -64,7 +64,6 @@ return
 #+e::Run, explorer
 
 ; ---------------------------------- Göster / Gizle ----------------------------------
-; WARN: - olmazsa hata oluşmakta
 
 #q::
     name := "- OneNote"
