@@ -12,6 +12,7 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 🎨 YEmojiye renkli şekiller eklendi 🔴🟥🧡
 - 💦 `Page` butonlarının değişiklikleri kaldırıldı
 - 💦 Gereksiz kısayollar temizlendi
 

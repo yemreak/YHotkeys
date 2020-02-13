@@ -18,6 +18,39 @@ return
 
 ; Yeni
 
+:::renklerka::🧡🧡💛💚💙💜🤎🖤🤍
+:::kırmızıka::🧡
+:::turuncuka::🧡
+:::sarıka::💛
+:::yeşilka::💚
+:::mavika::💙
+:::morka::💜
+:::kahverengika::🤎
+:::siyahka::🖤
+:::beyazka::🤍
+
+:::renkler::🔴🟠🟡🟢🔵🟣🟤⚫⚪
+:::kırmızı::🔴
+:::turuncu::🟠
+:::sarı::🟡
+:::yeşil::🟢
+:::mavi::🔵
+:::mor::🟣
+:::kahverengi::🟤
+:::siyah::⚫
+:::beyaz::⚪
+
+:::renklerk::🟥🟧🟨🟩🟦🟪🟫⬛⬜
+:::kırmızık::🟥
+:::turuncuk::🟧
+:::sarık::🟨
+:::yeşilk::🟩
+:::mavik::🟦
+:::mork::🟪
+:::kahverengik::🟫
+:::siyahk::⬛
+:::beyazk::⬜
+
 :::öğretmen::👨‍🏫
 :::öğretmenk::👩‍🏫
 :::hoca::👨‍🏫
@@ -36,10 +69,16 @@ return
 :::tır::🚛
 :::kamyon::🚚
 
+:::ressam::👨‍🎨
+:::ressamk::👩‍🎨
 :::artist::👨‍🎨
 :::artistk::👩‍🎨
 :::sanatçı::👨‍🎨
 :::sanatçık::👩‍🎨
+
+:::sanat::🎨
+:::palet::🎨
+:::tuval::🎨
 
 :::oky::⬆️
 :::oka::⬇️
@@ -766,8 +805,6 @@ return
 :::rapor::📜
 :::duyuru::📢
 :::tarih::📅
-:::ressam::👨‍🎨
-:::ressamk::👩‍🎨
 :::haber::📰
 :::habers::📰
 :::gazate::📰
@@ -970,8 +1007,6 @@ return
 :::alet::🧰
 :::düşünceli::🤔
 :::hmm::🤔
-:::sanat::🎨
-
 
 :::roket::🚀
 :::kumsaati::⌛
