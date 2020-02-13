@@ -18,6 +18,11 @@ return
 
 ; Yeni
 
+:::ilham::🌈
+:::gökkuşağı::🌈
+:::hayalgücü::🌈
+:::hayal::🌈
+
 :::renklerka::🧡🧡💛💚💙💜🤎🖤🤍
 :::kırmızıka::🧡
 :::turuncuka::🧡
