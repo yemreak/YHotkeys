@@ -2,7 +2,7 @@
 description: YHotkeys'de neler değişti
 ---
 
-# ✨ Changelog
+# 👀 Neler Değişti
 
 ## 📋 Tüm Değişiklikler
 

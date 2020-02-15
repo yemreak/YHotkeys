@@ -1,7 +1,7 @@
 # Table of contents
 
 * [🌱 YHotkeys](README.md)
-* [✨ Changelog](changelog.md)
+* [👀 Neler Değişti](changelog.md)
 * [💖 Katkıda Bulunma Rehberi](contributing.md)
 * [💞 Kısayollar](kisayollar/README.md)
   * [👀 Kısayollara Bakış](kisayollar/kisayollara-bakis.md)
