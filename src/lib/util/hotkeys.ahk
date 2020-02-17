@@ -15,11 +15,18 @@ ListLines, Off
 
 return
 
+
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
+!"::
+    SwitchWindow()
+return
 #Space::
     ToggleWindowPin()
 return
+
+; -------------------------------- Seçili metni kullanma ---------------------------------
+
 #^G::
     SearchOnGoogle()
 return
@@ -35,6 +42,9 @@ return
 #^N::
     KeepOnNotepad()
 return
+
+; -------------------------------- Seçili metni değiştirme ---------------------------------
+
 #^+U::
     ToUpperCase()
 return
@@ -53,17 +63,17 @@ return
 #^+D::
     ToDecode()
 return
-!"::
-    SwitchWindow()
-return
 
 #F1::Suspend
 
-; ---------------------------------- Çalıştır ----------------------------------
+; ----------------------------- Uygulamayı yeniden çalıştırma -------------------------------
 
 #+e::Run, explorer
 
-; ---------------------------------- Göster / Gizle ----------------------------------
+; ---------------------------------- Uygulama tetikleme ----------------------------------
+
+
+; -------------- Göster / Gizle --------------
 
 #q::
     name := "- OneNote"
@@ -87,7 +97,7 @@ return
     OpenWindowByTitle(name, com, mode)
 return
 
-; --------------------------------- Tray Kısayolları ---------------------------------
+; -------------- Tray Kısayolları --------------
 
 ; #"::
 ;     name := "WindowsTerminal.exe"
@@ -123,7 +133,7 @@ return
     OpenWindowInTray("title", name, com, mode)
 return
 
-; --------------------------------- Python | Özel Kısayollar ---------------------------------
+; -------------------------------- Özel Scriptler ---------------------------------
 
 #^!+s::
     name := "ShareX"
@@ -133,6 +143,7 @@ return
 return
 
 ; -------------------------------- Koşullu Kısayollar ---------------------------------
+
 ; WARN: En alta yazılmazsa sonrasındakilerin çalışmasını engeller, IfWındows yapılması gerekir
 
 #If MouseIsOver("ahk_class Shell_TrayWnd") ; For MouseIsOver, see #If example 1.
