@@ -15,11 +15,18 @@ ListLines, Off
 
 return
 
+
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
+!"::
+    SwitchWindow()
+return
 #Space::
     ToggleWindowPin()
 return
+
+; -------------------------------- Seçili metni kullanma ---------------------------------
+
 #^G::
     SearchOnGoogle()
 return
@@ -35,6 +42,9 @@ return
 #^N::
     KeepOnNotepad()
 return
+
+; -------------------------------- Seçili metni değiştirme ---------------------------------
+
 #^+U::
     ToUpperCase()
 return
@@ -53,17 +63,17 @@ return
 #^+D::
     ToDecode()
 return
-!"::
-    SwitchWindow()
-return
 
 #F1::Suspend
 
-; ---------------------------------- Çalıştır ----------------------------------
+; ----------------------------- Uygulamayı yeniden çalıştırma -------------------------------
 
 #+e::Run, explorer
 
-; ---------------------------------- Göster / Gizle ----------------------------------
+; ---------------------------------- Uygulama tetikleme ----------------------------------
+
+
+; -------------- Göster / Gizle --------------
 
 #q::
     name := "- OneNote"
@@ -80,14 +90,20 @@ return
 return
 
 #c::
-    ; BUG: Hesap makinesi tekrardan açılmıyor
     name := "Calculator"
     com := createAppCommand("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
     mode := 2
-    OpenWindowByTitle(name, com, mode)
+    OpenOrCloseWindow(name, com, mode)
 return
 
-; --------------------------------- Tray Kısayolları ---------------------------------
+; -------------- Tray Kısayolları --------------
+
+#"::
+    name := "Notepad"
+    com := "notepad"
+    mode := 2
+    OpenWindowInTray("class", name, com, mode)
+return
 
 ; #"::
 ;     name := "WindowsTerminal.exe"
@@ -117,13 +133,13 @@ return
 return
 
 #t::
-    name := " Microsoft Teams"
-    com := GetEnvPath("localappdata", "\Microsoft\Teams\Update.exe --processStart ""Teams.exe""")
+    name := "Telegram"
+    com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
-; --------------------------------- Python | Özel Kısayollar ---------------------------------
+; -------------------------------- Özel Scriptler ---------------------------------
 
 #^!+s::
     name := "ShareX"
@@ -133,6 +149,7 @@ return
 return
 
 ; -------------------------------- Koşullu Kısayollar ---------------------------------
+
 ; WARN: En alta yazılmazsa sonrasındakilerin çalışmasını engeller, IfWındows yapılması gerekir
 
 #If MouseIsOver("ahk_class Shell_TrayWnd") ; For MouseIsOver, see #If example 1.

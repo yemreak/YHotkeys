@@ -2,16 +2,26 @@
 description: YHotkeys'de neler değişti
 ---
 
-# ✨ Changelog
+# 👀 Neler Değişti
 
 ## 📋 Tüm Değişiklikler
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.2.2b
+## 👨‍🔬 2.4.2.3
 
 ⚗️ Deneysel versiyon
 
+## 🏷️ 2.4.2.2
+
+🚀 Yeni kısayol ve destekler eklendi
+
+- 💞 <kbd>❖ Win</kbd> <kbd>C</kbd> ile Hesap makinesini açma kapama 
+- 💞 <kbd>❖ Win</kbd> <kbd>"</kbd> kısayolu ile Notepad tetiklenmekte
+- 👨‍🔧 Artık <kbd>❖ Win</kbd> <kbd>T</kbd> kısayolu ile Telegram açılmakta
+- 👨‍🔧 Uygulama açılırken kısayolun bozulma sorunu giderildi
+- ➕ Yemojiye karakterler eklendi 🅰️🆎
+- 🎨 YEmojiye renkli şekiller eklendi 🔴🟥🧡
 - 💦 `Page` butonlarının değişiklikleri kaldırıldı
 - 💦 Gereksiz kısayollar temizlendi
 

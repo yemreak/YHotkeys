@@ -139,6 +139,18 @@ OpenWindowInTray(selector, name, command, mode=3) {
         RunCommand(command)
 }
 
+OpenOrCloseWindow(title, command, mode=3) {
+    SetTitleMatchMode, %mode%
+    DetectHiddenWindows, Off
+    
+    if WinExist(title) {
+        WinGet, ahkID, ID, %title%
+        WinClose, ahk_id %ahkID%
+    } else {
+        RunCommand(command)
+    }
+}
+
 OpenWindowByTitle(title, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
