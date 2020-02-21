@@ -18,6 +18,8 @@ return
 
 ; Yeni
 
+:::kulak::👂
+
 ; Letter
 :::a::🅰️
 :::ab::🆎

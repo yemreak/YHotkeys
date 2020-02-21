@@ -90,14 +90,20 @@ return
 return
 
 #c::
-    ; BUG: Hesap makinesi tekrardan açılmıyor
     name := "Calculator"
     com := createAppCommand("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
     mode := 2
-    OpenWindowByTitle(name, com, mode)
+    OpenWindowInTray("title", name, com, mode)
 return
 
 ; -------------- Tray Kısayolları --------------
+
+#"::
+    name := "Notepad"
+    com := "notepad"
+    mode := 2
+    OpenWindowInTray("class", name, com, mode)
+return
 
 ; #"::
 ;     name := "WindowsTerminal.exe"
