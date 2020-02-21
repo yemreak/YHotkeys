@@ -51,7 +51,7 @@ FixIfUrl(url) {
 
 RunCommand(url) {
     command = %ComSpec% /c "%url%"
-    RunWait, %command%, , hide, ahkPID
+    Run, %command%, , hide, ahkPID
 
     return ahkPID
 }
