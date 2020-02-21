@@ -93,7 +93,7 @@ return
     name := "Calculator"
     com := createAppCommand("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenOrCloseWindow(name, com, mode)
 return
 
 ; -------------- Tray Kısayolları --------------
