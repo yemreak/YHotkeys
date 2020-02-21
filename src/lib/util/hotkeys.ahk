@@ -127,8 +127,8 @@ return
 return
 
 #t::
-    name := " Microsoft Teams"
-    com := GetEnvPath("localappdata", "\Microsoft\Teams\Update.exe --processStart ""Teams.exe""")
+    name := "Telegram"
+    com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
