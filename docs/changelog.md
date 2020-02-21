@@ -8,9 +8,13 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.2.2b
+## 👨‍🔬 2.4.2.3
 
 ⚗️ Deneysel versiyon
+
+## 🏷️ 2.4.2.2
+
+🚀 Yeni kısayol ve destekler eklendi
 
 - 💞 <kbd>❖ Win</kbd> <kbd>C</kbd> ile Hesap makinesini açma kapama 
 - 💞 <kbd>❖ Win</kbd> <kbd>"</kbd> kısayolu ile Notepad tetiklenmekte
