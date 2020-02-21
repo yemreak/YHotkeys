@@ -12,6 +12,7 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 💞 <kbd>❖ Win</kbd> <kbd>C</kbd> ile Hesap makinesini açma kapama 
 - 💞 <kbd>❖ Win</kbd> <kbd>"</kbd> kısayolu ile Notepad tetiklenmekte
 - 👨‍🔧 Artık <kbd>❖ Win</kbd> <kbd>T</kbd> kısayolu ile Telegram açılmakta
 - 👨‍🔧 Uygulama açılırken kısayolun bozulma sorunu giderildi
