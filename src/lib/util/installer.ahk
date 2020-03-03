@@ -27,7 +27,7 @@ if (ShowConfirmDialog()) {
     CreateDataDir()
     InstallIcons()
     InstallExe()
-    InstallUpdateTool()
+    InstallTools()
     AskToStart()
 }
 return
@@ -69,6 +69,15 @@ InstallExe() {
     FileInstall, ..\..\YHotkeys.exe, %PATH_EXE%, 1
     FileCreateShortcut, %PATH_EXE%, %A_Desktop%\YHotkeys.lnk, %DIR_NAME%, , Kısayol Yöneticisi, %DIR_ICON%\seedling.ico
 }
+
+InstallTools() {
+    InstallUpdateTool()
+    ; InstallPythonTool()
+}
+
+; InstallPythonTool() {
+;     ; FileInstall, ..\..\tools\temp.exe, %DIR_ICON%\temp.exe, 1
+; }
 
 InstallUpdateTool() {
     global PATH_UPDATER
