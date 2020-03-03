@@ -26,7 +26,7 @@ description: YHotkeys ile pencere yönetim kısayolları
 | ❖ Win G | 🐙 GitHub Desktop |
 | ❖ Win X | 📅 Calendar |
 | ❖ Win " | 📃 Not defteri |
-| ❖ Win C | 🧮 Hesap makinesi (aç - kapa) |
+| ❖ Win C | 🧮 Hesap makinesi \(aç - kapa\) |
 
 ## 👀 Küçült / Göster
 

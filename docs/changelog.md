@@ -16,27 +16,27 @@ description: YHotkeys'de neler değişti
 
 💱 More useful translate
 
-- 🌟 <kbd>F1</kbd> key to translate with popup
-- 🗨 Mouse tooltip for translation
-- 🚀🚀 Inline google translate added (❖ Win ⇧ Shift ✲ Ctrl T)
-- 🚀 Now google translate works without browser (API)
-- 💦 Inline titlecase converter removed
-- 👨‍💻 Minor code improvements
-- 🏗️ Python tools template created
-- 🔳 Fullscreen hotkey changed to <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>F1</kbd>
+* 🌟 F1 key to translate with popup
+* 🗨 Mouse tooltip for translation
+* 🚀🚀 Inline google translate added \(❖ Win ⇧ Shift ✲ Ctrl T\)
+* 🚀 Now google translate works without browser \(API\)
+* 💦 Inline titlecase converter removed
+* 👨‍💻 Minor code improvements
+* 🏗️ Python tools template created
+* 🔳 Fullscreen hotkey changed to ❖ Win ⇧ Shift F1
 
 ## 🏷️ 2.4.2.2
 
 🚀 Yeni kısayol ve destekler eklendi
 
-- 💞 <kbd>❖ Win</kbd> <kbd>C</kbd> ile Hesap makinesini açma kapama 
-- 💞 <kbd>❖ Win</kbd> <kbd>"</kbd> kısayolu ile Notepad tetiklenmekte
-- 👨‍🔧 Artık <kbd>❖ Win</kbd> <kbd>T</kbd> kısayolu ile Telegram açılmakta
-- 👨‍🔧 Uygulama açılırken kısayolun bozulma sorunu giderildi
-- ➕ Yemojiye karakterler eklendi 🅰️🆎
-- 🎨 YEmojiye renkli şekiller eklendi 🔴🟥🧡
-- 💦 `Page` butonlarının değişiklikleri kaldırıldı
-- 💦 Gereksiz kısayollar temizlendi
+* 💞 ❖ Win C ile Hesap makinesini açma kapama 
+* 💞 ❖ Win " kısayolu ile Notepad tetiklenmekte
+* 👨‍🔧 Artık ❖ Win T kısayolu ile Telegram açılmakta
+* 👨‍🔧 Uygulama açılırken kısayolun bozulma sorunu giderildi
+* ➕ Yemojiye karakterler eklendi 🅰️🆎
+* 🎨 YEmojiye renkli şekiller eklendi 🔴🟥🧡
+* 💦 `Page` butonlarının değişiklikleri kaldırıldı
+* 💦 Gereksiz kısayollar temizlendi
 
 ## 🏷️ 2.4.2.1
 
