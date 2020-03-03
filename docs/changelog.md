@@ -8,9 +8,13 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.2.3
+## 👨‍🔬 2.4.3.1
 
 ⚗️ Experimental version
+
+## 👨‍🔬 2.4.3
+
+💱 More usefull translate
 
 - 🗨 Mouse tooltip for translation 
 - 🚀🚀 Inline google translate added (❖ Win ⇧ Shift ✲ Ctrl T)
