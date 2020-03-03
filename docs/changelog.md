@@ -14,7 +14,7 @@ description: YHotkeys'de neler değişti
 
 ## 🏷️ 2.4.3
 
-💱 More usefull translate
+💱 More useful translate
 
 - 🌟 <kbd>F1</kbd> key to translate with popup
 - 🗨 Mouse tooltip for translation
