@@ -16,33 +16,33 @@ description: YHotkeys'de neler değişti
 
 🚀 Yeni kısayol ve destekler eklendi
 
-- 💞 <kbd>❖ Win</kbd> <kbd>C</kbd> ile Hesap makinesini açma kapama 
-- 💞 <kbd>❖ Win</kbd> <kbd>"</kbd> kısayolu ile Notepad tetiklenmekte
-- 👨‍🔧 Artık <kbd>❖ Win</kbd> <kbd>T</kbd> kısayolu ile Telegram açılmakta
-- 👨‍🔧 Uygulama açılırken kısayolun bozulma sorunu giderildi
-- ➕ Yemojiye karakterler eklendi 🅰️🆎
-- 🎨 YEmojiye renkli şekiller eklendi 🔴🟥🧡
-- 💦 `Page` butonlarının değişiklikleri kaldırıldı
-- 💦 Gereksiz kısayollar temizlendi
+* 💞 ❖ Win C ile Hesap makinesini açma kapama 
+* 💞 ❖ Win " kısayolu ile Notepad tetiklenmekte
+* 👨‍🔧 Artık ❖ Win T kısayolu ile Telegram açılmakta
+* 👨‍🔧 Uygulama açılırken kısayolun bozulma sorunu giderildi
+* ➕ Yemojiye karakterler eklendi 🅰️🆎
+* 🎨 YEmojiye renkli şekiller eklendi 🔴🟥🧡
+* 💦 `Page` butonlarının değişiklikleri kaldırıldı
+* 💦 Gereksiz kısayollar temizlendi
 
 ## 🏷️ 2.4.2.1
 
 ✨ Seçili metnin üzerine uygulanan işlemler geliştirildi
 
-- 🌍 HTTP linklerini (`http://` ön eki olmasa bile) ❖ Win ✲ Ctrl E ile browser ile açma
-- 🧠 Daha verimli HTTP link algılayıcı eklendi (`www.`, `.com` metinleri ile HTTP algılanmakta)
-- ➕ YEmojiler artırıldı
-- 👪 Microsoft Teams kısayolu eklendi (❖ Win T)
-- 🖤 Seçili yolu komut istemi üzerinden açma kısayolu eklendi ❖ Win ✲ Ctrl C
+* 🌍 HTTP linklerini \(`http://` ön eki olmasa bile\) ❖ Win ✲ Ctrl E ile browser ile açma
+* 🧠 Daha verimli HTTP link algılayıcı eklendi \(`www.`, `.com` metinleri ile HTTP algılanmakta\)
+* ➕ YEmojiler artırıldı
+* 👪 Microsoft Teams kısayolu eklendi \(❖ Win T\)
+* 🖤 Seçili yolu komut istemi üzerinden açma kısayolu eklendi ❖ Win ✲ Ctrl C
 
 ## 🏷️ 2.4.2
 
 🔨 Seçili Metni Düzeltme kısayolları eklendi
 
-- 🤩 Upper, Lower, Title case, Encode ve Decode kısayolları eklendi
-- ➕ YEmojiler artırıldı 🦅🦋🐊🦖🕊️🦜🦢
-- 🏹 Yön YEmojileri eklendi ⬆️⬇️➡️⬅️↔️➡️⬅️↘️↗️↙️↖️
-- 💦 Focus yardımcı paketi kaldırıldı
+* 🤩 Upper, Lower, Title case, Encode ve Decode kısayolları eklendi
+* ➕ YEmojiler artırıldı 🦅🦋🐊🦖🕊️🦜🦢
+* 🏹 Yön YEmojileri eklendi ⬆️⬇️➡️⬅️↔️➡️⬅️↘️↗️↙️↖️
+* 💦 Focus yardımcı paketi kaldırıldı
 
 ## 🏷️ 2.4.1.4
 
@@ -98,7 +98,7 @@ description: YHotkeys'de neler değişti
 * ✨ Yemojiler artırıldı
 * 👨‍💻 Kodda verimlilik
 
-![](.gitbook/assets/tray_menu-1%20%282%29.png)
+![](https://github.com/yedhrab/YHotkeys/tree/b373155b1a1df6e6e8f4e8ce5b2d439a1cca9269/docs/.gitbook/assets/tray_menu-1%20%282%29.png)
 
 > 😥 Kısayollar henüz desteklenmemektedir.
 

@@ -13,3 +13,4 @@ description: YHotkeys kısayollarına bakış ve tavsiyeler
 | 📋 Seçili metinleri çalıştırabilir, google üzerinde aratabilir veye çevirebilirsiniz | [👀 Kısayollara Bakış](kisayollara-bakis.md) |
 | 🔳 F1 butonu ile tam ekran olmayı desteklemese de pencereyi tam ekran yapabilirsin | [✴️ Pencere Yönetimi](pencere-yoenetimi.md) |
 | [🚀 YEmoji](../yemoji.md) emojilerini kısayollarla kullanmana olanak sağlar | [🚀 YEmoji](../yemoji.md) |
+

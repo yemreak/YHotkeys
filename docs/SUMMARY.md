@@ -9,6 +9,7 @@
   * [✴️ Pencere Yönetimi](kisayollar/pencere-yoenetimi.md)
   * [📂 Dizin Yönetimi](kisayollar/dizin-yoenetimi.md)
 * [🚀 YEmoji](yemoji.md)
+* [🧐 Referanslar](referanslar.md)
 
 ## Tüm Kişisel Notlarım
 
@@ -32,3 +33,4 @@
 * [🔥 Firebase ve React Projem](https://github.com/yedhrab/YReact-Firebase)
 * [👨‍💻 Kişisel Scriptlerim](https://github.com/YEmreAk/YScripts)
 * [📕 Türkçe Git Kitabı](https://www.yemreak.com/book-git/)
+

@@ -24,13 +24,12 @@
 ## 💁‍♂️ Kısayolların Anlamları
 
 | 💞 Kısayol | 📝 Anlamı |
-| -  |  - |
-| <kbd>❖ Win</kbd> <kbd>Key</kbd> | Uygulama tetikleme |
-| <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>Key</kbd> | Uygulamayı yeniden çalıştırma |
-| <kbd>❖ Win</kbd> <kbd>✲ Ctrl</kbd> <kbd>Key</kbd> | Seçili metni kullanma |
-| <kbd>❖ Win</kbd> <kbd>✲ Ctrl</kbd> <kbd>⇧ Shift</kbd> <kbd>Key</kbd> | Seçili metni değiştirme |
-| <kbd>❖ Win</kbd> <kbd>✲ Ctrl</kbd> <kbd>⇧ Shift</kbd> <kbd>⎇ Alt</kbd> <kbd>Key</kbd> | Özel scriptler 
-
+| :--- | :--- |
+| ❖ Win Key | Uygulama tetikleme |
+| ❖ Win ⇧ Shift Key | Uygulamayı yeniden çalıştırma |
+| ❖ Win ✲ Ctrl Key | Seçili metni kullanma |
+| ❖ Win ✲ Ctrl ⇧ Shift Key | Seçili metni değiştirme |
+| ❖ Win ✲ Ctrl ⇧ Shift ⎇ Alt Key | Özel scriptler |
 
 ## 🍍 Kısayol Tanımlamaları
 
