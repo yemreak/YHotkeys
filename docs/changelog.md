@@ -10,10 +10,14 @@ description: YHotkeys'de neler değişti
 
 ## 👨‍🔬 2.4.2.3
 
-⚗️ Deneysel versiyon
+⚗️ Experimental version
 
+- 🗨 Mouse tooltip for translation 
+- 🚀🚀 Inline google translate added (❖ Win ⇧ Shift ✲ Ctrl T)
 - 🚀 Now google translate works without browser (API)
+- 💦 Inline titlecase converter removed
 - 👨‍💻 Minor code improvements
+- 🏗️ Python tools template created
 
 ## 🏷️ 2.4.2.2
 

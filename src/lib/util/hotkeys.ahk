@@ -44,7 +44,7 @@ return
     OpenInCommandPrompt()
 return
 #^T::
-    TranslateOnGoogle()
+    TranslateWithPopup()
 return
 #^N::
     KeepOnNotepad()
@@ -59,7 +59,7 @@ return
     ToLowerCase()
 return
 #^+T::
-    ToTitleCase()
+    TranslateInline()
 return
 #^+I::
     ToInverted()

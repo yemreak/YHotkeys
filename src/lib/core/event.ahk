@@ -35,7 +35,15 @@ return
 
 CloseApp:
     ExitApp
-Return
+return
+
+#IfWinExist ahk_class tooltips_class32
+    ESC::
+	~LButton::
+	~RButton::
+        ToolTip
+        return
+#IfWinActive
 
 RunOnExplorer(url) {
 	url := FixIfUrl(url)
@@ -150,9 +158,16 @@ SearchOnGoogle() {
     RunOnExplorer("http://www.google.com/search?q=" . value)
 }
 
-TranslateOnGoogle() {
+TranslateWithPopup() {
     value := GetExistClipboard()
-    MsgBox, % GoogleTranslate(value, "en", "tr")
+    ToolTip, % GoogleTranslate(value, "auto", "tr")
+}
+
+TranslateInline() {
+    value := GetExistClipboard()
+    results := GoogleTranslate(value, "auto", "tr")
+    resultArray := StrSplit(results, "`n")
+    SendFast(resultArray[1])
 }
 
 KeepOnNotepad() {
