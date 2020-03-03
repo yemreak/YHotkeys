@@ -12,7 +12,7 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Experimental version
 
-## 👨‍🔬 2.4.3
+## 🏷️ 2.4.3
 
 💱 More usefull translate
 
