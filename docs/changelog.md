@@ -16,12 +16,14 @@ description: YHotkeys'de neler değişti
 
 💱 More usefull translate
 
-- 🗨 Mouse tooltip for translation 
+- 🌟 <kbd>F1</kbd> key to translate with popup
+- 🗨 Mouse tooltip for translation
 - 🚀🚀 Inline google translate added (❖ Win ⇧ Shift ✲ Ctrl T)
 - 🚀 Now google translate works without browser (API)
 - 💦 Inline titlecase converter removed
 - 👨‍💻 Minor code improvements
 - 🏗️ Python tools template created
+- 🔳 Fullscreen hotkey changed to <kbd>❖ Win</kbd> <kbd>⇧ Shift</kbd> <kbd>F1</kbd>
 
 ## 🏷️ 2.4.2.2
 

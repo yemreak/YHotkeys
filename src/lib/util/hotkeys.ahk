@@ -21,7 +21,9 @@ return
 #Include, %A_ScriptDir%\lib\window\hide.ahk
 #Include, %A_ScriptDir%\lib\window\pin.ahk
 
-F1::FullScreenWindow()
+; ---------------------------------- Fast Hotkeys ----------------------------------
+
+F1::TranslateWithPopup()
 
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
@@ -49,6 +51,8 @@ return
 #^N::
     KeepOnNotepad()
 return
+
+#^F1::FullScreenWindow()
 
 ; -------------------------------- Seçili metni değiştirme ---------------------------------
 
