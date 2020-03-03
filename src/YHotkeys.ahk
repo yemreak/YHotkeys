@@ -47,14 +47,8 @@ if not DEBUG {
 
 return
 
-#Include, %A_ScriptDir%\lib\core\common.ahk
-#Include, %A_ScriptDir%\lib\core\event.ahk
-#Include, %A_ScriptDir%\lib\core\menu.ahk
-#Include, %A_ScriptDir%\lib\window\hide.ahk
-#Include, %A_ScriptDir%\lib\window\pin.ahk
 #Include, %A_ScriptDir%\lib\util\hotkeys.ahk
 #Include, %A_ScriptDir%\lib\util\yemoji.ahk
-#Include, %A_ScriptDir%\lib\util\fullscreen.ahk
 
 ExitFunc(exitReason, exitCode) {
     if exitReason not in Logoff,Shutdown

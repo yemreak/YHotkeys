@@ -15,6 +15,15 @@ ListLines, Off
 
 return
 
+#Include, %A_ScriptDir%\lib\core\common.ahk
+#Include, %A_ScriptDir%\lib\core\event.ahk
+#Include, %A_ScriptDir%\lib\core\menu.ahk
+#Include, %A_ScriptDir%\lib\window\hide.ahk
+#Include, %A_ScriptDir%\lib\window\pin.ahk
+
+; ---------------------------------- Fast Hotkeys ----------------------------------
+
+F1::TranslateWithPopup()
 
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
@@ -37,11 +46,13 @@ return
     OpenInCommandPrompt()
 return
 #^T::
-    TranslateOnGoogle()
+    TranslateWithPopup()
 return
 #^N::
     KeepOnNotepad()
 return
+
+#^F1::FullScreenWindow()
 
 ; -------------------------------- Seçili metni değiştirme ---------------------------------
 
@@ -52,7 +63,7 @@ return
     ToLowerCase()
 return
 #^+T::
-    ToTitleCase()
+    TranslateInline()
 return
 #^+I::
     ToInverted()

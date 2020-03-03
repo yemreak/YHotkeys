@@ -6,6 +6,9 @@
 
 return
 
+#Include, %A_ScriptDir%\lib\util\translate.ahk
+#Include, %A_ScriptDir%\lib\util\fullscreen.ahk
+
 IconClicked:
     ToggleMemWindowWithTitle(A_ThisMenuItem)
 return
@@ -32,7 +35,15 @@ return
 
 CloseApp:
     ExitApp
-Return
+return
+
+#IfWinExist ahk_class tooltips_class32
+    ESC::
+	~LButton::
+	~RButton::
+        ToolTip
+        return
+#IfWinActive
 
 RunOnExplorer(url) {
 	url := FixIfUrl(url)
@@ -102,20 +113,6 @@ uriDecode(str) {
 	Return, str
 }
 
-uriEncode(str) {
-	f = %A_FormatInteger%
-	SetFormat, Integer, Hex
-	If RegExMatch(str, "^\w+:/{0,2}", pr)
-		StringTrimLeft, str, str, StrLen(pr)
-	StringReplace, str, str, `%, `%25, All
-	Loop
-		If RegExMatch(str, "i)[^\w\.~%]", char)
-			StringReplace, str, str, %char%, % "%" . Asc(char), All
-		Else Break
-	SetFormat, Integer, %f%
-	Return, pr . str
-}
-
 ToInverted() {
     CopySelected()
     Lab_Invert_Char_Out:= ""
@@ -161,9 +158,16 @@ SearchOnGoogle() {
     RunOnExplorer("http://www.google.com/search?q=" . value)
 }
 
-TranslateOnGoogle() {
+TranslateWithPopup() {
     value := GetExistClipboard()
-    RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
+    ToolTip, % GoogleTranslate(value, "auto", "tr")
+}
+
+TranslateInline() {
+    value := GetExistClipboard()
+    results := GoogleTranslate(value, "auto", "tr")
+    resultArray := StrSplit(results, "`n")
+    SendFast(resultArray[1])
 }
 
 KeepOnNotepad() {
@@ -181,4 +185,8 @@ KeepOnNotepad() {
 OpenDocumentationPage() {
     global APP_PAGE
     RunOnExplorer(APP_PAGE)
+}
+
+FullScreenWindow() {
+    FWT()
 }
