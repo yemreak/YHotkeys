@@ -6,8 +6,6 @@
 
 return
 
-F1::FWT()
-
 ; FWT - Fullscreen window toggle
 ; https://autohotkey.com/boards/viewtopic.php?p=123166#p123166
 

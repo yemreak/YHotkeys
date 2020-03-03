@@ -6,6 +6,9 @@
 
 return
 
+#Include, %A_ScriptDir%\lib\util\translate.ahk
+#Include, %A_ScriptDir%\lib\util\fullscreen.ahk
+
 IconClicked:
     ToggleMemWindowWithTitle(A_ThisMenuItem)
 return
@@ -102,20 +105,6 @@ uriDecode(str) {
 	Return, str
 }
 
-uriEncode(str) {
-	f = %A_FormatInteger%
-	SetFormat, Integer, Hex
-	If RegExMatch(str, "^\w+:/{0,2}", pr)
-		StringTrimLeft, str, str, StrLen(pr)
-	StringReplace, str, str, `%, `%25, All
-	Loop
-		If RegExMatch(str, "i)[^\w\.~%]", char)
-			StringReplace, str, str, %char%, % "%" . Asc(char), All
-		Else Break
-	SetFormat, Integer, %f%
-	Return, pr . str
-}
-
 ToInverted() {
     CopySelected()
     Lab_Invert_Char_Out:= ""
@@ -163,7 +152,7 @@ SearchOnGoogle() {
 
 TranslateOnGoogle() {
     value := GetExistClipboard()
-    RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
+    MsgBox, % GoogleTranslate(value, "en", "tr")
 }
 
 KeepOnNotepad() {
@@ -181,4 +170,8 @@ KeepOnNotepad() {
 OpenDocumentationPage() {
     global APP_PAGE
     RunOnExplorer(APP_PAGE)
+}
+
+FullScreenWindow() {
+    FWT()
 }

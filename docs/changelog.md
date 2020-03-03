@@ -12,6 +12,9 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Deneysel versiyon
 
+- 🚀 Now google translate works without browser (API)
+- 👨‍💻 Minor code improvements
+
 ## 🏷️ 2.4.2.2
 
 🚀 Yeni kısayol ve destekler eklendi

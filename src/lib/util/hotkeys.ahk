@@ -15,6 +15,13 @@ ListLines, Off
 
 return
 
+#Include, %A_ScriptDir%\lib\core\common.ahk
+#Include, %A_ScriptDir%\lib\core\event.ahk
+#Include, %A_ScriptDir%\lib\core\menu.ahk
+#Include, %A_ScriptDir%\lib\window\hide.ahk
+#Include, %A_ScriptDir%\lib\window\pin.ahk
+
+F1::FullScreenWindow()
 
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
