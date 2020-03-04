@@ -24,6 +24,7 @@ return
 ; ---------------------------------- Fast Hotkeys ----------------------------------
 
 F1::TranslateWithPopup()
++F1::TranslateInline()
 
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
@@ -46,7 +47,7 @@ return
     OpenInCommandPrompt()
 return
 #^T::
-    TranslateWithPopup()
+    TranslateOnGoogle()
 return
 #^N::
     KeepOnNotepad()

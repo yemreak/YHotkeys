@@ -12,6 +12,10 @@ description: YHotkeys'de neler değişti
 
 ⚗️ Experimental version
 
+* 🌟 <kbd>⇧ Shift</kbd> <kbd>F1</kbd> key to inline translator
+* ♻️ Translating on google translate online is recycled and works like as before
+* 📝 Documentations renewed
+
 ## 🏷️ 2.4.3
 
 💱 More useful translate

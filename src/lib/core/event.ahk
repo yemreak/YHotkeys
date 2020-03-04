@@ -158,6 +158,11 @@ SearchOnGoogle() {
     RunOnExplorer("http://www.google.com/search?q=" . value)
 }
 
+TranslateOnGoogle() {
+    value := GetExistClipboard()
+    RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
+}
+
 TranslateWithPopup() {
     value := GetExistClipboard()
     ToolTip, % GoogleTranslate(value, "auto", "tr")
