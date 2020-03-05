@@ -101,13 +101,6 @@ return
     OpenWindowByTitle(name, com, mode)
 return
 
-#c::
-    name := "Calculator"
-    com := createAppCommand("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
-    mode := 2
-    OpenOrCloseWindow(name, com, mode)
-return
-
 ; -------------- Tray Kısayolları --------------
 
 #"::
@@ -115,6 +108,27 @@ return
     com := "notepad"
     mode := 2
     OpenWindowInTray("class", name, com, mode)
+return
+
+#c::
+    name := "Google Calendar"
+    com := EdgeAppCommand("kjbdgfilnfhdoflbpgamdcdgpehopbep")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
+#m::
+    name := "Gmail"
+    com := EdgeAppCommand("kmhopmchchfpfdcdjodmpfaaphdclmlj")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
+#k::
+    name := "Google Keep"
+    com := EdgeAppCommand("hcfcmgpnmpinpidjdgejehjchlbglpde")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
 return
 
 ; #"::

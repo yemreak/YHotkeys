@@ -195,3 +195,7 @@ OpenDocumentationPage() {
 FullScreenWindow() {
     FWT()
 }
+
+EdgeAppCommand(appId) {
+    return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe""  --profile-directory=Default --app-id=" . appId
+}
