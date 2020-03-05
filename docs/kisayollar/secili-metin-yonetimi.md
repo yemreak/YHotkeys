@@ -8,8 +8,8 @@ description: YHotkeys ile pencere seçili metin yönetim kısayolları
 
 | ⌨️ Buton | 📑 Açıklama |
 | :--- | :--- |
-| <kbd>F1</kbd> | 💱 Seçili metni çevirme ve popupda gösterme |
-| <kbd>⇧ Shift</kbd> <kbd>F1</kbd> | 💱 Seçili meti çevirip değiştirme |
+| F1 | 💱 Seçili metni çevirme ve popupda gösterme |
+| ⇧ Shift F1 | 💱 Seçili meti çevirip değiştirme |
 
 ## ✴️ Seçili Metin için Pencereler
 
@@ -33,3 +33,4 @@ description: YHotkeys ile pencere seçili metin yönetim kısayolları
 | ❖ Win ✲ Ctrl ⇧ Shift E | ↖️ Seçili metni encode eder |
 | ❖ Win ✲ Ctrl ⇧ Shift D | ↘️ Seçili metni decode eder |
 | ❖ Win ✲ Ctrl ⇧ Shift T | 💱 Seçili meti çevirip değiştirme |
+

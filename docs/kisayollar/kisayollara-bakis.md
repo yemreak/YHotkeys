@@ -18,5 +18,8 @@ description: YHotkeys kısayollarına bakış ve tavsiyeler
 
 * ⏬ Kısayolları kullanabilmek için app olarak indirmeniz gerekmektedir
 * 📧 Gmail, 💡 Keep, 📅 Calendar uygulamaları **Edge** üzerinden desteklenmektedir
-* 💞 Kısayollar sırasıyla, <kbd>M</kbd>, <kbd>K</kbd>, <kbd>C</kbd> şeklindedir
-* 💁‍♂️ Dikkatli bakıldığından baş harfleri olduğunu fark edilecektir (mail'in M'si)
+* 💞 Kısayollar sırasıyla, M, K, C şeklindedir
+* 💁‍♂️ Dikkatli bakıldığından baş harfleri olduğunu fark edilecektir \(mail'in M'si\)
+
+![](../.gitbook/assets/making_browser_app.png)
+
