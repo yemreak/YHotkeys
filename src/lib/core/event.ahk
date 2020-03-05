@@ -199,3 +199,7 @@ FullScreenWindow() {
 EdgeAppCommand(appId) {
     return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe""  --profile-directory=Default --app-id=" . appId
 }
+
+StartProgram(name) {
+    return """C:\Users\Yedhrab\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\" . name . ".lnk"""
+}

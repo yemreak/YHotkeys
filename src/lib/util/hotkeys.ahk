@@ -112,21 +112,21 @@ return
 
 #c::
     name := "Google Calendar"
-    com := EdgeAppCommand("kjbdgfilnfhdoflbpgamdcdgpehopbep")
+    com := StartProgram("Google Calendar")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
 #m::
     name := "Gmail"
-    com := EdgeAppCommand("kmhopmchchfpfdcdjodmpfaaphdclmlj")
+    com := StartProgram("Gmail")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
 #k::
     name := "Google Keep"
-    com := EdgeAppCommand("hcfcmgpnmpinpidjdgejehjchlbglpde")
+    com := StartProgram("Google Keep")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
