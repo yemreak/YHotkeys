@@ -15,6 +15,7 @@ description: YHotkeys'de neler değişti
 * 🌟 <kbd>⇧ Shift</kbd> <kbd>F1</kbd> key to inline translator
 * ♻️ Translating on google translate online is recycled and works like as before
 * 📝 Documentations renewed
+* ➕ Google app shorcuts added
 
 ## 🏷️ 2.4.3
 
