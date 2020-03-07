@@ -13,6 +13,7 @@ description: YHotkeys'de neler değişti
 ⚗️ Experimental version
 
 * 🌟 ⇧ Shift F1 key to inline translator
+* 👨‍🔧 Emoji error fixed
 * ♻️ Translating on google translate online is recycled and works like as before
 * 📝 Documentations renewed
 * ➕ Google app shorcuts added
