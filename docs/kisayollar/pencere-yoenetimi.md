@@ -24,9 +24,11 @@ description: YHotkeys ile pencere yönetim kısayolları
 | ❖ Win W | 📞 WhatsApp Desktop |
 | ❖ Win T | 💌 Telegram |
 | ❖ Win G | 🐙 GitHub Desktop |
-| ❖ Win X | 📅 Calendar |
+| ❖ Win X | 📅 MS Calendar |
 | ❖ Win " | 📃 Not defteri |
-| ❖ Win C | 🧮 Hesap makinesi \(aç - kapa\) |
+| ❖ Win C | 📅 Google Calendar |
+| ❖ Win K | 💡 Google Keep |
+| ❖ Win M | 📧 Google Mail |
 
 ## 👀 Küçült / Göster
 

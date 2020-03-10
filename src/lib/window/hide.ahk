@@ -136,7 +136,7 @@ OpenWindowInTray(selector, name, command, mode=3) {
         }
     }
     if !found
-        RunCommand(command)
+        RunOnConsole(command)
 }
 
 OpenOrCloseWindow(title, command, mode=3) {
@@ -147,7 +147,7 @@ OpenOrCloseWindow(title, command, mode=3) {
         WinGet, ahkID, ID, %title%
         WinClose, ahk_id %ahkID%
     } else {
-        RunCommand(command)
+        RunOnConsole(command)
     }
 }
 
@@ -159,7 +159,7 @@ OpenWindowByTitle(title, command, mode=3) {
         WinGet, ahkID, ID, %title%
         ToggleWindow(ahkID, False)
     } else {
-        RunCommand(command)
+        RunOnConsole(command)
     }
 }
 

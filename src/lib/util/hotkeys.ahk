@@ -24,6 +24,7 @@ return
 ; ---------------------------------- Fast Hotkeys ----------------------------------
 
 F1::TranslateWithPopup()
++F1::TranslateInline()
 
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
@@ -46,7 +47,7 @@ return
     OpenInCommandPrompt()
 return
 #^T::
-    TranslateWithPopup()
+    TranslateOnGoogle()
 return
 #^N::
     KeepOnNotepad()
@@ -100,13 +101,6 @@ return
     OpenWindowByTitle(name, com, mode)
 return
 
-#c::
-    name := "Calculator"
-    com := createAppCommand("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
-    mode := 2
-    OpenOrCloseWindow(name, com, mode)
-return
-
 ; -------------- Tray Kısayolları --------------
 
 #"::
@@ -114,6 +108,27 @@ return
     com := "notepad"
     mode := 2
     OpenWindowInTray("class", name, com, mode)
+return
+
+#c::
+    name := "Google Calendar"
+    com := StartProgram("Google Calendar")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
+#m::
+    name := "Gmail"
+    com := StartProgram("Gmail")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
+#k::
+    name := "Google Keep"
+    com := StartProgram("Google Keep")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
 return
 
 ; #"::

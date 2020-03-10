@@ -4,6 +4,13 @@ description: YHotkeys ile pencere seçili metin yönetim kısayolları
 
 # 📋 Seçili Metin Yönetimi
 
+## 🔤 Seçili Metin İşlemleri
+
+| ⌨️ Buton | 📑 Açıklama |
+| :--- | :--- |
+| F1 | 💱 Seçili metni çevirme ve popupda gösterme |
+| ⇧ Shift F1 | 💱 Seçili meti çevirip değiştirme |
+
 ## ✴️ Seçili Metin için Pencereler
 
 | ⌨️ Buton | 📑 Açıklama |
@@ -25,4 +32,5 @@ description: YHotkeys ile pencere seçili metin yönetim kısayolları
 | ❖ Win ✲ Ctrl ⇧ Shift I | ↔️ Seçili metni ters boyutlu harf \(Inverted\) yapar |
 | ❖ Win ✲ Ctrl ⇧ Shift E | ↖️ Seçili metni encode eder |
 | ❖ Win ✲ Ctrl ⇧ Shift D | ↘️ Seçili metni decode eder |
+| ❖ Win ✲ Ctrl ⇧ Shift T | 💱 Seçili meti çevirip değiştirme |
 

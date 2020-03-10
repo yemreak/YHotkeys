@@ -48,8 +48,18 @@ return
 RunOnExplorer(url) {
 	url := FixIfUrl(url)
 	
-    command = %ComSpec% /c ""explorer.exe" "%url%""
+    command := ExplorerCommand(url)
+    command := ConsoleCommand(command)
     RunWait, %command%, , hide
+}
+
+ConsoleCommand(command) {
+    cmd = %ComSpec% /c %command%
+    return cmd
+}
+
+ExplorerCommand(url) {
+    return "explorer.exe """ . url . """"
 }
 
 FixIfUrl(url) {
@@ -60,11 +70,15 @@ FixIfUrl(url) {
 	return url
 }
 
-RunCommand(url) {
-    command = %ComSpec% /c "%url%"
+RunHide(command) {
+    MsgBox % command
     Run, %command%, , hide, ahkPID
-
     return ahkPID
+}
+
+RunOnConsole(command) {
+    command := ConsoleCommand(command)
+    return RunHide(command)
 }
 
 CopySelected() {
@@ -158,6 +172,11 @@ SearchOnGoogle() {
     RunOnExplorer("http://www.google.com/search?q=" . value)
 }
 
+TranslateOnGoogle() {
+    value := GetExistClipboard()
+    RunOnExplorer("https://translate.google.com/?hl=tr#view=home&op=translate&sl=auto&tl=tr&text=" . value)
+}
+
 TranslateWithPopup() {
     value := GetExistClipboard()
     ToolTip, % GoogleTranslate(value, "auto", "tr")
@@ -189,4 +208,22 @@ OpenDocumentationPage() {
 
 FullScreenWindow() {
     FWT()
+}
+
+EdgeAppCommand(appId) {
+    return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe""  --profile-directory=Default --app-id=" . appId
+}
+
+StartProgram(name) {
+    filepath := "C:\Users\Yedhrab\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\" . name . ".lnk"
+    
+    if not FileExist(filepath)
+        filepath := ExplorerCommand("https://yhotkeys.yemreak.com/v/dev/kisayollar/kisayollara-bakis#google-kisayollarini-kullanma")
+
+        /* 
+        url := "https://www.google.com/search?q=" . name
+        filepath := ExplorerCommand(url) 
+        */
+    
+    return filepath
 }
