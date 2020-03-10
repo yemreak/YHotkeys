@@ -48,8 +48,18 @@ return
 RunOnExplorer(url) {
 	url := FixIfUrl(url)
 	
-    command = %ComSpec% /c ""explorer.exe" "%url%""
+    command := ExplorerCommand(url)
+    command := ConsoleCommand(command)
     RunWait, %command%, , hide
+}
+
+ConsoleCommand(command) {
+    cmd = %ComSpec% /c %command%
+    return cmd
+}
+
+ExplorerCommand(url) {
+    return "explorer.exe """ . url . """"
 }
 
 FixIfUrl(url) {
@@ -60,11 +70,15 @@ FixIfUrl(url) {
 	return url
 }
 
-RunCommand(url) {
-    command = %ComSpec% /c "%url%"
+RunHide(command) {
+    MsgBox % command
     Run, %command%, , hide, ahkPID
-
     return ahkPID
+}
+
+RunOnConsole(command) {
+    command := ConsoleCommand(command)
+    return RunHide(command)
 }
 
 CopySelected() {
@@ -201,5 +215,15 @@ EdgeAppCommand(appId) {
 }
 
 StartProgram(name) {
-    return """C:\Users\Yedhrab\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\" . name . ".lnk"""
+    filepath := "C:\Users\Yedhrab\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\" . name . ".lnk"
+    
+    if not FileExist(filepath)
+        filepath := ExplorerCommand("https://yhotkeys.yemreak.com/v/dev/kisayollar/kisayollara-bakis#google-kisayollarini-kullanma")
+
+        /* 
+        url := "https://www.google.com/search?q=" . name
+        filepath := ExplorerCommand(url) 
+        */
+    
+    return filepath
 }

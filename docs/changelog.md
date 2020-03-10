@@ -16,7 +16,7 @@ description: YHotkeys'de neler değişti
 * 👨‍🔧 Emoji error fixed
 * ♻️ Translating on google translate online is recycled and works like as before
 * 📝 Documentations renewed
-* ➕ Google app shorcuts added
+* ➕ Google app shorcuts and usage doc added
 
 ## 🏷️ 2.4.3
 

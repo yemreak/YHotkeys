@@ -17,7 +17,7 @@ description: YHotkeys kısayollarına bakış ve tavsiyeler
 ## 📢 Google Kısayollarını Kullanma
 
 * ⏬ Kısayolları kullanabilmek için app olarak indirmeniz gerekmektedir
-* 📧 Gmail, 💡 Keep, 📅 Calendar uygulamaları **Edge** üzerinden desteklenmektedir
+* 📧 Gmail, 💡 Keep, 📅 Calendar uygulamaları **tarayıcı uygulaması** olarak desteklenmektedir
 * 💞 Kısayollar sırasıyla, M, K, C şeklindedir
 * 💁‍♂️ Dikkatli bakıldığından baş harfleri olduğunu fark edilecektir \(mail'in M'si\)
 
