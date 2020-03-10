@@ -71,7 +71,6 @@ FixIfUrl(url) {
 }
 
 RunHide(command) {
-    MsgBox % command
     Run, %command%, , hide, ahkPID
     return ahkPID
 }
