@@ -8,10 +8,6 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.3.2b
-
-⚗️ Experimental version
-
 ## 🏷️ 2.4.3.1
 
 ✨ More useful shortcuts and translator
