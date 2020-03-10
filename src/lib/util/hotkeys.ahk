@@ -124,6 +124,20 @@ return
     OpenWindowInTray("title", name, com, mode)
 return
 
+#y::
+    name := "YouTube"
+    com := StartProgram("YouTube")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
+#T::
+    name := "Google Translate"
+    com := StartProgram("Google Translate")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
 #k::
     name := "Google Keep"
     com := StartProgram("Google Keep")
@@ -158,12 +172,14 @@ return
     OpenWindowInTray("class", name, com)
 return
 
+/* 
 #t::
     name := "Telegram"
     com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
-return
+return 
+*/
 
 ; -------------------------------- Özel Scriptler ---------------------------------
 

@@ -54,7 +54,7 @@ RunOnExplorer(url) {
 }
 
 ConsoleCommand(command) {
-    cmd = %ComSpec% /c %command%
+    cmd = %ComSpec% /c "%command%"
     return cmd
 }
 

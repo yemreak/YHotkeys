@@ -12,6 +12,7 @@ description: YHotkeys'de neler değişti
 
 ✨ More useful shortcuts and translator
 
+* 👨‍🔧 Some of hotkeys error fixed
 * 🌟 ⇧ Shift F1 key to inline translator
 * 👨‍🔧 Emoji error fixed
 * ♻️ Translating on google translate online is recycled and works like as before
