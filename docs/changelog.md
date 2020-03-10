@@ -8,14 +8,11 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 👨‍🔬 2.4.3.2
-
-⚗️ Experimental version
-
 ## 🏷️ 2.4.3.1
 
 ✨ More useful shortcuts and translator
 
+* 👨‍🔧 Some of hotkeys error fixed
 * 🌟 ⇧ Shift F1 key to inline translator
 * 👨‍🔧 Emoji error fixed
 * ♻️ Translating on google translate online is recycled and works like as before
