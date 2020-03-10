@@ -7,7 +7,7 @@
 ; UTF-8 with BOM
 
 ; ------------------------------- Development Settings -------------------------------
-DEBUG := False
+DEBUG := True
 
 ; ----------------------------------- App Settings -----------------------------------
 APP_ICON = 🌱
@@ -21,7 +21,7 @@ DIR_NAME := A_AppData . "\" . APP_NAME
 DIR_ICON := DIR_NAME . "\Icons"
 
 ; --------------------------------- Update settings ----------------------------------
-VERSION = 2.4.3.1
+VERSION = 2.4.3.2b
 API_RELEASE = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
 
 PATH_EXE = %DIR_NAME%\YHotkeys.exe
