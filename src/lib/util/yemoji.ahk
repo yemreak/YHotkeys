@@ -984,6 +984,7 @@ return
 :::dizic::
 
 :::telefon::📞
+:::mobil::📱
 :::ahtapot::🐙
 :::github::🐙
 :::not::📝
@@ -1005,6 +1006,7 @@ return
 :::yıldız::⭐
 :::fav::🌟
 :::kod::👨‍💻
+:::kodk:: 👩‍💻
 :::fişek::🎇
 :::harf::🔡
 :::karo::💠
