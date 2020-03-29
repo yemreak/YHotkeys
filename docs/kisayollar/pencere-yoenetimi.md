@@ -10,7 +10,7 @@ description: YHotkeys ile pencere yönetim kısayolları
 | :--- | :--- |
 | ⎇ Alt " | 💫 Aynı tür pencereler arasında gezinme |
 | ❖ Win ⌂ Space | 📌 Aktif olan pencereyi sabitleme / sabitlemeyi kaldırma |
-| F1 | 🔳 Tam ekran yapma \(desteklemese bile\) |
+| ❖ Win ✲ Ctrl F1 | 🔳 Tam ekran yapma \(desteklemese bile\) |
 
 ## 👁️ Gizle / Göster
 
