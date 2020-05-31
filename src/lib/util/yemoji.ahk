@@ -18,6 +18,27 @@ return
 
 ; Yeni
 
+:::bugfix::🐞👨‍🔧
+:::logfix::📜👨‍🔧
+:::codefix::👨‍💻👨‍🔧
+:::docfix::📖👨‍🔧
+:::funcfix::🤹👨‍🔧
+:::bugimp::🐞✨
+:::logimp::📜✨
+:::codeimp::👨‍💻✨
+:::docimp::📖✨
+:::funcimp::🤹✨
+:::bugadd::🐞➕
+:::logadd::📜➕
+:::codeadd::👨‍💻➕
+:::docadd::📖➕
+:::funcadd::🤹➕
+:::bugrem::🐞💦
+:::logrem::📜💦
+:::coderem::👨‍💻💦
+:::docrem::📖💦
+:::funcrem::🤹💦
+
 :::kulak::👂
 
 ; Letter
