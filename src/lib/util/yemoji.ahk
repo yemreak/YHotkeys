@@ -32,6 +32,8 @@ return
 :::1234::🔢
 :::back::🔚
 :::soon::🔙
+:::yakında::🔙
+:::geri::🔚
 
 :::id::🆔
 :::kimlik::🆔
@@ -54,6 +56,7 @@ return
 ; Geliştirici
 
 :::böcek::🐞
+:::bug::🐞
 :::dosya::📂
 
 ; Logging
@@ -400,7 +403,7 @@ return
 
 :::gerialma::⏪
 :::reverse::⏪
-:::geri::⏪
+:::gerib::⏪
 
 :::dal::🔀
 :::birleştirme::🔀
