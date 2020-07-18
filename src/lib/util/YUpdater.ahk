@@ -7,16 +7,12 @@
 ; update.exe name version url silent_flag
 ; YUpdater.exe YHotkeys 1 https://api.github.com/repos/yedhrab/YHotkeys/releases/latest .
 
-#Warn  ; Enable warnings to assist with detecting common errors.
-#NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
+#Warn ; Enable warnings to assist with detecting common errors.
+#NoEnv ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
 #KeyHistory 0 ; Tuş basımları loglamayı engeller
 
-SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
-ListLines, On ; Derlenen verileri loglamaz
-
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 #MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 
@@ -44,7 +40,6 @@ FLAG_SILENT = 0
 SetTrayMenu()
 ParseArgs()
 CheckForUpdates()
-return
 
 #Include, %A_ScriptDir%\json.ahk
 
@@ -63,7 +58,7 @@ ParseArgs() {
     APP_GITHUB_RELEASE_API := A_Args[3]
     APP_PATH := A_Args[4]
     FLAG_SILENT := A_Args[5]
-
+    
     if not (APP_NAME and APP_VERSION and APP_GITHUB_RELEASE_API and APP_PATH) {
         global TIP_MENU
         MsgBox, 0, %TIP_MENU%, ❗ Eksik parametreler var: `n`n💎APP_NAME: %APP_NAME%`n💎APP_VERSION: %APP_VERSION%`n💎APP_GITHUB_RELEASE_API:%APP_GITHUB_RELEASE_API%`n💎APP_PATH:%APP_PATH%
@@ -77,11 +72,11 @@ HTTPRequest(requestType, url) {
         MsgBox,4112,Fatal Error,Unable to create HTTP object
         ExitApp
     }
-
+    
     oHTTP.Open(requestType, url)
     oHTTP.SetAutoLogonPolicy(0) ; AutoLogonPolicy_Always=0, AutoLogonPolicy_OnlyIfBypassProxy=1, AutoLogonPolicy_Never=2
     oHTTP.Send()
-
+    
     return JSON.Load(oHTTP.ResponseText)
 }
 
@@ -96,7 +91,7 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
         ;Download the headers
         WebRequest.Open("HEAD", UrlToFile)
         WebRequest.Send()
-
+        
         try {
             ;Store the header which holds the file size in a variable:
             FinalSize := WebRequest.GetResponseHeader("Content-Length")
@@ -104,18 +99,18 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
             ; Cannot get "Content-Length" header
             FinalSize := ExpectedFileSize
         }
-
+        
         global TEXT_DOWNLOAD_START
         ;Create the progressbar and the timer
         Progress, w250 h80, , %TEXT_DOWNLOAD_START%, %UrlToFile%
-
+        
         LastSizeTick := 0
         LastSize := 0
-
+        
         ; Enable progress bar updating if the system knows file size
         SetTimer, __UpdateProgressBar, 1500
     }
-
+    
     ;Download the file
     UrlDownloadToFile, %UrlToFile%, %SaveFileAs%
     ;Remove the timer and the progressbar because the download has finished
@@ -124,31 +119,31 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
         SetTimer, __UpdateProgressBar, Off
     }
     Return
-
+    
     ;The label that updates the progressbar
     __UpdateProgressBar:
         ;Get the current filesize and tick
         CurrentSize := FileOpen(SaveFileAs, "r").Length ;FileGetSize wouldn't return reliable results
         CurrentSizeTick := A_TickCount
-
+        
         ;Calculate the downloadspeed
-        SpeedOrig  := Round((CurrentSize/1024-LastSize/1024)/((CurrentSizeTick-LastSizeTick)/1000))
-
-        SpeedUnit  := "KB/s"
-        Speed      := SpeedOrig
-
+        SpeedOrig := Round((CurrentSize/1024-LastSize/1024)/((CurrentSizeTick-LastSizeTick)/1000))
+        
+        SpeedUnit := "KB/s"
+        Speed := SpeedOrig
+        
         if (Speed > 1024) {
             ; Convert to megabytes
             SpeedUnit := "MB/s"
             Speed := Round(Speed/1024, 2)
         }
-
+        
         SpeedText := Speed . " " . SpeedUnit
-
+        
         ;Save the current filesize and tick for the next time
         LastSizeTick := CurrentSizeTick
         LastSize := FileOpen(SaveFileAs, "r").Length
-
+        
         if FinalSize = 0
         {
             PercentDone := 50
@@ -157,7 +152,7 @@ DownloadFile(UrlToFile, SaveFileAs, Overwrite := True, UseProgressBar := True, E
             PercentDone := Round(CurrentSize/FinalSize*100)
             SpeedText := SpeedText . ", " . Round((FinalSize - CurrentSize) / SpeedOrig / 1024) . "s left"
         }
-
+        
         ;Update the ProgressBar
         global TEXT_DOWNLOADING, TITLE_TEXT_DOWNLOADING
         Progress, %PercentDone%, %PercentDone%`% (%SpeedText%), %TEXT_DOWNLOADING%, %TITLE_TEXT_DOWNLOADING%; %SaveFileAs% (%PercentDone%`%)
@@ -169,7 +164,7 @@ StoreReleaseInfos(response) {
     name := response.name
     body := response.body
     download_url := response.assets[1].browser_download_url
-
+    
     global RELEASE_TAGNAME, RELEASE_TITLE, RELEASE_BODY, RELEASE_URL
     RELEASE_TAGNAME := tagname
     RELEASE_TITLE := name . " ( " . tagname . " )"
@@ -181,9 +176,9 @@ ShowUpdateDialog() {
     global RELEASE_TITLE, RELEASE_BODY, TIP_MENU, APP_VERSION, RELEASE_TAGNAME
     MsgBox, 4, %TIP_MENU%, %RELEASE_TITLE%`n`n%RELEASE_BODY% `n`n✨ Güncellemek ister misin? ( %APP_VERSION% -> %RELEASE_TAGNAME% )
     IfMsgBox Yes
-        return True
+    return True
     else
-        return False
+    return False
 }
 
 UpdateExist() {
@@ -201,7 +196,7 @@ CheckForUpdates() {
 
 OnResponse(response) {
     StoreReleaseInfos(response)
-
+    
     global FLAG_SILENT
     if (UpdateExist()) {
         OnUpdateClick()
@@ -219,12 +214,12 @@ OnUpdateClick() {
 
 UpdateApp() {
     KillScript()
-
+    
     global RELEASE_URL, APP_PATH
     DownloadFile(RELEASE_URL, APP_PATH)
-
+    
     Run, %APP_PATH%
-
+    
     global TIP_MENU
     MsgBox, 0, %TIP_MENU%, 👏 Güncelleme başarılı`n🌱 İmleci ikon üstüne getirerek yeni sürümü görebilirsiniz.
     ExitApp

@@ -8,10 +8,9 @@ Menu, Tray, Default, &Calculator
 
 Return
 
-
 Calc:
-If WinExist("Calculator")
-   WinClose, Calculator
-else
-   Run, Calc.exe
+   If WinExist("Calculator")
+      WinClose, Calculator
+   else
+      Run, Calc.exe
 Return

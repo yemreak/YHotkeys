@@ -32,9 +32,9 @@ OnMessage( 0x06, "ch_WM_ACTIVATE" )
 
 ;================================Variables================================;
 
-ch_hotkeyHide := "#q"                     ;{Win}q
-ch_hotkeyShow := "#w"                     ;{Win}w
-ch_hotkeyExit := "#F7"                    ;{Win}F7
+ch_hotkeyHide := "#q" ;{Win}q
+ch_hotkeyShow := "#w" ;{Win}w
+ch_hotkeyExit := "#F7" ;{Win}F7
 ch_maxWindows := 10
 ch_bgColor := "EBEBEB"
 ch_borderColor := "000000"
@@ -52,7 +52,6 @@ return
 
 ;=================================HotKeys=================================;
 
-
 ;===============================Subroutines===============================;
 
 ch_HideActiveWindow:
@@ -62,47 +61,47 @@ ch_HideActiveWindow:
   WinGet, ch_winId, Id, A
   Send, !{Esc}
   ch_HideWindow(ch_winId)
-  return
+return
 
 ch_ShowWindow:
   If ch_totalWindows = 0
     return
-  MouseGetPos, ch_xpos, ch_ypos            ;put LV right under the mouse
+  MouseGetPos, ch_xpos, ch_ypos ;put LV right under the mouse
   ch_xpos -= 10
   ch_ypos -= 10
   ch_BuildListView()
   if ch_totalWindows > 0
     Gui, Show, x%ch_xpos% y%ch_ypos%
-  return
+return
 
 ch_Exit:
-  If A_ExitReason in Shutdown,Exit         ;if shutting down the computer, skip
+  If A_ExitReason in Shutdown,Exit ;if shutting down the computer, skip
     ExitApp
-  ch_SaveToIni()                           ;if closing for any other reason, save hidden windows
-  ExitApp
-  
-ch_LVMenu:
-  If A_GuiEvent = DoubleClick               ;restore window on double-click
-    ch_RestoreWindow(A_EventInfo)
-  return
+  ch_SaveToIni() ;if closing for any other reason, save hidden windows
+ExitApp
 
-ButtonOK:                                  ;restore window on {Enter}
-  GuiControlGet, ch_FocusedControl, FocusV
-  If ch_FocusedControl <> ch_LVMenu
-  {
-    ch_FocusedControl :=
-    return
-  }
-  else
-  {
-    ch_FocusedControl :=
-    ch_RestoreWindow(LV_GetNext(0, "Focused"))
-  }
-  return
+ch_LVMenu:
+  If A_GuiEvent = DoubleClick ;restore window on double-click
+    ch_RestoreWindow(A_EventInfo)
+return
+
+ButtonOK: ;restore window on {Enter}
+GuiControlGet, ch_FocusedControl, FocusV
+If ch_FocusedControl <> ch_LVMenu
+{
+  ch_FocusedControl :=
+return
+}
+else
+{
+  ch_FocusedControl :=
+  ch_RestoreWindow(LV_GetNext(0, "Focused"))
+}
+return
 
 GUIEscape:
   GUI, Destroy
-  return
+return
 
 ;================================Functions================================;
 
@@ -112,7 +111,7 @@ ch_HideWindow(ch_winId)
   local ch_stored := 0
   Loop, %ch_maxWindows%
   {
-    If ch_winId%A_Index% =                ;find an empty variable and put the window ID in
+    If ch_winId%A_Index% = ;find an empty variable and put the window ID in
     {
       ch_winId%A_Index% := ch_winId
       ch_totalWindows += 1
@@ -122,15 +121,15 @@ ch_HideWindow(ch_winId)
   }
   If ch_stored = 1
     WinHide, ahk_id %ch_winId%
-  return
+return
 }
 
 ch_SaveToIni()
 {
   global
   local this_id
-  Loop, %ch_maxWindows%                  ;store currently
-  {                                      ;hidden windows in ini file for restoration later
+  Loop, %ch_maxWindows% ;store currently
+  { ;hidden windows in ini file for restoration later
     this_id := ch_winId%A_Index%
     IfWinNotExist, ahk_id %this_id%
       continue
@@ -138,15 +137,15 @@ ch_SaveToIni()
       continue
     IniWrite, % ch_winId%A_Index%, HideWinList.ini, Window%A_Index%, WinId
   }
-  return
+return
 }
 
 ch_LoadFromIni()
 {
   global
   local this_id
-  Loop, %ch_maxWindows%                     ;read the ini file to see if there are any
-  {                                         ;windows to be restored, then erase contents
+  Loop, %ch_maxWindows% ;read the ini file to see if there are any
+  { ;windows to be restored, then erase contents
     IniRead, this_id, HideWinList.ini, Window%A_Index%, WinId
     If this_id = ERROR
       continue
@@ -155,18 +154,18 @@ ch_LoadFromIni()
       continue
     ch_HideWindow(this_id)
   }
-  return
+return
 }
 
 ch_WM_ACTIVATE(ch_wParam)
 {
-  If (ch_wParam = 0)                      ;if the listview loses focus, hide it
+  If (ch_wParam = 0) ;if the listview loses focus, hide it
     Gui, Destroy
-  return
+return
 }
 
 ch_BuildListView()
-{   
+{ 
   global
   Gui, Destroy
   ch_GetLongestName()
@@ -197,9 +196,9 @@ ch_BuildListView()
       ch_winId%A_Index% :=
       ch_totalWindows -= 1
       continue
-    }   
-    local ch_winId := ch_winId%A_Index%         
-
+    } 
+    local ch_winId := ch_winId%A_Index% 
+    
     local ch_winClass
     WinGetClass, ch_winClass, ahk_id %ch_winId%
     If ch_winClass = #32770 ; fix for displaying control panel related windows (dialog class) that aren't on taskbar
@@ -209,7 +208,7 @@ ch_BuildListView()
       ;this whole icon routine is from evl, I don't pretend to
       ;understand it, I just modified it until it worked for me
       SendMessage, 0x7F, 2, 0,, ahk_id %ch_winId%
-      local ch_hIcon := ErrorLevel               
+      local ch_hIcon := ErrorLevel 
       If ( ! ch_hIcon )
       {
         SendMessage, 0x7F, 0, 0,, ahk_id %ch_winId%
@@ -234,20 +233,20 @@ ch_BuildListView()
     continue
   }
   LV_ModifyCol()
-  return
+return
 }
 
 ch_RestoreWindow(ch_RowNum)
 {
-  LV_GetText(ch_rowText, ch_RowNum, 1)        ;Get the Info from the row's first field.
-  StringGetPos, ch_firstSpace, ch_rowText, %A_Space%  ;These two lines extract the
-  StringLeft, ch_index, ch_rowText, ch_firstSpace     ;array index for the selected window
+  LV_GetText(ch_rowText, ch_RowNum, 1) ;Get the Info from the row's first field.
+  StringGetPos, ch_firstSpace, ch_rowText, %A_Space% ;These two lines extract the
+  StringLeft, ch_index, ch_rowText, ch_firstSpace ;array index for the selected window
   ch_winId := ch_winId%ch_Index%
   WinShow, ahk_id %ch_winId%
-  ch_winId%ch_index% :=                   ;Delete the contents of the variable
+  ch_winId%ch_index% := ;Delete the contents of the variable
   global ch_totalWindows -= 1
   Gui, Destroy
-  return
+return
 }
 
 ch_GetLongestName()
@@ -268,11 +267,11 @@ ch_GetLongestName()
     If (ch_winNameLength >= ch_longestName)
       ch_longestName := ch_winNameLength
   }
-
+  
   If ch_longestName <> 0
-    ch_longestName := ch_longestName + 50  ;add some room for the icon
-
-  return
+    ch_longestName := ch_longestName + 50 ;add some room for the icon
+  
+return
 }
 
 ;GetTextWidth by Sean:  http://www.autohotkey.com/forum/post-113847.html&sid=cb1840004443b42e1a730db24896b406#113847
@@ -280,17 +279,17 @@ GetTextWidth(sString, sFaceName, nHeight = 12, bBold = False, bItalic = False, b
 {
   hDC := DllCall("GetDC", "Uint", 0)
   nHeight := -DllCall("MulDiv", "int", nHeight, "int", DllCall("GetDeviceCaps", "Uint", hDC, "int", 90), "int", 72)
-
+  
   hFont := DllCall("CreateFont", "int", nHeight, "int", 0, "int", 0, "int", 0, "int", 400 + 300 * bBold, "Uint", bItalic, "Uint", bUnderline, "Uint", bStrikeOut, "Uint", nCharSet, "Uint", 0, "Uint", 0, "Uint", 0, "Uint", 0, "str", sFaceName)
   hFold := DllCall("SelectObject", "Uint", hDC, "Uint", hFont)
-
+  
   DllCall("GetTextExtentPoint32", "Uint", hDC, "str", sString, "int", StrLen(sString), "int64P", nSize)
-
+  
   DllCall("SelectObject", "Uint", hDC, "Uint", hFold)
   DllCall("DeleteObject", "Uint", hFont)
   DllCall("ReleaseDC", "Uint", 0, "Uint", hDC)
-
-  nWidth  := nSize & 0xFFFFFFFF
-
-  Return nWidth
+  
+  nWidth := nSize & 0xFFFFFFFF
+  
+Return nWidth
 }

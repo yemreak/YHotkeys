@@ -10,11 +10,6 @@
 #KeyHistory, 0
 #MaxThreadsPerHotkey, 1
 
-SetBatchLines, -1
-ListLines, Off
-
-return
-
 #Include, %A_ScriptDir%\lib\core\common.ahk
 #Include, %A_ScriptDir%\lib\core\event.ahk
 #Include, %A_ScriptDir%\lib\core\menu.ahk
@@ -83,7 +78,6 @@ return
 #+e::Run, explorer
 
 ; ---------------------------------- Uygulama tetikleme ----------------------------------
-
 
 ; -------------- Göster / Gizle --------------
 
@@ -195,7 +189,7 @@ return
 ; WARN: En alta yazılmazsa sonrasındakilerin çalışmasını engeller, IfWındows yapılması gerekir
 
 #If MouseIsOver("ahk_class Shell_TrayWnd") ; For MouseIsOver, see #If example 1.
-WheelUp::Send {Volume_Up}
+    WheelUp::Send {Volume_Up}
 WheelDown::Send {Volume_Down}
 ^WheelUp::Send {B}
 ^WheelDown::Send {Volume_Down}

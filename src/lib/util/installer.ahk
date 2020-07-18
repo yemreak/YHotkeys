@@ -1,13 +1,9 @@
-﻿#Warn  ; Enable warnings to assist with detecting common errors.
-#NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
+﻿#Warn ; Enable warnings to assist with detecting common errors.
+#NoEnv ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
 #KeyHistory 0 ; Tuş basımları loglamayı engeller
 
-SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
-ListLines, On ; Derlenen verileri loglamaz
-
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 #MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 
@@ -47,7 +43,7 @@ RemoveOldData() {
 
 InstallIcons() {
     global DIR_ICON
-    FileCreateDir,  %DIR_ICON%
+    FileCreateDir, %DIR_ICON%
     FileInstall, ..\..\res\update.ico, %DIR_ICON%\update.ico, 1
     FileInstall, ..\..\res\seedling.ico, %DIR_ICON%\seedling.ico, 1
     FileInstall, ..\..\res\default.ico, %DIR_ICON%\default.ico, 1
@@ -61,7 +57,7 @@ InstallIcons() {
 
 CreateDataDir() {
     global DIR_NAME
-    FileCreateDir,  %DIR_NAME%
+    FileCreateDir, %DIR_NAME%
 }
 
 InstallExe() {
@@ -72,7 +68,14 @@ InstallExe() {
 
 InstallTools() {
     InstallUpdateTool()
+    InstallEmojiScript()
     ; InstallPythonTool()
+}
+
+InstallEmojiScript() {
+    global DIR_SCRIPTS
+    FileCreateDir, %DIR_SCRIPTS%
+    FileInstall, .\yemoji.ahk, %DIR_SCRIPTS%\yemoji.ahk, 1
 }
 
 ; InstallPythonTool() {
@@ -96,7 +99,7 @@ ShowRunDialog() {
     global RELEASE_TITLE, RELEASE_BODY, TIP_MENU, APP_VERSION, RELEASE_TAGNAME
     MsgBox, 4, %TIP_MENU%, ▶️ Kurulum tamamlandı`, çalıştırmak ister misiniz
     IfMsgBox Yes
-        return True
+    return True
     else
         return False
 }
@@ -105,7 +108,7 @@ ShowConfirmDialog() {
     global RELEASE_TITLE, RELEASE_BODY, TIP_MENU, APP_VERSION, RELEASE_TAGNAME
     MsgBox, 4, %TIP_MENU%, ☠️ Kurulum işlemi çalışan YHotkeys'i sonlandıracaktır, devam edilsin mi?
     IfMsgBox Yes
-        return True
+    return True
     else
         return False
 }

@@ -52,7 +52,7 @@ Gui, Listview, Listview1
 
 Loop, %WS_nbr%
 {
-  LV_ADD("",WS_Value%A_Index%,WS_Title%A_Index%)  
+  LV_ADD("",WS_Value%A_Index%,WS_Title%A_Index%) 
 }
 LV_ModifyCol()
 
@@ -61,7 +61,7 @@ Gui, ListView, Listview2
 Loop, %WS_EX_nbr%
 {
   LV_ADD("",WS_EX_Value%A_Index%,WS_EX_Title%A_Index%)
-  }
+}
 LV_ModifyCol()
 
 Gui, Show,, windowstyles
@@ -74,39 +74,39 @@ TriggerActiveStyles = 0
 Loop
 {
   Sleep, 100
-
+  
   if ManipulateWindow
   {
     if TriggerActiveStyles
-	{
-	  TriggerActiveStyles = 0
-	  
+    {
+      TriggerActiveStyles = 0
+      
       GuiControl, -altsubmit, Listview1
       GuiControl, -altsubmit, Listview2
-	  
-	  WinSet, Style, %thestyle%, ahk_id %winid%
+      
+      WinSet, Style, %thestyle%, ahk_id %winid%
       WinSet, ExStyle, %theexstyle%, ahk_id %winid%
-	  
-	  Gosub ActiveStyles
-
+      
+      Gosub ActiveStyles
+      
       GuiControl, +altsubmit, Listview1
       GuiControl, +altsubmit, Listview2
-
-	  }
+      
+    }
     Continue
   }
-	
+  
   MouseGetPos,mx,my,winid,ctrl
-
+  
   WinGetTitle, wintitle, ahk_id %winid%
-
+  
   WinGet, thestyle, Style, ahk_id %winid%
   WinGet, theexstyle, ExStyle, ahk_id %winid%
   
   ControlGet, TheControlStyle, Style,, %ctrl%, ahk_id %winid%
   ControlGet, TheControlEXStyle, ExStyle,, %ctrl%, ahk_id %winid%
   ControlGet, TheControlHwnd, Hwnd,, %ctrl%, ahk_id %winid%
-
+  
   Gosub ActiveStyles
 }
 
@@ -118,13 +118,13 @@ GuiControl,,WindowName, Window - %wintitle%
 GuiControl,,WindowStats, Style %thestyle% ExStyle %theexstyle%
 GuiControl,,ControlName, Control - %ctrl% - Hwnd %TheControlHwnd%
 GuiControl,,ControlStats, Style %TheControlStyle% ExStyle %TheControlExStyle%
-   
+
 Gui,ListView,Listview1
-  
+
 loop, %WS_nbr%
 {
   LV_GetText(SortedListValue,A_Index)
-
+  
   If (thestyle & SortedListValue = SortedListValue)
     LV_Modify(A_Index, "Check")
   Else
@@ -136,7 +136,7 @@ Gui,ListView,Listview2
 loop, %WS_EX_nbr%
 {
   LV_GetText(SortedListValue,A_Index)
-
+  
   If (theexstyle & SortedListValue = SortedListValue)
     LV_Modify(A_Index, "Check")
   Else
@@ -152,8 +152,8 @@ Critical
 If !ManipulateWindow
   Return
 
-MainEventCode  = %A_GuiEvent%
-SubEventCode   = %ErrorLevel%
+MainEventCode = %A_GuiEvent%
+SubEventCode = %ErrorLevel%
 CheckRowNumber = %A_EventInfo%
 
 If InStr(MainEventCode,"I")
@@ -162,28 +162,28 @@ If InStr(MainEventCode,"I")
   {
     Gui,ListView,Listview1
     LV_GetText(SortedListValue,CheckRowNumber)
-
+    
     SetFormat, integer, hex
     thestyle := thestyle | SortedListValue
     SetFormat, integer, d
-
+    
     TriggerActiveStyles = 1
   }
-
+  
   If InStr(SubEventCode,"c",True)
   {
     Gui,ListView,Listview1
-	LV_GetText(SortedListValue,CheckRowNumber)
-
+    LV_GetText(SortedListValue,CheckRowNumber)
+    
     SetFormat, integer, hex
-	SortedListValue := 0xFFFFFFFF ^ SortedListValue
+    SortedListValue := 0xFFFFFFFF ^ SortedListValue
     thestyle := thestyle & SortedListValue
     SetFormat, integer, d
-
+    
     TriggerActiveStyles = 1
   }
 } 
-  
+
 Return
 
 Listview2: ;-------------------------------------------------------------------
@@ -193,8 +193,8 @@ Critical
 If !ManipulateWindow
   Return
 
-MainEventCode  = %A_GuiEvent%
-SubEventCode   = %ErrorLevel%
+MainEventCode = %A_GuiEvent%
+SubEventCode = %ErrorLevel%
 CheckRowNumber = %A_EventInfo%
 
 If InStr(MainEventCode,"I")
@@ -203,24 +203,24 @@ If InStr(MainEventCode,"I")
   {
     Gui,ListView,Listview2
     LV_GetText(SortedListValue,CheckRowNumber)
-
+    
     SetFormat, integer, hex
     theexstyle := theexstyle | SortedListValue
     SetFormat, integer, d
-
+    
     TriggerActiveStyles = 1
   }
-
+  
   If InStr(SubEventCode,"c",True)
   {
     Gui,ListView,Listview2
-	LV_GetText(SortedListValue,CheckRowNumber)
-
+    LV_GetText(SortedListValue,CheckRowNumber)
+    
     SetFormat, integer, hex
-	SortedListValue := 0xFFFFFFFF ^ SortedListValue
+    SortedListValue := 0xFFFFFFFF ^ SortedListValue
     theexstyle := theexstyle & SortedListValue
     SetFormat, integer, d
-
+    
     TriggerActiveStyles = 1
   }
 } 

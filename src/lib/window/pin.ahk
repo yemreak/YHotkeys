@@ -4,7 +4,6 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-
 ; --------------------------------- Hafıza İşlemleri ---------------------------------
 
 StorePinnedWindow(window_id) {
@@ -28,14 +27,14 @@ GetPinnedWindowIDs(){
     For index, window_id in PINNED_WINDOWS {
         window_ids.Push(window_id)
     }
-return window_ids
+    return window_ids
 }
 
 ; --------------------------------- Yönetim İşlemleri ---------------------------------
 
 ReleasePinnedWindow(window_id) {
     ix := GetPinnedWindowIndex(window_id)
-
+    
     global PINNED_WINDOWS
     PINNED_WINDOWS.RemoveAt(ix)
 }
@@ -45,7 +44,7 @@ ReleaseAllPinnedWindows() {
     For index, window_id in window_ids {
         OnPinnedWindow(window_id)
     }
-
+    
     global PINNED_WINDOWS
     PINNED_WINDOWS := []
 }
@@ -78,7 +77,7 @@ IsWindowTitleExist(window_title) {
 
 IsPinned(window_id) {
     WinGet, window_trans, Transparent, ahk_id %window_id%
-
+    
     global TRANSPARENT_PINNED
     return window_trans == TRANSPARENT_PINNED
 }
@@ -94,5 +93,3 @@ ToggleWindowPin() {
         }
     }
 }
-
-

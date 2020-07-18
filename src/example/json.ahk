@@ -3,22 +3,22 @@
 json_str =
 (
 {
-	"str": "Hello World",
-	"num": 12345,
-	"float": 123.5,
-	"true": true,
-	"false": false,
-	"null": null,
-	"array": [
-		"Auto",
-		"Hot",
-		"key"
-	],
-	"object": {
-		"A": "Auto",
-		"H": "Hot",
-		"K": "key"
-	}
+    "str": "Hello World",
+    "num": 12345,
+    "float": 123.5,
+    "true": true,
+    "false": false,
+    "null": null,
+    "array": [
+    "Auto",
+    "Hot",
+    "key"
+    ],
+    "object": {
+        "A": "Auto",
+        "H": "Hot",
+        "K": "key"
+    }
 }
 )
 
@@ -28,11 +28,11 @@ parsed_out := Format("
 (Join`r`n
 String: {}
 Number: {}
-Float:  {}
-true:   {}
-false:  {}
-null:   {}
-array:  [{}, {}, {}]
+Float: {}
+true: {}
+false: {}
+null: {}
+array: [{}, {}, {}]
 object: {{}A:""{}"", H:""{}"", K:""{}""{}}
 )"
 , parsed.str, parsed.num, parsed.float, parsed.true, parsed.false, parsed.null

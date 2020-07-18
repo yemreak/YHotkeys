@@ -4,10 +4,10 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-return
-
 #Include, %A_ScriptDir%\lib\util\translate.ahk
 #Include, %A_ScriptDir%\lib\util\fullscreen.ahk
+
+return
 
 IconClicked:
     ToggleMemWindowWithTitle(A_ThisMenuItem)
@@ -34,20 +34,20 @@ ShowAll:
 return
 
 CloseApp:
-    ExitApp
+ExitApp
 return
 
 #IfWinExist ahk_class tooltips_class32
-    ESC::
-	~LButton::
-	~RButton::
-        ToolTip
-        return
+ESC::
+~LButton::
+~RButton::
+    ToolTip
+return
 #IfWinActive
 
 RunOnExplorer(url) {
-	url := FixIfUrl(url)
-	
+    url := FixIfUrl(url)
+    
     command := ExplorerCommand(url)
     command := ConsoleCommand(command)
     RunWait, %command%, , hide
@@ -55,29 +55,29 @@ RunOnExplorer(url) {
 
 ConsoleCommand(command) {
     cmd = %ComSpec% /c "%command%"
-    return cmd
+return cmd
 }
 
 ExplorerCommand(url) {
-    return "explorer.exe """ . url . """"
+return "explorer.exe """ . url . """"
 }
 
 FixIfUrl(url) {
-	if url not contains http
-		If url contains www.,.com
-			url := "http://" . url
-
-	return url
+    if url not contains http
+        If url contains www.,.com
+        url := "http://" . url
+    
+return url
 }
 
 RunHide(command) {
     Run, %command%, , hide, ahkPID
-    return ahkPID
+return ahkPID
 }
 
 RunOnConsole(command) {
     command := ConsoleCommand(command)
-    return RunHide(command)
+return RunHide(command)
 }
 
 CopySelected() {
@@ -117,13 +117,12 @@ ToEncode() {
     SendFast(uriEncode(Clipboard))
 }
 
-
 uriDecode(str) {
-	Loop
-		If RegExMatch(str, "i)(?<=%)[\da-f]{1,2}", hex)
-			StringReplace, str, str, `%%hex%, % Chr("0x" . hex), All
-		Else Break
-	Return, str
+    Loop
+        If RegExMatch(str, "i)(?<=%)[\da-f]{1,2}", hex)
+        StringReplace, str, str, `%%hex%, % Chr("0x" . hex), All
+    Else Break
+        Return, str
 }
 
 ToInverted() {
@@ -132,11 +131,11 @@ ToInverted() {
     Loop % Strlen(Clipboard) {
         Lab_Invert_Char:= Substr(Clipboard, A_Index, 1)
         if Lab_Invert_Char is upper
-        Lab_Invert_Char_Out:= Lab_Invert_Char_Out Chr(Asc(Lab_Invert_Char) + 32)
+            Lab_Invert_Char_Out:= Lab_Invert_Char_Out Chr(Asc(Lab_Invert_Char) + 32)
         else if Lab_Invert_Char is lower
-        Lab_Invert_Char_Out:= Lab_Invert_Char_Out Chr(Asc(Lab_Invert_Char) - 32)
+            Lab_Invert_Char_Out:= Lab_Invert_Char_Out Chr(Asc(Lab_Invert_Char) - 32)
         else
-        Lab_Invert_Char_Out:= Lab_Invert_Char_Out Lab_Invert_Char
+            Lab_Invert_Char_Out:= Lab_Invert_Char_Out Lab_Invert_Char
     }
     SendFast(Lab_Invert_Char_Out)
 }
@@ -144,7 +143,7 @@ ToInverted() {
 ; Seçili alan varsa onu, yoksa eski kopyalananı alma
 GetExistClipboard() {
     value := TrimStr(clipboard)
-
+    
     CopySelected()
     trimmed_clipboard := TrimStr(clipboard)
     if (StrLen(trimmed_clipboard) > 0) {
@@ -190,13 +189,13 @@ TranslateInline() {
 
 KeepOnNotepad() {
     CopySelected()
-
+    
     Run, notepad.exe
     WinActivate, Untitled - Notepad
     WinWaitActive, Untitled - Notepad
-
+    
     Send ^v
-
+    
     ToggleWindowPin()
 }
 
@@ -210,7 +209,7 @@ FullScreenWindow() {
 }
 
 EdgeAppCommand(appId) {
-    return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe""  --profile-directory=Default --app-id=" . appId
+return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe"" --profile-directory=Default --app-id=" . appId
 }
 
 StartProgram(name) {
@@ -218,11 +217,11 @@ StartProgram(name) {
     
     if not FileExist(filepath)
         filepath := ExplorerCommand("https://yhotkeys.yemreak.com/v/dev/kisayollar/kisayollara-bakis#google-kisayollarini-kullanma")
-
+    
         /* 
         url := "https://www.google.com/search?q=" . name
         filepath := ExplorerCommand(url) 
-        */
+    */
     
-    return filepath
+return filepath
 }

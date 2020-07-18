@@ -4,10 +4,8 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-SendMode, Input
 #Hotstring EndChars : ; Bitirme karakteri
 #Hotstring Z C0 O T ; Algılama ayarları
-return
 
 ; Emoji Kaynakları
 ; http://xahlee.info/comp/unicode_index.html
@@ -18,11 +16,9 @@ return
 
 ; Yeni
 
-
 :::biber::🌶️
 :::elma::🍎
 :::elma2::🍏
-
 
 :::bugfix::🐞👨‍🔧
 :::logfix::📜👨‍🔧
@@ -256,7 +252,6 @@ return
 :::bisikletk::🚴‍♀️
 :::bisikletdk::🚵‍♂️
 
-
 :::parmak::👆
 :::parmak2::🤞
 :::parmaky::👆
@@ -454,7 +449,7 @@ return
 :::icat::👨‍🔬
 :::buluş::👨‍🔬
 :::keşif::👨‍🔬
-:::deney::👨‍🔬
+    :::deney::👨‍🔬
 :::deneysel::👨‍🔬
 :::beta::👨‍🔬
 :::dev::👨‍🔬
@@ -616,7 +611,6 @@ return
 :::bilmiyorumk::🤷‍♀️
 :::farketmez::🤷‍♂️
 :::farketmezk::🤷‍♀️
-
 
 :::kaş::🤨
 
@@ -896,7 +890,6 @@ return
 :::formül::🧬
 :::dna::🧬
 
-
 ; Kalemler
 :::kalem::🖊️
 :::kalemu::✒️
@@ -995,7 +988,6 @@ return
 :::madalya2::🥈
 :::madalya3::🥉
 
-
 :::uyanık::🙇‍♂️
 :::ayık::🙇‍♂️
 :::uyanıkk::🙇‍♀️
@@ -1012,116 +1004,116 @@ return
 :::dizit::🚄
 :::dizi2::📇
 :::dizic::
-
-:::telefon::📞
-:::mobil::📱
-:::ahtapot::🐙
-:::github::🐙
-:::not::📝
-
-:::kılıç::⚔️
-:::hançer::🗡️
-:::bıçak::🔪
-:::koş::🏃‍♂️
-:::koşk::🏃‍♀️
-:::takla::🤸‍♂️
-:::taklak::🤸‍♀️
-:::patlama::💥
-:::yay::🏹
-
-
-
-; YEmoji
-
-:::yıldız::⭐
-:::fav::🌟
-:::kod::👨‍💻
-:::kodk:: 👩‍💻
-:::fişek::🎇
-:::harf::🔡
-:::karo::💠
-:::elmas::💎
-
-:::beyinp::🤯
-:::bağlantı::🔗
-
-:::sarhoş::🥴
-:::buton::🎛️
-:::vida::🔩
-:::müzik::🎶
-:::hoperlör::🔉
-:::yönetici::👨‍💼
-:::yönet::👨‍💼
-:::yöneticik::👩‍💼
-:::yönetk::👩‍💼
-:::hakim::👨‍⚖️
-:::hakimk::👩‍⚖️
-:::doktor::👨‍⚕️
-:::doktork::👩‍⚕️
-:::yapboz::🧩
-:::güneş::🌞
-:::sinyal::📶
-:::japon::🔰
-:::parlak::🔆
-:::kutu::🧃
-
-
-:::meraklı::👀
-:::bulut::⛅
-:::dağ::🌄
-:::mızrak::🔱
-
-:::kıvrık::➰
-:::çubuk::🍢
-:::fiş::🔌
-:::resim::🖼️
-
-:::kurdele::🎀
-:::tamir::👨‍🔧
-:::tamirk::👩‍🔧
-:::alet::🧰
-:::düşünceli::🤔
-:::hmm::🤔
-
-:::roket::🚀
-:::kumsaati::⌛
-:::yazı::✍
-:::robot::🤖
-:::dalgıç::🤿
-
-:::anlaşma::🤝
-:::katkı::🤝
-:::birlik::🤝
-:::els::🤝
-
-:::elkaldırma::🙋‍♂️
-:::elkaldırmak::🙋‍♀️
-:::mikrofon::🎤
-
-:::dünya::🌍
-:::okul::🏫
-:::zar::🎲
-:::?::❔
-:::yükleme::⏫
-:::indirme::⏬
-
-:::kiraz::🍒
-:::pano::📋
-:::sirk::🎪
-
-:::çember::⭕
-:::kavhe::☕
-:::megafon::📢
-:::dvd::💿
-:::uzay::🌌
-:::top1::🏈
-:::top2::🏀
-:::top3::⚾
-:::top4::🏐
-:::pinpon::🏓
-:::top5::🏉
-:::iplik::🧶
-:::top6::🥎
-:::alışveriş::🛒
-:::atom::⚛️
-:::fide::🌱
+    
+    :::telefon::📞
+    :::mobil::📱
+    :::ahtapot::🐙
+    :::github::🐙
+    :::not::📝
+    
+    :::kılıç::⚔️
+    :::hançer::🗡️
+    :::bıçak::🔪
+    :::koş::🏃‍♂️
+    :::koşk::🏃‍♀️
+    :::takla::🤸‍♂️
+    :::taklak::🤸‍♀️
+    :::patlama::💥
+    :::yay::🏹
+    
+    
+    
+    ; YEmoji
+    
+    :::yıldız::⭐
+    :::fav::🌟
+    :::kod::👨‍💻
+    :::kodk:: 👩‍💻
+    :::fişek::🎇
+    :::harf::🔡
+    :::karo::💠
+    :::elmas::💎
+    
+    :::beyinp::🤯
+    :::bağlantı::🔗
+    
+    :::sarhoş::🥴
+    :::buton::🎛️
+    :::vida::🔩
+    :::müzik::🎶
+    :::hoperlör::🔉
+    :::yönetici::👨‍💼
+    :::yönet::👨‍💼
+    :::yöneticik::👩‍💼
+    :::yönetk::👩‍💼
+    :::hakim::👨‍⚖️
+    :::hakimk::👩‍⚖️
+    :::doktor::👨‍⚕️
+    :::doktork::👩‍⚕️
+    :::yapboz::🧩
+    :::güneş::🌞
+    :::sinyal::📶
+    :::japon::🔰
+    :::parlak::🔆
+    :::kutu::🧃
+    
+    
+    :::meraklı::👀
+    :::bulut::⛅
+    :::dağ::🌄
+    :::mızrak::🔱
+    
+    :::kıvrık::➰
+    :::çubuk::🍢
+    :::fiş::🔌
+    :::resim::🖼️
+    
+    :::kurdele::🎀
+    :::tamir::👨‍🔧
+    :::tamirk::👩‍🔧
+    :::alet::🧰
+    :::düşünceli::🤔
+    :::hmm::🤔
+    
+    :::roket::🚀
+    :::kumsaati::⌛
+    :::yazı::✍
+    :::robot::🤖
+    :::dalgıç::🤿
+    
+    :::anlaşma::🤝
+    :::katkı::🤝
+    :::birlik::🤝
+    :::els::🤝
+    
+    :::elkaldırma::🙋‍♂️
+    :::elkaldırmak::🙋‍♀️
+    :::mikrofon::🎤
+    
+    :::dünya::🌍
+    :::okul::🏫
+    :::zar::🎲
+    :::?::❔
+    :::yükleme::⏫
+    :::indirme::⏬
+    
+    :::kiraz::🍒
+    :::pano::📋
+    :::sirk::🎪
+    
+    :::çember::⭕
+    :::kavhe::☕
+    :::megafon::📢
+    :::dvd::💿
+    :::uzay::🌌
+    :::top1::🏈
+    :::top2::🏀
+    :::top3::⚾
+    :::top4::🏐
+    :::pinpon::🏓
+    :::top5::🏉
+    :::iplik::🧶
+    :::top6::🥎
+    :::alışveriş::🛒
+    :::atom::⚛️
+    :::fide::🌱

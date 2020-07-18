@@ -1,8 +1,5 @@
 #SingleInstance, Force
 #KeyHistory, 0
-SetBatchLines, -1
-ListLines, Off
-SendMode Input ; Forces Send and SendRaw to use SendInput buffering for speed.
 SetTitleMatchMode, 3 ; A window's title must exactly match WinTitle to be a match.
 SetWorkingDir, %A_ScriptDir%
 SplitPath, A_ScriptName, , , , thisscriptname
@@ -19,18 +16,18 @@ return
 A_DAY = 1000000
 
 Alert1:
-IfWinNotExist, Video Conversion, Process Complete
-{
-    ; Sayaç ile kontrol edip, günlük güncelleme yapılabilir
-    ; Kullanıcı seçebilir
-    MsgBox, % A_Now - A_DAY
-    SetTimer, Alert1, Off
-    ExitApp,
-    return
-}
-; Otherwise:
-SetTimer, Alert1, Off  ; i.e. the timer turns itself off here.
-SplashTextOn, , , The video conversion is finished.
-Sleep, 3000
-SplashTextOff
+    IfWinNotExist, Video Conversion, Process Complete
+    {
+        ; Sayaç ile kontrol edip, günlük güncelleme yapılabilir
+        ; Kullanıcı seçebilir
+        MsgBox, % A_Now - A_DAY
+        SetTimer, Alert1, Off
+        ExitApp,
+        return
+    }
+    ; Otherwise:
+    SetTimer, Alert1, Off ; i.e. the timer turns itself off here.
+    SplashTextOn, , , The video conversion is finished.
+    Sleep, 3000
+    SplashTextOff
 return

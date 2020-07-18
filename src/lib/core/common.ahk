@@ -7,7 +7,7 @@
 GetEnvPath(envvar, path=""){
     EnvGet, prepath, %envvar%
     path = %prepath%%path%
-return path
+    return path
 }
 
 createAppCommand(path) {

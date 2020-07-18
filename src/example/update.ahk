@@ -1,8 +1,5 @@
 #SingleInstance, Force
 #KeyHistory, 0
-SetBatchLines, -1
-ListLines, Off
-SendMode Input ; Forces Send and SendRaw to use SendInput buffering for speed.
 SetTitleMatchMode, 3 ; A window's title must exactly match WinTitle to be a match.
 SetWorkingDir, %A_ScriptDir%
 SplitPath, A_ScriptName, , , , thisscriptname
@@ -16,22 +13,22 @@ Check(verArray, tagArray, index) {
     if (index > verArray.Length()) {
         return False
     }
-
+    
     if (verArray[index] < tagArray[index]) {
         return True
     } else if (verArray[index] == tagArray[index]) {
         return Check(verArray, tagArray, index + 1)
     }
-
+    
     return False
 }
 
 UpdateExist(tagname) {
     tagArray := StrSplit(tagname, ".")
-
+    
     VERSION = 2.3.1
     verArray := StrSplit(VERSION, ".")
-
+    
     Loop % verArray.MaxIndex() {
         if (verArray[A_index] < tagArray[A_index]) {
             return True

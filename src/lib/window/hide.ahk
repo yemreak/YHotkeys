@@ -4,8 +4,6 @@
 ; ##                                                                                ##
 ; ####################################################################################
 
-return
-
 ; --------------------------------- Hafıza İşlemleri ---------------------------------
 
 class WindowObject {
@@ -25,7 +23,7 @@ DropFromMem(ahkID){
 
 KeepWindowInMem(ahkID) {
     item := CreateWindowObject(ahkID)
-
+    
     global HIDDEN_WINDOWS
     HIDDEN_WINDOWS.Push(item)
 }
@@ -33,13 +31,13 @@ KeepWindowInMem(ahkID) {
 CreateWindowObject(ahkID) {
     WinGetTitle, title, ahk_id %ahkID%
     WinGet, iconPath, ProcessPath, ahk_id %ahkID%
-
+    
     item := new WindowObject
-
+    
     item.ahkID := ahkID
     item.title := title
     item.iconPath := iconPath
-
+    
     return item
 }
 
@@ -49,7 +47,7 @@ GetHiddenWindowIDs(){
     For index, item in HIDDEN_WINDOWS {
         ahkIDs.Push(item.ahkID)
     }
-return ahkIDs
+    return ahkIDs
 }
 
 GetHiddenWindowIDByTitle(title){
@@ -59,7 +57,7 @@ GetHiddenWindowIDByTitle(title){
             return item.ahkID
         }
     }
-return 0
+    return 0
 }
 
 GetHiddenWindowIndex(ahkID){
@@ -69,7 +67,7 @@ GetHiddenWindowIndex(ahkID){
             return index
         }
     }
-return 0
+    return 0
 }
 
 ; --------------------------------- Yönetim İşlemleri ---------------------------------
@@ -111,7 +109,7 @@ SwitchWindow() {
 OpenWindowInTray(selector, name, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, On
-
+    
     IDlist := []
     if (selector == "title") {
         WinGet, IDlist, list, %name%
@@ -120,17 +118,17 @@ OpenWindowInTray(selector, name, command, mode=3) {
     } else if (selector == "exe") {
         WinGet, IDlist, list, ahk_exe %name%
     }
-
+    
     found := False
     Loop, %IDlist% {
         ahkID := IDlist%A_INDEX%
-
+        
         DetectHiddenWindows, On
         if WinExist("ahk_id" . ahkID) {
             WinGetTitle, title, ahk_id %ahkID%
             if (title == "")
                 continue
-
+            
             ToggleWindow(ahkID, True)
             found := True
         }
@@ -154,7 +152,7 @@ OpenOrCloseWindow(title, command, mode=3) {
 OpenWindowByTitle(title, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
-
+    
     if WinExist(title) {
         WinGet, ahkID, ID, %title%
         ToggleWindow(ahkID, False)
@@ -168,22 +166,22 @@ ShowAllHiddenWindows() {
     For index, ahkID in ahkIDs {
         ToggleWindow(ahkID, True)
     }
-
+    
     return ahkIDs
 }
 
 ClearAllHiddenWindows() {
     DetectHiddenWindows, On
-
+    
     ahkIDs := GetHiddenWindowIDs()
     For index, ahkID in ahkIDs {
         WinKill, ahk_id %ahkID%
         WinWaitClose, ahk_id %ahkID%
     }
-
+    
     global HIDDEN_WINDOWS
     HIDDEN_WINDOWS := []
-
+    
     CreateOrUpdateTrayMenu()
 }
 
@@ -191,9 +189,10 @@ ToggleMemWindowWithTitle(menuName) {
     ahkID := GetHiddenWindowIDByTitle(menuName)
     if ahkID
         ToggleWindow(ahkID, True)
-    else
+    else {
         global APP_PAGE
         Run, %APP_PAGE%
+    }
 }
 
 ShowWindowInTray(ahkID) {
