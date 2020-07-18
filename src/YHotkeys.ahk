@@ -21,17 +21,13 @@
 ; v1.1.31.01'de tüm desktoplarda çalışır
 ; https://www.autohotkey.com/download/1.1/AutoHotkey_1.1.31.01_setup.exe
 
-#Warn  ; Enable warnings to assist with detecting common errors.
-#NoEnv  ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
+#Warn ; Enable warnings to assist with detecting common errors.
+#NoEnv ; Uyumlukuk için A_ ön eki ile ortam değişkenlerini kullanın
 #SingleInstance Force ; Sadece 1 kez açalıştırabilire
 #KeyHistory 0 ; Tuş basımları loglamayı engeller
 ; #InstallKeybdHook ; Deneysel
 
-SetBatchLines, -1 ; Scripti sürekli olarak çalıştırma (nromalde her saniye 10ms uyur)
-ListLines, On ; Derlenen verileri loglamaz
-
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 #MaxThreadsPerHotkey, 1 ; Yanlışlıkla 2 kere buton algılanmasını engeller
 
@@ -45,10 +41,9 @@ if not DEBUG {
     CheckForUpdate(True)
 }
 
-return
-
 #Include, %A_ScriptDir%\lib\util\hotkeys.ahk
 #Include, %A_ScriptDir%\lib\util\yemoji.ahk
+#Include, %A_ScriptDir%\lib\util\emoji_menu.ahk
 
 ExitFunc(exitReason, exitCode) {
     if exitReason not in Logoff,Shutdown
@@ -58,4 +53,3 @@ ExitFunc(exitReason, exitCode) {
         return 0
     }
 }
-

@@ -19,9 +19,10 @@ APP_PAGE = https://yhotkeys.yemreak.com
 ; -------------------------------- Data dir settings ---------------------------------
 DIR_NAME := A_AppData . "\" . APP_NAME
 DIR_ICON := DIR_NAME . "\Icons"
+DIR_SCRIPTS := DIR_NAME . "\Scripts"
 
 ; --------------------------------- Update settings ----------------------------------
-VERSION = 2.4.3.1
+VERSION = 2.4.3.2
 API_RELEASE = https://api.github.com/repos/yedhrab/YHotkeys/releases/latest
 
 PATH_EXE = %DIR_NAME%\YHotkeys.exe
