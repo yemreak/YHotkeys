@@ -12,6 +12,7 @@ description: YHotkeys'de neler değişti
 
 * 🚀 Emoji panel shortcut added (❖ Win ✲ Ctrl Ş "emoji panel with ctrl")
 * 👨‍💻 Code formatted & improved
+* 👨‍🔧 Emoji sorunları giderildi
 
 ## 🏷️ 2.4.3.1
 
