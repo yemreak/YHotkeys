@@ -124,8 +124,6 @@ description: YHotkeys'de neler değişti
 * ✨ Yemojiler artırıldı
 * 👨‍💻 Kodda verimlilik
 
-![](https://github.com/yedhrab/YHotkeys/tree/b373155b1a1df6e6e8f4e8ce5b2d439a1cca9269/docs/.gitbook/assets/tray_menu-1%20%282%29.png)
-
 > 😥 Kısayollar henüz desteklenmemektedir.
 
 ## 🏷️ 2.4.0.2
