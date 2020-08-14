@@ -10,6 +10,19 @@ description: YHotkeys ile pencere seçili metin yönetim kısayolları
 | :--- | :--- |
 | F1 | 💱 Seçili metni çevirme ve popupda gösterme |
 | ⇧ Shift F1 | 💱 Seçili meti çevirip değiştirme |
+| ❖ Win ✲ Ctrl Ş | 🧐 Seçili olan emoji için hangi kısayol atandığını gösterir |
+
+### 💬 Popup ile çeviri
+
+![](../.gitbook/assets/example_translate_popup.png)
+
+### 💱 Metni çevirip, değiştirme
+
+![](../.gitbook/assets/example_translate_inline.gif)
+
+### 🔳 Emoji arama paneli
+
+![](../.gitbook/assets/emoji_panel_example.png)
 
 ## ✴️ Seçili Metin için Pencereler
 
