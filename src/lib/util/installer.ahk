@@ -115,6 +115,6 @@ ShowConfirmDialog() {
 
 KillScript() {
     global APP_NAME
-    command := "taskkill /im " . APP_NAME . ".exe"
+    command = taskkill /IM "%APP_NAME%.*" /F /T
     RunWait, %comspec% /c "%command%", , Hide
 }

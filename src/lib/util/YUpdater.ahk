@@ -227,6 +227,6 @@ UpdateApp() {
 
 KillScript() {
     global APP_NAME
-    command := "taskkill /im " . APP_NAME . ".*"
+    command = taskkill /IM "%APP_NAME%.*" /F /T
     RunWait, %comspec% /c "%command%", , Hide
 }
