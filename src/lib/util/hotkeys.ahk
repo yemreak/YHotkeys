@@ -20,6 +20,7 @@
 
 F1::TranslateWithPopup()
 +F1::TranslateInline()
+#Esc::CloseAllActivePrograms()
 
 ; ---------------------------------- Özellik Kısayolları ----------------------------------
 
