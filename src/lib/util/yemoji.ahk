@@ -16,6 +16,51 @@
 
 ; Yeni
 
+:::elmas::💎
+:::bekle::⌛
+
+:::buton::🔘
+
+; -------------- All Contributer --------------
+
+:::audio::🔊
+:::ally::♿️
+:::blog::📝
+:::business::💼
+:::code::💻
+:::content::🖋
+:::data::🔣
+:::doc::📖
+:::design::🎨
+:::example::💡
+:::eventOrganizing::📋
+:::financial::💵
+:::fundingFinding::🔍
+:::ideas::🤔
+:::infra::🚇
+:::maintenance::🚧
+:::mentoring::🧑‍🏫
+:::platform::📦
+:::plugin::🔌
+:::projectManagement::📆
+:::question::💬
+:::review::👀
+:::security::🛡️
+:::tool::🔧
+:::translation::🌍
+:::test::🧪
+:::tutorial::✅
+:::talk::📢
+:::userTesting::📓
+:::video::📹
+
+; -------------- All Contributer --------------
+
+:::func::🤹
+:::fix::👨‍🔧
+:::clean::💦
+:::log::📜
+
 :::biber::🌶️
 :::elma::🍎
 :::elma2::🍏
@@ -25,21 +70,25 @@
 :::codefix::👨‍💻👨‍🔧
 :::docfix::📖👨‍🔧
 :::funcfix::🤹👨‍🔧
+:::testfix::🧪👨‍🔧
 :::bugimp::🐞✨
 :::logimp::📜✨
 :::codeimp::👨‍💻✨
 :::docimp::📖✨
 :::funcimp::🤹✨
+:::testimp::🧪✨
 :::bugadd::🐞➕
 :::logadd::📜➕
 :::codeadd::👨‍💻➕
 :::docadd::📖➕
 :::funcadd::🤹➕
+:::testadd::🧪➕
 :::bugrem::🐞💦
 :::logrem::📜💦
 :::coderem::👨‍💻💦
 :::docrem::📖💦
 :::funcrem::🤹💦
+:::testrem::🧪💦
 
 :::kulak::👂
 
@@ -402,6 +451,8 @@
 :::şimşek::⚡
 :::enerji::⚡
 :::yıldırım::⚡
+:::statik::⚡
+:::static::⚡
 
 :::alev::🔥
 :::yanam::🔥
@@ -493,6 +544,8 @@
 
 :::tek::🦄
 :::aile::👪
+:::topluluk::👪
+:::community::👪
 :::aileç::👨‍👩‍👦‍👦
 :::çok::👪
 :::çokk::👨‍👩‍👦‍👦
@@ -513,12 +566,12 @@
 :::boşluk::🕳️
 
 :::uydu::🛰️
-:::yayın::🛰️
-:::broadcast::🛰️
 
 :::anten::📡
 :::alıcı::📡
 :::receiver::📡
+:::yayın::📡
+:::broadcast::📡
 
 :::tuğla::🧱
 :::duvar::🧱
@@ -526,6 +579,7 @@
 
 :::gece::🌃
 :::manzara::🌇
+:::ortam::🌇
 :::güng::🌃
 :::günb::🌇
 :::güna::🌆
@@ -661,6 +715,7 @@
 :::amaç::🎯
 
 :::gbb::‍🧙‍♂ Detaylı bilgi için TEMP alanına bakabilirsin.
+:::gbbl::‍🧙‍♂ Detaylı bilgi için [YEmoji](https://emoji.yemreak.com/kullanim/baglantilar) yapısına uygun oluşturulmuş: TEMP TEMP alanlarına bakabilirsin
 
 :::db::🗃️
 :::veritabanı::🗃️
@@ -821,7 +876,7 @@
 :::kitapt::📙
 :::gemi::🛳️
 :::gazete::📰
-:::lisans::©️
+:::lisans::🔐
 :::video::📺
 :::terazi::⚖️
 :::adalet::⚖️

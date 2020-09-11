@@ -64,6 +64,7 @@ InstallExe() {
     global DIR_NAME, PATH_EXE, DIR_ICON
     FileInstall, ..\..\YHotkeys.exe, %PATH_EXE%, 1
     FileCreateShortcut, %PATH_EXE%, %A_Desktop%\YHotkeys.lnk, %DIR_NAME%, , Kısayol Yöneticisi, %DIR_ICON%\seedling.ico
+    AskToAddStartUp()
 }
 
 InstallTools() {
@@ -88,16 +89,23 @@ InstallUpdateTool() {
 }
 
 AskToStart() {
-    if (ShowRunDialog()) {
+    if (AskDialog("▶️ Kurulum tamamlandı, çalıştırmak ister misiniz?")) {
         global PATH_EXE
         Run, %PATH_EXE%
     }
     ExitApp
 }
 
-ShowRunDialog() {
+AskToAddStartUp() {
+    if (AskDialog("▶️ Başlangıçta çalışmasını ister misiniz?")) {
+        global DIR_NAME, PATH_EXE, DIR_ICON
+        FileCreateShortcut, %PATH_EXE%, %A_Startup%\YHotkeys.lnk, %DIR_NAME%, , Kısayol Yöneticisi, %DIR_ICON%\seedling.ico
+    }
+}
+
+AskDialog(message) {
     global RELEASE_TITLE, RELEASE_BODY, TIP_MENU, APP_VERSION, RELEASE_TAGNAME
-    MsgBox, 4, %TIP_MENU%, ▶️ Kurulum tamamlandı`, çalıştırmak ister misiniz
+    MsgBox, 4, %TIP_MENU%, %message%
     IfMsgBox Yes
     return True
     else
