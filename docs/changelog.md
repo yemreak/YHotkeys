@@ -8,7 +8,7 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
-## 🏷️ 2.4.3.2
+## 🏷️ 2.4.3.3
 
 👨‍🔧 Ufak geliştirmeler ve iyileştirmeler
 
