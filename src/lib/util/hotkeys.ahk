@@ -95,6 +95,20 @@ return
     OpenWindowByTitle(name, com, mode)
 return
 
+#p::
+    name := "Your Phone"
+    com := createAppCommand("Microsoft.YourPhone_8wekyb3d8bbwe!App")
+    mode := 2
+    OpenWindowByTitle(name, com, mode)
+return
+
+#m::
+    name := "- Mail"
+    com := createAppCommand("microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail")
+    mode := 2
+    OpenWindowByTitle(name, com, mode)
+return
+
 ; -------------- Tray Kısayolları --------------
 
 #"::
@@ -106,35 +120,42 @@ return
 
 #c::
     name := "Google Calendar"
-    com := StartProgram("Google Calendar")
+    com := CreateStartProgramCmd("Google Calendar")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
-#m::
-    name := "Gmail"
-    com := StartProgram("Gmail")
+#z::
+    name := "BtcTurk | PRO"
+    com := CreateStartProgramCmd("BTCTurk PRO")
+    mode := 2
+    OpenWindowInTray("title", name, com, mode)
+return
+
+#SC056::
+    name := "| Binance"
+    com := CreateStartProgramCmd("Binance")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
 #y::
     name := "YouTube"
-    com := StartProgram("YouTube")
+    com := CreateStartProgramCmd("YouTube")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
 #T::
     name := "Google Translate"
-    com := StartProgram("Google Translate")
+    com := CreateStartProgramCmd("Google Translate")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
 
 #k::
     name := "Google Keep"
-    com := StartProgram("Google Keep")
+    com := CreateStartProgramCmd("Google Keep")
     mode := 2
     OpenWindowInTray("title", name, com, mode)
 return
