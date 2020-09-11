@@ -215,9 +215,7 @@ return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe"" -
 CreateStartProgramCmd(name) {
     filepath = %A_AppData%\Microsoft\Windows\Start Menu\Programs\%name%.lnk
     if not FileExist(filepath) {
-        url := "https://www.google.com/search?q=" . name
-        filepath := ExplorerCommand(url)
+        filepath := "https://www.google.com/search?q=" . name
     }
-    command = explorer.exe "%filepath%"
-    return command
+    return ExplorerCommand(filepath)
 }
