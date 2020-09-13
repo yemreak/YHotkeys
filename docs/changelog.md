@@ -8,6 +8,11 @@ description: YHotkeys'de neler değişti
 
 * [🏷️ Release](https://github.com/yedhrab/YHotkeys/releases) alanından tüm değişikliklere bakabilirsiniz.
 
+## 🏷️ 2.4.3.4
+
+- 📝 Notion desteği eklendi
+- 🤹 Tray için fonksiyonellik geliştirildi
+
 ## 🏷️ 2.4.3.3
 
 👨‍🔧 Ufak geliştirmeler ve iyileştirmeler

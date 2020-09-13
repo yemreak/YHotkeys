@@ -106,7 +106,7 @@ SwitchWindow() {
     }
 }
 
-OpenWindowInTray(selector, name, command, mode=3) {
+OpenWindowInTray(selector, name, command, mode=3, excludes:=False) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, On
     
@@ -120,17 +120,27 @@ OpenWindowInTray(selector, name, command, mode=3) {
     }
     
     found := False
+    pass := False
     Loop, %IDlist% {
         ahkID := IDlist%A_INDEX%
         
         DetectHiddenWindows, On
         if WinExist("ahk_id" . ahkID) {
-            WinGetTitle, title, ahk_id %ahkID%
-            if (title == "")
+            WinGetTitle, _title, ahk_id %ahkID%
+            if (_title == "")
                 continue
-            
-            ToggleWindow(ahkID, True)
-            found := True
+
+            Loop % excludes.Length() {
+                title := excludes[A_INDEX]
+                if (InStr(_title, title)) {
+                    pass := True
+                    Break
+                }
+            }
+            if !pass {
+                ToggleWindow(ahkID, True)
+                found := True
+            }
         }
     }
     if !found

@@ -119,6 +119,14 @@ return
     OpenWindowInTray("class", name, com, mode)
 return
 
+#n::
+    name := "Notion.exe"
+    excludes := ["MSCTFIME","Default IME"]
+    com := CreateStartProgramCmd("Notion")
+    mode := 3
+    OpenWindowInTray("exe", name, com, mode, excludes)
+return
+
 #c::
     name := "Google Calendar"
     com := CreateStartProgramCmd("Google Calendar")
