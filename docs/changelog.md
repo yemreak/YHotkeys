@@ -11,7 +11,8 @@ description: YHotkeys'de neler değişti
 ## 🏷️ 2.4.3.4
 
 - 📝 Notion desteği eklendi
-- 🤹 Tray için fonksiyonellik geliştirildi
+- 🤹 Tray için çoklu seçim ve seçime dahil etmeme fonksiyonelliği geliştirildi
+- 💫 Notion ile Notepad kısayolları yer değiştirdi
 
 ## 🏷️ 2.4.3.3
 

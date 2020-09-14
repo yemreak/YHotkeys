@@ -112,96 +112,96 @@ return
 
 ; -------------- Tray Kısayolları --------------
 
-#"::
-    name := "Notepad"
+#n::
+    selector := "Notepad"
     com := "notepad"
     mode := 2
-    OpenWindowInTray("class", name, com, mode)
+    OpenWindowInTray("class", selector, com, mode)
 return
 
-#n::
-    name := "Notion.exe"
+#"::
+    selector := "Notion.exe"
     excludes := ["MSCTFIME","Default IME"]
     com := CreateStartProgramCmd("Notion")
     mode := 3
-    OpenWindowInTray("exe", name, com, mode, excludes)
+    OpenWindowInTray("exe", selector, com, mode, excludes)
 return
 
 #c::
-    name := "Google Calendar"
+    selector := "Google Calendar"
     com := CreateStartProgramCmd("Google Calendar")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 #z::
-    name := "BtcTurk | PRO"
+    selector := "BtcTurk | PRO"
     com := CreateStartProgramCmd("BTCTurk PRO")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 #SC056::
-    name := "| Binance"
+    selectors := ["| Binance", "Binance Spot"]
     com := CreateStartProgramCmd("Binance")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selectors, com, mode)
 return
 
 #y::
-    name := "YouTube"
+    selector := "YouTube"
     com := CreateStartProgramCmd("YouTube")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 #T::
-    name := "Google Translate"
+    selector := "Google Translate"
     com := CreateStartProgramCmd("Google Translate")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 #k::
-    name := "Google Keep"
+    selector := "Google Keep"
     com := CreateStartProgramCmd("Google Keep")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 ; #"::
-;     name := "WindowsTerminal.exe"
+;     selector := "WindowsTerminal.exe"
 ;     com := createAppCommand("Microsoft.WindowsTerminal_8wekyb3d8bbwe!App"
 ;     mode := 2
-;     OpenWindowInTray("exe", name, com, mode)
+;     OpenWindowInTray("exe", selector, com, mode)
 ; return
 
 #w::
-    name := "WhatsApp"
+    selector := "WhatsApp"
     com := createAppCommand("5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 #g::
-    name := "GitHub Desktop"
+    selector := "GitHub Desktop"
     com := GetEnvPath("localappdata", "\GitHubDesktop\GitHubDesktop.exe")
     mode := 3
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return
 
 #e::
-    name := "CabinetWClass"
+    selector := "CabinetWClass"
     com := "explorer.exe"
-    OpenWindowInTray("class", name, com)
+    OpenWindowInTray("class", selector, com)
 return
 
 /* 
 #t::
-    name := "Telegram"
+    selector := "Telegram"
     com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
     mode := 2
-    OpenWindowInTray("title", name, com, mode)
+    OpenWindowInTray("title", selector, com, mode)
 return 
 */
 

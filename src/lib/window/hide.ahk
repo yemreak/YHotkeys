@@ -23,7 +23,7 @@ DropFromMem(ahkID){
 
 KeepWindowInMem(ahkID) {
     item := CreateWindowObject(ahkID)
-    
+
     global HIDDEN_WINDOWS
     HIDDEN_WINDOWS.Push(item)
 }
@@ -31,13 +31,13 @@ KeepWindowInMem(ahkID) {
 CreateWindowObject(ahkID) {
     WinGetTitle, title, ahk_id %ahkID%
     WinGet, iconPath, ProcessPath, ahk_id %ahkID%
-    
+
     item := new WindowObject
-    
+
     item.ahkID := ahkID
     item.title := title
     item.iconPath := iconPath
-    
+
     return item
 }
 
@@ -106,24 +106,50 @@ SwitchWindow() {
     }
 }
 
-OpenWindowInTray(selector, name, command, mode=3, excludes:=False) {
+OpenWindowInTray(selType, sels, command, mode=3, excludes:=False) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, On
-    
+
     IDlist := []
-    if (selector == "title") {
-        WinGet, IDlist, list, %name%
-    } else if (selector == "class") {
-        WinGet, IDlist, list, ahk_class %name%
-    } else if (selector == "exe") {
-        WinGet, IDlist, list, ahk_exe %name%
+    myIDList := []
+
+    sels_length := sels.Length()
+    if sels_length {
+        Loop, % sels_length {
+            sel := sels[A_Index]
+            if (selType == "title") {
+                WinGet, myIDList, list, %sel%
+            } else if (selType == "class") {
+                WinGet, myIDList, list, ahk_class %sel%
+            } else if (selType == "exe") {
+                WinGet, myIDList, list, ahk_exe %sel%
+            }
+            Loop, % myIDList {
+                myID := myIDList%A_Index%
+                If !HasVal(IDlist, myID) 
+                    IDlist.Push(myID)
+            }
+        }
     }
-    
+    else {
+        if (selType == "title") {
+            WinGet, myIDList, list, %sels%
+        } else if (selType == "class") {
+            WinGet, myIDList, list, ahk_class %sels%
+        } else if (selType == "exe") {
+            WinGet, myIDList, list, ahk_exe %sels%
+        }
+        Loop, % myIDList {
+            myID := myIDList%A_Index%
+            If !HasVal(IDlist, myID) 
+                IDlist.Push(myID)
+        }
+    }
+
     found := False
     pass := False
-    Loop, %IDlist% {
-        ahkID := IDlist%A_INDEX%
-        
+    Loop, % IDlist.Length() {
+        ahkID := IDlist[A_Index]
         DetectHiddenWindows, On
         if WinExist("ahk_id" . ahkID) {
             WinGetTitle, _title, ahk_id %ahkID%
@@ -150,7 +176,7 @@ OpenWindowInTray(selector, name, command, mode=3, excludes:=False) {
 OpenOrCloseWindow(title, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
-    
+
     if WinExist(title) {
         WinGet, ahkID, ID, %title%
         WinClose, ahk_id %ahkID%
@@ -162,7 +188,7 @@ OpenOrCloseWindow(title, command, mode=3) {
 OpenWindowByTitle(title, command, mode=3) {
     SetTitleMatchMode, %mode%
     DetectHiddenWindows, Off
-    
+
     if WinExist(title) {
         WinGet, ahkID, ID, %title%
         ToggleWindow(ahkID, False)
@@ -176,22 +202,22 @@ ShowAllHiddenWindows() {
     For index, ahkID in ahkIDs {
         ToggleWindow(ahkID, True)
     }
-    
+
     return ahkIDs
 }
 
 ClearAllHiddenWindows() {
     DetectHiddenWindows, On
-    
+
     ahkIDs := GetHiddenWindowIDs()
     For index, ahkID in ahkIDs {
         WinKill, ahk_id %ahkID%
         WinWaitClose, ahk_id %ahkID%
     }
-    
+
     global HIDDEN_WINDOWS
     HIDDEN_WINDOWS := []
-    
+
     CreateOrUpdateTrayMenu()
 }
 
