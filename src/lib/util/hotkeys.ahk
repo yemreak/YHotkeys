@@ -135,8 +135,8 @@ return
 return
 
 #z::
-    selector := "BtcTurk | PRO"
-    com := CreateStartProgramCmd("BTCTurk PRO")
+    selector := "BtcTurk PRO"
+    com := CreateStartProgramCmd("BtcTurk | PRO")
     mode := 2
     OpenWindowInTray("title", selector, com, mode)
 return
