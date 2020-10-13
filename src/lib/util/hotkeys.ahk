@@ -110,6 +110,13 @@ return
     OpenWindowByTitle(name, com, mode)
 return
 
+#t::
+    selector := "Telegram"
+    com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
+    mode := 2
+    OpenWindowByTitle(selector, com, mode)
+return 
+
 ; -------------- Tray Kısayolları --------------
 
 #n::
@@ -135,10 +142,10 @@ return
 return
 
 #z::
-    selector := "BtcTurk PRO"
-    com := CreateStartProgramCmd("BtcTurk | PRO")
+    selectors := ["BtcTurk | PRO", "BtcTurk"]
+    com := CreateStartProgramCmd("BtcTurk PRO")
     mode := 2
-    OpenWindowInTray("title", selector, com, mode)
+    OpenWindowInTray("title", selectors, com, mode)
 return
 
 #SC056::
@@ -155,12 +162,12 @@ return
     OpenWindowInTray("title", selector, com, mode)
 return
 
-#T::
-    selector := "Google Translate"
-    com := CreateStartProgramCmd("Google Translate")
-    mode := 2
-    OpenWindowInTray("title", selector, com, mode)
-return
+; #T::
+;     selector := "Google Translate"
+;     com := CreateStartProgramCmd("Google Translate")
+;     mode := 2
+;     OpenWindowInTray("title", selector, com, mode)
+; return
 
 #k::
     selector := "Google Keep"
@@ -195,15 +202,6 @@ return
     com := "explorer.exe"
     OpenWindowInTray("class", selector, com)
 return
-
-/* 
-#t::
-    selector := "Telegram"
-    com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
-    mode := 2
-    OpenWindowInTray("title", selector, com, mode)
-return 
-*/
 
 ; -------------------------------- Özel Scriptler ---------------------------------
 
