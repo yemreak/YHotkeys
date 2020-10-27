@@ -217,13 +217,13 @@ return "https://www.google.com/search?q=" . query
 }
 
 CreateStartProgramCmd(name) {
+    filepath = %A_AppData%\Microsoft\Windows\Start Menu\Programs\%name%.lnk
     if FileExist(filepath) {
-        filepath = %A_AppData%\Microsoft\Windows\Start Menu\Programs\%name%.lnk
+        return ExplorerCommand(filepath)
     }
     else {
-        filepath := CreateGoogleSearchUrl(filepath)
+        return ExplorerCommand(CreateGoogleSearchUrl(name)) 
     }
-return ExplorerCommand(filepath)
 }
 
 CloseAllActivePrograms() {
