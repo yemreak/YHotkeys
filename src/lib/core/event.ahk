@@ -34,7 +34,7 @@ ShowAll:
 return
 
 CloseApp:
-ExitApp
+    ExitApp
 return
 
 #IfWinExist ahk_class tooltips_class32
@@ -47,7 +47,7 @@ return
 
 RunOnExplorer(url) {
     url := FixIfUrl(url)
-    
+
     command := ExplorerCommand(url)
     command := ConsoleCommand(command)
     RunWait, %command%, , hide
@@ -66,7 +66,7 @@ FixIfUrl(url) {
     if url not contains http
         If url contains www.,.com
         url := "http://" . url
-    
+
 return url
 }
 
@@ -143,7 +143,7 @@ ToInverted() {
 ; Seçili alan varsa onu, yoksa eski kopyalananı alma
 GetExistClipboard() {
     value := TrimStr(clipboard)
-    
+
     CopySelected()
     trimmed_clipboard := TrimStr(clipboard)
     if (StrLen(trimmed_clipboard) > 0) {
@@ -189,13 +189,13 @@ TranslateInline() {
 
 KeepOnNotepad() {
     CopySelected()
-    
+
     Run, notepad.exe
     WinActivate, Untitled - Notepad
     WinWaitActive, Untitled - Notepad
-    
+
     Send ^v
-    
+
     ToggleWindowPin()
 }
 
@@ -212,12 +212,18 @@ EdgeAppCommand(appId) {
 return """C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe"" --profile-directory=Default --app-id=" . appId
 }
 
+CreateGoogleSearchUrl(query) {
+return "https://www.google.com/search?q=" . query
+}
+
 CreateStartProgramCmd(name) {
-    filepath = %A_AppData%\Microsoft\Windows\Start Menu\Programs\%name%.lnk
-    if not FileExist(filepath) {
-        filepath := "https://www.google.com/search?q=" . name
+    if FileExist(filepath) {
+        filepath = %A_AppData%\Microsoft\Windows\Start Menu\Programs\%name%.lnk
     }
-    return ExplorerCommand(filepath)
+    else {
+        filepath := CreateGoogleSearchUrl(filepath)
+    }
+return ExplorerCommand(filepath)
 }
 
 CloseAllActivePrograms() {

@@ -10,8 +10,9 @@ GetEnvPath(envvar, path=""){
     return path
 }
 
-createAppCommand(path) {
-    return "explorer.exe shell:appsFolder\" . path
+createAppCommand(path, query) {
+    ; path := CreateGoogleSearchUrl(query)
+    return ExplorerCommand("shell:appsFolder\" . path)
 }
 
 WriteToIni(sec, key, val) {
@@ -37,7 +38,7 @@ MouseIsOver(WinTitle) {
 HasVal(haystack, needle) {
     for index, value in haystack
         if (value = needle)
-            return index
+        return index
     if !(IsObject(haystack))
         throw Exception("Bad haystack!", -1, haystack)
     return 0

@@ -84,35 +84,35 @@ return
 
 #q::
     name := "- OneNote"
-    com := createAppCommand("Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim")
+    com := createAppCommand("Microsoft.Office.OneNote_8wekyb3d8bbwe!microsoft.onenoteim", "OneNote")
     mode := 2
     OpenWindowByTitle(name, com, mode)
 return
 
 #x::
     name := "- Calendar"
-    com := createAppCommand("microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.calendar")
+    com := createAppCommand("microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.calendar", "Microsoft Calendar")
     mode := 2
     OpenWindowByTitle(name, com, mode)
 return
 
 #p::
     name := "Your Phone"
-    com := createAppCommand("Microsoft.YourPhone_8wekyb3d8bbwe!App")
+    com := createAppCommand("Microsoft.YourPhone_8wekyb3d8bbwe!App", "Your Phone")
     mode := 2
     OpenWindowByTitle(name, com, mode)
 return
 
 #m::
     name := "- Mail"
-    com := createAppCommand("microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail")
+    com := createAppCommand("microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail", "Microsoft Mail")
     mode := 2
     OpenWindowByTitle(name, com, mode)
 return
 
 #t::
     selector := "Telegram"
-    com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store")
+    com := createAppCommand("TelegramMessengerLLP.TelegramDesktop_t4vj0pshhgkwm!Telegram.TelegramDesktop.Store", "Telegram Desktop")
     mode := 2
     OpenWindowByTitle(selector, com, mode)
 return 
@@ -185,7 +185,7 @@ return
 
 #w::
     selector := "WhatsApp"
-    com := createAppCommand("5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop")
+    com := createAppCommand("5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop", "Whatsapp Desktop")
     mode := 2
     OpenWindowInTray("title", selector, com, mode)
 return
@@ -207,7 +207,7 @@ return
 
 #^!+s::
     name := "ShareX"
-    com := createAppCommand("19568ShareX.ShareX_egrzcvs15399j!ShareX")
+    com := createAppCommand("19568ShareX.ShareX_egrzcvs15399j!ShareX", "Sharex")
     mode := 3
     OpenWindowInTray("title", name, com, mode)
 return
