@@ -186,7 +186,7 @@ return
 #w::
     selector := "WhatsApp"
     com := createAppCommand("5319275A.WhatsAppDesktop_cv1g1gvanyjgm!WhatsAppDesktop", "Whatsapp Desktop")
-    mode := 2
+    mode := 3
     OpenWindowInTray("title", selector, com, mode)
 return
 
