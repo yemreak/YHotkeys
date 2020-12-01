@@ -119,19 +119,11 @@ return
 
 ; -------------- Tray Kısayolları --------------
 
-#n::
+#"::
     selector := "Notepad"
     com := "notepad"
     mode := 2
     OpenWindowInTray("class", selector, com, mode)
-return
-
-#"::
-    selector := "Notion.exe"
-    excludes := ["MSCTFIME","Default IME"]
-    com := CreateStartProgramCmd("Notion")
-    mode := 3
-    OpenWindowInTray("exe", selector, com, mode, excludes)
 return
 
 #c::
