@@ -10,6 +10,7 @@ description: YHotkeys'de neler değişti
 
 ## 🏷️ 2.4.3.4
 
+- 🐞👨‍🔧 NotionEnchancer olduğundan notion kısayolu kaldırıldı
 - 🤹➕ θ Theta, teta sembolü eklendi
 - 🤹➕ Telegram kısayolu eklendi
 - 📝 Notion desteği eklendi
