@@ -6,6 +6,8 @@ description: >-
 
 # 🌱 YHotkeys
 
+> 📣 MacOS'a geçmem sebebiyle geliştirilmesine son verilmiştir 😢
+
 ## 🔰 Ne İşe Yarar
 
 ⭐ Tek bir fide bile, Windows'unu tazelemeye yeter.
