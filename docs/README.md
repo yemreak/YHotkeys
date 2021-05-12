@@ -46,13 +46,13 @@ description: >-
 
 ## 👁‍🗨 Uygulamaya Bakış
 
-![](https://github.com/yedhrab/YHotkeys/tree/729201d08a3f16190798e3b56b64911959787c76/docs/.gitbook/assets/usage.gif)
+![](https://github.com/yedhrab/YHotkeys/raw/master/docs/.gitbook/assets/usage.gif)
 
-![](https://github.com/yedhrab/YHotkeys/tree/729201d08a3f16190798e3b56b64911959787c76/docs/.gitbook/assets/tray_icon.png)
+![](https://github.com/yedhrab/YHotkeys/raw/master/docs/.gitbook/assets/tray_icon.png)
 
-![](https://github.com/yedhrab/YHotkeys/tree/729201d08a3f16190798e3b56b64911959787c76/docs/.gitbook/assets/tray_hover.png)
+![](https://github.com/yedhrab/YHotkeys/raw/master/docs/.gitbook/assets/tray_hover.png)
 
-![](https://github.com/yedhrab/YHotkeys/tree/729201d08a3f16190798e3b56b64911959787c76/docs/.gitbook/assets/tray_menu.png)
+![](https://github.com/yedhrab/YHotkeys/raw/master/docs/.gitbook/assets/tray_menu.png)
 
 ## 💖 Destek ve İletişim
 
